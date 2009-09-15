@@ -1,0 +1,21 @@
+This directory contains a collection of input files of the ld1.x
+code for the generation of PAW datasets or US pseudopotentials for 
+several elements. 
+To generate the pseudopotentials change the file make_ps inserting
+the path to the ld1.x code.
+Then give the command:
+
+. ./make_all_ps
+
+The UPF pseudopotentials will appear in the directories 
+functional/PSEUDOPOTENTIALS.
+
+Note that these pseudopotentials are very experimental. 
+They use new features of the ld1.x code that are not extensively
+tested.
+So check them very carefully before using and give feedback
+if you find better sets of parameters or if some property turns
+out to be wrong.
+
+Andrea Dal Corso 
+Sep. 2009
