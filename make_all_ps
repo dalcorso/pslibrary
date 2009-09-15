@@ -1,0 +1,14 @@
+#!/bin/bash
+
+cd pz
+. ../make_ps
+cd ..
+cd pbe
+. ../make_ps
+cd ..
+cd rel-pz
+. ../make_ps
+cd ..
+cd rel-pbe
+. ../make_ps
+cd ..

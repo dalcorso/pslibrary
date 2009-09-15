@@ -2,7 +2,7 @@ This directory contains a collection of input files of the ld1.x
 code for the generation of PAW datasets or US pseudopotentials for 
 several elements. 
 To generate the pseudopotentials change the file make_ps inserting
-the path to the ld1.x code.
+the path to the QE code.
 Then give the command:
 
 . ./make_all_ps

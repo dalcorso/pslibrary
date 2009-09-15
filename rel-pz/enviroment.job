@@ -1,0 +1,13 @@
+#!/bin/bash
+
+#fct='pz'
+#fct='pbe'
+fct='rel-pz'
+#fct='rel-pbe'
+
+gfun='LDA'
+#gfun='PBE'
+
+#nrel=1
+nrel=2
+

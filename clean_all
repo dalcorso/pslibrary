@@ -1,0 +1,14 @@
+#!/bin/bash
+
+cd pz
+. ../clean
+cd ..
+cd pbe
+. ../clean
+cd ..
+cd rel-pz
+. ../clean
+cd ..
+cd rel-pbe
+. ../clean
+cd ..

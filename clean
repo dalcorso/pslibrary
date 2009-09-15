@@ -1,0 +1,3 @@
+#!/bin/bash
+
+\rm -rf PSEUDOPOTENTIALS WORK *.in ld1* *.UPF
