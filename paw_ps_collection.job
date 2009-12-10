@@ -1336,7 +1336,7 @@ cat > O.$fct-paw_kj.in << EOF
    rmatch_augfun=1.20,
    nlcc=.true.,
    new_core_ps=.true.,
-   rcore=0.5,
+   rcore=0.7,
    tm=.true.
  /
 5
