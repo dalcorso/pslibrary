@@ -2021,7 +2021,7 @@ cat > Tl.$fct-paw_kj.in << EOF
    lloc=-1,
    rcloc=2.2,
    which_augfun='PSQ',
-   rmatch_augfun=1.86,
+   rmatch_augfun=1.67,
    nlcc=.true.,
    new_core_ps=.true.,
    rcore=1.5,
