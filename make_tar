@@ -1,0 +1,19 @@
+#!/bin/bash
+
+tar_directory=pslibrary.0.1 
+mkdir $tar_directory
+
+cp AAREADME clean clean_all make_ps make_all_ps paw_ps_collection.job \
+   us_ps_collection.job $tar_directory
+
+mkdir $tar_directory/pz
+mkdir $tar_directory/pbe
+mkdir $tar_directory/rel-pz
+mkdir $tar_directory/rel-pbe
+
+cp pz/enviroment.job $tar_directory/pz
+cp pbe/enviroment.job $tar_directory/pbe
+cp rel-pz/enviroment.job $tar_directory/rel-pz
+cp rel-pbe/enviroment.job $tar_directory/rel-pbe
+
+tar -czvf $tar_directory.tar.gz $tar_directory
