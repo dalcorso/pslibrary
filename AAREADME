@@ -24,3 +24,16 @@ out to be wrong.
 
 Andrea Dal Corso 
 Aug. 2010
+
+pslibrary.0.1 (ADC, Aug. 2010)
+
+First release of the pseudopotential library. The following PPs are available:
+
+H, B, C, N, O, F, Al, Si, P, S, Cl, Fe, Ni, Ag, Pt, Au, Pb.
+
+pslibrary.0.2 (ADC, Feb. 2011)
+
+The following PPs have been added to the library:
+
+Li, Be, Na, Cu, Ga, As, Se, Br, Mo, Cd, Sn, I, Hf, Ta
+
