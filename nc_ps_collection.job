@@ -56,6 +56,29 @@ cat > Al.$fct-nc.in << EOF
 3D  3  2  0.00  0.10  2.60  2.60  0.0
 EOF
 
+cat > Ar.$fct-nc.in << EOF
+ &input
+   title='Ar',
+   zed=18,
+   rel=$nrel,
+   config='[Ne] 3s2 3p6 3d-2',
+   iswitch=3,
+   dft='$gfun'
+ /
+ &inputp
+   pseudotype=2,
+   file_pseudopw='Ar.$fct-nc.UPF',
+   author='TM',
+   lloc=2,
+   nlcc=.true.,
+   tm=.true.
+ /
+3
+3S  1  0  2.00  0.00  2.05  2.05  0.0
+3P  2  1  6.00  0.00  2.05  2.05  0.0
+3D  3  2  0.00  0.10  2.05  2.05  0.0
+EOF
+
 cat > As.$fct-nc.in << EOF
  &input
    title='As',
@@ -77,6 +100,30 @@ cat > As.$fct-nc.in << EOF
 4S  1  0  2.00  0.00  2.10  2.10  0.0
 4D  3  2  0.00  0.10  2.10  2.10  0.0
 4P  2  1  3.00  0.00  2.10  2.10  0.0
+EOF
+
+cat > At.$fct-nc.in << EOF
+ &input
+   title='At',
+   zed=85.0,
+   rel=$nrel,
+   config='[Xe] 4f14 5d10 6s2 6p5 6d-1 5f-1',
+   iswitch=3,
+   dft='$gfun'
+ /
+ &inputp
+   pseudotype=2,
+   file_pseudopw='At.$fct-nc.UPF',
+   author='TM',
+   lloc=3,
+   nlcc=.true.,
+   tm=.true.
+ /
+4
+6S  1  0  2.00  0.00  3.00  3.00  0.0
+6P  2  1  5.00  0.00  3.00  3.00  0.0
+6D  3  2  0.00  0.10  3.00  3.00  0.0
+5F  4  3  0.00  0.10  3.00  3.00  0.0
 EOF
 
 cat > Au.$fct-nc.in << EOF
@@ -128,7 +175,7 @@ cat > Ba.$fct-nc.in << EOF
    title='Ba',
    zed=56.,
    rel=$nrel,
-   config='[Kr] 6s2.0 6p0.0 5d0.0',
+   config='[Xe] 6s2.0 6p0.0 5d0.0',
    iswitch=3,
    dft='$gfun'
  /
@@ -140,10 +187,9 @@ cat > Ba.$fct-nc.in << EOF
    nlcc=.true.,
    tm=.true.
  /
-3
-6P  2  1  0.00  0.00  4.10  4.10  0.0
-5D  3  2  0.00  0.00  3.90  3.90  0.0
-6S  1  0  2.00  0.00  3.90  3.90  0.0
+2
+6P  2  1  0.00  0.00  4.60  4.60  0.0
+6S  1  0  2.00  0.00  4.40  4.40  0.0
 EOF
 
 cat > Be.$fct-nc.in << EOF
@@ -282,6 +328,30 @@ cat > Cd.$fct-nc.in << EOF
 5S  1  0  2.00  0.00  2.65  2.65  0.0
 EOF
 
+cat > Ce.$fct-nc.in << EOF
+ &input
+   title='Ce',
+   zed=58.0,
+   rel=$nrel,
+   config='[Xe] 4f1 5d1 6s2 6p0 ',
+   iswitch=3,
+   dft='$gfun'
+ /
+ &inputp
+   pseudotype=2,
+   file_pseudopw='Ce.$fct-nc.UPF',
+   author='TM',
+   lloc=0,
+   nlcc=.true.,
+   tm=.true.
+ /
+4
+6P  2  1  0.00  0.00  3.75  3.75  0.0
+5D  3  2  1.00  0.00  3.25  3.25  0.0
+4F  4  3  1.00  0.00  3.25  3.25  0.0
+6S  1  0  2.00  0.00  3.25  3.25  0.0
+EOF
+
 cat > Cl.$fct-nc.in << EOF
  &input
    title='Cl',
@@ -356,7 +426,7 @@ cat > Cs.$fct-nc.in << EOF
    title='Cs',
    zed=55.,
    rel=$nrel,
-   config='[Kr] 6s1.0 6p0.0 5d0.0',
+   config='[Xe] 6s1.0 6p0.0',
    iswitch=3,
    dft='$gfun'
  /
@@ -368,10 +438,9 @@ cat > Cs.$fct-nc.in << EOF
    nlcc=.true.,
    tm=.true.
  /
-3
-6P  2  1  0.00  0.00  4.23  4.23  0.0
-5D  3  2  0.00  0.00  4.23  4.23  0.0
-6S  1  0  1.00  0.00  3.73  3.73  0.0
+2
+6P  2  1  0.00  0.00  4.60  4.60  0.0
+6S  1  0  1.00  0.00  4.40  4.40  0.0
 EOF
 
 cat > Cu.$fct-nc.in << EOF
@@ -397,6 +466,78 @@ cat > Cu.$fct-nc.in << EOF
 4S  1  0  1.00  0.00  2.08  2.08  0.0
 EOF
 
+cat > Dy.$fct-nc.in << EOF
+ &input
+   title='Dy',
+   zed=66.0,
+   rel=$nrel,
+   config='[Xe] 4f10 5d0 6s2 6p0 ',
+   iswitch=3,
+   dft='$gfun'
+ /
+ &inputp
+   pseudotype=2,
+   file_pseudopw='Dy.$fct-nc.UPF',
+   author='TM',
+   lloc=0,
+   nlcc=.true.,
+   tm=.true.
+ /
+4
+6P  2  1  0.00  0.00  3.60  3.60  0.0
+5D  3  2  0.00  0.00  3.20  3.20  0.0
+4F  4  3 10.00  0.00  3.20  3.20  0.0
+6S  1  0  2.00  0.00  3.20  3.20  0.0
+EOF
+
+cat > Er.$fct-nc.in << EOF
+ &input
+   title='Er',
+   zed=68.0,
+   rel=$nrel,
+   config='[Xe] 4f12 5d0 6s2 6p0 ',
+   iswitch=3,
+   dft='$gfun'
+ /
+ &inputp
+   pseudotype=2,
+   file_pseudopw='Er.$fct-nc.UPF',
+   author='TM',
+   lloc=0,
+   nlcc=.true.,
+   tm=.true.
+ /
+4
+6P  2  1  0.00  0.00  3.50  3.50  0.0
+5D  3  2  0.00  0.00  3.15  3.15  0.0
+4F  4  3 12.00  0.00  3.15  3.15  0.0
+6S  1  0  2.00  0.00  3.15  3.15  0.0
+EOF
+
+cat > Eu.$fct-nc.in << EOF
+ &input
+   title='Eu',
+   zed=63.0,
+   rel=$nrel,
+   config='[Xe] 4f7 5d0 6s2 6p0 ',
+   iswitch=3,
+   dft='$gfun'
+ /
+ &inputp
+   pseudotype=2,
+   file_pseudopw='Eu.$fct-nc.UPF',
+   author='TM',
+   lloc=0,
+   nlcc=.true.,
+   tm=.true.
+ /
+4
+6P  2  1  0.00  0.00  3.65  3.65  0.0
+5D  3  2  0.00  0.00  3.25  3.25  0.0
+4F  4  3  7.00  0.00  3.25  3.25  0.0
+6S  1  0  2.00  0.00  3.25  3.25  0.0
+EOF
+
 cat > Ga.$fct-nc.in << EOF
  &input
    title='Ga',
@@ -418,6 +559,30 @@ cat > Ga.$fct-nc.in << EOF
 4P  2  1  1.00  0.00  2.10  2.10  0.0
 3D  3  2 10.00  0.00  2.10  2.10  0.0
 4S  1  0  2.00  0.00  2.10  2.10  0.0
+EOF
+
+cat > Gd.$fct-nc.in << EOF
+ &input
+   title='Gd',
+   zed=64.0,
+   rel=$nrel,
+   config='[Xe] 4f7 5d1 6s2 6p0 ',
+   iswitch=3,
+   dft='$gfun'
+ /
+ &inputp
+   pseudotype=2,
+   file_pseudopw='Gd.$fct-nc.UPF',
+   author='TM',
+   lloc=0,
+   nlcc=.true.,
+   tm=.true.
+ /
+4
+6P  2  1  0.00  0.00  3.65  3.65  0.0
+5D  3  2  1.00  0.00  3.25  3.25  0.0
+4F  4  3  7.00  0.00  3.25  3.25  0.0
+6S  1  0  2.00  0.00  3.25  3.25  0.0
 EOF
 
 cat > Ge.$fct-nc.in << EOF
@@ -507,6 +672,26 @@ cat > H.$fct-nc.in << EOF
 1S  1  0  1.00  0.00  0.50  0.50  0.0
 EOF
 
+cat > He.$fct-nc.in << EOF
+ &input
+   title='He',
+   zed=2,
+   rel=$nrel,
+   config='1s2 2p-1',
+   iswitch=3,
+   dft='$gfun'
+ /
+ &inputp
+   pseudotype=2,
+   file_pseudopw='He.$fct-nc.UPF',
+   author='TM',
+   lloc=0,
+   tm=.true.
+ /
+1
+1S  1  0  2.00  0.00  1.00  1.00  0.0
+EOF
+
 cat > Hf.$fct-nc.in << EOF
  &input
    title='Hf',
@@ -525,9 +710,33 @@ cat > Hf.$fct-nc.in << EOF
    tm=.true.
  /
 3
-6P  2  1  0.00  0.00  2.80  2.80  0.0
-5D  3  2  2.00  0.00  2.80  2.80  0.0
-6S  1  0  2.00  0.00  2.80  2.80  0.0
+6P  2  1  0.00  0.00  2.60  2.60  0.0
+5D  3  2  2.00  0.00  2.60  2.60  0.0
+6S  1  0  2.00  0.00  2.60  2.60  0.0
+EOF
+
+cat > Ho.$fct-nc.in << EOF
+ &input
+   title='Ho',
+   zed=67.0,
+   rel=$nrel,
+   config='[Xe] 4f11 5d0 6s2 6p0 ',
+   iswitch=3,
+   dft='$gfun'
+ /
+ &inputp
+   pseudotype=2,
+   file_pseudopw='Ho.$fct-nc.UPF',
+   author='TM',
+   lloc=0,
+   nlcc=.true.,
+   tm=.true.
+ /
+4
+6P  2  1  0.00  0.00  3.60  3.60  0.0
+5D  3  2  0.00  0.00  3.20  3.20  0.0
+4F  4  3 11.00  0.00  3.20  3.20  0.0
+6S  1  0  2.00  0.00  3.20  3.20  0.0
 EOF
 
 cat > K.$fct-nc.in << EOF
@@ -551,6 +760,29 @@ cat > K.$fct-nc.in << EOF
 4P  2  1  0.00  0.00  3.76  3.76  0.0
 3D  3  2 -1.00  0.10  3.76  3.76  0.0
 4S  1  0  1.00  0.00  3.51  3.51  0.0
+EOF
+
+cat > Kr.$fct-nc.in << EOF
+ &input
+   title='Kr',
+   zed=36.,
+   rel=$nrel,
+   config='[Ar] 3d10.0 4s2.0 4p6.0 4d-2.0',
+   iswitch=3,
+   dft='$gfun'
+ /
+ &inputp
+   pseudotype=2,
+   file_pseudopw='Kr.$fct-nc.UPF',
+   author='TM',
+   lloc=2,
+   nlcc=.true.,
+   tm=.true.
+ /
+3
+4S  1  0  2.00  0.00  3.25  3.25  0.0
+4P  2  1  6.00  0.00  3.25  3.25  0.0
+4D  3  2  0.00  0.10  3.25  3.25  0.0
 EOF
 
 cat > Hg.$fct-nc.in << EOF
@@ -627,7 +859,7 @@ cat > Ir.$fct-nc.in << EOF
    title='Ir',
    zed=77.,
    rel=$nrel,
-   config='[Xe] 6s2.0 6p0.0 5d7.0',
+   config='[Xe] 4f14 6s2.0 6p0.0 5d7.0',
    iswitch=3,
    dft='$gfun'
  /
@@ -643,6 +875,30 @@ cat > Ir.$fct-nc.in << EOF
 6P  2  1  0.00  0.00  2.45  2.45  0.0
 5D  3  2  7.00  0.00  2.45  2.45  0.0
 6S  1  0  2.00  0.00  2.45  2.45  0.0
+EOF
+
+cat > La.$fct-nc.in << EOF
+ &input
+   title='La',
+   zed=57.0,
+   rel=$nrel,
+   config='[Xe] 4f0 5d1 6s2 6p0 ',
+   iswitch=3,
+   dft='$gfun'
+ /
+ &inputp
+   pseudotype=2,
+   file_pseudopw='La.$fct-nc.UPF',
+   author='TM',
+   lloc=0,
+   nlcc=.true.,
+   tm=.true.
+ /
+4
+6P  2  1  0.00  0.00  4.10  4.10  0.0
+5D  3  2  1.00  0.00  3.50  3.50  0.0
+4F  4  3  0.00  0.10  3.50  3.50  0.0
+6S  1  0  2.00  0.00  3.50  3.50  0.0
 EOF
 
 cat > Li.$fct-nc.in << EOF
@@ -665,6 +921,30 @@ cat > Li.$fct-nc.in << EOF
 2
 2P  2  1  0.00  0.00  2.45  2.45  0.0
 2S  1  0  1.00  0.00  2.45  2.45  0.0
+EOF
+
+cat > Lu.$fct-nc.in << EOF
+ &input
+   title='Lu',
+   zed=71.0,
+   rel=$nrel,
+   config='[Xe] 4f14 5d1 6s2 6p0 ',
+   iswitch=3,
+   dft='$gfun'
+ /
+ &inputp
+   pseudotype=2,
+   file_pseudopw='Lu.$fct-nc.UPF',
+   author='TM',
+   lloc=0,
+   nlcc=.true.,
+   tm=.true.
+ /
+4
+6P  2  1  0.00  0.00  3.40  3.40  0.0
+5D  3  2  1.00  0.00  3.10  3.10  0.0
+4F  4  3 14.00  0.00  3.10  3.10  0.0
+6S  1  0  2.00  0.00  3.10  3.10  0.0
 EOF
 
 cat > Mg.$fct-nc.in << EOF
@@ -758,6 +1038,28 @@ cat > Na.$fct-nc.in << EOF
 3P  2  1  0.00  0.00  2.50  2.50  0.0
 EOF
 
+cat > Ne.$fct-nc.in << EOF
+ &input
+   title='Ne',
+   zed=10.0,
+   rel=$nrel,
+   config='1s2.0 2s2.0 2p6.0 3d-2.0',
+   iswitch=3,
+   dft='$gfun'
+ /
+ &inputp
+   pseudotype=2,
+   file_pseudopw='Ne.$fct-nc.UPF',
+   author='TM',
+   lloc=0,
+   tm=.true.,
+ /
+2
+2P  2  1  6.00  0.00  1.55  1.55  0.0
+2S  1  0  2.00  0.00  1.55  1.55  0.0
+EOF
+
+
 cat > Ni.$fct-nc.in << EOF
  &input
    title='Ni',
@@ -825,6 +1127,29 @@ cat > Nb.$fct-nc.in << EOF
 5S  1  0  2.00  0.00  2.49  2.49  0.0
 EOF
 
+cat > Nd.$fct-nc.in << EOF
+ &input
+   title='Nd',
+   zed=60.0,
+   rel=$nrel,
+   config='[Xe] 4f4 5d0 6s2 6p0 ',
+   iswitch=3,
+   dft='$gfun'
+ /
+ &inputp
+   pseudotype=2,
+   file_pseudopw='Nd.$fct-nc.UPF',
+   author='TM',
+   lloc=0,
+   nlcc=.true.,
+   tm=.true.
+ /
+4
+6P  2  1  0.00  0.00  3.75  3.75  0.0
+5D  3  2  0.00  0.00  3.25  3.25  0.0
+4F  4  3  4.00  0.00  3.25  3.25  0.0
+6S  1  0  2.00  0.00  3.25  3.25  0.0
+EOF
 
 cat > O.$fct-nc.in << EOF
  &input
@@ -852,7 +1177,7 @@ cat > Os.$fct-nc.in << EOF
    title='Os',
    zed=76.,
    rel=$nrel,
-   config='[Xe] 6s2.0 6p0.0 5d6.0',
+   config='[Xe] 4f14 6s2.0 6p0.0 5d6.0',
    iswitch=3,
    dft='$gfun'
  /
@@ -893,6 +1218,30 @@ cat > Pb.$fct-nc.in << EOF
 6S  1  0  2.00  0.00  3.15  3.15  0.0
 EOF
 
+cat > Pm.$fct-nc.in << EOF
+ &input
+   title='Pm',
+   zed=61.0,
+   rel=$nrel,
+   config='[Xe] 4f5 5d0 6s2 6p0 ',
+   iswitch=3,
+   dft='$gfun'
+ /
+ &inputp
+   pseudotype=2,
+   file_pseudopw='Pm.$fct-nc.UPF',
+   author='TM',
+   lloc=0,
+   nlcc=.true.,
+   tm=.true.
+ /
+4
+6P  2  1  0.00  0.00  3.65  3.65  0.0
+5D  3  2  0.00  0.00  3.25  3.25  0.0
+4F  4  3  5.00  0.00  3.25  3.25  0.0
+6S  1  0  2.00  0.00  3.25  3.25  0.0
+EOF
+
 cat > Po.$fct-nc.in << EOF
  &input
    title='Po',
@@ -915,6 +1264,30 @@ cat > Po.$fct-nc.in << EOF
 6P  2  1  4.00  0.00  3.00  3.00  0.0
 6D  3  2  0.00  0.10  3.00  3.00  0.0
 5F  4  3  0.00  0.10  3.00  3.00  0.0
+EOF
+
+cat > Pr.$fct-nc.in << EOF
+ &input
+   title='Pr',
+   zed=59.0,
+   rel=$nrel,
+   config='[Xe] 4f3 5d0 6s2 6p0 ',
+   iswitch=3,
+   dft='$gfun'
+ /
+ &inputp
+   pseudotype=2,
+   file_pseudopw='Pr.$fct-nc.UPF',
+   author='TM',
+   lloc=0,
+   nlcc=.true.,
+   tm=.true.
+ /
+4
+6P  2  1  0.00  0.00  3.75  3.75  0.0
+5D  3  2  0.00  0.00  3.25  3.25  0.0
+4F  4  3  3.00  0.00  3.25  3.25  0.0
+6S  1  0  2.00  0.00  3.25  3.25  0.0
 EOF
 
 cat > Pt.$fct-nc.in << EOF
@@ -1014,13 +1387,13 @@ cat > Re.$fct-nc.in << EOF
    title='Re',
    zed=75.,
    rel=$nrel,
-   config='[Xe] 6s2.0 6p0.0 5d5.0',
+   config='[Xe] 4f14 6s2.0 6p0.0 5d5.0',
    iswitch=3,
    dft='$gfun'
  /
  &inputp
    pseudotype=2,
-   file_pseudopw='W.$fct-nc.UPF',
+   file_pseudopw='Re.$fct-nc.UPF',
    author='TM',
    lloc=0,
    nlcc=.true.,
@@ -1054,6 +1427,30 @@ cat > Rh.$fct-nc.in << EOF
 5P  2  1  0.00  0.00  2.60  2.60  0.0
 4D  3  2  8.00  0.00  2.40  2.40  0.0
 5S  1  0  1.00  0.00  2.40  2.40  0.0
+EOF
+
+cat > Rn.$fct-nc.in << EOF
+ &input
+   title='Rn',
+   zed=86.0,
+   rel=$nrel,
+   config='[Xe] 4f14 5d10 6s2 6p6 6d-1 5f-1',
+   iswitch=3,
+   dft='$gfun'
+ /
+ &inputp
+   pseudotype=2,
+   file_pseudopw='Rn.$fct-nc.UPF',
+   author='TM',
+   lloc=3,
+   nlcc=.true.,
+   tm=.true.
+ /
+4
+6S  1  0  2.00  0.00  3.00  3.00  0.0
+6P  2  1  6.00  0.00  3.00  3.00  0.0
+6D  3  2  0.00  0.10  3.00  3.00  0.0
+5F  4  3  0.00  0.10  3.00  3.00  0.0
 EOF
 
 cat > Ru.$fct-nc.in << EOF
@@ -1196,6 +1593,30 @@ cat > Si.$fct-nc.in << EOF
 3D  3  2  0.00  0.10  1.80  1.80  0.0
 EOF
 
+cat > Sm.$fct-nc.in << EOF
+ &input
+   title='Sm',
+   zed=62.0,
+   rel=$nrel,
+   config='[Xe] 4f6 5d0 6s2 6p0 ',
+   iswitch=3,
+   dft='$gfun'
+ /
+ &inputp
+   pseudotype=2,
+   file_pseudopw='Sm.$fct-nc.UPF',
+   author='TM',
+   lloc=0,
+   nlcc=.true.,
+   tm=.true.
+ /
+4
+6P  2  1  0.00  0.00  3.65  3.65  0.0
+5D  3  2  0.00  0.00  3.25  3.25  0.0
+4F  4  3  6.00  0.00  3.25  3.25  0.0
+6S  1  0  2.00  0.00  3.25  3.25  0.0
+EOF
+
 cat > Sn.$fct-nc.in << EOF
  &input
    title='Sn',
@@ -1263,6 +1684,30 @@ cat > Ta.$fct-nc.in << EOF
 6P  2  1  0.00  0.00  2.55  2.55  0.0
 5D  3  2  3.00  0.00  2.55  2.55  0.0
 6S  1  0  2.00  0.00  2.55  2.55  0.0
+EOF
+
+cat > Tb.$fct-nc.in << EOF
+ &input
+   title='Tb',
+   zed=65.0,
+   rel=$nrel,
+   config='[Xe] 4f9 5d0 6s2 6p0 ',
+   iswitch=3,
+   dft='$gfun'
+ /
+ &inputp
+   pseudotype=2,
+   file_pseudopw='Tb.$fct-nc.UPF',
+   author='TM',
+   lloc=0,
+   nlcc=.true.,
+   tm=.true.
+ /
+4
+6P  2  1  0.00  0.00  3.60  3.60  0.0
+5D  3  2  0.00  0.00  3.20  3.20  0.0
+4F  4  3  9.00  0.00  3.20  3.20  0.0
+6S  1  0  2.00  0.00  3.20  3.20  0.0
 EOF
 
 cat > Tc.$fct-nc.in << EOF
@@ -1358,6 +1803,30 @@ cat > Tl.$fct-nc.in << EOF
 6S  1  0  2.00  0.00  3.00  3.00  0.0
 EOF
 
+cat > Tm.$fct-nc.in << EOF
+ &input
+   title='Tm',
+   zed=69.0,
+   rel=$nrel,
+   config='[Xe] 4f13 5d0 6s2 6p0 ',
+   iswitch=3,
+   dft='$gfun'
+ /
+ &inputp
+   pseudotype=2,
+   file_pseudopw='Tm.$fct-nc.UPF',
+   author='TM',
+   lloc=0,
+   nlcc=.true.,
+   tm=.true.
+ /
+4
+6P  2  1  0.00  0.00  3.50  3.50  0.0
+5D  3  2  0.00  0.00  3.15  3.15  0.0
+4F  4  3 13.00  0.00  3.15  3.15  0.0
+6S  1  0  2.00  0.00  3.15  3.15  0.0
+EOF
+
 cat > V.$fct-nc.in << EOF
  &input
    title='V',
@@ -1379,6 +1848,29 @@ cat > V.$fct-nc.in << EOF
 4P  2  1  0.00  0.00  2.70  2.70  0.0
 3D  3  2  3.00  0.00  2.35  2.35  0.0
 4S  1  0  2.00  0.00  2.35  2.35  0.0
+EOF
+
+cat > Xe.$fct-nc.in << EOF
+ &input
+   title='Xe',
+   zed=54.,
+   rel=$nrel,
+   config='[Kr] 4d10.0 5s2.0 5p6.0 5d-2.0',
+   iswitch=3,
+   dft='$gfun'
+ /
+ &inputp
+   pseudotype=2,
+   file_pseudopw='Xe.$fct-nc.UPF',
+   author='TM',
+   lloc=0,
+   nlcc=.true.,
+   tm=.true.
+ /
+3
+5P  2  1  6.00  0.00  3.25  3.25  0.0
+5D  3  2  0.00  0.10  3.25  3.25  0.0
+5S  1  0  2.00  0.00  3.25  3.25  0.0
 EOF
 
 cat > Y.$fct-nc.in << EOF
@@ -1404,12 +1896,36 @@ cat > Y.$fct-nc.in << EOF
 5S  1  0  2.00  0.00  3.05  3.05  0.0
 EOF
 
+cat > Yb.$fct-nc.in << EOF
+ &input
+   title='Yb',
+   zed=70.0,
+   rel=$nrel,
+   config='[Xe] 4f14 5d0 6s2 6p0 ',
+   iswitch=3,
+   dft='$gfun'
+ /
+ &inputp
+   pseudotype=2,
+   file_pseudopw='Yb.$fct-nc.UPF',
+   author='TM',
+   lloc=0,
+   nlcc=.true.,
+   tm=.true.
+ /
+4
+6P  2  1  0.00  0.00  3.50  3.50  0.0
+5D  3  2  0.00  0.00  3.15  3.15  0.0
+4F  4  3 14.00  0.00  3.15  3.15  0.0
+6S  1  0  2.00  0.00  3.15  3.15  0.0
+EOF
+
 cat > W.$fct-nc.in << EOF
  &input
    title='W',
    zed=74.,
    rel=$nrel,
-   config='[Xe] 6s2.0 6p0.0 5d4.0',
+   config='[Xe] 4f14 6s2.0 6p0.0 5d4.0',
    iswitch=3,
    dft='$gfun'
  /
