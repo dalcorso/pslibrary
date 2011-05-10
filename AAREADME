@@ -1,7 +1,9 @@
 This directory contains a collection of input files for the ld1.x
-code distributed with the Quantum-ESPRESSO package. It
+code distributed with the Quantum ESPRESSO package. It
 allows the generation of PAW datasets or US pseudopotentials,
 scalar relativistic or fully relativistic, for several elements. 
+Starting with version 0.2.1 also the TM norm conserving radii are
+distributed for the generation of NC pseudopotentials.
 To generate the pseudopotentials change the file make_ps inserting
 the path to the QE package.
 Then give the command:
@@ -36,4 +38,13 @@ pslibrary.0.2 (ADC, Feb. 2011)
 The following PPs have been added to the library:
 
 Li, Be, Na, Cu, Ga, As, Se, Br, Mo, Cd, Sn, I, Hf, Ta
+
+pslibrary.0.2.1 (ADC, May 2011)
+
+A ghost in the Li PP has been removed. 
+
+The Fe PP substituted with a PP with 3s and 3p semicore states.
+
+Added an input file for the generation of norm conserving PPs with the same
+core radii suggested in the Troullier and Martins (TM) atomic code.
 

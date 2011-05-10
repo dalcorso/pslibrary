@@ -1,6 +1,6 @@
 #!/bin/bash
 
-PWDIR='/home/dalcorso/espresso/'
+PWDIR='/path_to_quantum_espresso/'
 work=./WORK
 . $PWDIR/examples/environment_variables
 BIN_DIR=$PWDIR/bin
@@ -8,6 +8,8 @@ BIN_DIR=$PWDIR/bin
 mkdir $work >& /dev/null
 \rm -f $work/* >& /dev/null
 mkdir PSEUDOPOTENTIALS >& /dev/null
+
+. ../nc_ps_collection.job
 
 . ../paw_ps_collection.job
 
