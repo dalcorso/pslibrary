@@ -27,6 +27,7 @@ out to be wrong.
 Andrea Dal Corso 
 Aug. 2010
 
+---------------------------------------------------------
 pslibrary.0.1 (ADC, Aug. 2010)
 
 First release of the pseudopotential library. The following PPs are available:
@@ -39,6 +40,7 @@ The following PPs have been added to the library:
 
 Li, Be, Na, Cu, Ga, As, Se, Br, Mo, Cd, Sn, I, Hf, Ta
 
+---------------------------------------------------------
 pslibrary.0.2.1 (ADC, May 2011)
 
 A ghost in the Li PP has been removed. 
@@ -48,3 +50,23 @@ The Fe PP substituted with a PP with 3s and 3p semicore states.
 Added an input file for the generation of norm conserving PPs with the same
 core radii suggested in the Troullier and Martins (TM) atomic code.
 
+--------------------------------------------------------
+pslibrary.0.2.2 (ADC, In progress)
+
+Introduced the possibility to have different parameters in the scalar 
+relativistic (SR) or in the fully relativistic (FR) case. 
+
+SR changes:
+
+FR changes:
+
+Pb 
+
+SR additions:
+
+FR additions:
+
+Removed PPs:
+In the NC case Cu and W were not working. Removed.
+
+--------------------------------------------------------

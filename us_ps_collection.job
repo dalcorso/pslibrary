@@ -674,6 +674,41 @@ cat > O.$fct-rrkjus.in << EOF
 3D  3  2 -2.00  0.15  1.30  1.30  0.0
 EOF
 
+if [ $nrel = 2 ]
+then
+
+cat > Pb.$fct-rrkjus.in << EOF
+ &input
+   title='Pb',
+   zed=82.0,
+   rel=$nrel,
+   config='[Xe] 4f14 5d10 6s2 6p2',
+   iswitch=3,
+   dft='$gfun'
+ /
+ &inputp
+   pseudotype=3,
+   file_pseudopw='Pb.$fct-rrkjus.UPF',
+   author='ADC',
+   lloc=-1,
+   rcloc=2.2,
+   which_augfun='PSQ',
+   rmatch_augfun=1.6,
+   nlcc=.true.,
+   new_core_ps=.true.,
+   rcore=1.4,
+   tm=.true.
+ /
+6
+6S  1  0  2.00  0.00  2.00  2.20  0.0
+6S  1  0  0.00  5.00  2.00  2.20  0.0
+6P  2  1  2.00  0.00  2.40  2.60  0.0
+6P  2  1  0.00  6.50  2.40  2.60  0.0
+5D  3  2 10.00  0.00  1.60  2.10  0.0
+5D  3  2  0.00 -0.90  1.60  2.10  0.0
+EOF
+
+else
 
 cat > Pb.$fct-rrkjus.in << EOF
  &input
@@ -705,6 +740,8 @@ cat > Pb.$fct-rrkjus.in << EOF
 5D  3  2 10.00  0.00  1.60  2.10  0.0
 5D  3  2  0.00 -0.90  1.60  2.10  0.0
 EOF
+
+fi
 
 cat > Pt.$fct-rrkjus.in << EOF
  &input

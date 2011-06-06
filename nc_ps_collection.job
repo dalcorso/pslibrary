@@ -472,29 +472,6 @@ cat > Cs.$fct-nc.in << EOF
 6S  1  0  1.00  0.00  4.40  4.40  0.0
 EOF
 
-cat > Cu.$fct-nc.in << EOF
- &input
-   title='Cu',
-   zed=29.,
-   rel=$nrel,
-   config='[Ar] 3d10.0 4s1.0 4p0.0',
-   iswitch=3,
-   dft='$gfun'
- /
- &inputp
-   pseudotype=2,
-   file_pseudopw='Cu.$fct-nc.UPF',
-   author='TM',
-   lloc=0,
-   nlcc=.true.,
-   tm=.true.
- /
-3
-4P  2  1  0.00  0.00  2.30  2.30  0.0
-3D  3  2 10.00  0.00  2.08  2.08  0.0
-4S  1  0  1.00  0.00  2.08  2.08  0.0
-EOF
-
 cat > Dy.$fct-nc.in << EOF
  &input
    title='Dy',
@@ -2112,29 +2089,6 @@ cat > Yb.$fct-nc.in << EOF
 5D  3  2  0.00  0.00  3.15  3.15  0.0
 4F  4  3 14.00  0.00  3.15  3.15  0.0
 6S  1  0  2.00  0.00  3.15  3.15  0.0
-EOF
-
-cat > W.$fct-nc.in << EOF
- &input
-   title='W',
-   zed=74.,
-   rel=$nrel,
-   config='[Xe] 4f14 6s2.0 6p0.0 5d4.0',
-   iswitch=3,
-   dft='$gfun'
- /
- &inputp
-   pseudotype=2,
-   file_pseudopw='W.$fct-nc.UPF',
-   author='TM',
-   lloc=0,
-   nlcc=.true.,
-   tm=.true.
- /
-3
-6P  2  1  0.00  0.00  2.45  2.45  0.0
-5D  3  2  4.00  0.00  2.45  2.45  0.0
-6S  1  0  2.00  0.00  2.45  2.45  0.0
 EOF
 
 cat > Zn.$fct-nc.in << EOF
