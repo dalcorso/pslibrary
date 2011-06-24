@@ -56,19 +56,15 @@ pslibrary.0.2.2 (ADC, In progress)
 Introduced the possibility to have different parameters in the scalar 
 relativistic (SR) or in the fully relativistic (FR) case. 
 
-SR changes:
+SR changes: Pb
 
-Pb
+FR changes: Al, Pb 
 
-FR changes:
+SR additions: Pd
 
-Al, Pb 
-
-SR additions:
-
-FR additions:
+FR additions: Pd
 
 Removed PPs:
-In the NC case Cu and W were not working. Removed.
+In the NC case Cu and W were not working. 
 
 --------------------------------------------------------
