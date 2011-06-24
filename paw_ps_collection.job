@@ -786,8 +786,8 @@ cat > Pb.$fct-paw_kj.in << EOF
    author='ADC',
    lloc=-1,
    rcloc=2.2,
-   which_augfun='BESSEL',
-   rmatch_augfun=1.9,
+   which_augfun='PSQ',
+   rmatch_augfun=1.6,
    nlcc=.true.,
    new_core_ps=.true.,
    rcore=1.4,
@@ -799,7 +799,7 @@ cat > Pb.$fct-paw_kj.in << EOF
 6P  2  1  2.00  0.00  2.40  2.60  0.0
 6P  2  1  0.00  6.50  2.40  2.60  0.0
 5D  3  2 10.00  0.00  1.60  2.10  0.0
-5D  3  2  0.00 -0.90  1.60  2.10  0.0
+5D  3  2  0.00  0.10  1.60  2.10  0.0
 EOF
 
 fi
