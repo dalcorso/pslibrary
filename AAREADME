@@ -34,6 +34,7 @@ First release of the pseudopotential library. The following PPs are available:
 
 H, B, C, N, O, F, Al, Si, P, S, Cl, Fe, Ni, Ag, Pt, Au, Pb.
 
+---------------------------------------------------------
 pslibrary.0.2 (ADC, Feb. 2011)
 
 The following PPs have been added to the library:
@@ -70,5 +71,4 @@ FR additions: Pd, Ge, In, Te, Bi, Zn, Hg
 
 Removed PPs:
 In the NC case Cu and W were not working. 
-
 --------------------------------------------------------
