@@ -53,6 +53,10 @@ core radii suggested in the Troullier and Martins (TM) atomic code.
 --------------------------------------------------------
 pslibrary.0.2.2 (ADC, In progress)
 
+Introduced the possibility to generate the PP for only one element and
+for all functionals. Edit the file make_ps and choose the element, then
+run make_all_ps.
+
 Introduced the possibility to have different parameters in the scalar 
 relativistic (SR) or in the fully relativistic (FR) case. 
 
@@ -60,9 +64,9 @@ SR changes: Pb
 
 FR changes: Al, Pb 
 
-SR additions: Pd
+SR additions: Pd, Ge, In, Te, Bi, Zn, Hg
 
-FR additions: Pd
+FR additions: Pd, Ge, In, Te, Bi, Zn, Hg
 
 Removed PPs:
 In the NC case Cu and W were not working. 
