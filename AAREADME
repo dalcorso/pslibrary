@@ -51,7 +51,7 @@ Added an input file for the generation of norm conserving PPs with the same
 core radii suggested in the Troullier and Martins (TM) atomic code.
 
 --------------------------------------------------------
-pslibrary.0.2.2 (ADC, In progress)
+pslibrary.0.2.2 (ADC, Aug. 2011)
 
 Introduced the possibility to generate the PP for only one element and
 for all functionals. Edit the file make_ps and choose the element, then
