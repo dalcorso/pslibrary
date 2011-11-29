@@ -75,4 +75,5 @@ In the NC case Cu and W were not working.
 
 pslibrary.0.2.3 (ADC work in progress)
 
-SR changes: NC Ge PP had a ghost. Improved PP.
+SR changes: NC Ge and Sn PPs had a ghost. Improved PPs.
+
