@@ -16,7 +16,11 @@ mkdir PSEUDOPOTENTIALS >& /dev/null
 
 . ../paw_ps_collection.job
 
+#. ../paw_ps_collection_tot.job
+
 . ../us_ps_collection.job
+
+#. ../us_ps_collection_tot.job
 
 ld1_command="$PARA_PREFIX $BIN_DIR/ld1.x $PARA_POSTFIX"
 

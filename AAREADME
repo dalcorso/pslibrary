@@ -73,7 +73,18 @@ Removed PPs:
 In the NC case Cu and W were not working. 
 --------------------------------------------------------
 
-pslibrary.0.2.3 (ADC work in progress)
+pslibrary.0.2.3 (ADC, Dic. 2011)
 
 SR changes: NC Ge and Sn PPs had a ghost. Improved PPs.
 
+Introduced two additional files with PAW and US PP inputs for remaining
+elements:
+
+ Ar At Ba Ca Ce Co Cr Cs He Ir K Kr La Mg Mn Nb Ne Os Po Rb Rh Re Ru Sb
+ Sc Sr Tc Ti Tl V Xe Y W Zr
+
+These PPs are known to have some problem in some case (mainly in the FR form)
+and need further tuning, but are a starting point for further optiminization,
+so use them at your own risk. 
+In order to add also these PPs to your list uncomment the appropriate lines
+in make_ps.

@@ -1,10 +1,11 @@
 #!/bin/bash
 
-tar_directory=pslibrary.0.2.2 
+tar_directory=pslibrary.0.2.3 
 mkdir $tar_directory
 
 cp AAREADME clean clean_all make_ps make_all_ps paw_ps_collection.job \
-   us_ps_collection.job nc_ps_collection.job $tar_directory
+   paw_ps_collection_tot.job us_ps_collection.job us_ps_collection_tot.job \
+   nc_ps_collection.job $tar_directory
 
 mkdir $tar_directory/pz
 mkdir $tar_directory/pbe
