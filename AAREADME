@@ -75,7 +75,7 @@ In the NC case Cu and W were not working.
 
 pslibrary.0.2.3 (ADC, Dic. 2011)
 
-SR changes: NC Ge and Sn PPs had a ghost. Improved PPs.
+SR changes: NC-PP Ge and Sn PPs had a ghost. Improved PPs.
 
 Introduced two additional files with PAW and US PP inputs for remaining
 elements:
@@ -88,3 +88,14 @@ and need further tuning, but are a starting point for further optiminization,
 so use them at your own risk. 
 In order to add also these PPs to your list uncomment the appropriate lines
 in make_ps.
+
+--------------------------------------------------------
+
+pslibrary.0.2.4 (ADC, WORK IN PROGRESS)
+
+SR + FR changes: NC-PP: Sb and As had not SO projectors in the p channel 
+                 (which was local). Now d is local.
+                 NC-PP: Ga with 3d in valence was too hard. Substituted with a 
+                        PP with 3d in the core.
+                 
+
