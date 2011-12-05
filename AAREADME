@@ -98,4 +98,6 @@ SR + FR changes: NC-PP: Sb and As had not SO projectors in the p channel
                  NC-PP: Ga with 3d in valence was too hard. Substituted with a 
                         PP with 3d in the core.
                  
-
+SR + FR changes: NC-PP: Ge had not SO projectors in the (local) p channel.
+                Now d is local.
+                NC-PP: Relativistic Sn had still a ghost. Core radii increased.

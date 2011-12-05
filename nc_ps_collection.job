@@ -626,14 +626,14 @@ cat > Ge.$fct-nc.in << EOF
    pseudotype=2,
    file_pseudopw='Ge.$fct-nc.UPF',
    author='TM',
-   lloc=1,
+   lloc=2,
    nlcc=.true.,
    tm=.true.
  /
 3
 4S  1  0  2.00  0.00  2.10  2.10  0.0
-4D  3  2  0.00  0.10  2.40  2.40  0.0
 4P  2  1  2.00  0.00  2.10  2.10  0.0
+4D  3  2  0.00  0.10  2.40  2.40  0.0
 EOF
 
 cat > Fe.$fct-nc.in << EOF
@@ -1760,8 +1760,8 @@ cat > Sn.$fct-nc.in << EOF
  /
 3
 5P  2  1  2.00  0.00  2.50  2.50  0.0
-5D  3  2  0.00  0.10  2.60  2.60  0.0
-5S  1  0  2.00  0.00  2.50  2.50  0.0
+5D  3  2  0.00  0.05  3.00  3.00  0.0
+5S  1  0  2.00  0.00  2.60  2.60  0.0
 EOF
 
 cat > Sr.$fct-nc.in << EOF
