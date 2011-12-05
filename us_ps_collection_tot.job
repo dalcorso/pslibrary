@@ -137,7 +137,7 @@ cat > Ce.$fct-rrkjus.in << EOF
    lloc=-1,
    rcloc=2.0,
    which_augfun='PSQ',
-   rmatch_augfun=1.4,
+   rmatch_augfun=1.5,
    nlcc=.true.,
    new_core_ps=.true.,
    rcore=1.4,
