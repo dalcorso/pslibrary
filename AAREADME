@@ -63,6 +63,11 @@ Andrea Dal Corso
 19/12/2011
 
 ---------------------------------------------------------
+
+Citation: If you write some paper using these PPs please cite both
+the name of the PP and the version of pslibrary that you have used.
+
+---------------------------------------------------------
 pslibrary.0.1 (ADC, Aug. 2010)
 
 First release of the pseudopotential library. The following PPs are available:
