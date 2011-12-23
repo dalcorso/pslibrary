@@ -27,6 +27,41 @@ out to be wrong.
 Andrea Dal Corso 
 Aug. 2010
 
+---------------------------------------------------------------------------
+Situation of the pslibrary project:
+
+PAW datasets and US-PPs that are in 
+
+ paw_ps_collection.job
+ us_ps_collection.job
+
+have been tested in some cases and no error has been reported so far. 
+Those that were in pslibrary.0.1 have been tested estensively, the
+others are under test right now.
+
+PAW datasets and US-PPs that are in
+
+paw_ps_collection_tot.job
+us_ps_collection_tot.job
+
+have not been tested or if tested have been found to have problems 
+in at least one case (mainly FR). However a few bugs have been found 
+in the pw.x code and some of the apparent PP problems might be now corrected. 
+These PPs will be moved to the other files as soon as they are reasonably 
+tested or improved.
+
+NC-PPs that are in 
+nc_ps_collection.job
+
+are just starting values for the core radii. This part of the library 
+needs much more work. Really few tests of this library have been done
+so far. 
+
+Please report to the pw_forum or to me any problem that you find. 
+
+Andrea Dal Corso
+19/12/2011
+
 ---------------------------------------------------------
 pslibrary.0.1 (ADC, Aug. 2010)
 
@@ -101,3 +136,5 @@ SR + FR changes: NC-PP: Sb and As had not SO projectors in the p channel
 SR + FR changes: NC-PP: Ge had not SO projectors in the (local) p channel.
                 Now d is local.
                 NC-PP: Relativistic Sn had still a ghost. Core radii increased.
+
+SR + FR changes : NC-PP In had a ghost.
