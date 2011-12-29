@@ -1,145 +1,79 @@
 This directory contains a collection of input files for the ld1.x
-code distributed with the Quantum ESPRESSO package. It
-allows the generation of PAW datasets or US pseudopotentials,
+atomic code which is distributed with the Quantum ESPRESSO package
+(See http://www.quantum-espresso.org).
+It allows the generation of PAW data-sets or US pseudopotentials,
 scalar relativistic or fully relativistic, for several elements. 
-Starting with version 0.2.1 also the TM norm conserving radii are
-distributed for the generation of NC pseudopotentials.
-To generate the pseudopotentials change the file make_ps inserting
-the path to the QE package.
+To generate the pseudopotentials, you need to change the file make_ps 
+inserting the path to the QE package.
 Then give the command:
 
 . ./make_all_ps
 
-or enter in one  "functional" directory  and give the command:
+to create the PPs for the pz, pbe, rel-pz and rel-pbe functionals,
+or enter in a "functional" directory and give the command:
 
 . ../make_ps
 
-The UPF pseudopotentials will appear in the directories 
-functional/PSEUDOPOTENTIALS.
+The UPF pseudopotentials will appear in the directory
+ functional/PSEUDOPOTENTIALS. 
+See the file Modules/funct.f90 in the QE distribution for a list of the
+available functionals. 
+NB: Only LDA or GGA PPs can be created by the ld1.x code so no hybrid 
+functional, or meta-GGA PPs is presently available.
 
-Note that these pseudopotentials are very experimental. 
-They use new features of the ld1.x code that are not extensively
-tested.
-So check them very carefully before using and please give feedback
-if you find better sets of parameters or if some property turns
-out to be wrong.
+Andrea Dal Corso
+12/2011
 
-Andrea Dal Corso 
-Aug. 2010
+--------------------------------------------------------------------------
 
----------------------------------------------------------------------------
-Situation of the pslibrary project:
-
-PAW datasets and US-PPs that are in 
+Note that these pseudopotentials are experimental. 
+By default, only PAW data-sets and US-PPs that are in 
 
  paw_ps_collection.job
  us_ps_collection.job
 
-have been tested in some cases and no error has been reported so far. 
-Those that were in pslibrary.0.1 have been tested estensively, the
-others are under test right now.
+are generated. These PPs have been tested in some cases and no error 
+has been reported so far. The PPs that were in pslibrary.0.1 
+(See ChangeLog file) have been tested extensively, the others are 
+under test right now. Only the pz, pbe, rel-pz and rel-pbe functionals
+have been tested. Please report any problem that you find with the
+other functionals.
 
-PAW datasets and US-PPs that are in
+PAW data-sets and US-PPs that are in
 
 paw_ps_collection_tot.job
 us_ps_collection_tot.job
 
-have not been tested or if tested have been found to have problems 
-in at least one case (mainly FR). However a few bugs have been found 
+have not been tested or if tested have been found to have at least
+one problem (mainly in the FR case). However a few bugs have been found 
 in the pw.x code and some of the apparent PP problems might be now corrected. 
-These PPs will be moved to the other files as soon as they are reasonably 
-tested or improved.
 
-NC-PPs that are in 
-nc_ps_collection.job
-
-are just starting values for the core radii. This part of the library 
-needs much more work. Really few tests of this library have been done
-so far. 
+For testing purposes, starting with version 0.2.1 also the TM norm 
+conserving radii are distributed. 
+(NB: these radii have been originally imported from the file
+distributed with the Troullier and Martins (TM) atomic code.
+See http://bohr.inesc-mn.pt/~jlm/pseudo.html
+but they have not been tested. The file is maintained so improvement are 
+continuously made. However the status of this part of the library is far 
+from complete.)
 
 Please report to the pw_forum or to me any problem that you find. 
 
 Andrea Dal Corso
-19/12/2011
+12/2011
+----------------------------------------------------------------------------
 
----------------------------------------------------------
+All the material included in this distribution is free software;
+you can redistribute it and/or modify it under the terms of the GNU
+General Public License as published by the Free Software Foundation;
+either version 2 of the License, or (at your option) any later version.
 
-Citation: If you write some paper using these PPs please cite both
-the name of the PP and the version of pslibrary that you have used.
+These programs are distributed in the hope that they will be useful, but
+WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY
+or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public License
+for more details.
 
----------------------------------------------------------
-pslibrary.0.1 (ADC, Aug. 2010)
+You should have received a copy of the GNU General Public License along
+with this program; if not, write to the Free Software Foundation, Inc.,
+675 Mass Ave, Cambridge, MA 02139, USA.
 
-First release of the pseudopotential library. The following PPs are available:
-
-H, B, C, N, O, F, Al, Si, P, S, Cl, Fe, Ni, Ag, Pt, Au, Pb.
-
----------------------------------------------------------
-pslibrary.0.2 (ADC, Feb. 2011)
-
-The following PPs have been added to the library:
-
-Li, Be, Na, Cu, Ga, As, Se, Br, Mo, Cd, Sn, I, Hf, Ta
-
----------------------------------------------------------
-pslibrary.0.2.1 (ADC, May 2011)
-
-A ghost in the Li PP has been removed. 
-
-The Fe PP substituted with a PP with 3s and 3p semicore states.
-
-Added an input file for the generation of norm conserving PPs with the same
-core radii suggested in the Troullier and Martins (TM) atomic code.
-
---------------------------------------------------------
-pslibrary.0.2.2 (ADC, Aug. 2011)
-
-Introduced the possibility to generate the PP for only one element and
-for all functionals. Edit the file make_ps and choose the element, then
-run make_all_ps.
-
-Introduced the possibility to have different parameters in the scalar 
-relativistic (SR) or in the fully relativistic (FR) case. 
-
-SR changes: Pb
-
-FR changes: Al, Pb 
-
-SR additions: Pd, Ge, In, Te, Bi, Zn, Hg
-
-FR additions: Pd, Ge, In, Te, Bi, Zn, Hg
-
-Removed PPs:
-In the NC case Cu and W were not working. 
---------------------------------------------------------
-
-pslibrary.0.2.3 (ADC, Dic. 2011)
-
-SR changes: NC-PP Ge and Sn PPs had a ghost. Improved PPs.
-
-Introduced two additional files with PAW and US PP inputs for remaining
-elements:
-
- Ar At Ba Ca Ce Co Cr Cs He Ir K Kr La Mg Mn Nb Ne Os Po Rb Rh Re Ru Sb
- Sc Sr Tc Ti Tl V Xe Y W Zr
-
-These PPs are known to have some problem in some case (mainly in the FR form)
-and need further tuning, but are a starting point for further optiminization,
-so use them at your own risk. 
-In order to add also these PPs to your list uncomment the appropriate lines
-in make_ps.
-
---------------------------------------------------------
-
-pslibrary.0.2.4 (ADC, WORK IN PROGRESS)
-
-SR + FR changes: NC-PP: Sb and As had not SO projectors in the p channel 
-                 (which was local). Now d is local.
-                 NC-PP: Ga with 3d in valence was too hard. Substituted with a 
-                        PP with 3d in the core.
-                 
-SR + FR changes: NC-PP: Ge had not SO projectors in the (local) p channel.
-                Now d is local.
-                NC-PP: Relativistic Sn had still a ghost. Core radii increased.
-
-SR + FR changes : NC-PP In had a ghost.

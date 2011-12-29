@@ -1,0 +1,79 @@
+---------------------------------------------------------
+pslibrary.0.1 (ADC, Aug. 2010)
+
+First release of the pseudopotential library. The following PPs 
+are available:
+
+H, B, C, N, O, F, Al, Si, P, S, Cl, Fe, Ni, Ag, Pt, Au, Pb.
+
+---------------------------------------------------------
+pslibrary.0.2 (ADC, Feb. 2011)
+
+The following PPs have been added to the library:
+
+Li, Be, Na, Cu, Ga, As, Se, Br, Mo, Cd, Sn, I, Hf, Ta
+
+---------------------------------------------------------
+pslibrary.0.2.1 (ADC, May 2011)
+
+A ghost in the Li PP has been removed. 
+
+The Fe PP substituted with a PP with 3s and 3p semicore states.
+
+Added an input file for the generation of norm conserving PPs with the same
+core radii suggested in the Troullier and Martins (TM) atomic code.
+
+--------------------------------------------------------
+pslibrary.0.2.2 (ADC, Aug. 2011)
+
+Introduced the possibility to generate the PP for only one element and
+for all functionals. Edit the file make_ps and choose the element, then
+run make_all_ps.
+
+Introduced the possibility to have different parameters in the scalar 
+relativistic (SR) or in the fully relativistic (FR) case. 
+
+SR changes: Pb
+
+FR changes: Al, Pb 
+
+SR additions: Pd, Ge, In, Te, Bi, Zn, Hg
+
+FR additions: Pd, Ge, In, Te, Bi, Zn, Hg
+
+Removed PPs:
+In the NC case Cu and W were not working. 
+--------------------------------------------------------
+
+pslibrary.0.2.3 (ADC, Dic. 2011)
+
+SR changes: NC-PP Ge and Sn PPs had a ghost. Improved PPs.
+
+Introduced two additional files with PAW and US PP inputs for remaining
+elements:
+
+ Ar At Ba Ca Ce Co Cr Cs He Ir K Kr La Mg Mn Nb Ne Os Po Rb Rh Re Ru Sb
+ Sc Sr Tc Ti Tl V Xe Y W Zr
+
+These PPs are known to have some problem in some case (mainly in the FR form)
+and need further tuning, but are a starting point for further optiminization,
+so use them at your own risk. 
+In order to add also these PPs to your list uncomment the appropriate lines
+in make_ps.
+
+--------------------------------------------------------
+
+pslibrary.0.2.4 (ADC, WORK IN PROGRESS)
+
+SR + FR changes: NC-PP: Sb and As had not SO projectors in the p channel 
+(which was local). Now d is local. 
+NC-PP: Ga with 3d in valence was too hard. Substituted with a 
+PP with 3d in the core.
+
+SR + FR changes: NC-PP: Ge had not SO projectors in the (local) p channel.
+Now d is local.
+NC-PP: Relativistic Sn had still a ghost. Core radii increased.
+
+SR + FR changes : NC-PP In had a ghost.
+
+PP transferred from the _tot file: Rh (SR+FR), Ir (SR+FR), Ar 
