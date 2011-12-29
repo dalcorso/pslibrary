@@ -3,7 +3,8 @@
 PWDIR='/path_to_quantum_espresso/'
 element='all'
 
-# do not change after this line
+# do not change after this line. Uncomment the appropriate line if
+# you want to test the additional PPs.
 
 work=./WORK
 . $PWDIR/examples/environment_variables
@@ -12,14 +13,22 @@ BIN_DIR=$PWDIR/bin
 mkdir $work >& /dev/null
 mkdir PSEUDOPOTENTIALS >& /dev/null
 
-#. ../nc_ps_collection.job
-
 . ../paw_ps_collection.job
-
-#. ../paw_ps_collection_tot.job
-
 . ../us_ps_collection.job
 
+#  Uncomment the following line to generate the NC-PPs. Be very careful
+#  these PPs are completely untested.
+#
+#. ../nc_ps_collection.job
+
+#  Uncomment the following line to generate additional PAW data sets. Be
+#  careful these PPs might have problems.
+#
+#. ../paw_ps_collection_tot.job
+
+#  Uncomment the following line to generate additional US-PPs. Be
+#  careful these PPs might have problems.
+#
 #. ../us_ps_collection_tot.job
 
 ld1_command="$PARA_PREFIX $BIN_DIR/ld1.x $PARA_POSTFIX"

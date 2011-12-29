@@ -18,11 +18,17 @@ The UPF pseudopotentials will appear in the directory
  functional/PSEUDOPOTENTIALS. 
 See the file Modules/funct.f90 in the QE distribution for a list of the
 available functionals. 
-NB: Only LDA or GGA PPs can be created by the ld1.x code so no hybrid 
-functional, or meta-GGA PPs is presently available.
+NB: Only LDA or GGA PPs can be created by the ld1.x code. Hybrid 
+functionals or meta-GGA PPs are not presently available.
+
+If you need a PP for one element, change the variable 
+
+element='all'
+
+with the element name (examples Si, C, Fe, etc.).
 
 Andrea Dal Corso
-12/2011
+Dic. 2011
 
 --------------------------------------------------------------------------
 
@@ -36,7 +42,7 @@ are generated. These PPs have been tested in some cases and no error
 has been reported so far. The PPs that were in pslibrary.0.1 
 (See ChangeLog file) have been tested extensively, the others are 
 under test right now. Only the pz, pbe, rel-pz and rel-pbe functionals
-have been tested. Please report any problem that you find with the
+have been tested. Please report any problem that you find with 
 other functionals.
 
 PAW data-sets and US-PPs that are in
@@ -47,20 +53,24 @@ us_ps_collection_tot.job
 have not been tested or if tested have been found to have at least
 one problem (mainly in the FR case). However a few bugs have been found 
 in the pw.x code and some of the apparent PP problems might be now corrected. 
+To generate these PPs you need to enter in the make_ps file and uncomment
+the appropriate line.
 
 For testing purposes, starting with version 0.2.1 also the TM norm 
 conserving radii are distributed. 
 (NB: these radii have been originally imported from the file
 distributed with the Troullier and Martins (TM) atomic code.
 See http://bohr.inesc-mn.pt/~jlm/pseudo.html
-but they have not been tested. The file is maintained so improvement are 
+but they have not been tested. The file is maintained so improvements are 
 continuously made. However the status of this part of the library is far 
 from complete.)
+To generate these PPs you need to enter in the make_ps file and uncomment
+the appropriate line.
 
 Please report to the pw_forum or to me any problem that you find. 
 
 Andrea Dal Corso
-12/2011
+Dic. 2011
 ----------------------------------------------------------------------------
 
 All the material included in this distribution is free software;
