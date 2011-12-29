@@ -1,20 +1,40 @@
 #!/bin/bash
 
-tar_directory=pslibrary.0.2.3 
+tar_directory=pslibrary.1.0.0 
 mkdir $tar_directory
 
 cp AAREADME clean clean_all make_ps make_all_ps paw_ps_collection.job \
-   paw_ps_collection_tot.job us_ps_collection.job us_ps_collection_tot.job \
-   nc_ps_collection.job $tar_directory
+   us_ps_collection.job nc_ps_collection.job paw_ps_collection_tot.job us_ps_collection_tot.job make_tar $tar_directory
 
 mkdir $tar_directory/pz
-mkdir $tar_directory/pbe
 mkdir $tar_directory/rel-pz
+mkdir $tar_directory/pbe
 mkdir $tar_directory/rel-pbe
+mkdir $tar_directory/bp
+mkdir $tar_directory/rel-bp
+mkdir $tar_directory/pbesol
+mkdir $tar_directory/rel-pbesol
+mkdir $tar_directory/pw91
+mkdir $tar_directory/rel-pw91
+mkdir $tar_directory/revpbe
+mkdir $tar_directory/rel-revpbe
+mkdir $tar_directory/wc
+mkdir $tar_directory/rel-wc
+
 
 cp pz/enviroment.job $tar_directory/pz
-cp pbe/enviroment.job $tar_directory/pbe
 cp rel-pz/enviroment.job $tar_directory/rel-pz
+cp pbe/enviroment.job $tar_directory/pbe
 cp rel-pbe/enviroment.job $tar_directory/rel-pbe
+cp bp/enviroment.job $tar_directory/bp
+cp rel-bp/enviroment.job $tar_directory/rel-bp
+cp pbesol/enviroment.job $tar_directory/pbesol
+cp rel-pbesol/enviroment.job $tar_directory/rel-pbesol
+cp pw91/enviroment.job $tar_directory/pw91
+cp rel-pw91/enviroment.job $tar_directory/rel-pw91
+cp revpbe/enviroment.job $tar_directory/revpbe
+cp rel-revpbe/enviroment.job $tar_directory/rel-revpbe
+cp wc/enviroment.job $tar_directory/wc
+cp rel-wc/enviroment.job $tar_directory/rel-wc
 
 tar -czvf $tar_directory.tar.gz $tar_directory
