@@ -12,7 +12,7 @@ BIN_DIR=$PWDIR/bin
 mkdir $work >& /dev/null
 mkdir PSEUDOPOTENTIALS >& /dev/null
 
-. ../nc_ps_collection.job
+#. ../nc_ps_collection.job
 
 . ../paw_ps_collection.job
 
@@ -29,7 +29,6 @@ echo "ld1_command =" $ld1_command
 if [ $element = "all" ] ;
 then
 
-   \rm -f $work/* >& /dev/null
    for atom in *.in ; do
        echo -e "Making   $atom  ...\c"
        $ld1_command < $atom > $work/$atom.out
@@ -48,4 +47,3 @@ fi
 
 \mv *.UPF PSEUDOPOTENTIALS
 \mv *.in WORK
-\rm -fr ld1* 
