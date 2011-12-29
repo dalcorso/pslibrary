@@ -100,6 +100,35 @@ EOF
 
 fi
 
+cat > Ar.$fct-rrkjus.in << EOF
+ &input
+   title='Ar',
+   zed=18.0,
+   rel=$nrel,
+   config='[Ar] 3d-2',
+   iswitch=3,
+   dft='$gfun'
+ /
+ &inputp
+   pseudotype=3,
+   file_pseudopw='Ar.$fct-rrkjus.UPF',
+   author='ADC',
+   lloc=2,
+   which_augfun='PSQ',
+   rmatch_augfun=1.0,
+   nlcc=.true.,
+   new_core_ps=.true.,
+   rcore=0.9,
+   tm=.true.
+ /
+5
+3S  1  0  2.00  0.00  1.60  1.80  0.0
+3S  1  0  0.00  0.20  1.40  1.80  0.0
+3P  2  1  6.00  0.00  1.90  2.10  0.0
+3P  2  1  0.00  0.20  1.10  2.10  0.0
+3D  3  2 -2.00  0.45  1.80  1.80  0.0
+EOF
+
 cat > As.$fct-rrkjus.in << EOF
  &input
    title='As',
@@ -696,6 +725,74 @@ cat > In.$fct-rrkjus.in << EOF
 4D  3  2  0.00 -0.60  1.60  2.00  0.0
 EOF
 
+if [ $nrel = 2 ]
+then
+
+cat > Ir.$fct-rrkjus.in << EOF
+ &input
+   title='Ir',
+   zed=77.,
+   rel=$nrel,
+   config='[Xe] 4f14.0 5d7.0 6s2.0 6p0.0',
+   iswitch=3,
+   dft='$gfun'
+ /
+ &inputp
+   pseudotype=3,
+   file_pseudopw='Ir.$fct-rrkjus.UPF',
+   author='ADC',
+   lloc=-1,
+   rcloc=2.3,
+   which_augfun='PSQ',
+   rmatch_augfun=1.0,
+   nlcc=.true.,
+   new_core_ps=.true.,
+   rcore=1.6,
+   tm=.true.
+ /
+6
+6S  1  0  2.00  0.00  2.00  2.40  0.0
+6S  1  0  0.00  2.50  2.00  2.40  0.0
+6P  2  1  0.00  0.00  2.30  2.60  0.0
+6P  2  1  0.00  3.50  2.30  2.60  0.0
+5D  3  2  7.00  0.00  1.80  2.20  0.0
+5D  3  2  0.00  0.80  1.80  2.20  0.0
+EOF
+
+else
+
+cat > Ir.$fct-rrkjus.in << EOF
+ &input
+   title='Ir',
+   zed=77.,
+   rel=$nrel,
+   config='[Xe] 4f14.0 5d7.0 6s2.0 6p0.0',
+   iswitch=3,
+   dft='$gfun'
+ /
+ &inputp
+   pseudotype=3,
+   file_pseudopw='Ir.$fct-rrkjus.UPF',
+   author='ADC',
+   lloc=-1,
+   rcloc=2.5,
+   which_augfun='PSQ',
+   rmatch_augfun=1.0,
+   nlcc=.true.,
+   new_core_ps=.true.,
+   rcore=1.6,
+   tm=.true.
+ /
+6
+6S  1  0  2.00  0.00  2.20  2.30  0.0
+6S  1  0  0.00  0.40  2.20  2.30  0.0
+6P  2  1  0.00  0.00  2.30  2.50  0.0
+6P  2  1  0.00  6.40  2.30  2.50  0.0
+5D  3  2  7.00  0.00  1.80  2.10  0.0
+5D  3  2  0.00  4.30  1.80  2.10  0.0
+EOF
+
+fi
 
 cat > Li.$fct-rrkjus.in << EOF
  &input
@@ -1027,6 +1124,77 @@ cat > P.$fct-rrkjus.in << EOF
 3P  2  1  0.00  6.00  2.00  2.10  0.0
 3D  3  2 -2.00 -0.30  1.90  1.90  0.0
 EOF
+
+if [ $nrel = 2 ]
+then
+
+cat > Rh.$fct-rrkjus.in << EOF
+ &input
+   title='Rh',
+   zed=45.,
+   rel=$nrel,
+   config='[Kr] 4d8. 5s1.0 5p0.0',
+   iswitch=3,
+   dft='$gfun'
+ /
+ &inputp
+   pseudotype=3,
+   file_pseudopw='Rh.$fct-rrkjus.UPF',
+   author='ADC',
+   lloc=-1,
+   rcloc=2.3,
+   which_augfun='PSQ',
+   rmatch_augfun=0.9,
+   nlcc=.true.,
+   new_core_ps=.true.,
+   rcore=0.9,
+   tm=.true.
+ /
+7
+4S  1  0  2.00  0.00  1.30  1.70  0.0
+5S  2  0  1.00  0.00  1.10  1.70  0.0
+5S  2  0  0.00  6.30  1.10  1.70  0.0
+4P  2  1  6.00  0.00  1.50  1.70  0.0
+5P  3  1  0.00  0.00  1.10  2.10  0.0
+4D  3  2  8.00  0.00  1.70  1.90  0.0
+4D  3  2 -2.00  0.30  1.00  1.90  0.0
+EOF
+
+else
+
+cat > Rh.$fct-rrkjus.in << EOF
+ &input
+   title='Rh',
+   zed=45.,
+   rel=$nrel,
+   config='[Kr] 4d7. 5s2.0 5p0.0',
+   iswitch=3,
+   dft='$gfun'
+ /
+ &inputp
+   pseudotype=3,
+   file_pseudopw='Rh.$fct-rrkjus.UPF',
+   author='ADC',
+   lloc=-1,
+   rcloc=2.3,
+   which_augfun='PSQ',
+   rmatch_augfun=0.9,
+   nlcc=.true.,
+   new_core_ps=.true.,
+   rcore=0.9,
+   tm=.true.
+ /
+7
+4S  1  0  2.00  0.00  1.30  1.70  0.0
+5S  2  0  2.00  0.00  1.10  1.70  0.0
+5S  2  0  0.00  6.00  1.10  1.70  0.0
+4P  2  1  6.00  0.00  1.50  1.70  0.0
+5P  3  1  0.00  0.00  1.10  2.10  0.0
+4D  3  2  7.00  0.00  1.70  1.90  0.0
+4D  3  2 -2.00  0.30  1.00  1.90  0.0
+EOF
+
+fi
 
 cat > S.$fct-rrkjus.in << EOF
  &input
