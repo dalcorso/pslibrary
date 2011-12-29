@@ -1,0 +1,7 @@
+#!/bin/bash
+
+fct='rel-pw91'
+
+gfun='PW91'
+
+nrel=2

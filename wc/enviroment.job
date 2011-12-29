@@ -1,0 +1,7 @@
+#!/bin/bash
+
+fct='wc'
+
+gfun='WC'
+
+nrel=1

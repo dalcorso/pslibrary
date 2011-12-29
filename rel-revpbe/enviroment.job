@@ -1,0 +1,7 @@
+#!/bin/bash
+
+fct='rel-revpbe'
+
+gfun='REVPBE'
+
+nrel=2
