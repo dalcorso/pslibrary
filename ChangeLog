@@ -77,3 +77,10 @@ NC-PP: Relativistic Sn had still a ghost. Core radii increased.
 SR + FR changes : NC-PP In had a ghost.
 
 PP transferred from the _tot file: Rh (SR+FR), Ir (SR+FR), Ar 
+
+PPs names now follows the indications of the QE PP distribution. Semicore
+states included in the PP are indicated in the PP name.
+Added two files containing alternative PPs. Presently:
+Fe : SR and FR without semicore 3s and 3p states.
+Pt : SR and FR PPs with semicore 5s and 5p states.
+Au : SR and FE PPs with semicore 5s and 5p states.

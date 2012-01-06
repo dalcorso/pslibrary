@@ -10,7 +10,7 @@
 
 . enviroment.job
 
-cat > Ag.$fct-paw_kj.in << EOF
+cat > Ag.$fct-dn-kjpaw.in << EOF
  &input
    title='Ag',
    zed=47.,
@@ -22,7 +22,7 @@ cat > Ag.$fct-paw_kj.in << EOF
  &inputp
    lpaw=.true.,
    pseudotype=3,
-   file_pseudopw='Ag.$fct-paw_kj.UPF',
+   file_pseudopw='Ag.$fct-dn-kjpaw.UPF',
    author='ADC',
    lloc=-1,
    rcloc=2.4,
@@ -43,7 +43,7 @@ EOF
 if [ $nrel = 2 ]
 then
 
-cat > Al.$fct-paw_kj.in << EOF
+cat > Al.$fct-n-kjpaw.in << EOF
  &input
    title='Al',
    zed=13.0,
@@ -55,7 +55,7 @@ cat > Al.$fct-paw_kj.in << EOF
  &inputp
    lpaw=.true.,
    pseudotype=3,
-   file_pseudopw='Al.$fct-paw_kj.UPF',
+   file_pseudopw='Al.$fct-n-kjpaw.UPF',
    author='ADC',
    lloc=2,
    which_augfun='PSQ',
@@ -73,7 +73,7 @@ EOF
 
 else
 
-cat > Al.$fct-paw_kj.in << EOF
+cat > Al.$fct-n-kjpaw.in << EOF
  &input
    title='Al',
    zed=13.0,
@@ -85,7 +85,7 @@ cat > Al.$fct-paw_kj.in << EOF
  &inputp
    lpaw=.true.,
    pseudotype=3,
-   file_pseudopw='Al.$fct-paw_kj.UPF',
+   file_pseudopw='Al.$fct-n-kjpaw.UPF',
    author='ADC',
    lloc=2,
    which_augfun='PSQ',
@@ -103,7 +103,7 @@ EOF
 
 fi
 
-cat > Ar.$fct-paw_kj.in << EOF
+cat > Ar.$fct-n-kjpaw.in << EOF
  &input
    title='Ar',
    zed=18.0,
@@ -115,7 +115,7 @@ cat > Ar.$fct-paw_kj.in << EOF
  &inputp
    lpaw=.true.,
    pseudotype=3,
-   file_pseudopw='Ar.$fct-paw_kj.UPF',
+   file_pseudopw='Ar.$fct-n-kjpaw.UPF',
    author='ADC',
    lloc=2,
    which_augfun='BESSEL',
@@ -133,7 +133,7 @@ cat > Ar.$fct-paw_kj.in << EOF
 3D  3  2 -2.00  0.45  1.80  1.80  0.0
 EOF
 
-cat > As.$fct-paw_kj.in << EOF
+cat > As.$fct-n-kjpaw.in << EOF
  &input
    title='As',
    zed=33.,
@@ -145,7 +145,7 @@ cat > As.$fct-paw_kj.in << EOF
  &inputp
    lpaw=.true.,
    pseudotype=3,
-   file_pseudopw='As.$fct-paw_kj.UPF',
+   file_pseudopw='As.$fct-n-kjpaw.UPF',
    author='ADC',
    lloc=2,
    which_augfun ='PSQ',
@@ -163,7 +163,7 @@ cat > As.$fct-paw_kj.in << EOF
 4D  3  2 -2.00  0.50  2.00  2.00  0.0
 EOF
 
-cat > Au.$fct-paw_kj.in << EOF
+cat > Au.$fct-dn-kjpaw.in << EOF
  &input
    title='Au',
    zed=79.,
@@ -175,7 +175,7 @@ cat > Au.$fct-paw_kj.in << EOF
  &inputp
    lpaw=.true.,
    pseudotype=3,
-   file_pseudopw='Au.$fct-paw_kj.UPF',
+   file_pseudopw='Au.$fct-dn-kjpaw.UPF',
    author='ADC',
    lloc=-2,
    rcloc=2.4,
@@ -195,7 +195,7 @@ cat > Au.$fct-paw_kj.in << EOF
 5D  3  2  0.00 -0.30  1.10  2.20  0.0
 EOF
 
-cat > B.$fct-paw_kj.in << EOF
+cat > B.$fct-n-kjpaw.in << EOF
  &input
    title='B',
    zed=5.0,
@@ -207,7 +207,7 @@ cat > B.$fct-paw_kj.in << EOF
  &inputp
    lpaw=.true.,
    pseudotype=3,
-   file_pseudopw='B.$fct-paw_kj.UPF',
+   file_pseudopw='B.$fct-n-kjpaw.UPF',
    author='ADC',
    lloc=2,
    which_augfun ='BESSEL',
@@ -223,7 +223,7 @@ cat > B.$fct-paw_kj.in << EOF
 3D  3  2 -2.00  0.15  1.20  1.20  0.0
 EOF
 
-cat > Be.$fct-paw_kj.in << EOF
+cat > Be.$fct-n-kjpaw.in << EOF
  &input
    title='Be',
    zed=4.0,
@@ -235,7 +235,7 @@ cat > Be.$fct-paw_kj.in << EOF
  &inputp
    lpaw=.true.,
    pseudotype=3,
-   file_pseudopw='Be.$fct-paw_kj.UPF',
+   file_pseudopw='Be.$fct-n-kjpaw.UPF',
    author='ADC',
    lloc=2,
    rcloc=1.2,
@@ -257,7 +257,7 @@ EOF
 if [ $nrel = 2 ]
 then
 
-cat > Bi.$fct-paw_kj.in << EOF
+cat > Bi.$fct-dn-kjpaw.in << EOF
  &input
    title='Bi',
    zed=83.,
@@ -269,7 +269,7 @@ cat > Bi.$fct-paw_kj.in << EOF
  &inputp
    lpaw=.true.,
    pseudotype=3,
-   file_pseudopw='Bi.$fct-paw_kj.UPF',
+   file_pseudopw='Bi.$fct-dn-kjpaw.UPF',
    author='ADC',
    lloc=-2,
    rcloc=2.2,
@@ -291,7 +291,7 @@ EOF
 
 else
 
-cat > Bi.$fct-paw_kj.in << EOF
+cat > Bi.$fct-dn-kjpaw.in << EOF
  &input
    title='Bi',
    zed=83.,
@@ -303,7 +303,7 @@ cat > Bi.$fct-paw_kj.in << EOF
  &inputp
    lpaw=.true.,
    pseudotype=3,
-   file_pseudopw='Bi.$fct-paw_kj.UPF',
+   file_pseudopw='Bi.$fct-dn-kjpaw.UPF',
    author='ADC',
    lloc=-1,
    rcloc=2.2,
@@ -326,7 +326,7 @@ EOF
 fi
 
 
-cat > Br.$fct-paw_kj.in << EOF
+cat > Br.$fct-n-kjpaw.in << EOF
  &input
    title='Br',
    zed=35.,
@@ -338,7 +338,7 @@ cat > Br.$fct-paw_kj.in << EOF
  &inputp
    lpaw=.true.,
    pseudotype=3,
-   file_pseudopw='Br.$fct-paw_kj.UPF',
+   file_pseudopw='Br.$fct-n-kjpaw.UPF',
    author='ADC',
    lloc=2,
    which_augfun='PSQ',
@@ -356,7 +356,7 @@ cat > Br.$fct-paw_kj.in << EOF
 4D  3  2 -2.00 -0.50  1.90  1.90  0.0
 EOF
 
-cat > C.$fct-paw_kj.in << EOF
+cat > C.$fct-n-kjpaw.in << EOF
  &input
    title='C',
    zed=6,
@@ -368,7 +368,7 @@ cat > C.$fct-paw_kj.in << EOF
  &inputp
    lpaw=.true.,
    pseudotype=3,
-   file_pseudopw='C.$fct-paw_kj.UPF',
+   file_pseudopw='C.$fct-n-kjpaw.UPF',
    author='"Lorenzo Paulatto" <paulatto@sissa.it>',
    lloc=2,
    which_augfun ='BESSEL',
@@ -386,7 +386,7 @@ cat > C.$fct-paw_kj.in << EOF
 3D  3  2 -2.00  0.10  1.10  1.10  0.0
 EOF
 
-cat > Cd.$fct-paw_kj.in << EOF
+cat > Cd.$fct-dn-kjpaw.in << EOF
  &input
    title='Cd',
    zed=48.,
@@ -398,7 +398,7 @@ cat > Cd.$fct-paw_kj.in << EOF
  &inputp
    lpaw=.true.,
    pseudotype=3,
-   file_pseudopw='Cd.$fct-paw_kj.UPF',
+   file_pseudopw='Cd.$fct-dn-kjpaw.UPF',
    author='ADC',
    lloc=-1,
    rcloc=1.9,
@@ -418,7 +418,7 @@ cat > Cd.$fct-paw_kj.in << EOF
 4D  3  2  0.00  4.30  1.80  2.20  0.0
 EOF
 
-cat > Cl.$fct-paw_kj.in << EOF
+cat > Cl.$fct-n-kjpaw.in << EOF
  &input
    title='Cl',
    zed=17,
@@ -430,7 +430,7 @@ cat > Cl.$fct-paw_kj.in << EOF
  &inputp
    lpaw=.true.,
    pseudotype=3,
-   file_pseudopw='Cl.$fct-paw_kj.UPF',
+   file_pseudopw='Cl.$fct-n-kjpaw.UPF',
    author='ADC',
    lloc=2,
    which_augfun ='PSQ',
@@ -448,7 +448,7 @@ cat > Cl.$fct-paw_kj.in << EOF
 3D  3  2 -2.00  0.15  1.80  1.80  0.0
 EOF
 
-cat > Cu.$fct-paw_kj.in << EOF
+cat > Cu.$fct-dn-kjpaw.in << EOF
  &input
    title='Cu',
    zed=29.,
@@ -460,7 +460,7 @@ cat > Cu.$fct-paw_kj.in << EOF
  &inputp
    lpaw=.true.,
    pseudotype=3,
-   file_pseudopw='Cu.$fct-paw_kj.UPF',
+   file_pseudopw='Cu.$fct-dn-kjpaw.UPF',
    author='ADC',
    lloc=-1,
    rcloc=1.9,
@@ -479,39 +479,8 @@ cat > Cu.$fct-paw_kj.in << EOF
 3D  3  2  0.00  2.30  1.50  1.90  0.0
 EOF
 
-cat > Ga.$fct-paw_kj.in << EOF
- &input
-   title='Ga',
-   zed=31.,
-   rel=$nrel,
-   config='[Ar] 3d10.0 4s2.0 4p1.0',
-   iswitch=3,
-   dft='$gfun'
- /
- &inputp
-   lpaw=.true.,
-   pseudotype=3,
-   file_pseudopw='Ga.$fct-paw_kj.UPF',
-   author='ADC',
-   lloc=-1,
-   rcloc=2.0,
-   which_augfun='BESSEL',
-   rmatch_augfun=1.9,
-   nlcc=.true.,
-   new_core_ps=.true.,
-   rcore=1.0,
-   tm=.true.
- /
-6
-4S  1  0  2.00  0.00  1.80  2.00  0.0
-4S  1  0  0.00  3.10  1.80  2.00  0.0
-4P  2  1  1.00  0.00  2.30  2.50  0.0
-4P  2  1  0.00  6.30  2.30  2.50  0.0
-3D  3  2 10.00  0.00  1.60  1.90  0.0
-3D  3  2  0.00  1.30  1.60  1.90  0.0
-EOF
 
-cat > Fe.$fct-paw_kj.in << EOF
+cat > Fe.$fct-spn-kjpaw.in << EOF
  &input
    title='Fe',
    zed=26.,
@@ -523,7 +492,7 @@ cat > Fe.$fct-paw_kj.in << EOF
  &inputp
    lpaw=.true.,
    pseudotype=3,
-   file_pseudopw='Fe.$fct-paw_kj.UPF',
+   file_pseudopw='Fe.$fct-spn-kjpaw.UPF',
    author='ADC',
    lloc=-2,
    rcloc=1.8,
@@ -543,7 +512,7 @@ cat > Fe.$fct-paw_kj.in << EOF
 3D  3  2  0.00 -0.40  1.40  2.00  0.0
 EOF
 
-cat > F.$fct-paw_kj.in << EOF
+cat > F.$fct-n-kjpaw.in << EOF
  &input
    title='F',
    zed=9.0,
@@ -555,7 +524,7 @@ cat > F.$fct-paw_kj.in << EOF
  &inputp
    lpaw=.true.,
    pseudotype=3,
-   file_pseudopw='F.$fct-paw_kj.UPF',
+   file_pseudopw='F.$fct-n-kjpaw.UPF',
    author='ADC',
    lloc=2,
    which_augfun ='PSQ',
@@ -572,7 +541,39 @@ cat > F.$fct-paw_kj.in << EOF
 3D  3  2 -2.00  0.15  1.20  1.20  0.0
 EOF
 
-cat > Ge.$fct-paw_kj.in << EOF
+cat > Ga.$fct-dn-kjpaw.in << EOF
+ &input
+   title='Ga',
+   zed=31.,
+   rel=$nrel,
+   config='[Ar] 3d10.0 4s2.0 4p1.0',
+   iswitch=3,
+   dft='$gfun'
+ /
+ &inputp
+   lpaw=.true.,
+   pseudotype=3,
+   file_pseudopw='Ga.$fct-dn-kjpaw.UPF',
+   author='ADC',
+   lloc=-1,
+   rcloc=2.0,
+   which_augfun='BESSEL',
+   rmatch_augfun=1.9,
+   nlcc=.true.,
+   new_core_ps=.true.,
+   rcore=1.0,
+   tm=.true.
+ /
+6
+4S  1  0  2.00  0.00  1.80  2.00  0.0
+4S  1  0  0.00  3.10  1.80  2.00  0.0
+4P  2  1  1.00  0.00  2.30  2.50  0.0
+4P  2  1  0.00  6.30  2.30  2.50  0.0
+3D  3  2 10.00  0.00  1.60  1.90  0.0
+3D  3  2  0.00  1.30  1.60  1.90  0.0
+EOF
+
+cat > Ge.$fct-dn-kjpaw.in << EOF
  &input
    title='Ge',
    zed=32.,
@@ -584,7 +585,7 @@ cat > Ge.$fct-paw_kj.in << EOF
  &inputp
    lpaw=.true.,
    pseudotype=3,
-   file_pseudopw='Ge.$fct-paw_kj.UPF',
+   file_pseudopw='Ge.$fct-dn-kjpaw.UPF',
    author='ADC',
    lloc=-1,
    rcloc=2.2,
@@ -604,7 +605,7 @@ cat > Ge.$fct-paw_kj.in << EOF
 3D  3  2  0.00 -0.40  1.50  1.80  0.0
 EOF
 
-cat > In.$fct-paw_kj.in << EOF
+cat > In.$fct-dn-kjpaw.in << EOF
  &input
    title='In',
    zed=49.,
@@ -616,7 +617,7 @@ cat > In.$fct-paw_kj.in << EOF
  &inputp
    lpaw=.true.,
    pseudotype=3,
-   file_pseudopw='In.$fct-paw_kj.UPF',
+   file_pseudopw='In.$fct-dn-kjpaw.UPF',
    author='ADC',
    lloc=-1,
    rcloc=1.9,
@@ -639,7 +640,7 @@ EOF
 if [ $nrel = 2 ] 
 then
 
-cat > Ir.$fct-paw_kj.in << EOF
+cat > Ir.$fct-n-kjpaw.in << EOF
  &input
    title='Ir',
    zed=77.,
@@ -651,7 +652,7 @@ cat > Ir.$fct-paw_kj.in << EOF
  &inputp
    lpaw=.true.,
    pseudotype=3,
-   file_pseudopw='Ir.$fct-paw_kj.UPF',
+   file_pseudopw='Ir.$fct-n-kjpaw.UPF',
    author='ADC',
    lloc=-1,
    rcloc=2.4,
@@ -671,7 +672,7 @@ EOF
 
 else
 
-cat > Ir.$fct-paw_kj.in << EOF
+cat > Ir.$fct-n-kjpaw.in << EOF
  &input
    title='Ir',
    zed=77.,
@@ -683,7 +684,7 @@ cat > Ir.$fct-paw_kj.in << EOF
  &inputp
    lpaw=.true.,
    pseudotype=3,
-   file_pseudopw='Ir.$fct-paw_kj.UPF',
+   file_pseudopw='Ir.$fct-n-kjpaw.UPF',
    author='ADC',
    lloc=-1,
    rcloc=2.5,
@@ -703,7 +704,7 @@ EOF
 
 fi
 
-cat > H.$fct-paw_kj.in << EOF
+cat > H.$fct-kjpaw.in << EOF
  &input
    title='H',
    zed=1,
@@ -715,7 +716,7 @@ cat > H.$fct-paw_kj.in << EOF
  &inputp
    lpaw=.true.,
    pseudotype=3,
-   file_pseudopw='H.$fct-paw_kj.UPF',
+   file_pseudopw='H.$fct-kjpaw.UPF',
    author='"Lorenzo Paulatto" <paulatto@sissa.it>',
    lloc=1,
    which_augfun='PSQ',
@@ -728,7 +729,7 @@ cat > H.$fct-paw_kj.in << EOF
 2P  2  1 -1.00  0.05  0.75  0.75  0.0
 EOF
 
-cat > Hf.$fct-paw_kj.in << EOF
+cat > Hf.$fct-spn-kjpaw.in << EOF
  &input
    title='Hf',
    zed=72.0,
@@ -740,7 +741,7 @@ cat > Hf.$fct-paw_kj.in << EOF
  &inputp
    lpaw=.true.,
    pseudotype=3,
-   file_pseudopw='Hf.$fct-paw_kj.UPF',
+   file_pseudopw='Hf.$fct-spn-kjpaw.UPF',
    author='ADC',
    lloc=-1,
    rcloc=2.5,
@@ -759,7 +760,7 @@ cat > Hf.$fct-paw_kj.in << EOF
 5D  3  2 -2.00  0.30  1.60  1.70  0.0
 EOF
 
-cat > Hg.$fct-paw_kj.in << EOF
+cat > Hg.$fct-dn-kjpaw.in << EOF
  &input
    title='Hg',
    zed=80.0,
@@ -771,7 +772,7 @@ cat > Hg.$fct-paw_kj.in << EOF
  &inputp
    lpaw=.true.,
    pseudotype=3,
-   file_pseudopw='Hg.$fct-paw_kj.UPF',
+   file_pseudopw='Hg.$fct-dn-kjpaw.UPF',
    author='ADC',
    lloc=-1,
    rcloc=1.9,
@@ -794,7 +795,7 @@ EOF
 if [ $nrel = 2 ]
 then
 
-cat > I.$fct-paw_kj.in << EOF
+cat > I.$fct-n-kjpaw.in << EOF
  &input
    title='I',
    zed=53.,
@@ -806,7 +807,7 @@ cat > I.$fct-paw_kj.in << EOF
  &inputp
    lpaw=.true.,
    pseudotype=3,
-   file_pseudopw='I.$fct-paw_kj.UPF',
+   file_pseudopw='I.$fct-n-kjpaw.UPF',
    author='ADC',
    lloc=2,
    which_augfun ='PSQ',
@@ -825,7 +826,7 @@ EOF
 
 else
 
-cat > I.$fct-paw_kj.in << EOF
+cat > I.$fct-n-kjpaw.in << EOF
  &input
    title='I',
    zed=53.,
@@ -837,7 +838,7 @@ cat > I.$fct-paw_kj.in << EOF
  &inputp
    lpaw=.true.,
    pseudotype=3,
-   file_pseudopw='I.$fct-paw_kj.UPF',
+   file_pseudopw='I.$fct-n-kjpaw.UPF',
    author='ADC',
    lloc=2,
    which_augfun ='PSQ',
@@ -856,7 +857,7 @@ EOF
 
 fi
 
-cat > Li.$fct-paw_kj.in << EOF
+cat > Li.$fct-s-kjpaw.in << EOF
  &input
    title='Li',
    zed=3.0,
@@ -868,7 +869,7 @@ cat > Li.$fct-paw_kj.in << EOF
  &inputp
    lpaw=.true.,
    pseudotype=3,
-   file_pseudopw='Li.$fct-paw_kj.UPF',
+   file_pseudopw='Li.$fct-s-kjpaw.UPF',
    author='ADC',
    lloc=-1,
    rcloc=1.3,
@@ -883,7 +884,7 @@ cat > Li.$fct-paw_kj.in << EOF
 2P  2  1  0.00  1.70  2.00  2.20  0.0
 EOF
 
-cat > Mo.$fct-paw_kj.in << EOF
+cat > Mo.$fct-spn-kjpaw.in << EOF
  &input
    title='Mo',
    zed=42.0,
@@ -895,7 +896,7 @@ cat > Mo.$fct-paw_kj.in << EOF
  &inputp
    lpaw=.true.,
    pseudotype=3,
-   file_pseudopw='Mo.$fct-paw_kj.UPF',
+   file_pseudopw='Mo.$fct-spn-kjpaw.UPF',
    author='ADC',
    lloc=-1,
    rcloc=2.4,
@@ -915,7 +916,7 @@ cat > Mo.$fct-paw_kj.in << EOF
 4D  3  2 -2.00  6.30  1.00  1.90  0.0
 EOF
 
-cat > Na.$fct-paw_kj.in << EOF
+cat > Na.$fct-spn-kjpaw.in << EOF
  &input
    title='Na',
    zed=11.0,
@@ -927,7 +928,7 @@ cat > Na.$fct-paw_kj.in << EOF
  &inputp
    lpaw=.true.,
    pseudotype=3,
-   file_pseudopw='Na.$fct-paw_kj.UPF',
+   file_pseudopw='Na.$fct-spn-kjpaw.UPF',
    author='ADC',
    lloc=2,
    which_augfun='PSQ',
@@ -942,7 +943,7 @@ cat > Na.$fct-paw_kj.in << EOF
 3D  3  2 -2.00  0.30  2.00  2.00  0.0
 EOF
 
-cat > Ni.$fct-paw_kj.in << EOF
+cat > Ni.$fct-n-kjpaw.in << EOF
  &input
    title='Ni',
    zed=28.,
@@ -954,7 +955,7 @@ cat > Ni.$fct-paw_kj.in << EOF
  &inputp
    lpaw=.true.,
    pseudotype=3,
-   file_pseudopw='Ni.$fct-paw_kj.UPF',
+   file_pseudopw='Ni.$fct-n-kjpaw.UPF',
    author='ADC',
    lloc=-1,
    rcloc=2.1,
@@ -974,7 +975,7 @@ cat > Ni.$fct-paw_kj.in << EOF
 3D 3 2 0.00 -0.40  0.70  1.80  0.0
 EOF
 
-cat > N.$fct-paw_kj.in << EOF
+cat > N.$fct-n-kjpaw.in << EOF
  &input
    title='N',
    zed=7.,
@@ -986,7 +987,7 @@ cat > N.$fct-paw_kj.in << EOF
  &inputp
    lpaw = .true.,
    pseudotype=3,
-   file_pseudopw='N.$fct-paw_kj.UPF',
+   file_pseudopw='N.$fct-n-kjpaw.UPF',
    author='"Lorenzo Paulatto" <paulatto@sissa.it>, modified by ADC',
    which_augfun='PSQ',
    rmatch_augfun=1.0,
@@ -1004,7 +1005,7 @@ cat > N.$fct-paw_kj.in << EOF
 3D  3  2 -2.00  0.15  1.10  1.10  0.0
 EOF
 
-cat > O.$fct-paw_kj.in << EOF
+cat > O.$fct-n-kjpaw.in << EOF
  &input
    title='O',
    zed=8,
@@ -1016,7 +1017,7 @@ cat > O.$fct-paw_kj.in << EOF
  &inputp
    lpaw=.true.,
    pseudotype=3,
-   file_pseudopw='O.$fct-paw_kj.UPF',
+   file_pseudopw='O.$fct-n-kjpaw.UPF',
    author='"Lorenzo Paulatto" <paulatto@sissa.it>, modified by ADC',
    lloc=2,
    which_augfun='BESSEL',
@@ -1037,7 +1038,7 @@ EOF
 if [ $nrel = 2 ]
 then
 
-cat > Pb.$fct-paw_kj.in << EOF
+cat > Pb.$fct-dn-kjpaw.in << EOF
  &input
    title='Pb',
    zed=82.0,
@@ -1049,7 +1050,7 @@ cat > Pb.$fct-paw_kj.in << EOF
  &inputp
    lpaw=.true.,
    pseudotype=3,
-   file_pseudopw='Pb.$fct-paw_kj.UPF',
+   file_pseudopw='Pb.$fct-dn-kjpaw.UPF',
    author='ADC',
    lloc=-1,
    rcloc=2.2,
@@ -1071,7 +1072,7 @@ EOF
 
 else
 
-cat > Pb.$fct-paw_kj.in << EOF
+cat > Pb.$fct-dn-kjpaw.in << EOF
  &input
    title='Pb',
    zed=82.0,
@@ -1083,7 +1084,7 @@ cat > Pb.$fct-paw_kj.in << EOF
  &inputp
    lpaw=.true.,
    pseudotype=3,
-   file_pseudopw='Pb.$fct-paw_kj.UPF',
+   file_pseudopw='Pb.$fct-dn-kjpaw.UPF',
    author='ADC',
    lloc=-1,
    rcloc=2.2,
@@ -1108,7 +1109,7 @@ fi
 if [ $nrel = 2 ]
 then
 
-cat > Pd.$fct-paw_kj.in << EOF
+cat > Pd.$fct-n-kjpaw.in << EOF
  &input
    title='Pd',
    zed=46.,
@@ -1120,7 +1121,7 @@ cat > Pd.$fct-paw_kj.in << EOF
  &inputp
    lpaw=.true.,
    pseudotype=3,
-   file_pseudopw='Pd.$fct-paw_kj.UPF',
+   file_pseudopw='Pd.$fct-n-kjpaw.UPF',
    author='ADC',
    lloc=-1,
    rcloc=2.1,
@@ -1140,7 +1141,7 @@ EOF
 
 else
 
-cat > Pd.$fct-paw_kj.in << EOF
+cat > Pd.$fct-n-kjpaw.in << EOF
  &input
    title='Pd',
    zed=46.,
@@ -1152,7 +1153,7 @@ cat > Pd.$fct-paw_kj.in << EOF
  &inputp
    lpaw=.true.,
    pseudotype=3,
-   file_pseudopw='Pd.$fct-paw_kj.UPF',
+   file_pseudopw='Pd.$fct-n-kjpaw.UPF',
    author='ADC',
    lloc=-1,
    rcloc=2.2,
@@ -1173,7 +1174,7 @@ EOF
 fi
 
 
-cat > Pt.$fct-paw_kj.in << EOF
+cat > Pt.$fct-n-kjpaw.in << EOF
  &input
    title='Pt',
    zed=78.,
@@ -1185,7 +1186,7 @@ cat > Pt.$fct-paw_kj.in << EOF
  &inputp
    lpaw=.true.,
    pseudotype=3,
-   file_pseudopw='Pt.$fct-paw_kj.UPF',
+   file_pseudopw='Pt.$fct-n-kjpaw.UPF',
    author='ADC',
    lloc=-2,
    rcloc=2.4,
@@ -1205,7 +1206,7 @@ cat > Pt.$fct-paw_kj.in << EOF
 5D  3  2  0.00  0.80  1.80  2.20  0.0
 EOF
 
-cat > P.$fct-paw_kj.in << EOF
+cat > P.$fct-n-kjpaw.in << EOF
  &input
    title='P',
    zed=15.,
@@ -1217,7 +1218,7 @@ cat > P.$fct-paw_kj.in << EOF
  &inputp
    lpaw=.true.,
    pseudotype=3,
-   file_pseudopw='P.$fct-paw_kj.UPF',
+   file_pseudopw='P.$fct-n-kjpaw.UPF',
    author='ADC',
    lloc=2,
    which_augfun ='PSQ',
@@ -1235,7 +1236,7 @@ cat > P.$fct-paw_kj.in << EOF
 3D  3  2 -2.00 -0.30  1.90  1.90  0.0
 EOF
 
-cat > Rh.$fct-paw_kj.in << EOF
+cat > Rh.$fct-n-kjpaw.in << EOF
  &input
    title='Rh',
    zed=45.,
@@ -1247,7 +1248,7 @@ cat > Rh.$fct-paw_kj.in << EOF
  &inputp
    lpaw=.true.,
    pseudotype=3,
-   file_pseudopw='Rh.$fct-paw_kj.UPF',
+   file_pseudopw='Rh.$fct-n-kjpaw.UPF',
    author='ADC',
    lloc=-1,
    rcloc=2.3,
@@ -1268,7 +1269,7 @@ cat > Rh.$fct-paw_kj.in << EOF
 4D  3  2 -2.00  0.30  1.00  1.90  0.0
 EOF
 
-cat > S.$fct-paw_kj.in << EOF
+cat > S.$fct-n-kjpaw.in << EOF
  &input
    title='S',
    zed=16,
@@ -1280,7 +1281,7 @@ cat > S.$fct-paw_kj.in << EOF
  &inputp
    lpaw=.true.,
    pseudotype=3,
-   file_pseudopw='S.$fct-paw_kj.UPF',
+   file_pseudopw='S.$fct-n-kjpaw.UPF',
    author='ADC',
    lloc=2,
    which_augfun ='PSQ',
@@ -1298,7 +1299,7 @@ cat > S.$fct-paw_kj.in << EOF
 3D  3  2 -2.00 -0.30  1.90  1.90  0.0
 EOF
 
-cat > Se.$fct-paw_kj.in << EOF
+cat > Se.$fct-n-kjpaw.in << EOF
  &input
    title='Se',
    zed=34.,
@@ -1310,7 +1311,7 @@ cat > Se.$fct-paw_kj.in << EOF
  &inputp
    lpaw=.true.,
    pseudotype=3,
-   file_pseudopw='Se.$fct-paw_kj.UPF',
+   file_pseudopw='Se.$fct-n-kjpaw.UPF',
    author='ADC',
    lloc=2,
    which_augfun='PSQ',
@@ -1329,7 +1330,7 @@ cat > Se.$fct-paw_kj.in << EOF
 EOF
 
 
-cat > Si.$fct-paw_kj.in << EOF
+cat > Si.$fct-n-kjpaw.in << EOF
  &input
    title='Si',
    zed=14.0,
@@ -1341,7 +1342,7 @@ cat > Si.$fct-paw_kj.in << EOF
  &inputp
    lpaw=.true.,
    pseudotype=3,
-   file_pseudopw='Si.$fct-paw_kj.UPF',
+   file_pseudopw='Si.$fct-n-kjpaw.UPF',
    author='ADC',
    lloc=2,
    which_augfun='PSQ',
@@ -1359,7 +1360,7 @@ cat > Si.$fct-paw_kj.in << EOF
 3D  3  2 -2.00 -0.30  2.00  2.00  0.0
 EOF
 
-cat > Sn.$fct-paw_kj.in << EOF
+cat > Sn.$fct-dn-kjpaw.in << EOF
  &input
    title='Sn',
    zed=50.,
@@ -1371,7 +1372,7 @@ cat > Sn.$fct-paw_kj.in << EOF
  &inputp
    lpaw=.true.,
    pseudotype=3,
-   file_pseudopw='Sn.$fct-paw_kj.UPF',
+   file_pseudopw='Sn.$fct-dn-kjpaw.UPF',
    author='ADC',
    lloc=-1,
    rcloc=2.3,
@@ -1391,7 +1392,7 @@ cat > Sn.$fct-paw_kj.in << EOF
 EOF
 
 
-cat > Ta.$fct-paw_kj.in << EOF
+cat > Ta.$fct-spn-kjpaw.in << EOF
  &input
    title='Ta',
    zed=73.0,
@@ -1403,7 +1404,7 @@ cat > Ta.$fct-paw_kj.in << EOF
  &inputp
    lpaw=.true.,
    pseudotype=3,
-   file_pseudopw='Ta.$fct-paw_kj.UPF',
+   file_pseudopw='Ta.$fct-spn-kjpaw.UPF',
    author='ADC',
    lloc=-1,
    rcloc=2.3,
@@ -1423,7 +1424,7 @@ cat > Ta.$fct-paw_kj.in << EOF
 5D  3  2 -2.00  0.30  1.70  1.90  0.0
 EOF
 
-cat > Te.$fct-paw_kj.in << EOF
+cat > Te.$fct-dn-kjpaw.in << EOF
  &input
    title='Te',
    zed=52.,
@@ -1435,7 +1436,7 @@ cat > Te.$fct-paw_kj.in << EOF
  &inputp
    lpaw=.true.,
    pseudotype=3,
-   file_pseudopw='Te.$fct-paw_kj.UPF',
+   file_pseudopw='Te.$fct-dn-kjpaw.UPF',
    author='ADC',
    lloc=-1,
    rcloc=2.2,
@@ -1454,7 +1455,7 @@ cat > Te.$fct-paw_kj.in << EOF
 4D  3  2  0.00  1.30  1.60  1.90  0.0
 EOF
 
-cat > Zn.$fct-paw_kj.in << EOF
+cat > Zn.$fct-dn-kjpaw.in << EOF
  &input
    title='Zn',
    zed=30.,
@@ -1466,7 +1467,7 @@ cat > Zn.$fct-paw_kj.in << EOF
  &inputp
    lpaw=.true.,
    pseudotype=3,
-   file_pseudopw='Zn.$fct-paw_kj.UPF',
+   file_pseudopw='Zn.$fct-dn-kjpaw.UPF',
    author='ADC',
    which_augfun='PSQ',
    rmatch_augfun=1.3,

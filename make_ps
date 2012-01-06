@@ -26,10 +26,20 @@ mkdir PSEUDOPOTENTIALS >& /dev/null
 #
 #. ../paw_ps_collection_tot.job
 
+#  Uncomment the following line to generate additional PAW data sets. 
+#  These are alternative data sets. 
+#
+#. ../paw_ps_collection_alt.job
+
 #  Uncomment the following line to generate additional US-PPs. Be
 #  careful these PPs might have problems.
 #
 #. ../us_ps_collection_tot.job
+
+#  Uncomment the following line to generate additional US-PPs. 
+#  These are alternative PPs
+#
+#. ../us_ps_collection_alt.job
 
 ld1_command="$PARA_PREFIX $BIN_DIR/ld1.x $PARA_POSTFIX"
 

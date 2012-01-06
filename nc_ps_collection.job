@@ -15,7 +15,7 @@
 
 . enviroment.job
 
-cat > Ac.$fct-nc.in << EOF
+cat > Ac.$fct-n-nc.in << EOF
  &input
    title='Ac',
    zed=89.0,
@@ -26,7 +26,7 @@ cat > Ac.$fct-nc.in << EOF
  /
  &inputp
    pseudotype=2,
-   file_pseudopw='Ac.$fct-nc.UPF',
+   file_pseudopw='Ac.$fct-n-nc.UPF',
    author='TM + Modified by ADC',
    lloc=0,
    nlcc=.true.,
@@ -39,7 +39,7 @@ cat > Ac.$fct-nc.in << EOF
 7S  1  0  2.00  0.00  3.00  3.00  0.0
 EOF
 
-cat > Ag.$fct-nc.in << EOF
+cat > Ag.$fct-n-nc.in << EOF
  &input
    title='Ag',
    zed=47.,
@@ -50,7 +50,7 @@ cat > Ag.$fct-nc.in << EOF
  /
  &inputp
    pseudotype=2,
-   file_pseudopw='Ag.$fct-nc.UPF',
+   file_pseudopw='Ag.$fct-n-nc.UPF',
    author='TC',
    lloc=0,
    nlcc=.true.,
@@ -62,7 +62,7 @@ cat > Ag.$fct-nc.in << EOF
 5S  1  0  1.00  0.00  2.60  2.60  0.0
 EOF
 
-cat > Al.$fct-nc.in << EOF
+cat > Al.$fct-n-nc.in << EOF
  &input
    title='Al',
    zed=13.0,
@@ -73,7 +73,7 @@ cat > Al.$fct-nc.in << EOF
  /
  &inputp
    pseudotype=2,
-   file_pseudopw='Al.$fct-nc.UPF',
+   file_pseudopw='Al.$fct-n-nc.UPF',
    author='TM',
    lloc=2,
    nlcc=.true.,
@@ -85,7 +85,7 @@ cat > Al.$fct-nc.in << EOF
 3D  3  2  0.00  0.10  2.60  2.60  0.0
 EOF
 
-cat > Ar.$fct-nc.in << EOF
+cat > Ar.$fct-n-nc.in << EOF
  &input
    title='Ar',
    zed=18,
@@ -96,7 +96,7 @@ cat > Ar.$fct-nc.in << EOF
  /
  &inputp
    pseudotype=2,
-   file_pseudopw='Ar.$fct-nc.UPF',
+   file_pseudopw='Ar.$fct-n-nc.UPF',
    author='TM',
    lloc=2,
    nlcc=.true.,
@@ -108,7 +108,7 @@ cat > Ar.$fct-nc.in << EOF
 3D  3  2  0.00  0.10  2.05  2.05  0.0
 EOF
 
-cat > As.$fct-nc.in << EOF
+cat > As.$fct-n-nc.in << EOF
  &input
    title='As',
    zed=33.,
@@ -119,7 +119,7 @@ cat > As.$fct-nc.in << EOF
  /
  &inputp
    pseudotype=2,
-   file_pseudopw='As.$fct-nc.UPF',
+   file_pseudopw='As.$fct-n-nc.UPF',
    author='TM',
    lloc=2,
    nlcc=.true.,
@@ -131,7 +131,7 @@ cat > As.$fct-nc.in << EOF
 4D  3  2  0.00  0.10  2.10  2.10  0.0
 EOF
 
-cat > At.$fct-nc.in << EOF
+cat > At.$fct-n-nc.in << EOF
  &input
    title='At',
    zed=85.0,
@@ -142,7 +142,7 @@ cat > At.$fct-nc.in << EOF
  /
  &inputp
    pseudotype=2,
-   file_pseudopw='At.$fct-nc.UPF',
+   file_pseudopw='At.$fct-n-nc.UPF',
    author='TM',
    lloc=3,
    nlcc=.true.,
@@ -155,7 +155,7 @@ cat > At.$fct-nc.in << EOF
 5F  4  3  0.00  0.10  3.00  3.00  0.0
 EOF
 
-cat > Au.$fct-nc.in << EOF
+cat > Au.$fct-n-nc.in << EOF
  &input
    title='Au',
    zed=79.,
@@ -166,7 +166,7 @@ cat > Au.$fct-nc.in << EOF
  /
  &inputp
    pseudotype=2,
-   file_pseudopw='Au.$fct-nc.UPF',
+   file_pseudopw='Au.$fct-n-nc.UPF',
    author='TM',
    lloc=0,
    nlcc=.true.,
@@ -199,7 +199,7 @@ cat > B.$fct-nc.in << EOF
 2S  1  0  2.00  0.00  1.40  1.40  0.0
 EOF
 
-cat > Ba.$fct-nc.in << EOF
+cat > Ba.$fct-n-nc.in << EOF
  &input
    title='Ba',
    zed=56.,
@@ -210,7 +210,7 @@ cat > Ba.$fct-nc.in << EOF
  /
  &inputp
    pseudotype=2,
-   file_pseudopw='Ba.$fct-nc.UPF',
+   file_pseudopw='Ba.$fct-n-nc.UPF',
    author='TM',
    lloc=0,
    nlcc=.true.,
@@ -221,7 +221,7 @@ cat > Ba.$fct-nc.in << EOF
 6S  1  0  2.00  0.00  4.40  4.40  0.0
 EOF
 
-cat > Be.$fct-nc.in << EOF
+cat > Be.$fct-n-nc.in << EOF
  &input
    title='Be',
    zed=4.0,
@@ -232,7 +232,7 @@ cat > Be.$fct-nc.in << EOF
  /
  &inputp
    pseudotype=2,
-   file_pseudopw='Be.$fct-nc.UPF',
+   file_pseudopw='Be.$fct-n-nc.UPF',
    author='TM',
    lloc=0,
    nlcc=.true.,
@@ -243,7 +243,7 @@ cat > Be.$fct-nc.in << EOF
 2S  1  0  2.00  0.00  2.10  2.10  0.0
 EOF
 
-cat > Bi.$fct-nc.in << EOF
+cat > Bi.$fct-n-nc.in << EOF
  &input
    title='Bi',
    zed=83.0,
@@ -254,7 +254,7 @@ cat > Bi.$fct-nc.in << EOF
  /
  &inputp
    pseudotype=2,
-   file_pseudopw='Bi.$fct-nc.UPF',
+   file_pseudopw='Bi.$fct-n-nc.UPF',
    author='TM',
    lloc=3,
    nlcc=.true.,
@@ -267,7 +267,7 @@ cat > Bi.$fct-nc.in << EOF
 5F  4  3  0.00  0.10  2.70  2.70  0.0
 EOF
 
-cat > Br.$fct-nc.in << EOF
+cat > Br.$fct-n-nc.in << EOF
  &input
    title='Br',
    zed=35.,
@@ -278,7 +278,7 @@ cat > Br.$fct-nc.in << EOF
  /
  &inputp
    pseudotype=2,
-   file_pseudopw='Br.$fct-nc.UPF',
+   file_pseudopw='Br.$fct-n-nc.UPF',
    author='TM',
    lloc=2,
    nlcc=.true.,
@@ -311,7 +311,7 @@ cat > C.$fct-nc.in << EOF
 2S  1  0  2.00  0.00  1.30  1.30  0.0
 EOF
 
-cat > Ca.$fct-nc.in << EOF
+cat > Ca.$fct-n-nc.in << EOF
  &input
    title='Ca',
    zed=20.,
@@ -322,7 +322,7 @@ cat > Ca.$fct-nc.in << EOF
  /
  &inputp
    pseudotype=2,
-   file_pseudopw='Ca.$fct-nc.UPF',
+   file_pseudopw='Ca.$fct-n-nc.UPF',
    author='TM',
    lloc=0,
    nlcc=.true.,
@@ -334,7 +334,7 @@ cat > Ca.$fct-nc.in << EOF
 4S  1  0  2.00  0.00  3.30  3.30  0.0
 EOF
 
-cat > Cd.$fct-nc.in << EOF
+cat > Cd.$fct-n-nc.in << EOF
  &input
    title='Cd',
    zed=48.,
@@ -345,7 +345,7 @@ cat > Cd.$fct-nc.in << EOF
  /
  &inputp
    pseudotype=2,
-   file_pseudopw='Cd.$fct-nc.UPF',
+   file_pseudopw='Cd.$fct-n-nc.UPF',
    author='TM',
    lloc=0,
    nlcc=.true.,
@@ -357,7 +357,7 @@ cat > Cd.$fct-nc.in << EOF
 5S  1  0  2.00  0.00  2.65  2.65  0.0
 EOF
 
-cat > Ce.$fct-nc.in << EOF
+cat > Ce.$fct-n-nc.in << EOF
  &input
    title='Ce',
    zed=58.0,
@@ -368,7 +368,7 @@ cat > Ce.$fct-nc.in << EOF
  /
  &inputp
    pseudotype=2,
-   file_pseudopw='Ce.$fct-nc.UPF',
+   file_pseudopw='Ce.$fct-n-nc.UPF',
    author='TM',
    lloc=0,
    nlcc=.true.,
@@ -381,7 +381,7 @@ cat > Ce.$fct-nc.in << EOF
 6S  1  0  2.00  0.00  3.25  3.25  0.0
 EOF
 
-cat > Cl.$fct-nc.in << EOF
+cat > Cl.$fct-n-nc.in << EOF
  &input
    title='Cl',
    zed=17,
@@ -392,7 +392,7 @@ cat > Cl.$fct-nc.in << EOF
  /
  &inputp
    pseudotype=2,
-   file_pseudopw='Cl.$fct-nc.UPF',
+   file_pseudopw='Cl.$fct-n-nc.UPF',
    author='TM',
    lloc=2,
    nlcc=.true.,
@@ -404,7 +404,7 @@ cat > Cl.$fct-nc.in << EOF
 3D  3  2  0.00  0.10  1.75  1.75  0.0
 EOF
 
-cat > Co.$fct-nc.in << EOF
+cat > Co.$fct-n-nc.in << EOF
  &input
    title='Co',
    zed=27.,
@@ -415,7 +415,7 @@ cat > Co.$fct-nc.in << EOF
  /
  &inputp
    pseudotype=2,
-   file_pseudopw='Co.$fct-nc.UPF',
+   file_pseudopw='Co.$fct-n-nc.UPF',
    author='TM',
    lloc=0,
    nlcc=.true.,
@@ -427,7 +427,7 @@ cat > Co.$fct-nc.in << EOF
 4S  1  0  2.00  0.00  2.20  2.20  0.0
 EOF
 
-cat > Cr.$fct-nc.in << EOF
+cat > Cr.$fct-n-nc.in << EOF
  &input
    title='V',
    zed=24.,
@@ -438,7 +438,7 @@ cat > Cr.$fct-nc.in << EOF
  /
  &inputp
    pseudotype=2,
-   file_pseudopw='Cr.$fct-nc.UPF',
+   file_pseudopw='Cr.$fct-n-nc.UPF',
    author='TM',
    lloc=0,
    nlcc=.true.,
@@ -450,7 +450,7 @@ cat > Cr.$fct-nc.in << EOF
 4S  1  0  1.00  0.00  2.25  2.25  0.0
 EOF
 
-cat > Cs.$fct-nc.in << EOF
+cat > Cs.$fct-n-nc.in << EOF
  &input
    title='Cs',
    zed=55.,
@@ -461,7 +461,7 @@ cat > Cs.$fct-nc.in << EOF
  /
  &inputp
    pseudotype=2,
-   file_pseudopw='Cs.$fct-nc.UPF',
+   file_pseudopw='Cs.$fct-n-nc.UPF',
    author='TM',
    lloc=0,
    nlcc=.true.,
@@ -472,7 +472,7 @@ cat > Cs.$fct-nc.in << EOF
 6S  1  0  1.00  0.00  4.40  4.40  0.0
 EOF
 
-cat > Dy.$fct-nc.in << EOF
+cat > Dy.$fct-n-nc.in << EOF
  &input
    title='Dy',
    zed=66.0,
@@ -483,7 +483,7 @@ cat > Dy.$fct-nc.in << EOF
  /
  &inputp
    pseudotype=2,
-   file_pseudopw='Dy.$fct-nc.UPF',
+   file_pseudopw='Dy.$fct-n-nc.UPF',
    author='TM',
    lloc=0,
    nlcc=.true.,
@@ -496,7 +496,7 @@ cat > Dy.$fct-nc.in << EOF
 6S  1  0  2.00  0.00  3.20  3.20  0.0
 EOF
 
-cat > Er.$fct-nc.in << EOF
+cat > Er.$fct-n-nc.in << EOF
  &input
    title='Er',
    zed=68.0,
@@ -507,7 +507,7 @@ cat > Er.$fct-nc.in << EOF
  /
  &inputp
    pseudotype=2,
-   file_pseudopw='Er.$fct-nc.UPF',
+   file_pseudopw='Er.$fct-n-nc.UPF',
    author='TM',
    lloc=0,
    nlcc=.true.,
@@ -520,7 +520,7 @@ cat > Er.$fct-nc.in << EOF
 6S  1  0  2.00  0.00  3.15  3.15  0.0
 EOF
 
-cat > Eu.$fct-nc.in << EOF
+cat > Eu.$fct-n-nc.in << EOF
  &input
    title='Eu',
    zed=63.0,
@@ -531,7 +531,7 @@ cat > Eu.$fct-nc.in << EOF
  /
  &inputp
    pseudotype=2,
-   file_pseudopw='Eu.$fct-nc.UPF',
+   file_pseudopw='Eu.$fct-n-nc.UPF',
    author='TM',
    lloc=0,
    nlcc=.true.,
@@ -544,7 +544,7 @@ cat > Eu.$fct-nc.in << EOF
 6S  1  0  2.00  0.00  3.25  3.25  0.0
 EOF
 
-cat > Fr.$fct-nc.in << EOF
+cat > Fr.$fct-n-nc.in << EOF
  &input
    title='Fr',
    zed=87.,
@@ -555,7 +555,7 @@ cat > Fr.$fct-nc.in << EOF
  /
  &inputp
    pseudotype=2,
-   file_pseudopw='Fr.$fct-nc.UPF',
+   file_pseudopw='Fr.$fct-n-nc.UPF',
    author='TM',
    lloc=0,
    nlcc=.true.,
@@ -566,7 +566,7 @@ cat > Fr.$fct-nc.in << EOF
 7S  1  0  1.00  0.00  5.00  5.00  0.0
 EOF
 
-cat > Ga.$fct-nc.in << EOF
+cat > Ga.$fct-n-nc.in << EOF
  &input
    title='Ga',
    zed=31.,
@@ -577,7 +577,7 @@ cat > Ga.$fct-nc.in << EOF
  /
  &inputp
    pseudotype=2,
-   file_pseudopw='Ga.$fct-nc.UPF',
+   file_pseudopw='Ga.$fct-n-nc.UPF',
    author='TM',
    lloc=2,
    nlcc=.true.,
@@ -589,7 +589,7 @@ cat > Ga.$fct-nc.in << EOF
 4D  3  2  0.00  0.05  2.75  2.75  0.0
 EOF
 
-cat > Gd.$fct-nc.in << EOF
+cat > Gd.$fct-n-nc.in << EOF
  &input
    title='Gd',
    zed=64.0,
@@ -600,7 +600,7 @@ cat > Gd.$fct-nc.in << EOF
  /
  &inputp
    pseudotype=2,
-   file_pseudopw='Gd.$fct-nc.UPF',
+   file_pseudopw='Gd.$fct-n-nc.UPF',
    author='TM',
    lloc=0,
    nlcc=.true.,
@@ -613,7 +613,7 @@ cat > Gd.$fct-nc.in << EOF
 6S  1  0  2.00  0.00  3.25  3.25  0.0
 EOF
 
-cat > Ge.$fct-nc.in << EOF
+cat > Ge.$fct-n-nc.in << EOF
  &input
    title='Ge',
    zed=32.,
@@ -624,7 +624,7 @@ cat > Ge.$fct-nc.in << EOF
  /
  &inputp
    pseudotype=2,
-   file_pseudopw='Ge.$fct-nc.UPF',
+   file_pseudopw='Ge.$fct-n-nc.UPF',
    author='TM',
    lloc=2,
    nlcc=.true.,
@@ -636,7 +636,7 @@ cat > Ge.$fct-nc.in << EOF
 4D  3  2  0.00  0.10  2.40  2.40  0.0
 EOF
 
-cat > Fe.$fct-nc.in << EOF
+cat > Fe.$fct-n-nc.in << EOF
  &input
    title='Fe',
    zed=26.,
@@ -647,7 +647,7 @@ cat > Fe.$fct-nc.in << EOF
  /
  &inputp
    pseudotype=2,
-   file_pseudopw='Fe.$fct-nc.UPF',
+   file_pseudopw='Fe.$fct-n-nc.UPF',
    author='TM',
    lloc=0,
    nlcc=.true.,
@@ -659,7 +659,7 @@ cat > Fe.$fct-nc.in << EOF
 4S  1  0  2.00  0.00  2.20  2.20  0.0
 EOF
 
-cat > F.$fct-nc.in << EOF
+cat > F.$fct-n-nc.in << EOF
  &input
    title='F',
    zed=9.0,
@@ -670,7 +670,7 @@ cat > F.$fct-nc.in << EOF
  /
  &inputp
    pseudotype=2,
-   file_pseudopw='F.$fct-nc.UPF',
+   file_pseudopw='F.$fct-n-nc.UPF',
    author='TM',
    lloc=0,
    tm=.true.,
@@ -680,7 +680,7 @@ cat > F.$fct-nc.in << EOF
 2S  1  0  2.00  0.00  1.30  1.30  0.0
 EOF
 
-cat > H.$fct-nc.in << EOF
+cat > H.$fct-n-nc.in << EOF
  &input
    title='H',
    zed=1,
@@ -691,7 +691,7 @@ cat > H.$fct-nc.in << EOF
  /
  &inputp
    pseudotype=2,
-   file_pseudopw='H.$fct-nc.UPF',
+   file_pseudopw='H.$fct-n-nc.UPF',
    author='TM',
    lloc=0,
    tm=.true.
@@ -700,7 +700,7 @@ cat > H.$fct-nc.in << EOF
 1S  1  0  1.00  0.00  0.50  0.50  0.0
 EOF
 
-cat > He.$fct-nc.in << EOF
+cat > He.$fct-n-nc.in << EOF
  &input
    title='He',
    zed=2,
@@ -711,7 +711,7 @@ cat > He.$fct-nc.in << EOF
  /
  &inputp
    pseudotype=2,
-   file_pseudopw='He.$fct-nc.UPF',
+   file_pseudopw='He.$fct-n-nc.UPF',
    author='TM',
    lloc=0,
    tm=.true.
@@ -720,7 +720,7 @@ cat > He.$fct-nc.in << EOF
 1S  1  0  2.00  0.00  1.00  1.00  0.0
 EOF
 
-cat > Hf.$fct-nc.in << EOF
+cat > Hf.$fct-n-nc.in << EOF
  &input
    title='Hf',
    zed=72.0,
@@ -731,7 +731,7 @@ cat > Hf.$fct-nc.in << EOF
  /
  &inputp
    pseudotype=2,
-   file_pseudopw='Hf.$fct-nc.UPF',
+   file_pseudopw='Hf.$fct-n-nc.UPF',
    author='TM',
    lloc=0,
    nlcc=.true.,
@@ -743,7 +743,7 @@ cat > Hf.$fct-nc.in << EOF
 6S  1  0  2.00  0.00  2.60  2.60  0.0
 EOF
 
-cat > Ho.$fct-nc.in << EOF
+cat > Ho.$fct-n-nc.in << EOF
  &input
    title='Ho',
    zed=67.0,
@@ -754,7 +754,7 @@ cat > Ho.$fct-nc.in << EOF
  /
  &inputp
    pseudotype=2,
-   file_pseudopw='Ho.$fct-nc.UPF',
+   file_pseudopw='Ho.$fct-n-nc.UPF',
    author='TM',
    lloc=0,
    nlcc=.true.,
@@ -767,7 +767,7 @@ cat > Ho.$fct-nc.in << EOF
 6S  1  0  2.00  0.00  3.20  3.20  0.0
 EOF
 
-cat > K.$fct-nc.in << EOF
+cat > K.$fct-n-nc.in << EOF
  &input
    title='K',
    zed=19.,
@@ -778,7 +778,7 @@ cat > K.$fct-nc.in << EOF
  /
  &inputp
    pseudotype=2,
-   file_pseudopw='K.$fct-nc.UPF',
+   file_pseudopw='K.$fct-n-nc.UPF',
    author='TM',
    lloc=0,
    nlcc=.true.,
@@ -790,7 +790,7 @@ cat > K.$fct-nc.in << EOF
 4S  1  0  1.00  0.00  3.51  3.51  0.0
 EOF
 
-cat > Kr.$fct-nc.in << EOF
+cat > Kr.$fct-n-nc.in << EOF
  &input
    title='Kr',
    zed=36.,
@@ -801,7 +801,7 @@ cat > Kr.$fct-nc.in << EOF
  /
  &inputp
    pseudotype=2,
-   file_pseudopw='Kr.$fct-nc.UPF',
+   file_pseudopw='Kr.$fct-n-nc.UPF',
    author='TM',
    lloc=2,
    nlcc=.true.,
@@ -813,7 +813,7 @@ cat > Kr.$fct-nc.in << EOF
 4D  3  2  0.00  0.10  3.25  3.25  0.0
 EOF
 
-cat > Hg.$fct-nc.in << EOF
+cat > Hg.$fct-n-nc.in << EOF
  &input
    title='Hg',
    zed=80.,
@@ -824,7 +824,7 @@ cat > Hg.$fct-nc.in << EOF
  /
  &inputp
    pseudotype=2,
-   file_pseudopw='Hg.$fct-nc.UPF',
+   file_pseudopw='Hg.$fct-n-nc.UPF',
    author='TM',
    lloc=0,
    nlcc=.true.,
@@ -836,7 +836,7 @@ cat > Hg.$fct-nc.in << EOF
 6S  1  0  2.00  0.00  2.70  2.70  0.0
 EOF
 
-cat > I.$fct-nc.in << EOF
+cat > I.$fct-n-nc.in << EOF
  &input
    title='I',
    zed=53.,
@@ -847,7 +847,7 @@ cat > I.$fct-nc.in << EOF
  /
  &inputp
    pseudotype=2,
-   file_pseudopw='I.$fct-nc.UPF',
+   file_pseudopw='I.$fct-n-nc.UPF',
    author='TM',
    lloc=0,
    nlcc=.true.,
@@ -859,7 +859,7 @@ cat > I.$fct-nc.in << EOF
 5S  1  0  2.00  0.00  2.40  2.40  0.0
 EOF
 
-cat > In.$fct-nc.in << EOF
+cat > In.$fct-n-nc.in << EOF
  &input
    title='In',
    zed=49.,
@@ -870,7 +870,7 @@ cat > In.$fct-nc.in << EOF
  /
  &inputp
    pseudotype=2,
-   file_pseudopw='In.$fct-nc.UPF',
+   file_pseudopw='In.$fct-n-nc.UPF',
    author='TM',
    lloc=0,
    nlcc=.true.,
@@ -882,7 +882,7 @@ cat > In.$fct-nc.in << EOF
 5S  1  0  2.00  0.00  2.90  2.90  0.0
 EOF
 
-cat > Ir.$fct-nc.in << EOF
+cat > Ir.$fct-n-nc.in << EOF
  &input
    title='Ir',
    zed=77.,
@@ -893,7 +893,7 @@ cat > Ir.$fct-nc.in << EOF
  /
  &inputp
    pseudotype=2,
-   file_pseudopw='Ir.$fct-nc.UPF',
+   file_pseudopw='Ir.$fct-n-nc.UPF',
    author='TM',
    lloc=0,
    nlcc=.true.,
@@ -905,7 +905,7 @@ cat > Ir.$fct-nc.in << EOF
 6S  1  0  2.00  0.00  2.45  2.45  0.0
 EOF
 
-cat > La.$fct-nc.in << EOF
+cat > La.$fct-n-nc.in << EOF
  &input
    title='La',
    zed=57.0,
@@ -916,7 +916,7 @@ cat > La.$fct-nc.in << EOF
  /
  &inputp
    pseudotype=2,
-   file_pseudopw='La.$fct-nc.UPF',
+   file_pseudopw='La.$fct-n-nc.UPF',
    author='TM',
    lloc=0,
    nlcc=.true.,
@@ -929,7 +929,7 @@ cat > La.$fct-nc.in << EOF
 6S  1  0  2.00  0.00  3.50  3.50  0.0
 EOF
 
-cat > Li.$fct-nc.in << EOF
+cat > Li.$fct-n-nc.in << EOF
  &input
    title='Li',
    zed=3.0,
@@ -940,7 +940,7 @@ cat > Li.$fct-nc.in << EOF
  /
  &inputp
    pseudotype=2,
-   file_pseudopw='Li.$fct-nc.UPF',
+   file_pseudopw='Li.$fct-n-nc.UPF',
    author='TM',
    lloc=0,
    nlcc=.true.,
@@ -951,7 +951,7 @@ cat > Li.$fct-nc.in << EOF
 2S  1  0  1.00  0.00  2.45  2.45  0.0
 EOF
 
-cat > Lu.$fct-nc.in << EOF
+cat > Lu.$fct-n-nc.in << EOF
  &input
    title='Lu',
    zed=71.0,
@@ -962,7 +962,7 @@ cat > Lu.$fct-nc.in << EOF
  /
  &inputp
    pseudotype=2,
-   file_pseudopw='Lu.$fct-nc.UPF',
+   file_pseudopw='Lu.$fct-n-nc.UPF',
    author='TM',
    lloc=0,
    nlcc=.true.,
@@ -975,7 +975,7 @@ cat > Lu.$fct-nc.in << EOF
 6S  1  0  2.00  0.00  3.10  3.10  0.0
 EOF
 
-cat > Mg.$fct-nc.in << EOF
+cat > Mg.$fct-n-nc.in << EOF
  &input
    title='Mg',
    zed=12.0,
@@ -986,7 +986,7 @@ cat > Mg.$fct-nc.in << EOF
  /
  &inputp
    pseudotype=2,
-   file_pseudopw='Mg.$fct-nc.UPF',
+   file_pseudopw='Mg.$fct-n-nc.UPF',
    author='TM',
    lloc=2,
    nlcc=.true.,
@@ -998,7 +998,7 @@ cat > Mg.$fct-nc.in << EOF
 3D  3  2  0.00  0.10  2.80  2.80  0.0
 EOF
 
-cat > Mn.$fct-nc.in << EOF
+cat > Mn.$fct-n-nc.in << EOF
  &input
    title='Mn',
    zed=25.,
@@ -1009,7 +1009,7 @@ cat > Mn.$fct-nc.in << EOF
  /
  &inputp
    pseudotype=2,
-   file_pseudopw='Mn.$fct-nc.UPF',
+   file_pseudopw='Mn.$fct-n-nc.UPF',
    author='TM modified by ADC',
    lloc=0,
    nlcc=.true.,
@@ -1021,7 +1021,7 @@ cat > Mn.$fct-nc.in << EOF
 4S  1  0  2.00  0.00  2.30  2.30  0.0
 EOF
 
-cat > Mo.$fct-nc.in << EOF
+cat > Mo.$fct-n-nc.in << EOF
  &input
    title='Mo',
    zed=42.0,
@@ -1032,7 +1032,7 @@ cat > Mo.$fct-nc.in << EOF
  /
  &inputp
    pseudotype=2,
-   file_pseudopw='Mo.$fct-nc.UPF',
+   file_pseudopw='Mo.$fct-n-nc.UPF',
    author='TM',
    lloc=0,
    nlcc=.true.,
@@ -1044,7 +1044,7 @@ cat > Mo.$fct-nc.in << EOF
 5S  1  0  1.00  0.00  2.45  2.45  0.0
 EOF
 
-cat > Na.$fct-nc.in << EOF
+cat > Na.$fct-n-nc.in << EOF
  &input
    title='Na',
    zed=11.0,
@@ -1055,7 +1055,7 @@ cat > Na.$fct-nc.in << EOF
  /
  &inputp
    pseudotype=2,
-   file_pseudopw='Na.$fct-nc.UPF',
+   file_pseudopw='Na.$fct-n-nc.UPF',
    author='TM',
    lloc=1,
    nlcc=.true.,
@@ -1087,8 +1087,7 @@ cat > Ne.$fct-nc.in << EOF
 2S  1  0  2.00  0.00  1.55  1.55  0.0
 EOF
 
-
-cat > Ni.$fct-nc.in << EOF
+cat > Ni.$fct-n-nc.in << EOF
  &input
    title='Ni',
    zed=28.,
@@ -1099,7 +1098,7 @@ cat > Ni.$fct-nc.in << EOF
  /
  &inputp
    pseudotype=2,
-   file_pseudopw='Ni.$fct-nc.UPF',
+   file_pseudopw='Ni.$fct-n-nc.UPF',
    author='TM',
    lloc=0,
    nlcc=.true.,
@@ -1132,7 +1131,7 @@ cat > N.$fct-nc.in << EOF
 2S  1  0  2.00  0.00  1.00  1.00  0.0
 EOF
 
-cat > Nb.$fct-nc.in << EOF
+cat > Nb.$fct-n-nc.in << EOF
  &input
    title='Nb',
    zed=41.,
@@ -1143,7 +1142,7 @@ cat > Nb.$fct-nc.in << EOF
  /
  &inputp
    pseudotype=2,
-   file_pseudopw='Nb.$fct-nc.UPF',
+   file_pseudopw='Nb.$fct-n-nc.UPF',
    author='TM',
    lloc=0,
    nlcc=.true.,
@@ -1155,7 +1154,7 @@ cat > Nb.$fct-nc.in << EOF
 5S  1  0  2.00  0.00  2.49  2.49  0.0
 EOF
 
-cat > Nd.$fct-nc.in << EOF
+cat > Nd.$fct-n-nc.in << EOF
  &input
    title='Nd',
    zed=60.0,
@@ -1166,7 +1165,7 @@ cat > Nd.$fct-nc.in << EOF
  /
  &inputp
    pseudotype=2,
-   file_pseudopw='Nd.$fct-nc.UPF',
+   file_pseudopw='Nd.$fct-n-nc.UPF',
    author='TM',
    lloc=0,
    nlcc=.true.,
@@ -1179,7 +1178,7 @@ cat > Nd.$fct-nc.in << EOF
 6S  1  0  2.00  0.00  3.25  3.25  0.0
 EOF
 
-cat > Np.$fct-nc.in << EOF
+cat > Np.$fct-n-nc.in << EOF
  &input
    title='Np',
    zed=93.0,
@@ -1190,7 +1189,7 @@ cat > Np.$fct-nc.in << EOF
  /
  &inputp
    pseudotype=2,
-   file_pseudopw='Np.$fct-nc.UPF',
+   file_pseudopw='Np.$fct-n-nc.UPF',
    author='TM',
    lloc=0,
    nlcc=.true.,
@@ -1224,7 +1223,7 @@ cat > O.$fct-nc.in << EOF
 2S  1  0  2.00  0.00  1.10  1.10  0.0
 EOF
 
-cat > Os.$fct-nc.in << EOF
+cat > Os.$fct-n-nc.in << EOF
  &input
    title='Os',
    zed=76.,
@@ -1235,7 +1234,7 @@ cat > Os.$fct-nc.in << EOF
  /
  &inputp
    pseudotype=2,
-   file_pseudopw='Os.$fct-nc.UPF',
+   file_pseudopw='Os.$fct-n-nc.UPF',
    author='TM',
    lloc=0,
    nlcc=.true.,
@@ -1247,8 +1246,7 @@ cat > Os.$fct-nc.in << EOF
 6S  1  0  2.00  0.00  2.40  2.40  0.0
 EOF
 
-
-cat > Pm.$fct-nc.in << EOF
+cat > Pm.$fct-n-nc.in << EOF
  &input
    title='Pm',
    zed=61.0,
@@ -1259,7 +1257,7 @@ cat > Pm.$fct-nc.in << EOF
  /
  &inputp
    pseudotype=2,
-   file_pseudopw='Pm.$fct-nc.UPF',
+   file_pseudopw='Pm.$fct-n-nc.UPF',
    author='TM',
    lloc=0,
    nlcc=.true.,
@@ -1272,8 +1270,7 @@ cat > Pm.$fct-nc.in << EOF
 6S  1  0  2.00  0.00  3.25  3.25  0.0
 EOF
 
-
-cat > Pa.$fct-nc.in << EOF
+cat > Pa.$fct-n-nc.in << EOF
  &input
    title='Pa',
    zed=91.0,
@@ -1284,7 +1281,7 @@ cat > Pa.$fct-nc.in << EOF
  /
  &inputp
    pseudotype=2,
-   file_pseudopw='Pa.$fct-nc.UPF',
+   file_pseudopw='Pa.$fct-n-nc.UPF',
    author='TM',
    lloc=0,
    nlcc=.true.,
@@ -1297,7 +1294,7 @@ cat > Pa.$fct-nc.in << EOF
 7S  1  0  2.00  0.00  3.00  3.00  0.0
 EOF
 
-cat > Pb.$fct-nc.in << EOF
+cat > Pb.$fct-n-nc.in << EOF
  &input
    title='Pb',
    zed=82.0,
@@ -1308,7 +1305,7 @@ cat > Pb.$fct-nc.in << EOF
  /
  &inputp
    pseudotype=2,
-   file_pseudopw='Pb.$fct-nc.UPF',
+   file_pseudopw='Pb.$fct-n-nc.UPF',
    author='TM',
    lloc=0,
    nlcc=.true.,
@@ -1320,7 +1317,7 @@ cat > Pb.$fct-nc.in << EOF
 6S  1  0  2.00  0.00  3.15  3.15  0.0
 EOF
 
-cat > Pd.$fct-nc.in << EOF
+cat > Pd.$fct-n-nc.in << EOF
  &input
    title='Pd',
    zed=46.0,
@@ -1331,7 +1328,7 @@ cat > Pd.$fct-nc.in << EOF
  /
  &inputp
    pseudotype=2,
-   file_pseudopw='Pd.$fct-nc.UPF',
+   file_pseudopw='Pd.$fct-n-nc.UPF',
    author='TM',
    lloc=0,
    nlcc=.true.,
@@ -1343,7 +1340,7 @@ cat > Pd.$fct-nc.in << EOF
 5S  1  0  0.00  0.00  2.45  2.45  0.0
 EOF
 
-cat > P.$fct-nc.in << EOF
+cat > P.$fct-n-nc.in << EOF
  &input
    title='P',
    zed=15.,
@@ -1354,7 +1351,7 @@ cat > P.$fct-nc.in << EOF
  /
  &inputp
    pseudotype=2,
-   file_pseudopw='P.$fct-nc.UPF',
+   file_pseudopw='P.$fct-n-nc.UPF',
    author='TM',
    lloc=2,
    nlcc=.true.,
@@ -1366,7 +1363,7 @@ cat > P.$fct-nc.in << EOF
 3D  3  2  0.00  0.10  1.95  1.95  0.0
 EOF
 
-cat > Po.$fct-nc.in << EOF
+cat > Po.$fct-n-nc.in << EOF
  &input
    title='Po',
    zed=84.0,
@@ -1377,7 +1374,7 @@ cat > Po.$fct-nc.in << EOF
  /
  &inputp
    pseudotype=2,
-   file_pseudopw='Po.$fct-nc.UPF',
+   file_pseudopw='Po.$fct-n-nc.UPF',
    author='TM',
    lloc=3,
    nlcc=.true.,
@@ -1390,7 +1387,7 @@ cat > Po.$fct-nc.in << EOF
 5F  4  3  0.00  0.10  3.00  3.00  0.0
 EOF
 
-cat > Pt.$fct-nc.in << EOF
+cat > Pt.$fct-n-nc.in << EOF
  &input
    title='Pt',
    zed=78.,
@@ -1401,7 +1398,7 @@ cat > Pt.$fct-nc.in << EOF
  /
  &inputp
    pseudotype=2,
-   file_pseudopw='Pt.$fct-nc.UPF',
+   file_pseudopw='Pt.$fct-n-nc.UPF',
    author='TM',
    lloc=0,
    nlcc=.true.,
@@ -1413,7 +1410,7 @@ cat > Pt.$fct-nc.in << EOF
 6S  1  0  1.00  0.00  2.45  2.45  0.0
 EOF
 
-cat > Pr.$fct-nc.in << EOF
+cat > Pr.$fct-n-nc.in << EOF
  &input
    title='Pr',
    zed=59.0,
@@ -1424,7 +1421,7 @@ cat > Pr.$fct-nc.in << EOF
  /
  &inputp
    pseudotype=2,
-   file_pseudopw='Pr.$fct-nc.UPF',
+   file_pseudopw='Pr.$fct-n-nc.UPF',
    author='TM',
    lloc=0,
    nlcc=.true.,
@@ -1437,7 +1434,7 @@ cat > Pr.$fct-nc.in << EOF
 6S  1  0  2.00  0.00  3.25  3.25  0.0
 EOF
 
-cat > Pu.$fct-nc.in << EOF
+cat > Pu.$fct-n-nc.in << EOF
  &input
    title='Pu',
    zed=94.0,
@@ -1448,7 +1445,7 @@ cat > Pu.$fct-nc.in << EOF
  /
  &inputp
    pseudotype=2,
-   file_pseudopw='Pu.$fct-nc.UPF',
+   file_pseudopw='Pu.$fct-n-nc.UPF',
    author='TM',
    lloc=0,
    nlcc=.true.,
@@ -1461,7 +1458,7 @@ cat > Pu.$fct-nc.in << EOF
 7S  1  0  2.00  0.00  3.00  3.00  0.0
 EOF
 
-cat > Rb.$fct-nc.in << EOF
+cat > Rb.$fct-n-nc.in << EOF
  &input
    title='Rb',
    zed=37.,
@@ -1472,7 +1469,7 @@ cat > Rb.$fct-nc.in << EOF
  /
  &inputp
    pseudotype=2,
-   file_pseudopw='Rb.$fct-nc.UPF',
+   file_pseudopw='Rb.$fct-n-nc.UPF',
    author='TM',
    lloc=0,
    nlcc=.true.,
@@ -1484,7 +1481,7 @@ cat > Rb.$fct-nc.in << EOF
 5S  1  0  1.00  0.00  3.82  3.82  0.0
 EOF
 
-cat > Ra.$fct-nc.in << EOF
+cat > Ra.$fct-n-nc.in << EOF
  &input
    title='Ra',
    zed=88.,
@@ -1495,7 +1492,7 @@ cat > Ra.$fct-nc.in << EOF
  /
  &inputp
    pseudotype=2,
-   file_pseudopw='Ra.$fct-nc.UPF',
+   file_pseudopw='Ra.$fct-n-nc.UPF',
    author='TM',
    lloc=0,
    nlcc=.true.,
@@ -1506,7 +1503,7 @@ cat > Ra.$fct-nc.in << EOF
 7S  1  0  2.00  0.00  4.50  4.50  0.0
 EOF
 
-cat > Re.$fct-nc.in << EOF
+cat > Re.$fct-n-nc.in << EOF
  &input
    title='Re',
    zed=75.,
@@ -1517,7 +1514,7 @@ cat > Re.$fct-nc.in << EOF
  /
  &inputp
    pseudotype=2,
-   file_pseudopw='Re.$fct-nc.UPF',
+   file_pseudopw='Re.$fct-n-nc.UPF',
    author='TM',
    lloc=0,
    nlcc=.true.,
@@ -1529,8 +1526,7 @@ cat > Re.$fct-nc.in << EOF
 6S  1  0  2.00  0.00  2.45  2.45  0.0
 EOF
 
-
-cat > Rh.$fct-nc.in << EOF
+cat > Rh.$fct-n-nc.in << EOF
  &input
    title='Rh',
    zed=45.0,
@@ -1541,7 +1537,7 @@ cat > Rh.$fct-nc.in << EOF
  /
  &inputp
    pseudotype=2,
-   file_pseudopw='Rh.$fct-nc.UPF',
+   file_pseudopw='Rh.$fct-n-nc.UPF',
    author='TM',
    lloc=0,
    nlcc=.true.,
@@ -1553,7 +1549,7 @@ cat > Rh.$fct-nc.in << EOF
 5S  1  0  1.00  0.00  2.40  2.40  0.0
 EOF
 
-cat > Rn.$fct-nc.in << EOF
+cat > Rn.$fct-n-nc.in << EOF
  &input
    title='Rn',
    zed=86.0,
@@ -1564,7 +1560,7 @@ cat > Rn.$fct-nc.in << EOF
  /
  &inputp
    pseudotype=2,
-   file_pseudopw='Rn.$fct-nc.UPF',
+   file_pseudopw='Rn.$fct-n-nc.UPF',
    author='TM',
    lloc=3,
    nlcc=.true.,
@@ -1577,7 +1573,7 @@ cat > Rn.$fct-nc.in << EOF
 5F  4  3  0.00  0.10  3.00  3.00  0.0
 EOF
 
-cat > Ru.$fct-nc.in << EOF
+cat > Ru.$fct-n-nc.in << EOF
  &input
    title='Ru',
    zed=44.0,
@@ -1588,7 +1584,7 @@ cat > Ru.$fct-nc.in << EOF
  /
  &inputp
    pseudotype=2,
-   file_pseudopw='Ru.$fct-nc.UPF',
+   file_pseudopw='Ru.$fct-n-nc.UPF',
    author='TM',
    lloc=0,
    nlcc=.true.,
@@ -1600,7 +1596,7 @@ cat > Ru.$fct-nc.in << EOF
 5S  1  0  1.00  0.00  2.70  2.70  0.0
 EOF
 
-cat > S.$fct-nc.in << EOF
+cat > S.$fct-n-nc.in << EOF
  &input
    title='S',
    zed=16,
@@ -1611,7 +1607,7 @@ cat > S.$fct-nc.in << EOF
  /
  &inputp
    pseudotype=2,
-   file_pseudopw='S.$fct-nc.UPF',
+   file_pseudopw='S.$fct-n-nc.UPF',
    author='TM',
    lloc=2,
    nlcc=.true.,
@@ -1623,7 +1619,7 @@ cat > S.$fct-nc.in << EOF
 3D  3  2  0.00  0.10  1.70  1.70  0.0
 EOF
 
-cat > Sb.$fct-nc.in << EOF
+cat > Sb.$fct-n-nc.in << EOF
  &input
    title='Sb',
    zed=51.,
@@ -1634,7 +1630,7 @@ cat > Sb.$fct-nc.in << EOF
  /
  &inputp
    pseudotype=2,
-   file_pseudopw='Sb.$fct-nc.UPF',
+   file_pseudopw='Sb.$fct-n-nc.UPF',
    author='TM',
    lloc=0,
    nlcc=.true.,
@@ -1646,7 +1642,7 @@ cat > Sb.$fct-nc.in << EOF
 5S  1  0  2.00  0.00  2.60  2.60  0.0
 EOF
 
-cat > Sc.$fct-nc.in << EOF
+cat > Sc.$fct-n-nc.in << EOF
  &input
    title='Sc',
    zed=21.,
@@ -1657,7 +1653,7 @@ cat > Sc.$fct-nc.in << EOF
  /
  &inputp
    pseudotype=2,
-   file_pseudopw='Sc.$fct-nc.UPF',
+   file_pseudopw='Sc.$fct-n-nc.UPF',
    author='TM',
    lloc=0,
    nlcc=.true.,
@@ -1669,8 +1665,7 @@ cat > Sc.$fct-nc.in << EOF
 4S  1  0  2.00  0.00  2.80  2.80  0.0
 EOF
 
-
-cat > Se.$fct-nc.in << EOF
+cat > Se.$fct-n-nc.in << EOF
  &input
    title='Se',
    zed=34.,
@@ -1681,7 +1676,7 @@ cat > Se.$fct-nc.in << EOF
  /
  &inputp
    pseudotype=2,
-   file_pseudopw='Se.$fct-nc.UPF',
+   file_pseudopw='Se.$fct-n-nc.UPF',
    author='TM',
    lloc=2,
    nlcc=.true.,
@@ -1694,7 +1689,7 @@ cat > Se.$fct-nc.in << EOF
 EOF
 
 
-cat > Si.$fct-nc.in << EOF
+cat > Si.$fct-n-nc.in << EOF
  &input
    title='Si',
    zed=14.0,
@@ -1705,7 +1700,7 @@ cat > Si.$fct-nc.in << EOF
  /
  &inputp
    pseudotype=2,
-   file_pseudopw='Si.$fct-nc.UPF',
+   file_pseudopw='Si.$fct-n-nc.UPF',
    author='TM',
    lloc=2,
    nlcc=.true.,
@@ -1717,7 +1712,7 @@ cat > Si.$fct-nc.in << EOF
 3D  3  2  0.00  0.10  1.80  1.80  0.0
 EOF
 
-cat > Sm.$fct-nc.in << EOF
+cat > Sm.$fct-n-nc.in << EOF
  &input
    title='Sm',
    zed=62.0,
@@ -1728,7 +1723,7 @@ cat > Sm.$fct-nc.in << EOF
  /
  &inputp
    pseudotype=2,
-   file_pseudopw='Sm.$fct-nc.UPF',
+   file_pseudopw='Sm.$fct-n-nc.UPF',
    author='TM',
    lloc=0,
    nlcc=.true.,
@@ -1741,7 +1736,7 @@ cat > Sm.$fct-nc.in << EOF
 6S  1  0  2.00  0.00  3.25  3.25  0.0
 EOF
 
-cat > Sn.$fct-nc.in << EOF
+cat > Sn.$fct-n-nc.in << EOF
  &input
    title='Sn',
    zed=50.,
@@ -1752,7 +1747,7 @@ cat > Sn.$fct-nc.in << EOF
  /
  &inputp
    pseudotype=2,
-   file_pseudopw='Sn.$fct-nc.UPF',
+   file_pseudopw='Sn.$fct-n-nc.UPF',
    author='TM',
    lloc=0,
    nlcc=.true.,
@@ -1764,7 +1759,7 @@ cat > Sn.$fct-nc.in << EOF
 5S  1  0  2.00  0.00  2.60  2.60  0.0
 EOF
 
-cat > Sr.$fct-nc.in << EOF
+cat > Sr.$fct-n-nc.in << EOF
  &input
    title='Sr',
    zed=38.,
@@ -1775,7 +1770,7 @@ cat > Sr.$fct-nc.in << EOF
  /
  &inputp
    pseudotype=2,
-   file_pseudopw='Sr.$fct-nc.UPF',
+   file_pseudopw='Sr.$fct-n-nc.UPF',
    author='TM',
    lloc=0,
    nlcc=.true.,
@@ -1787,7 +1782,7 @@ cat > Sr.$fct-nc.in << EOF
 5S  1  0  2.00  0.00  3.60  3.60  0.0
 EOF
 
-cat > Ta.$fct-nc.in << EOF
+cat > Ta.$fct-n-nc.in << EOF
  &input
    title='Ta',
    zed=73.0,
@@ -1798,7 +1793,7 @@ cat > Ta.$fct-nc.in << EOF
  /
  &inputp
    pseudotype=2,
-   file_pseudopw='Ta.$fct-nc.UPF',
+   file_pseudopw='Ta.$fct-n-nc.UPF',
    author='TM',
    lloc=0,
    nlcc=.true.,
@@ -1810,7 +1805,7 @@ cat > Ta.$fct-nc.in << EOF
 6S  1  0  2.00  0.00  2.55  2.55  0.0
 EOF
 
-cat > Tb.$fct-nc.in << EOF
+cat > Tb.$fct-n-nc.in << EOF
  &input
    title='Tb',
    zed=65.0,
@@ -1821,7 +1816,7 @@ cat > Tb.$fct-nc.in << EOF
  /
  &inputp
    pseudotype=2,
-   file_pseudopw='Tb.$fct-nc.UPF',
+   file_pseudopw='Tb.$fct-n-nc.UPF',
    author='TM',
    lloc=0,
    nlcc=.true.,
@@ -1834,7 +1829,7 @@ cat > Tb.$fct-nc.in << EOF
 6S  1  0  2.00  0.00  3.20  3.20  0.0
 EOF
 
-cat > Tc.$fct-nc.in << EOF
+cat > Tc.$fct-n-nc.in << EOF
  &input
    title='Tc',
    zed=43.0,
@@ -1845,7 +1840,7 @@ cat > Tc.$fct-nc.in << EOF
  /
  &inputp
    pseudotype=2,
-   file_pseudopw='Tc.$fct-nc.UPF',
+   file_pseudopw='Tc.$fct-n-nc.UPF',
    author='TM',
    lloc=0,
    nlcc=.true.,
@@ -1857,7 +1852,7 @@ cat > Tc.$fct-nc.in << EOF
 5S  1  0  2.00  0.00  2.40  2.40  0.0
 EOF
 
-cat > Te.$fct-nc.in << EOF
+cat > Te.$fct-n-nc.in << EOF
  &input
    title='Te',
    zed=52.,
@@ -1868,7 +1863,7 @@ cat > Te.$fct-nc.in << EOF
  /
  &inputp
    pseudotype=2,
-   file_pseudopw='Te.$fct-nc.UPF',
+   file_pseudopw='Te.$fct-n-nc.UPF',
    author='TM',
    lloc=0,
    nlcc=.true.,
@@ -1880,7 +1875,7 @@ cat > Te.$fct-nc.in << EOF
 5S  1  0  2.00  0.00  2.60  2.60  0.0
 EOF
 
-cat > Th.$fct-nc.in << EOF
+cat > Th.$fct-n-nc.in << EOF
  &input
    title='Th',
    zed=90.0,
@@ -1891,7 +1886,7 @@ cat > Th.$fct-nc.in << EOF
  /
  &inputp
    pseudotype=2,
-   file_pseudopw='Th.$fct-nc.UPF',
+   file_pseudopw='Th.$fct-n-nc.UPF',
    author='TM',
    lloc=0,
    nlcc=.true.,
@@ -1904,7 +1899,7 @@ cat > Th.$fct-nc.in << EOF
 7S  1  0  2.00  0.00  3.00  3.00  0.0
 EOF
 
-cat > Ti.$fct-nc.in << EOF
+cat > Ti.$fct-n-nc.in << EOF
  &input
    title='Ti',
    zed=22.,
@@ -1915,7 +1910,7 @@ cat > Ti.$fct-nc.in << EOF
  /
  &inputp
    pseudotype=2,
-   file_pseudopw='Ti.$fct-nc.UPF',
+   file_pseudopw='Ti.$fct-n-nc.UPF',
    author='TM',
    lloc=0,
    nlcc=.true.,
@@ -1927,7 +1922,7 @@ cat > Ti.$fct-nc.in << EOF
 4S  1  0  2.00  0.00  2.54  2.54  0.0
 EOF
 
-cat > Tl.$fct-nc.in << EOF
+cat > Tl.$fct-n-nc.in << EOF
  &input
    title='Tl',
    zed=81.,
@@ -1938,7 +1933,7 @@ cat > Tl.$fct-nc.in << EOF
  /
  &inputp
    pseudotype=2,
-   file_pseudopw='Tl.$fct-nc.UPF',
+   file_pseudopw='Tl.$fct-n-nc.UPF',
    author='TM',
    lloc=0,
    nlcc=.true.,
@@ -1950,7 +1945,7 @@ cat > Tl.$fct-nc.in << EOF
 6S  1  0  2.00  0.00  3.00  3.00  0.0
 EOF
 
-cat > Tm.$fct-nc.in << EOF
+cat > Tm.$fct-n-nc.in << EOF
  &input
    title='Tm',
    zed=69.0,
@@ -1961,7 +1956,7 @@ cat > Tm.$fct-nc.in << EOF
  /
  &inputp
    pseudotype=2,
-   file_pseudopw='Tm.$fct-nc.UPF',
+   file_pseudopw='Tm.$fct-n-nc.UPF',
    author='TM',
    lloc=0,
    nlcc=.true.,
@@ -1974,7 +1969,7 @@ cat > Tm.$fct-nc.in << EOF
 6S  1  0  2.00  0.00  3.15  3.15  0.0
 EOF
 
-cat > V.$fct-nc.in << EOF
+cat > V.$fct-n-nc.in << EOF
  &input
    title='V',
    zed=23.,
@@ -1985,7 +1980,7 @@ cat > V.$fct-nc.in << EOF
  /
  &inputp
    pseudotype=2,
-   file_pseudopw='V.$fct-nc.UPF',
+   file_pseudopw='V.$fct-n-nc.UPF',
    author='TM',
    lloc=0,
    nlcc=.true.,
@@ -1997,7 +1992,7 @@ cat > V.$fct-nc.in << EOF
 4S  1  0  2.00  0.00  2.35  2.35  0.0
 EOF
 
-cat > U.$fct-nc.in << EOF
+cat > U.$fct-n-nc.in << EOF
  &input
    title='U',
    zed=92.0,
@@ -2008,7 +2003,7 @@ cat > U.$fct-nc.in << EOF
  /
  &inputp
    pseudotype=2,
-   file_pseudopw='U.$fct-nc.UPF',
+   file_pseudopw='U.$fct-n-nc.UPF',
    author='TM',
    lloc=0,
    nlcc=.true.,
@@ -2021,7 +2016,7 @@ cat > U.$fct-nc.in << EOF
 7S  1  0  2.00  0.00  3.00  3.00  0.0
 EOF
 
-cat > Xe.$fct-nc.in << EOF
+cat > Xe.$fct-n-nc.in << EOF
  &input
    title='Xe',
    zed=54.,
@@ -2032,7 +2027,7 @@ cat > Xe.$fct-nc.in << EOF
  /
  &inputp
    pseudotype=2,
-   file_pseudopw='Xe.$fct-nc.UPF',
+   file_pseudopw='Xe.$fct-n-nc.UPF',
    author='TM',
    lloc=0,
    nlcc=.true.,
@@ -2044,7 +2039,7 @@ cat > Xe.$fct-nc.in << EOF
 5S  1  0  2.00  0.00  3.25  3.25  0.0
 EOF
 
-cat > Y.$fct-nc.in << EOF
+cat > Y.$fct-n-nc.in << EOF
  &input
    title='Y',
    zed=39.,
@@ -2055,7 +2050,7 @@ cat > Y.$fct-nc.in << EOF
  /
  &inputp
    pseudotype=2,
-   file_pseudopw='Y.$fct-nc.UPF',
+   file_pseudopw='Y.$fct-n-nc.UPF',
    author='TM',
    lloc=0,
    nlcc=.true.,
@@ -2067,7 +2062,7 @@ cat > Y.$fct-nc.in << EOF
 5S  1  0  2.00  0.00  3.05  3.05  0.0
 EOF
 
-cat > Yb.$fct-nc.in << EOF
+cat > Yb.$fct-n-nc.in << EOF
  &input
    title='Yb',
    zed=70.0,
@@ -2078,7 +2073,7 @@ cat > Yb.$fct-nc.in << EOF
  /
  &inputp
    pseudotype=2,
-   file_pseudopw='Yb.$fct-nc.UPF',
+   file_pseudopw='Yb.$fct-n-nc.UPF',
    author='TM',
    lloc=0,
    nlcc=.true.,
@@ -2105,7 +2100,6 @@ cat > Zn.$fct-nc.in << EOF
    file_pseudopw='Zn.$fct-nc.UPF',
    author='TM',
    lloc=0,
-   nlcc=.true.,
    tm=.true.
  /
 3
@@ -2114,7 +2108,7 @@ cat > Zn.$fct-nc.in << EOF
 4S  1  0  2.00  0.00  2.30  2.30  0.0
 EOF
 
-cat > Zr.$fct-nc.in << EOF
+cat > Zr.$fct-n-nc.in << EOF
  &input
    title='Zr',
    zed=40.,
@@ -2125,7 +2119,7 @@ cat > Zr.$fct-nc.in << EOF
  /
  &inputp
    pseudotype=2,
-   file_pseudopw='Zr.$fct-nc.UPF',
+   file_pseudopw='Zr.$fct-n-nc.UPF',
    author='TM',
    lloc=0,
    nlcc=.true.,
