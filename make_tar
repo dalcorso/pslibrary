@@ -4,7 +4,7 @@ tar_directory=pslibrary.1.0.0
 mkdir $tar_directory
 
 cp AAREADME clean clean_all make_ps make_all_ps paw_ps_collection.job \
-   us_ps_collection.job nc_ps_collection.job paw_ps_collection_tot.job us_ps_collection_tot.job make_tar $tar_directory
+   us_ps_collection.job nc_ps_collection.job paw_ps_collection_tot.job us_ps_collection_tot.job paw_ps_collection_alt.job us_ps_collection_alt.job make_tar $tar_directory
 
 mkdir $tar_directory/pz
 mkdir $tar_directory/rel-pz
