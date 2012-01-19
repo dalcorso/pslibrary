@@ -56,6 +56,16 @@ in the pw.x code and some of the apparent PP problems might be now corrected.
 To generate these PPs you need to enter in the make_ps file and uncomment
 the appropriate line.
 
+PAW data-sets and US-PPs that are in
+
+paw_ps_collection_alt.job
+us_ps_collection_alt.job
+
+are alternative data sets that might have a different number of valence
+states with respect to the data set in the main distribution file.
+They are not compiled by default. To generate them you need to enter in the 
+make_ps file and uncomment the appropriate line.
+
 For testing purposes, starting with version 0.2.1 also the TM norm 
 conserving radii are distributed. 
 (NB: these radii have been originally imported from the file

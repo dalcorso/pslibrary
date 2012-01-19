@@ -56,14 +56,17 @@ elements:
  Sc Sr Tc Ti Tl V Xe Y W Zr
 
 These PPs are known to have some problem in some case (mainly in the FR form)
-and need further tuning, but are a starting point for further optiminization,
+and need further tuning, but are a starting point for further optimization,
 so use them at your own risk. 
 In order to add also these PPs to your list uncomment the appropriate lines
 in make_ps.
 
 --------------------------------------------------------
 
-pslibrary.0.2.4 (ADC, WORK IN PROGRESS)
+pslibrary.0.2.4 (ADC, Jan 2012)
+
+Reorganization of the documentation.
+Names of the PPs now conform to the QE recommendations.
 
 SR + FR changes: NC-PP: Sb and As had not SO projectors in the p channel 
 (which was local). Now d is local. 
@@ -76,10 +79,11 @@ NC-PP: Relativistic Sn had still a ghost. Core radii increased.
 
 SR + FR changes : NC-PP In had a ghost.
 
-PP transferred from the _tot file: Rh (SR+FR), Ir (SR+FR), Ar 
+PP transferred from the _tot file to the main file: Rh (SR+FR), Ir (SR+FR), Ar 
 
 PPs names now follows the indications of the QE PP distribution. Semicore
 states included in the PP are indicated in the PP name.
+
 Added two files containing alternative PPs. Presently:
 Fe : SR and FR without semicore 3s and 3p states.
 Pt : SR and FR PPs with semicore 5s and 5p states.
