@@ -43,8 +43,8 @@ FR additions: Pd, Ge, In, Te, Bi, Zn, Hg
 
 Removed PPs:
 In the NC case Cu and W were not working. 
---------------------------------------------------------
 
+--------------------------------------------------------
 pslibrary.0.2.3 (ADC, Dic. 2011)
 
 SR changes: NC-PP Ge and Sn PPs had a ghost. Improved PPs.
@@ -62,7 +62,6 @@ In order to add also these PPs to your list uncomment the appropriate lines
 in make_ps.
 
 --------------------------------------------------------
-
 pslibrary.0.2.4 (ADC, Jan 2012)
 
 Reorganization of the documentation.
@@ -87,4 +86,10 @@ states included in the PP are indicated in the PP name.
 Added two files containing alternative PPs. Presently:
 Fe : SR and FR without semicore 3s and 3p states.
 Pt : SR and FR PPs with semicore 5s and 5p states.
-Au : SR and FE PPs with semicore 5s and 5p states.
+Au : SR and FR PPs with semicore 5s and 5p states.
+
+--------------------------------------------------------
+pslibrary.0.2.5 (ADC, WORK IN PROGRESS)
+
+Added PPs FR + SR: Mg with semicore 2s and 2p states has been added to the
+alternative PPs.
