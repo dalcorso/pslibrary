@@ -1236,7 +1236,7 @@ cat > P.$fct-n-kjpaw.in << EOF
 3D  3  2 -2.00 -0.30  1.90  1.90  0.0
 EOF
 
-cat > Rh.$fct-n-kjpaw.in << EOF
+cat > Rh.$fct-spn-kjpaw.in << EOF
  &input
    title='Rh',
    zed=45.,
@@ -1248,7 +1248,7 @@ cat > Rh.$fct-n-kjpaw.in << EOF
  &inputp
    lpaw=.true.,
    pseudotype=3,
-   file_pseudopw='Rh.$fct-n-kjpaw.UPF',
+   file_pseudopw='Rh.$fct-spn-kjpaw.UPF',
    author='ADC',
    lloc=-1,
    rcloc=2.3,
