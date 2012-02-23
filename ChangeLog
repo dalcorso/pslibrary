@@ -95,3 +95,6 @@ Added PPs FR + SR: Mg with semicore 2s and 2p states has been added to the
 alternative PPs.
 
 Rh and V names were not correct in the paw case.
+
+Bug fix: The alternative Pt and Au inputs produced always scalar 
+relativistic data sets.

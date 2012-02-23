@@ -20,7 +20,7 @@ cat > Au.$fct-spn-kjpaw.in << EOF
  &input
    title='Au',
    zed=79.,
-   rel=$rel,
+   rel=$nrel,
    config='[Xe] 4f14 5d10.0 6s1.0 6p0.0',
    iswitch=3,
    dft='$gfun'
@@ -113,7 +113,7 @@ cat > Pt.$fct-spn-kjpaw.in << EOF
  &input
    title='Pt',
    zed=78.,
-   rel=$rel,
+   rel=$nrel,
    config='[Xe] 4f14 5d9.0 6s1.0 6p0.0',
    iswitch=3,
    dft='$gfun'
