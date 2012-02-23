@@ -836,7 +836,7 @@ cat > V.$fct-spn-kjpaw.in << EOF
  &inputp
    lpaw=.true.,
    pseudotype=3,
-   file_pseudopw='V.$fct-n-kjpaw.UPF',
+   file_pseudopw='V.$fct-spn-kjpaw.UPF',
    author='ADC',
    lloc=-1,
    rcloc=2.0,
