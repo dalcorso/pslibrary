@@ -4,10 +4,14 @@ PWDIR='/path_to_quantum_espresso/'
 element='all'
 
 # do not change after this line. Uncomment the appropriate line if
-# you want to test the additional PPs.
+# you want to test the additional PPs or to use a version of 
+# QE < 5.0 (at your own risk).
 
 work=./WORK
-. $PWDIR/examples/environment_variables
+#  For QE < 5.0 
+#. $PWDIR/example/environment_variables
+#
+. $PWDIR/environment_variables
 BIN_DIR=$PWDIR/bin
 
 mkdir $work >& /dev/null
