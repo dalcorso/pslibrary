@@ -99,4 +99,34 @@ Rh and V names were not correct in the paw case.
 Bug fix: The alternative Pt and Au inputs produced always scalar 
 relativistic data sets.
 
-Scripts updated to QE 5.0.
+Scripts updated for QE 5.0
+
+--------------------------------------------------------
+pslibrary.0.2.6 (ADC, Sep. 2012)
+
+Hf data set is not very good, moved to the _tot files.
+
+Ce data set had problems. Removed.
+
+Alternative (FR+SR) Ir PP with semicore states added to the alternative PPs.
+
+The title of the job now contains the pslibrary version. 
+Added to each PP the number of the last version in which it changed.
+
+The e-mail address is no more allowed in the author name. 
+It is too difficult to update it.
+
+The PPs in the _tot files have been given a vote (a-c are candidate to be
+moved in the main PPs files).
+
+a: no error found, several structures for which structural parameters agree
+   with all-electron. A working PP.
+b: no error found, some structures have moderate differences with
+   all electron. A working PP that could be imporved. 
+c: no error found, some structures have large differences with all-electron. 
+   A working PP should be easy to improve.
+
+d: same convergence problem. Errors moderately large. Not acceptable PP,
+   need revision, but might be used in some cases.
+e: insufficient PP. Problems.
+q: PPs for which there is no info so far.

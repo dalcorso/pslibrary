@@ -1,6 +1,6 @@
 #!/bin/bash
 #!
-#! Copyright (C) 2010-2011 Andrea Dal Corso 
+#! Copyright (C) 2010-2012 Andrea Dal Corso 
 #! This file is distributed under the terms of the
 #! GNU General Public License. See the file `License'
 #! in the root directory of the present distribution,
@@ -12,7 +12,7 @@
 
 cat > Ag.$fct-dn-kjpaw.in << EOF
  &input
-   title='Ag',
+   title='Ag pslibrary.0.1',
    zed=47.,
    rel=$nrel,
    config='[Kr] 4d9.5 5s1.5 5p0.0',
@@ -45,7 +45,7 @@ then
 
 cat > Al.$fct-n-kjpaw.in << EOF
  &input
-   title='Al',
+   title='Al pslibrary.0.2.2',
    zed=13.0,
    rel=$nrel,
    config='[Ne] 3s2 3p1 3d-2.0 4f-2.0',
@@ -75,7 +75,7 @@ else
 
 cat > Al.$fct-n-kjpaw.in << EOF
  &input
-   title='Al',
+   title='Al pslibrary.0.1',
    zed=13.0,
    rel=$nrel,
    config='[Ne] 3s2 3p1 3d-2.0 4f-2.0',
@@ -105,7 +105,7 @@ fi
 
 cat > Ar.$fct-n-kjpaw.in << EOF
  &input
-   title='Ar',
+   title='Ar pslibrary.0.2.3',
    zed=18.0,
    rel=$nrel,
    config='[Ar] 3d-2',
@@ -135,7 +135,7 @@ EOF
 
 cat > As.$fct-n-kjpaw.in << EOF
  &input
-   title='As',
+   title='As pslibrary.0.2',
    zed=33.,
    rel=$nrel,
    config='[Ar] 3d10.0 4s2.0 4p3.0 4d-2.0',
@@ -165,7 +165,7 @@ EOF
 
 cat > Au.$fct-dn-kjpaw.in << EOF
  &input
-   title='Au',
+   title='Au pslibrary.0.1',
    zed=79.,
    rel=$nrel,
    config='[Xe] 4f14 5d10.0 6s1.0 6p0.0',
@@ -197,7 +197,7 @@ EOF
 
 cat > B.$fct-n-kjpaw.in << EOF
  &input
-   title='B',
+   title='B pslibrary.0.1',
    zed=5.0,
    rel=$nrel,
    config='1s2.0 2s2.0 2p1.0 3d-2.0',
@@ -225,7 +225,7 @@ EOF
 
 cat > Be.$fct-n-kjpaw.in << EOF
  &input
-   title='Be',
+   title='Be pslibrary.0.2',
    zed=4.0,
    rel=$nrel,
    config='1s2 2s2.0 2p0.0 3d-2',
@@ -259,7 +259,7 @@ then
 
 cat > Bi.$fct-dn-kjpaw.in << EOF
  &input
-   title='Bi',
+   title='Bi pslibrary.0.2.2',
    zed=83.,
    rel=$nrel,
    config='[Xe] 4f14.0 5d10.0 6s2.0 6p3.0 6d-2.0',
@@ -293,7 +293,7 @@ else
 
 cat > Bi.$fct-dn-kjpaw.in << EOF
  &input
-   title='Bi',
+   title='Bi pslibrary.0.2.2',
    zed=83.,
    rel=$nrel,
    config='[Xe] 4f14.0 5d10.0 6s2.0 6p3.0 6d-2.0',
@@ -328,7 +328,7 @@ fi
 
 cat > Br.$fct-n-kjpaw.in << EOF
  &input
-   title='Br',
+   title='Br pslibrary.0.2',
    zed=35.,
    rel=$nrel,
    config='[Ar] 3d10.0 4s2.0 4p5.0 4d-2.0',
@@ -358,7 +358,7 @@ EOF
 
 cat > C.$fct-n-kjpaw.in << EOF
  &input
-   title='C',
+   title='C pslibrary.0.1',
    zed=6,
    rel=$nrel,
    config='[He] 2s2 2p2 3d-2',
@@ -369,7 +369,7 @@ cat > C.$fct-n-kjpaw.in << EOF
    lpaw=.true.,
    pseudotype=3,
    file_pseudopw='C.$fct-n-kjpaw.UPF',
-   author='"Lorenzo Paulatto" <paulatto@sissa.it>',
+   author='Lorenzo Paulatto',
    lloc=2,
    which_augfun ='BESSEL',
    rmatch_augfun=1.1,
@@ -388,7 +388,7 @@ EOF
 
 cat > Cd.$fct-dn-kjpaw.in << EOF
  &input
-   title='Cd',
+   title='Cd pslibrary.0.2',
    zed=48.,
    rel=$nrel,
    config='[Kr] 4d9.5 5s2.0 5p0.5',
@@ -420,7 +420,7 @@ EOF
 
 cat > Cl.$fct-n-kjpaw.in << EOF
  &input
-   title='Cl',
+   title='Cl pslibrary.0.1',
    zed=17,
    rel=$nrel,
    config='[Ne] 3s2 3p5 3d-2',
@@ -450,7 +450,7 @@ EOF
 
 cat > Cu.$fct-dn-kjpaw.in << EOF
  &input
-   title='Cu',
+   title='Cu pslibrary.0.2',
    zed=29.,
    rel=$nrel,
    config='[Ar] 3d9.5 4s1.5 4p0.0',
@@ -482,7 +482,7 @@ EOF
 
 cat > Fe.$fct-spn-kjpaw.in << EOF
  &input
-   title='Fe',
+   title='Fe pslibrary.0.2.1',
    zed=26.,
    rel=$nrel,
    config='[Ar] 4s2.0 3d6.0 4p0',
@@ -514,7 +514,7 @@ EOF
 
 cat > F.$fct-n-kjpaw.in << EOF
  &input
-   title='F',
+   title='F pslibrary.0.1',
    zed=9.0,
    rel=$nrel,
    config='1s2.0 2s2.0 2p5.0 3d-2.0',
@@ -543,7 +543,7 @@ EOF
 
 cat > Ga.$fct-dn-kjpaw.in << EOF
  &input
-   title='Ga',
+   title='Ga pslibrary.0.2',
    zed=31.,
    rel=$nrel,
    config='[Ar] 3d10.0 4s2.0 4p1.0',
@@ -575,7 +575,7 @@ EOF
 
 cat > Ge.$fct-dn-kjpaw.in << EOF
  &input
-   title='Ge',
+   title='Ge pslibrary.0.2.2',
    zed=32.,
    rel=$nrel,
    config='[Ar] 3d10.0 4s2.0 4p2.0',
@@ -607,7 +607,7 @@ EOF
 
 cat > In.$fct-dn-kjpaw.in << EOF
  &input
-   title='In',
+   title='In pslibrary.0.2.2',
    zed=49.,
    rel=$nrel,
    config='[Kr] 4d10.0 5s2.0 5p1.0',
@@ -642,7 +642,7 @@ then
 
 cat > Ir.$fct-n-kjpaw.in << EOF
  &input
-   title='Ir',
+   title='Ir pslibrary.0.2.3',
    zed=77.,
    rel=$nrel,
    config='[Xe] 4f14.0 5d7.0 6s2.0 6p0.0',
@@ -674,7 +674,7 @@ else
 
 cat > Ir.$fct-n-kjpaw.in << EOF
  &input
-   title='Ir',
+   title='Ir pslibrary.0.2.3',
    zed=77.,
    rel=$nrel,
    config='[Xe] 4f14.0 5d7.0 6s2.0 6p0.0',
@@ -706,7 +706,7 @@ fi
 
 cat > H.$fct-kjpaw.in << EOF
  &input
-   title='H',
+   title='H pslibrary.0.1',
    zed=1,
    rel=$nrel,
    config='1s1 2p-1',
@@ -717,7 +717,7 @@ cat > H.$fct-kjpaw.in << EOF
    lpaw=.true.,
    pseudotype=3,
    file_pseudopw='H.$fct-kjpaw.UPF',
-   author='"Lorenzo Paulatto" <paulatto@sissa.it>',
+   author='Lorenzo Paulatto',
    lloc=1,
    which_augfun='PSQ',
    rmatch_augfun=0.8,
@@ -729,40 +729,9 @@ cat > H.$fct-kjpaw.in << EOF
 2P  2  1 -1.00  0.05  0.75  0.75  0.0
 EOF
 
-cat > Hf.$fct-spn-kjpaw.in << EOF
- &input
-   title='Hf',
-   zed=72.0,
-   rel=$nrel,
-   config='[Xe] 4f14 5d2.0 6s2 6p0',
-   iswitch=3,
-   dft='$gfun'
- /
- &inputp
-   lpaw=.true.,
-   pseudotype=3,
-   file_pseudopw='Hf.$fct-spn-kjpaw.UPF',
-   author='ADC',
-   lloc=-1,
-   rcloc=2.5,
-   which_augfun='BESSEL',
-   rmatch_augfun=1.5,
-   nlcc=.true.,
-   rcore=1.2,
-   tm=.true.
- /
-6
-5S  1  0  2.00  0.00  1.50  1.60  0.0
-6S  2  0  2.00  0.00  1.10  1.60  0.0
-5P  2  1  6.00  0.00  1.50  1.60  0.0
-6P  3  1  0.00  0.00  1.30  1.60  0.0
-5D  3  2  2.00  0.00  1.60  1.70  0.0
-5D  3  2 -2.00  0.30  1.60  1.70  0.0
-EOF
-
 cat > Hg.$fct-dn-kjpaw.in << EOF
  &input
-   title='Hg',
+   title='Hg pslibrary.0.2.2',
    zed=80.0,
    rel=$nrel,
    config='[Xe] 4f14. 5d10 6s2 6p0.0',
@@ -797,7 +766,7 @@ then
 
 cat > I.$fct-n-kjpaw.in << EOF
  &input
-   title='I',
+   title='I pslibrary.0.2.2',
    zed=53.,
    rel=$nrel,
    config='[Kr] 4d10.0 5s2.0 5p5.0 5d-2.0',
@@ -828,7 +797,7 @@ else
 
 cat > I.$fct-n-kjpaw.in << EOF
  &input
-   title='I',
+   title='I pslibrary.0.2',
    zed=53.,
    rel=$nrel,
    config='[Kr] 4d10.0 5s2.0 5p5.0 5d-2.0',
@@ -859,7 +828,7 @@ fi
 
 cat > Li.$fct-s-kjpaw.in << EOF
  &input
-   title='Li',
+   title='Li pslibrary.0.2.1',
    zed=3.0,
    rel=$nrel,
    config='1s2 2s1 2p0 3d-2',
@@ -886,7 +855,7 @@ EOF
 
 cat > Mo.$fct-spn-kjpaw.in << EOF
  &input
-   title='Mo',
+   title='Mo pslibrary.0.2',
    zed=42.0,
    rel=$nrel,
    config='[Kr] 4d5.0 5s1 5p0',
@@ -918,7 +887,7 @@ EOF
 
 cat > Na.$fct-spn-kjpaw.in << EOF
  &input
-   title='Na',
+   title='Na pslibrary.0.2',
    zed=11.0,
    rel=$nrel,
    config='[Ne] 3s0.5 3p0 3d-2',
@@ -945,7 +914,7 @@ EOF
 
 cat > Ni.$fct-n-kjpaw.in << EOF
  &input
-   title='Ni',
+   title='Ni pslibrary.0.1',
    zed=28.,
    rel=$nrel,
    config='[Ar] 4s2 3d8 4p0',
@@ -977,7 +946,7 @@ EOF
 
 cat > N.$fct-n-kjpaw.in << EOF
  &input
-   title='N',
+   title='N pslibrary.0.1',
    zed=7.,
    rel=$nrel,
    config='[He] 2s2 2p3 3d-2',
@@ -988,7 +957,7 @@ cat > N.$fct-n-kjpaw.in << EOF
    lpaw = .true.,
    pseudotype=3,
    file_pseudopw='N.$fct-n-kjpaw.UPF',
-   author='"Lorenzo Paulatto" <paulatto@sissa.it>, modified by ADC',
+   author='Lorenzo Paulatto, modified by ADC',
    which_augfun='PSQ',
    rmatch_augfun=1.0,
    lloc=2,
@@ -1007,7 +976,7 @@ EOF
 
 cat > O.$fct-n-kjpaw.in << EOF
  &input
-   title='O',
+   title='O pslibrary.0.1',
    zed=8,
    rel=$nrel,
    config='[He] 2s2 2p4 3d-2',
@@ -1018,7 +987,7 @@ cat > O.$fct-n-kjpaw.in << EOF
    lpaw=.true.,
    pseudotype=3,
    file_pseudopw='O.$fct-n-kjpaw.UPF',
-   author='"Lorenzo Paulatto" <paulatto@sissa.it>, modified by ADC',
+   author='Lorenzo Paulatto, modified by ADC',
    lloc=2,
    which_augfun='BESSEL',
    rmatch_augfun=1.20,
@@ -1040,7 +1009,7 @@ then
 
 cat > Pb.$fct-dn-kjpaw.in << EOF
  &input
-   title='Pb',
+   title='Pb pslibrary.0.2.2',
    zed=82.0,
    rel=$nrel,
    config='[Xe] 4f14 5d10 6s2 6p2',
@@ -1074,7 +1043,7 @@ else
 
 cat > Pb.$fct-dn-kjpaw.in << EOF
  &input
-   title='Pb',
+   title='Pb pslibrary.0.2.2',
    zed=82.0,
    rel=$nrel,
    config='[Xe] 4f14 5d10 6s2 6p2',
@@ -1111,7 +1080,7 @@ then
 
 cat > Pd.$fct-n-kjpaw.in << EOF
  &input
-   title='Pd',
+   title='Pd pslibrary.0.2.2',
    zed=46.,
    rel=$nrel,
    config='[Kr] 4d10. 5s0. 5p0.0',
@@ -1143,7 +1112,7 @@ else
 
 cat > Pd.$fct-n-kjpaw.in << EOF
  &input
-   title='Pd',
+   title='Pd pslibrary.0.2.2',
    zed=46.,
    rel=$nrel,
    config='[Kr] 4d9.5 5s0.5 5p0.0',
@@ -1176,7 +1145,7 @@ fi
 
 cat > Pt.$fct-n-kjpaw.in << EOF
  &input
-   title='Pt',
+   title='Pt pslibrary.0.1',
    zed=78.,
    rel=$nrel,
    config='[Xe] 4f14 5d9.0 6s1.0 6p0.0',
@@ -1208,7 +1177,7 @@ EOF
 
 cat > P.$fct-n-kjpaw.in << EOF
  &input
-   title='P',
+   title='P pslibrary.0.1',
    zed=15.,
    rel=$nrel,
    config='[Ne] 3s2 3p3 3d-2',
@@ -1238,7 +1207,7 @@ EOF
 
 cat > Rh.$fct-spn-kjpaw.in << EOF
  &input
-   title='Rh',
+   title='Rh pslibrary.0.2.3',
    zed=45.,
    rel=$nrel,
    config='[Kr] 4d8. 5s1.0 5p0.0',
@@ -1271,7 +1240,7 @@ EOF
 
 cat > S.$fct-n-kjpaw.in << EOF
  &input
-   title='S',
+   title='S pslibrary.0.1',
    zed=16,
    rel=$nrel,
    config='[Ne] 3s2 3p4 3d-2',
@@ -1301,7 +1270,7 @@ EOF
 
 cat > Se.$fct-n-kjpaw.in << EOF
  &input
-   title='Se',
+   title='Se pslibrary.0.2',
    zed=34.,
    rel=$nrel,
    config='[Ar] 3d10.0 4s2.0 4p4.0 4d-2.0',
@@ -1332,7 +1301,7 @@ EOF
 
 cat > Si.$fct-n-kjpaw.in << EOF
  &input
-   title='Si',
+   title='Si pslibrary.0.1',
    zed=14.0,
    rel=$nrel,
    config='[Ne] 3s2 3p2 3d-2.0 4f-2.0',
@@ -1362,7 +1331,7 @@ EOF
 
 cat > Sn.$fct-dn-kjpaw.in << EOF
  &input
-   title='Sn',
+   title='Sn pslibrary.0.2',
    zed=50.,
    rel=$nrel,
    config='[Kr] 4d10.0 5s2.0 5p2.0',
@@ -1394,7 +1363,7 @@ EOF
 
 cat > Ta.$fct-spn-kjpaw.in << EOF
  &input
-   title='Ta',
+   title='Ta pslibrary.0.2',
    zed=73.0,
    rel=$nrel,
    config='[Xe] 4f14 5d3.0 6s2 6p0',
@@ -1426,7 +1395,7 @@ EOF
 
 cat > Te.$fct-dn-kjpaw.in << EOF
  &input
-   title='Te',
+   title='Te pslibrary.0.2.2',
    zed=52.,
    rel=$nrel,
    config='[Kr] 4d10.0 5s2.0 5p4.00 5d-2.0',
@@ -1457,7 +1426,7 @@ EOF
 
 cat > Zn.$fct-dn-kjpaw.in << EOF
  &input
-   title='Zn',
+   title='Zn pslibrary.0.2.2',
    zed=30.,
    rel=$nrel,
    config='[Ar] 3d10. 4s2. 4p0.0',
