@@ -10,9 +10,9 @@
 
 . enviroment.job
 
-cat > At.$fct-dn-rrkjus.in << EOF
+cat > At.$fct-dn-rrkjus_psl.0.2.3.in << EOF
  &input
-   title='At pslibrary.0.2.3 q',
+   title='At q',
    zed=85.,
    rel=$nrel,
    config='[Xe] 4f14.0 5d10.0 6s2.0 6p5.0 6d-2.0',
@@ -21,7 +21,7 @@ cat > At.$fct-dn-rrkjus.in << EOF
  /
  &inputp
    pseudotype=3,
-   file_pseudopw='At.$fct-dn-rrkjus.UPF',
+   file_pseudopw='At.$fct-dn-rrkjus_psl.0.2.3.UPF',
    author='ADC',
    lloc=-1,
    rcloc=1.9,
@@ -39,9 +39,9 @@ cat > At.$fct-dn-rrkjus.in << EOF
 5D  3  2 -2.00  0.50  1.10  1.80  0.0
 EOF
 
-cat > Ba.$fct-spn-rrkjus.in << EOF
+cat > Ba.$fct-spn-rrkjus_psl.0.2.3.in << EOF
  &input
-   title='Ba pslibrary.0.2.3 d',
+   title='Ba d',
    zed=56.0,
    rel=$nrel,
    config='[Xe] 5d0.0 6s2 6p0',
@@ -50,7 +50,7 @@ cat > Ba.$fct-spn-rrkjus.in << EOF
  /
  &inputp
    pseudotype=3,
-   file_pseudopw='Ba.$fct-spn-rrkjus.UPF',
+   file_pseudopw='Ba.$fct-spn-rrkjus_psl.0.2.3.UPF',
    author='ADC',
    lloc=-1,
    rcloc=2.6,
@@ -69,9 +69,9 @@ cat > Ba.$fct-spn-rrkjus.in << EOF
 5D  3  2 -2.00  0.30  2.00  2.30  0.0
 EOF
 
-cat > Ca.$fct-spn-rrkjus.in << EOF
+cat > Ca.$fct-spn-rrkjus_psl.0.2.3.in << EOF
  &input
-   title='Ca pslibrary.0.2.3 b',
+   title='Ca b',
    zed=20.0,
    rel=$nrel,
    config='[Ar] 3d0.0 4s2.0 4p0',
@@ -80,7 +80,7 @@ cat > Ca.$fct-spn-rrkjus.in << EOF
  /
  &inputp
    pseudotype=3,
-   file_pseudopw='Ca.$fct-spn-rrkjus.UPF',
+   file_pseudopw='Ca.$fct-spn-rrkjus_psl.0.2.3.UPF',
    author='ADC',
    lloc=-1,
    rcloc=2.4,
@@ -100,9 +100,9 @@ cat > Ca.$fct-spn-rrkjus.in << EOF
 3D  3  2 -2.00  0.30  2.00  2.30  0.0
 EOF
 
-#cat > Ce.$fct-spn-rrkjus.in << EOF
+#cat > Ce.$fct-spn-rrkjus_psl.0.2.3.in << EOF
 # &input
-#   title='Ce pslibrary.0.2.3 f',
+#   title='Ce f',
 #   zed=58.0,
 #   rel=$nrel,
 #   config='[Xe] 4f1.0 5d1.0 6s2 6p0',
@@ -111,7 +111,7 @@ EOF
 # /
 # &inputp
 #   pseudotype=3,
-#   file_pseudopw='Ce.$fct-spn-rrkjus.UPF',
+#   file_pseudopw='Ce.$fct-spn-rrkjus_psl.0.2.3.UPF',
 #   author='ADC',
 #   lloc=-1,
 #   rcloc=2.0,
@@ -133,9 +133,9 @@ EOF
 #4F  4  3  0.00 -0.24  1.50  2.00  0.0
 #EOF
 
-cat > Co.$fct-n-rrkjus.in << EOF
+cat > Co.$fct-n-rrkjus_psl.0.2.3.in << EOF
  &input
-   title='Co pslibrary.0.2.3 b',
+   title='Co b',
    zed=27.,
    rel=$nrel,
    config='[Ar] 4s2 3d7 4p0',
@@ -144,7 +144,7 @@ cat > Co.$fct-n-rrkjus.in << EOF
  /
  &inputp
    pseudotype=3,
-   file_pseudopw='Co.$fct-n-rrkjus.UPF',
+   file_pseudopw='Co.$fct-n-rrkjus_psl.0.2.3.UPF',
    author='ADC',
    lloc=-1,
    rcloc=2.0,
@@ -164,9 +164,9 @@ cat > Co.$fct-n-rrkjus.in << EOF
 3D  3 2 0.00 -0.40  1.40  1.90  0.0
 EOF
 
-cat > Cr.$fct-spn-rrkjus.in << EOF
+cat > Cr.$fct-spn-rrkjus_psl.0.2.3.in << EOF
  &input
-   title='Cr pslibrary.0.2.3 c',
+   title='Cr c',
    zed=24.0,
    rel=$nrel,
    config='[Ar] 3d5.0 4s1 4p0',
@@ -175,7 +175,7 @@ cat > Cr.$fct-spn-rrkjus.in << EOF
  /
  &inputp
    pseudotype=3,
-   file_pseudopw='Cr.$fct-spn-rrkjus.UPF',
+   file_pseudopw='Cr.$fct-spn-rrkjus_psl.0.2.3.UPF',
    author='ADC',
    lloc=-1,
    rcloc=2.0,
@@ -195,9 +195,9 @@ cat > Cr.$fct-spn-rrkjus.in << EOF
 3D  3  2 -2.00  0.30  1.30  1.70  0.0
 EOF
 
-cat > Cs.$fct-spn-rrkjus.in << EOF
+cat > Cs.$fct-spn-rrkjus_psl.0.2.3.in << EOF
  &input
-   title='Cs pslibrary.0.2.3 e',
+   title='Cs e',
    zed=55.0,
    rel=$nrel,
    config='[Xe] 5d0.0 6s1 6p0',
@@ -206,7 +206,7 @@ cat > Cs.$fct-spn-rrkjus.in << EOF
  /
  &inputp
    pseudotype=3,
-   file_pseudopw='Cs.$fct-spn-rrkjus.UPF',
+   file_pseudopw='Cs.$fct-spn-rrkjus_psl.0.2.3.UPF',
    author='ADC',
    lloc=-1,
    rcloc=2.2,
@@ -226,9 +226,9 @@ cat > Cs.$fct-spn-rrkjus.in << EOF
 5D  3  2 -2.00  4.30  1.90  2.10  0.0
 EOF
 
-cat > Hf.$fct-spn-rrkjus.in << EOF
+cat > Hf.$fct-spn-rrkjus_psl.0.2.in << EOF
  &input
-   title='Hf pslibrary.0.2 d',
+   title='Hf d',
    zed=72.0,
    rel=$nrel,
    config='[Xe] 4f14 5d2.0 6s2 6p0',
@@ -237,7 +237,7 @@ cat > Hf.$fct-spn-rrkjus.in << EOF
  /
  &inputp
    pseudotype=3,
-   file_pseudopw='Hf.$fct-spn-rrkjus.UPF',
+   file_pseudopw='Hf.$fct-spn-rrkjus_psl.0.2.UPF',
    author='ADC',
    lloc=-1,
    rcloc=2.5,
@@ -256,9 +256,9 @@ cat > Hf.$fct-spn-rrkjus.in << EOF
 5D  3  2 -2.00  0.30  1.60  1.70  0.0
 EOF
 
-cat > He.$fct-rrkjus.in << EOF
+cat > He.$fct-rrkjus_psl.0.2.3.in << EOF
  &input
-   title='He pslibrary.0.2.3 q',
+   title='He q',
    zed=2.0,
    rel=$nrel,
    config='1s2 2p-2',
@@ -267,7 +267,7 @@ cat > He.$fct-rrkjus.in << EOF
  /
  &inputp
    pseudotype=3,
-   file_pseudopw='He.$fct-rrkjus.UPF',
+   file_pseudopw='He.$fct-rrkjus_psl.0.2.3.UPF',
    author='ADC',
    lloc=1,
    which_augfun ='PSQ'
@@ -279,9 +279,9 @@ cat > He.$fct-rrkjus.in << EOF
 2P  2  1 -2.00  0.10  1.10  1.10  0.0
 EOF
 
-cat > K.$fct-spn-rrkjus.in << EOF
+cat > K.$fct-spn-rrkjus_psl.0.2.3.in << EOF
  &input
-   title='K pslibrary.0.2.3 b',
+   title='K b',
    zed=19.0,
    rel=$nrel,
    config='[Ar] 3d-2 4s1 4p0',
@@ -290,7 +290,7 @@ cat > K.$fct-spn-rrkjus.in << EOF
  /
  &inputp
    pseudotype=3,
-   file_pseudopw='K.$fct-spn-rrkjus.UPF',
+   file_pseudopw='K.$fct-spn-rrkjus_psl.0.2.3.UPF',
    author='ADC',
    lloc=-1,
    rcloc=2.2,
@@ -310,9 +310,9 @@ cat > K.$fct-spn-rrkjus.in << EOF
 3D  3  2 -2.00  1.30  1.70  2.10  0.0
 EOF
 
-cat > Kr.$fct-n-rrkjus.in << EOF
+cat > Kr.$fct-n-rrkjus_psl.0.2.3.in << EOF
  &input
-   title='Kr pslibrary.0.2.3 q',
+   title='Kr q',
    zed=36.0,
    rel=$nrel,
    config='[Ar] 3d10 4s2 4p6.00 4d-2.0',
@@ -321,7 +321,7 @@ cat > Kr.$fct-n-rrkjus.in << EOF
  /
  &inputp
    pseudotype=3,
-   file_pseudopw='Kr.$fct-n-rrkjus.UPF',
+   file_pseudopw='Kr.$fct-n-rrkjus_psl.0.2.3.UPF',
    author='ADC',
    lloc=-1,
    rcloc=1.8,
@@ -341,9 +341,9 @@ cat > Kr.$fct-n-rrkjus.in << EOF
 4D  3  2 -2.00  0.70  1.70  2.00  0.0
 EOF
 
-cat > La.$fct-spn-rrkjus.in << EOF
+cat > La.$fct-spn-rrkjus_psl.0.2.3.in << EOF
  &input
-   title='La pslibrary.0.2.3 q',
+   title='La q',
    zed=57.0,
    rel=$nrel,
    config='[Xe] 5d1.0 6s2 6p0',
@@ -352,7 +352,7 @@ cat > La.$fct-spn-rrkjus.in << EOF
  /
  &inputp
    pseudotype=3,
-   file_pseudopw='La.$fct-spn-rrkjus.UPF',
+   file_pseudopw='La.$fct-spn-rrkjus_psl.0.2.3.UPF',
    author='ADC',
    lloc=-1,
    rcloc=2.3,
@@ -372,9 +372,9 @@ cat > La.$fct-spn-rrkjus.in << EOF
 5D  3  2 -2.00  0.30  1.60  2.00  0.0
 EOF
 
-cat > Mg.$fct-n-rrkjus.in << EOF
+cat > Mg.$fct-n-rrkjus_psl.0.2.3.in << EOF
  &input
-   title='Mg pslibrary.0.2.3 a',
+   title='Mg a',
    zed=12.0,
    rel=$nrel,
    config='[Ne] 3s2.0 3p0 3d-2',
@@ -383,7 +383,7 @@ cat > Mg.$fct-n-rrkjus.in << EOF
  /
  &inputp
    pseudotype=3,
-   file_pseudopw='Mg.$fct-n-rrkjus.UPF',
+   file_pseudopw='Mg.$fct-n-rrkjus_psl.0.2.3.UPF',
    author='ADC',
    lloc=2,
    which_augfun='PSQ',
@@ -401,9 +401,9 @@ cat > Mg.$fct-n-rrkjus.in << EOF
 3D  3  2 -2.00  0.30  2.30  2.30  0.0
 EOF
 
-cat > Mn.$fct-spn-rrkjus.in << EOF
+cat > Mn.$fct-spn-rrkjus_psl.0.2.3.in << EOF
  &input
-   title='Mn pslibrary.0.2.3 c',
+   title='Mn c',
    zed=25.0,
    rel=$nrel,
    config='[Ar] 3d5.0 4s2 4p0',
@@ -412,7 +412,7 @@ cat > Mn.$fct-spn-rrkjus.in << EOF
  /
  &inputp
    pseudotype=3,
-   file_pseudopw='Mn.$fct-spn-rrkjus.UPF',
+   file_pseudopw='Mn.$fct-spn-rrkjus_psl.0.2.3.UPF',
    author='ADC',
    lloc=-1,
    rcloc=1.9,
@@ -432,9 +432,9 @@ cat > Mn.$fct-spn-rrkjus.in << EOF
 3D  3  2 -2.00 -0.30  1.40  1.60  0.0
 EOF
 
-cat > Nb.$fct-spn-rrkjus.in << EOF
+cat > Nb.$fct-spn-rrkjus_psl.0.2.3.in << EOF
  &input
-   title='Nb pslibrary.0.2.3 c',
+   title='Nb c',
    zed=41.0,
    rel=$nrel,
    config='[Kr] 4d4.0 5s1 5p0',
@@ -443,7 +443,7 @@ cat > Nb.$fct-spn-rrkjus.in << EOF
  /
  &inputp
    pseudotype=3,
-   file_pseudopw='Nb.$fct-spn-rrkjus.UPF',
+   file_pseudopw='Nb.$fct-spn-rrkjus_psl.0.2.3.UPF',
    author='ADC',
    lloc=-1,
    rcloc=2.2,
@@ -463,9 +463,9 @@ cat > Nb.$fct-spn-rrkjus.in << EOF
 4D  3  2 -2.00  6.30  1.00  1.90  0.0
 EOF
 
-cat > Ne.$fct-n-rrkjus.in << EOF
+cat > Ne.$fct-n-rrkjus_psl.0.2.3.in << EOF
  &input
-   title='Ne pslibrary.0.2.3 q',
+   title='Ne q',
    zed=10.0,
    rel=$nrel,
    config='1s2 2s2 2p6 3d-2',
@@ -474,7 +474,7 @@ cat > Ne.$fct-n-rrkjus.in << EOF
  /
  &inputp
    pseudotype=3,
-   file_pseudopw='Ne.$fct-n-rrkjus.UPF',
+   file_pseudopw='Ne.$fct-n-rrkjus_psl.0.2.3.UPF',
    author='ADC',
    lloc=2,
    which_augfun ='PSQ',
@@ -492,9 +492,9 @@ cat > Ne.$fct-n-rrkjus.in << EOF
 3D  3  2 -2.00  0.15  1.10  1.10  0.0
 EOF
 
-cat > Os.$fct-n-rrkjus.in << EOF
+cat > Os.$fct-n-rrkjus_psl.0.2.3.in << EOF
  &input
-   title='Os pslibrary.0.2.3 q',
+   title='Os q',
    zed=76.,
    rel=$nrel,
    iswitch=3,
@@ -504,7 +504,7 @@ cat > Os.$fct-n-rrkjus.in << EOF
  &inputp
    lloc=0,
    pseudotype=3,
-   file_pseudopw='Os.$fct-n-rrkjus.UPF',
+   file_pseudopw='Os.$fct-n-rrkjus_psl.0.2.3.UPF',
    author='ADC',
    nlcc=.true.,
    rcore=0.9,
@@ -516,9 +516,9 @@ cat > Os.$fct-n-rrkjus.in << EOF
 6S  1  0  2.00  0.00  2.50  2.50  0.0
 EOF
 
-cat > Po.$fct-dn-rrkjus.in << EOF
+cat > Po.$fct-dn-rrkjus_psl.0.2.3.in << EOF
  &input
-   title='Po pslibrary.0.2.3 q',
+   title='Po q',
    zed=84.,
    rel=$nrel,
    config='[Xe] 4f14.0 5d10.0 6s2.0 6p4.0 6d-2',
@@ -527,7 +527,7 @@ cat > Po.$fct-dn-rrkjus.in << EOF
  /
  &inputp
    pseudotype=3,
-   file_pseudopw='Po.$fct-dn-rrkjus.UPF',
+   file_pseudopw='Po.$fct-dn-rrkjus_psl.0.2.3.UPF',
    author='ADC',
    lloc=-1,
    rcloc=1.9,
@@ -547,9 +547,9 @@ cat > Po.$fct-dn-rrkjus.in << EOF
 5D  3  2 -2.00  0.50  1.20  1.80 0.0
 EOF
 
-cat > Rb.$fct-spn-rrkjus.in << EOF
+cat > Rb.$fct-spn-rrkjus_psl.0.2.3.in << EOF
  &input
-   title='Rb pslibrary.0.2.3 d',
+   title='Rb d',
    zed=37.0,
    rel=$nrel,
    config='[Kr] 4d-2.0 5s1 5p0',
@@ -558,7 +558,7 @@ cat > Rb.$fct-spn-rrkjus.in << EOF
  /
  &inputp
    pseudotype=3,
-   file_pseudopw='Rb.$fct-spn-rrkjus.UPF',
+   file_pseudopw='Rb.$fct-spn-rrkjus_psl.0.2.3.UPF',
    author='ADC',
    lloc=-1,
    rcloc=2.2,
@@ -577,9 +577,9 @@ cat > Rb.$fct-spn-rrkjus.in << EOF
 4D  3  2 -2.00  0.30  2.00  2.10  0.0
 EOF
 
-cat > Re.$fct-spn-rrkjus.in << EOF
+cat > Re.$fct-spn-rrkjus_psl.0.2.3.in << EOF
  &input
-   title='Re pslibrary.0.2.3 q',
+   title='Re q',
    zed=75.0,
    rel=$nrel,
    config='[Xe] 4f14 5d5.0 6s2 6p0',
@@ -588,7 +588,7 @@ cat > Re.$fct-spn-rrkjus.in << EOF
  /
  &inputp
    pseudotype=3,
-   file_pseudopw='Re.$fct-spn-rrkjus.UPF',
+   file_pseudopw='Re.$fct-spn-rrkjus_psl.0.2.3.UPF',
    author='ADC',
    lloc=-1,
    rcloc=2.3,
@@ -608,9 +608,9 @@ cat > Re.$fct-spn-rrkjus.in << EOF
 5D  3  2 -2.00  0.30  1.70  1.90  0.0
 EOF
 
-cat > Ru.$fct-spn-rrkjus.in << EOF
+cat > Ru.$fct-spn-rrkjus_psl.0.2.3.in << EOF
  &input
-   title='Ru pslibrary.0.2.3 c',
+   title='Ru c',
    zed=44.,
    rel=$nrel,
    config='[Kr] 4d6.0 5s2.0 5p0.0',
@@ -619,7 +619,7 @@ cat > Ru.$fct-spn-rrkjus.in << EOF
  /
  &inputp
    pseudotype=3,
-   file_pseudopw='Ru.$fct-spn-rrkjus.UPF',
+   file_pseudopw='Ru.$fct-spn-rrkjus_psl.0.2.3.UPF',
    author='ADC',
    lloc=-1,
    rcloc=2.4,
@@ -639,9 +639,9 @@ cat > Ru.$fct-spn-rrkjus.in << EOF
 4D  3  2 -2.00  0.30  1.70  1.90  0.0
 EOF
 
-cat > Sb.$fct-n-rrkjus.in << EOF
+cat > Sb.$fct-n-rrkjus_psl.0.2.3.in << EOF
  &input
-   title='Sb pslibrary.0.2.3 c',
+   title='Sb c',
    zed=51.,
    rel=$nrel,
    config='[Kr] 4d10.0 5s2.0 5p3.0 5d-2.0',
@@ -650,7 +650,7 @@ cat > Sb.$fct-n-rrkjus.in << EOF
  /
  &inputp
    pseudotype=3,
-   file_pseudopw='Sb.$fct-n-rrkjus.UPF',
+   file_pseudopw='Sb.$fct-n-rrkjus_psl.0.2.3.UPF',
    author='ADC',
    lloc=2,
    which_augfun ='PSQ',
@@ -667,9 +667,9 @@ cat > Sb.$fct-n-rrkjus.in << EOF
 EOF
 
 
-cat > Sc.$fct-spn-rrkjus.in << EOF
+cat > Sc.$fct-spn-rrkjus_psl.0.2.3.in << EOF
  &input
-   title='Sc pslibrary.0.2.3 a',
+   title='Sc a',
    zed=21.0,
    rel=$nrel,
    config='[Ar] 3d1.0 4s2 4p0',
@@ -678,7 +678,7 @@ cat > Sc.$fct-spn-rrkjus.in << EOF
  /
  &inputp
    pseudotype=3,
-   file_pseudopw='Sc.$fct-spn-rrkjus.UPF',
+   file_pseudopw='Sc.$fct-spn-rrkjus_psl.0.2.3.UPF',
    author='ADC',
    lloc=-1,
    rcloc=2.0,
@@ -698,9 +698,9 @@ cat > Sc.$fct-spn-rrkjus.in << EOF
 3D  3  2 -2.00  0.30  1.40  1.60  0.0
 EOF
 
-cat > Sr.$fct-spn-rrkjus.in << EOF
+cat > Sr.$fct-spn-rrkjus_psl.0.2.3.in << EOF
  &input
-   title='Sr pslibrary.0.2.3 b',
+   title='Sr b',
    zed=38.0,
    rel=$nrel,
    config='[Kr] 4d0.0 5s2 5p0',
@@ -709,7 +709,7 @@ cat > Sr.$fct-spn-rrkjus.in << EOF
  /
  &inputp
    pseudotype=3,
-   file_pseudopw='Sr.$fct-spn-rrkjus.UPF',
+   file_pseudopw='Sr.$fct-spn-rrkjus_psl.0.2.3.UPF',
    author='ADC',
    lloc=-1,
    rcloc=2.3,
@@ -729,9 +729,9 @@ cat > Sr.$fct-spn-rrkjus.in << EOF
 4D  3  2 -2.00  0.30  2.00  2.10  0.0
 EOF
 
-cat > Tc.$fct-spn-rrkjus.in << EOF
+cat > Tc.$fct-spn-rrkjus_psl.0.2.3.in << EOF
  &input
-   title='Tc pslibrary.0.2.3 c',
+   title='Tc c',
    zed=43.0,
    rel=$nrel,
    config='[Kr] 4d5.0 5s2 5p0',
@@ -740,7 +740,7 @@ cat > Tc.$fct-spn-rrkjus.in << EOF
  /
  &inputp
    pseudotype=3,
-   file_pseudopw='Tc.$fct-spn-rrkjus.UPF',
+   file_pseudopw='Tc.$fct-spn-rrkjus_psl.0.2.3.UPF',
    author='ADC',
    lloc=-2,
    rcloc=2.3,
@@ -760,9 +760,9 @@ cat > Tc.$fct-spn-rrkjus.in << EOF
 4D  3  2 -2.00  6.30  1.00  1.90  0.0
 EOF
 
-cat > Ti.$fct-spn-rrkjus.in << EOF
+cat > Ti.$fct-spn-rrkjus_psl.0.2.3.in << EOF
  &input
-   title='Ti pslibrary.0.2.3 d',
+   title='Ti d',
    zed=22.0,
    rel=$nrel,
    config='[Ar] 3d2.0 4s2 4p0',
@@ -771,7 +771,7 @@ cat > Ti.$fct-spn-rrkjus.in << EOF
  /
  &inputp
    pseudotype=3,
-   file_pseudopw='Ti.$fct-spn-rrkjus.UPF',
+   file_pseudopw='Ti.$fct-spn-rrkjus_psl.0.2.3.UPF',
    author='ADC',
    lloc=-1,
    rcloc=2.0,
@@ -790,9 +790,9 @@ cat > Ti.$fct-spn-rrkjus.in << EOF
 3D  3  2 -2.00  0.30  1.40  1.70  0.0
 EOF
 
-cat > Tl.$fct-dn-rrkjus.in << EOF
+cat > Tl.$fct-dn-rrkjus_psl.0.2.3.in << EOF
  &input
-   title='Tl pslibrary.0.2.3 q',
+   title='Tl q',
    zed=81.,
    rel=$nrel,
    config='[Xe] 4f14.0 5d10.0 6s2.0 6p1.0',
@@ -801,7 +801,7 @@ cat > Tl.$fct-dn-rrkjus.in << EOF
  /
  &inputp
    pseudotype=3,
-   file_pseudopw='Tl.$fct-dn-rrkjus.UPF',
+   file_pseudopw='Tl.$fct-dn-rrkjus_psl.0.2.3.UPF',
    author='ADC',
    lloc=-1,
    rcloc=2.2,
@@ -821,9 +821,9 @@ cat > Tl.$fct-dn-rrkjus.in << EOF
 5D  3  2  0.00 -0.60  1.60  2.00  0.0
 EOF
 
-cat > V.$fct-spn-rrkjus.in << EOF
+cat > V.$fct-spn-rrkjus_psl.0.2.3.in << EOF
  &input
-   title='V pslibrary.0.2.3 b',
+   title='V b',
    zed=23.0,
    rel=$nrel,
    config='[Ar] 3d3.0 4s2 4p0',
@@ -832,7 +832,7 @@ cat > V.$fct-spn-rrkjus.in << EOF
  /
  &inputp
    pseudotype=3,
-   file_pseudopw='V.$fct-spn-rrkjus.UPF',
+   file_pseudopw='V.$fct-spn-rrkjus_psl.0.2.3.UPF',
    author='ADC',
    lloc=-1,
    rcloc=2.0,
@@ -852,9 +852,9 @@ cat > V.$fct-spn-rrkjus.in << EOF
 3D  3  2 -2.00  0.30  1.40  1.70  0.0
 EOF
 
-cat > Xe.$fct-n-rrkjus.in << EOF
+cat > Xe.$fct-n-rrkjus_psl.0.2.3.in << EOF
  &input
-   title='Xe pslibrary.0.2.3 q',
+   title='Xe q',
    zed=54.,
    rel=$nrel,
    config='[Kr] 4d10.0 5s2.0 5p6.0 5d-2.0',
@@ -863,7 +863,7 @@ cat > Xe.$fct-n-rrkjus.in << EOF
  /
  &inputp
    pseudotype=3,
-   file_pseudopw='Xe.$fct-n-rrkjus.UPF',
+   file_pseudopw='Xe.$fct-n-rrkjus_psl.0.2.3.UPF',
    author='ADC',
    lloc=2,
    which_augfun ='PSQ',
@@ -879,9 +879,9 @@ cat > Xe.$fct-n-rrkjus.in << EOF
 5D  3  2 -2.00  1.50  1.80  1.80  0.0
 EOF
 
-cat > Y.$fct-spn-rrkjus.in << EOF
+cat > Y.$fct-spn-rrkjus_psl.0.2.3.in << EOF
  &input
-   title='Y pslibrary.0.2.3 b',
+   title='Y b',
    zed=39.0,
    rel=$nrel,
    config='[Kr] 4d1.0 5s2 5p0',
@@ -890,7 +890,7 @@ cat > Y.$fct-spn-rrkjus.in << EOF
  /
  &inputp
    pseudotype=3,
-   file_pseudopw='Y.$fct-spn-rrkjus.UPF',
+   file_pseudopw='Y.$fct-spn-rrkjus_psl.0.2.3.UPF',
    author='ADC',
    lloc=-1,
    rcloc=2.4,
@@ -909,9 +909,9 @@ cat > Y.$fct-spn-rrkjus.in << EOF
 4D  3  2 -2.00  0.30  1.70  1.90  0.0
 EOF
 
-cat > W.$fct-spn-rrkjus.in << EOF
+cat > W.$fct-spn-rrkjus_psl.0.2.3.in << EOF
  &input
-   title='W pslibrary.0.2.3 c',
+   title='W c',
    zed=74.0,
    rel=$nrel,
    config='[Xe] 4f14 5d4.0 6s2 6p0',
@@ -920,7 +920,7 @@ cat > W.$fct-spn-rrkjus.in << EOF
  /
  &inputp
    pseudotype=3,
-   file_pseudopw='W.$fct-spn-rrkjus.UPF',
+   file_pseudopw='W.$fct-spn-rrkjus_psl.0.2.3.UPF',
    author='ADC',
    lloc=-1,
    rcloc=2.4,
@@ -940,9 +940,9 @@ cat > W.$fct-spn-rrkjus.in << EOF
 5D  3  2 -2.00  0.30  1.70  1.90  0.0
 EOF
 
-cat > Zr.$fct-spn-rrkjus.in << EOF
+cat > Zr.$fct-spn-rrkjus_psl.0.2.3.in << EOF
  &input
-   title='Zr pslibrary.0.2.3 b',
+   title='Zr b',
    zed=40.0,
    rel=$nrel,
    config='[Kr] 4d2.0 5s2 5p0',
@@ -951,7 +951,7 @@ cat > Zr.$fct-spn-rrkjus.in << EOF
  /
  &inputp
    pseudotype=3,
-   file_pseudopw='Zr.$fct-spn-rrkjus.UPF',
+   file_pseudopw='Zr.$fct-spn-rrkjus_psl.0.2.3.UPF',
    author='ADC',
    lloc=-1,
    rcloc=2.4,

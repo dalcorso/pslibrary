@@ -110,8 +110,8 @@ Ce data set had problems. Removed.
 
 Alternative (FR+SR) Ir PP with semicore states added to the alternative PPs.
 
-The title of the job now contains the pslibrary version. 
-Added to each PP the number of the last version in which it changed.
+The name of the job now contains the pslibrary version. 
+Added to each PP name the number of the last version in which it changed.
 
 The e-mail address is no more allowed in the author name. 
 It is too difficult to update it.
@@ -124,7 +124,7 @@ a: no error found, several structures for which structural parameters agree
 b: no error found, some structures have moderate differences with
    all electron. A working PP that could be imporved. 
 c: no error found, some structures have large differences with all-electron. 
-   A working PP should be easy to improve.
+   A working PP that should be improved.
 
 d: same convergence problem. Errors moderately large. Not acceptable PP,
    need revision, but might be used in some cases.

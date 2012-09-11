@@ -16,9 +16,9 @@
 . enviroment.job
 
 
-cat > Au.$fct-spn-rrkjus.in << EOF
+cat > Au.$fct-spn-rrkjus_psl.0.2.4.in << EOF
  &input
-   title='Au pslibrary.0.2.4',
+   title='Au',
    zed=79.,
    rel=$nrel,
    config='[Xe] 4f14 5d10.0 6s1.0 6p0.0',
@@ -27,7 +27,7 @@ cat > Au.$fct-spn-rrkjus.in << EOF
  /
  &inputp
    pseudotype=3,
-   file_pseudopw='Au.$fct-spn-rrkjus.UPF',
+   file_pseudopw='Au.$fct-spn-rrkjus_psl.0.2.4.UPF',
    author='ADC',
    lloc=-2,
    rcloc=1.6,
@@ -47,9 +47,9 @@ cat > Au.$fct-spn-rrkjus.in << EOF
 5D  3  2  0.00 -0.30  1.80  2.30  0.0
 EOF
 
-cat > Fe.$fct-n-rrkjus.in << EOF
+cat > Fe.$fct-n-rrkjus_psl.0.2.4.in << EOF
  &input
-   title='Fe pslibrary.0.2.4',
+   title='Fe',
    zed=26.,
    rel=$nrel,
    config='[Ar] 4s1.7 3d6.3 4p0',
@@ -58,7 +58,7 @@ cat > Fe.$fct-n-rrkjus.in << EOF
  /
  &inputp
    pseudotype=3,
-   file_pseudopw='Fe.$fct-n-rrkjus.UPF',
+   file_pseudopw='Fe.$fct-n-rrkjus_psl.0.2.4.UPF',
    author='ADC',
    lloc=-1,
    rcloc=2.1,
@@ -78,9 +78,9 @@ cat > Fe.$fct-n-rrkjus.in << EOF
 3D 3 2 0.00 -0.30  0.70  1.80  0.0
 EOF
 
-cat > Ir.$fct-spn-rrkjus.in << EOF
+cat > Ir.$fct-spn-rrkjus_psl.0.2.6.in << EOF
  &input
-   title='Ir pslibrary.0.2.4',
+   title='Ir',
    zed=77.,
    rel=$nrel,
    config='[Xe] 4f14.0 5d7.0 6s2.0 6p0.0',
@@ -89,7 +89,7 @@ cat > Ir.$fct-spn-rrkjus.in << EOF
  /
  &inputp
    pseudotype=3,
-   file_pseudopw='Ir.$fct-spn-rrkjus.UPF',
+   file_pseudopw='Ir.$fct-spn-rrkjus_psl.0.2.6.UPF',
    author='ADC',
    lloc=-1,
    rcloc=2.2,
@@ -107,9 +107,9 @@ cat > Ir.$fct-spn-rrkjus.in << EOF
 5D  3  2  0.00 -0.30  1.80  2.30  0.0
 EOF
 
-cat > Mg.$fct-sp-rrkjus.in << EOF
+cat > Mg.$fct-sp-rrkjus_psl.0.2.5.in << EOF
  &input
-   title='Mg pslibrary.0.2.5',
+   title='Mg',
    zed=12.0,
    rel=$nrel,
    config='[Ne] 3s1.5 3p0 3d-2',
@@ -118,7 +118,7 @@ cat > Mg.$fct-sp-rrkjus.in << EOF
  /
  &inputp
    pseudotype=3,
-   file_pseudopw='Mg.$fct-sp-rrkjus.UPF',
+   file_pseudopw='Mg.$fct-sp-rrkjus_psl.0.2.5.UPF',
    author='ADC',
    rcloc=1.5
    lloc=-1,
@@ -135,9 +135,9 @@ cat > Mg.$fct-sp-rrkjus.in << EOF
 3D  3  2 -2.00  0.30  1.10  2.30  0.0
 EOF
 
-cat > Pt.$fct-spn-rrkjus.in << EOF
+cat > Pt.$fct-spn-rrkjus_psl.0.2.4.in << EOF
  &input
-   title='Pt pslibrary.0.2.4',
+   title='Pt',
    zed=78.,
    rel=$nrel,
    config='[Xe] 4f14 5d9.0 6s1.0 6p0.0',
@@ -146,7 +146,7 @@ cat > Pt.$fct-spn-rrkjus.in << EOF
  /
  &inputp
    pseudotype=3,
-   file_pseudopw='Pt.$fct-spn-rrkjus.UPF',
+   file_pseudopw='Pt.$fct-spn-rrkjus_psl.0.2.4.UPF',
    author='ADC',
    lloc=-2,
    rcloc=1.8,
