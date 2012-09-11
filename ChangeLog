@@ -104,7 +104,9 @@ Scripts updated for QE 5.0
 --------------------------------------------------------
 pslibrary.0.2.6 (ADC, Sep. 2012)
 
-Hf data set is not very good, moved to the _tot files.
+Hf data set is not very accurate, moved to the _tot files.
+Zn data set has been reported to have convergence problem. Moved to _tot
+   file.
 
 Ce data set had problems. Removed.
 
