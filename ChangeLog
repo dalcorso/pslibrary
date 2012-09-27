@@ -102,11 +102,9 @@ relativistic data sets.
 Scripts updated for QE 5.0
 
 --------------------------------------------------------
-pslibrary.0.2.6 (ADC, Sep. 2012)
+pslibrary.0.3.0 (ADC, Oct. 2012)
 
 Hf data set is not very accurate, moved to the _tot files.
-Zn data set has been reported to have convergence problem. Moved to _tot
-   file.
 
 Ce data set had problems. Removed.
 
@@ -132,3 +130,8 @@ d: same convergence problem. Errors moderately large. Not acceptable PP,
    need revision, but might be used in some cases.
 e: insufficient PP. Problems.
 q: PPs for which there is no info so far.
+
+
+Nb, Mo, Tc, Ru, Rh, have been substituted with hopefully improved data-sets. 
+Apparently in all this series the core radius of the local PP was too
+large and decreased the transferability.

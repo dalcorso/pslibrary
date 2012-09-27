@@ -790,7 +790,38 @@ cat > Li.$fct-s-rrkjus_psl.0.2.1.in << EOF
 2P  2  1  0.00  1.70  2.00  2.20  0.0
 EOF
 
-cat > Mo.$fct-spn-rrkjus_psl.0.2.in << EOF
+#cat > Mo.$fct-spn-rrkjus_psl.0.2.in << EOF
+# &input
+#   title='Mo',
+#   zed=42.0,
+#   rel=$nrel,
+#   config='[Kr] 4d5.0 5s1 5p0',
+#   iswitch=3,
+#   dft='$gfun'
+# /
+# &inputp
+#   pseudotype=3,
+#   file_pseudopw='Mo.$fct-spn-rrkjus_psl.0.2.UPF',
+#   author='ADC',
+#   lloc=-1,
+#   rcloc=2.4,
+#   which_augfun='PSQ',
+#   rmatch_augfun=0.95,
+#   nlcc=.true.,
+#   new_core_ps=.true.,
+#   rcore=1.0,
+#   tm=.true.
+# /
+#6
+#4S  1  0  2.00  0.00  1.30  1.70  0.0
+#5S  2  0  1.00  0.00  1.00  1.70  0.0
+#4P  2  1  6.00  0.00  1.40  1.70  0.0
+#5P  3  1  0.00  0.00  1.20  1.70  0.0
+#4D  3  2  5.00  0.00  1.40  1.90  0.0
+#4D  3  2 -2.00  6.30  1.00  1.90  0.0
+#EOF
+
+cat > Mo.$fct-spn-rrkjus_psl.0.3.0.in << EOF
  &input
    title='Mo',
    zed=42.0,
@@ -801,24 +832,24 @@ cat > Mo.$fct-spn-rrkjus_psl.0.2.in << EOF
  /
  &inputp
    pseudotype=3,
-   file_pseudopw='Mo.$fct-spn-rrkjus_psl.0.2.UPF',
+   file_pseudopw='Mo.$fct-spn-rrkjus_psl.0.3.0.UPF',
    author='ADC',
    lloc=-1,
-   rcloc=2.4,
+   rcloc=1.4,
    which_augfun='PSQ',
-   rmatch_augfun=0.95,
+   rmatch_augfun_nc=.true.,
    nlcc=.true.,
    new_core_ps=.true.,
    rcore=1.0,
    tm=.true.
  /
 6
-4S  1  0  2.00  0.00  1.30  1.70  0.0
-5S  2  0  1.00  0.00  1.00  1.70  0.0
-4P  2  1  6.00  0.00  1.40  1.70  0.0
-5P  3  1  0.00  0.00  1.20  1.70  0.0
-4D  3  2  5.00  0.00  1.40  1.90  0.0
-4D  3  2 -2.00  6.30  1.00  1.90  0.0
+4S  1  0  2.00  0.00  0.95  1.70  0.0
+5S  2  0  1.00  0.00  0.95  1.70  0.0
+4P  2  1  6.00  0.00  0.95  1.70  0.0
+5P  3  1  0.00  0.00  0.95  1.70  0.0
+4D  3  2  5.00  0.00  0.95  1.70  0.0
+4D  3  2 -2.00  0.30  0.95  1.70  0.0
 EOF
 
 cat > Na.$fct-spn-rrkjus_psl.0.2.in << EOF
@@ -1095,10 +1126,78 @@ cat > P.$fct-n-rrkjus_psl.0.1.in << EOF
 3D  3  2 -2.00 -0.30  1.90  1.90  0.0
 EOF
 
-if [ $nrel = 2 ]
-then
+#if [ $nrel = 2 ]
+#then
 
-cat > Rh.$fct-spn-rrkjus_psl.0.2.3.in << EOF
+#cat > Rh.$fct-spn-rrkjus_psl.0.2.3.in << EOF
+# &input
+#   title='Rh',
+#   zed=45.,
+#   rel=$nrel,
+#   config='[Kr] 4d8. 5s1.0 5p0.0',
+#   iswitch=3,
+#   dft='$gfun'
+# /
+# &inputp
+#   pseudotype=3,
+#   file_pseudopw='Rh.$fct-spn-rrkjus_psl.0.2.3.UPF',
+#   author='ADC',
+#   lloc=-1,
+#   rcloc=2.3,
+#   which_augfun='PSQ',
+#   rmatch_augfun=0.9,
+#   nlcc=.true.,
+#   new_core_ps=.true.,
+#   rcore=0.9,
+#   tm=.true.
+# /
+#7
+#4S  1  0  2.00  0.00  1.30  1.70  0.0
+#5S  2  0  1.00  0.00  1.10  1.70  0.0
+#5S  2  0  0.00  6.30  1.10  1.70  0.0
+#4P  2  1  6.00  0.00  1.50  1.70  0.0
+#5P  3  1  0.00  0.00  1.10  2.10  0.0
+#4D  3  2  8.00  0.00  1.70  1.90  0.0
+#4D  3  2 -2.00  0.30  1.00  1.90  0.0
+#EOF
+#
+#else
+#
+#cat > Rh.$fct-spn-rrkjus_psl.0.2.3.in << EOF
+# &input
+#   title='Rh',
+#   zed=45.,
+#   rel=$nrel,
+#   config='[Kr] 4d7. 5s2.0 5p0.0',
+#   iswitch=3,
+#   dft='$gfun'
+# /
+# &inputp
+#   pseudotype=3,
+#   file_pseudopw='Rh.$fct-spn-rrkjus_psl.0.2.3.UPF',
+#   author='ADC',
+#   lloc=-1,
+#   rcloc=2.3,
+#   which_augfun='PSQ',
+#   rmatch_augfun=0.9,
+#   nlcc=.true.,
+#   new_core_ps=.true.,
+#   rcore=0.9,
+#   tm=.true.
+# /
+#7
+#4S  1  0  2.00  0.00  1.30  1.70  0.0
+#5S  2  0  2.00  0.00  1.10  1.70  0.0
+#5S  2  0  0.00  6.00  1.10  1.70  0.0
+#4P  2  1  6.00  0.00  1.50  1.70  0.0
+#5P  3  1  0.00  0.00  1.10  2.10  0.0
+#4D  3  2  7.00  0.00  1.70  1.90  0.0
+#4D  3  2 -2.00  0.30  1.00  1.90  0.0
+#EOF
+
+#fi
+
+cat > Rh.$fct-spn-rrkjus_psl.0.3.0.in << EOF
  &input
    title='Rh',
    zed=45.,
@@ -1109,62 +1208,26 @@ cat > Rh.$fct-spn-rrkjus_psl.0.2.3.in << EOF
  /
  &inputp
    pseudotype=3,
-   file_pseudopw='Rh.$fct-spn-rrkjus_psl.0.2.3.UPF',
+   file_pseudopw='Rh.$fct-spn-rrkjus_psl.0.3.0.UPF',
    author='ADC',
    lloc=-1,
-   rcloc=2.3,
+   rcloc=1.9,
    which_augfun='PSQ',
-   rmatch_augfun=0.9,
+   rmatch_augfun_nc=.true.,
    nlcc=.true.,
    new_core_ps=.true.,
    rcore=0.9,
    tm=.true.
  /
-7
-4S  1  0  2.00  0.00  1.30  1.70  0.0
-5S  2  0  1.00  0.00  1.10  1.70  0.0
-5S  2  0  0.00  6.30  1.10  1.70  0.0
-4P  2  1  6.00  0.00  1.50  1.70  0.0
-5P  3  1  0.00  0.00  1.10  2.10  0.0
-4D  3  2  8.00  0.00  1.70  1.90  0.0
-4D  3  2 -2.00  0.30  1.00  1.90  0.0
+6
+4S  1  0  2.00  0.00  0.90  1.70  0.0
+5S  2  0  1.00  0.00  0.90  1.30  0.0
+4P  2  1  6.00  0.00  0.90  1.70  0.0
+5P  3  1  0.00  0.00  0.90  1.70  0.0
+4D  3  2  8.00  0.00  0.90  1.90  0.0
+4D  3  2 -2.00  0.30  0.90  1.90  0.0
 EOF
 
-else
-
-cat > Rh.$fct-spn-rrkjus_psl.0.2.3.in << EOF
- &input
-   title='Rh',
-   zed=45.,
-   rel=$nrel,
-   config='[Kr] 4d7. 5s2.0 5p0.0',
-   iswitch=3,
-   dft='$gfun'
- /
- &inputp
-   pseudotype=3,
-   file_pseudopw='Rh.$fct-spn-rrkjus_psl.0.2.3.UPF',
-   author='ADC',
-   lloc=-1,
-   rcloc=2.3,
-   which_augfun='PSQ',
-   rmatch_augfun=0.9,
-   nlcc=.true.,
-   new_core_ps=.true.,
-   rcore=0.9,
-   tm=.true.
- /
-7
-4S  1  0  2.00  0.00  1.30  1.70  0.0
-5S  2  0  2.00  0.00  1.10  1.70  0.0
-5S  2  0  0.00  6.00  1.10  1.70  0.0
-4P  2  1  6.00  0.00  1.50  1.70  0.0
-5P  3  1  0.00  0.00  1.10  2.10  0.0
-4D  3  2  7.00  0.00  1.70  1.90  0.0
-4D  3  2 -2.00  0.30  1.00  1.90  0.0
-EOF
-
-fi
 
 cat > S.$fct-n-rrkjus_psl.0.1.in << EOF
  &input
@@ -1344,3 +1407,32 @@ cat > Te.$fct-dn-rrkjus_psl.0.2.2.in << EOF
 4D  3  2  0.00  1.30  1.60  1.90  0.0
 EOF
 
+cat > Zn.$fct-dn-rrkjus_psl.0.2.2.in << EOF
+ &input
+   title='Zn d',
+   zed=30.,
+   rel=$nrel,
+   config='[Ar] 3d10. 4s2. 4p0.0',
+   iswitch=3,
+   dft='$gfun'
+ /
+ &inputp
+   pseudotype=3,
+   file_pseudopw='Zn.$fct-dn-rrkjus_psl.0.2.2.UPF',
+   author='ADC',
+   which_augfun='PSQ',
+   rmatch_augfun=1.3,
+   lloc=-1,
+   rcloc=1.7,
+   nlcc=.true.,
+   rcore=0.7,
+   tm=.true.
+ /
+6
+4S  1  0  2.00  0.00  2.10  2.20  0.0
+4S  1  0  0.00  6.10  1.40  2.20  0.0
+4P  2  1  0.00  0.00  2.20  2.30  0.0
+4P  2  1  0.00  6.30  1.40  2.30  0.0
+3D  3  2 10.00  0.00  1.50  1.80  0.0
+3D  3  2  0.00 -0.60  1.50  1.80  0.0
+EOF
