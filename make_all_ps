@@ -5,15 +5,15 @@
 #   with the functional name and type ../make_ps
 #
 
-cd pz
+cd ./pz
 . ../make_ps
 cd ..
-cd pbe
+cd ./pbe
 . ../make_ps
 cd ..
-cd rel-pz
+cd ./rel-pz
 . ../make_ps
 cd ..
-cd rel-pbe
+cd ./rel-pbe
 . ../make_ps
 cd ..

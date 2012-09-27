@@ -7,7 +7,7 @@
 #! or http://www.gnu.org/copyleft/gpl.txt .
 #!
 
-. enviroment.job
+. ./enviroment.job
 
 cat > Ag.$fct-dn-rrkjus_psl.0.1.in << EOF
  &input

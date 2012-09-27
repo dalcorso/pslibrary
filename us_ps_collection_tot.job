@@ -8,7 +8,7 @@
 #!
 
 
-. enviroment.job
+. ./enviroment.job
 
 cat > At.$fct-dn-rrkjus_psl.0.2.3.in << EOF
  &input

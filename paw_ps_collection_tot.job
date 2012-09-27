@@ -9,7 +9,7 @@
 
 
 
-. enviroment.job
+. ./enviroment.job
 
 
 cat > At.$fct-dn-kjpaw_psl.0.2.3.in << EOF

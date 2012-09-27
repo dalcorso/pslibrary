@@ -8,7 +8,7 @@
 #!
 
 
-. enviroment.job
+. ./enviroment.job
 
 cat > Ag.$fct-dn-kjpaw_psl.0.1.in << EOF
  &input
