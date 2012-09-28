@@ -103,7 +103,37 @@ EOF
 
 fi
 
-cat > Ar.$fct-n-kjpaw_psl.0.2.3.in << EOF
+#cat > Ar.$fct-n-kjpaw_psl.0.2.3.in << EOF
+# &input
+#   title='Ar',
+#   zed=18.0,
+#   rel=$nrel,
+#   config='[Ar] 3d-2',
+#   iswitch=3,
+#   dft='$gfun'
+# /
+# &inputp
+#   lpaw=.true.,
+#   pseudotype=3,
+#   file_pseudopw='Ar.$fct-n-kjpaw_psl.0.2.3.UPF',
+#   author='ADC',
+#   lloc=2,
+#   which_augfun='BESSEL',
+#   rmatch_augfun=1.4,
+#   nlcc=.true.,
+#   new_core_ps=.true.,
+#   rcore=0.9,
+#   tm=.true.
+# /
+#5
+#3S  1  0  2.00  0.00  1.60  1.80  0.0
+#3S  1  0  0.00  0.20  1.40  1.80  0.0
+#3P  2  1  6.00  0.00  1.90  2.10  0.0
+#3P  2  1  0.00  0.20  1.10  2.10  0.0
+#3D  3  2 -2.00  0.45  1.80  1.80  0.0
+#EOF
+
+cat > Ar.$fct-n-kjpaw_psl.0.3.0.in << EOF
  &input
    title='Ar',
    zed=18.0,
@@ -115,11 +145,11 @@ cat > Ar.$fct-n-kjpaw_psl.0.2.3.in << EOF
  &inputp
    lpaw=.true.,
    pseudotype=3,
-   file_pseudopw='Ar.$fct-n-kjpaw.psl.0.2.3.UPF',
+   file_pseudopw='Ar.$fct-n-kjpaw_psl.0.3.0.UPF',
    author='ADC',
    lloc=2,
-   which_augfun='BESSEL',
-   rmatch_augfun=1.4,
+   which_augfun='PSQ',
+   rmatch_augfun=1.0,
    nlcc=.true.,
    new_core_ps=.true.,
    rcore=0.9,
@@ -163,7 +193,39 @@ cat > As.$fct-n-kjpaw_psl.0.2.in << EOF
 4D  3  2 -2.00  0.50  2.00  2.00  0.0
 EOF
 
-cat > Au.$fct-dn-kjpaw_psl.0.1.in << EOF
+#cat > Au.$fct-dn-kjpaw_psl.0.1.in << EOF
+# &input
+#   title='Au',
+#   zed=79.,
+#   rel=$nrel,
+#   config='[Xe] 4f14 5d10.0 6s1.0 6p0.0',
+#   iswitch=3,
+#   dft='$gfun'
+# /
+# &inputp
+#   lpaw=.true.,
+#   pseudotype=3,
+#   file_pseudopw='Au.$fct-dn-kjpaw_psl.0.1.UPF',
+#   author='ADC',
+#   lloc=-2,
+#   rcloc=2.4,
+#   which_augfun='PSQ',
+#   rmatch_augfun=0.95,
+#   nlcc=.true.,
+#   new_core_ps=.true.,
+#   rcore=1.6,
+#   tm=.true.
+# /
+#6
+#6S  1  0  1.00  0.00  1.90  2.30  0.0
+#6S  1  0  0.00  2.30  1.70  2.30  0.0
+#6P  2  1  0.00  0.00  2.00  2.40  0.0
+#6P  2  1  0.00  3.60  1.80  2.40  0.0
+#5D  3  2 10.00  0.00  1.80  2.20  0.0
+#5D  3  2  0.00 -0.30  1.10  2.20  0.0
+#EOF
+
+cat > Au.$fct-dn-kjpaw_psl.0.3.0.in << EOF
  &input
    title='Au',
    zed=79.,
@@ -175,12 +237,12 @@ cat > Au.$fct-dn-kjpaw_psl.0.1.in << EOF
  &inputp
    lpaw=.true.,
    pseudotype=3,
-   file_pseudopw='Au.$fct-dn-kjpaw_psl.0.1.UPF',
+   file_pseudopw='Au.$fct-dn-kjpaw_psl.0.3.0.UPF',
    author='ADC',
    lloc=-2,
    rcloc=2.4,
    which_augfun='PSQ',
-   rmatch_augfun=0.95,
+   rmatch_augfun=1.00,
    nlcc=.true.,
    new_core_ps=.true.,
    rcore=1.6,
@@ -418,7 +480,37 @@ cat > Cd.$fct-dn-kjpaw_psl.0.2.in << EOF
 4D  3  2  0.00  4.30  1.80  2.20  0.0
 EOF
 
-cat > Cl.$fct-n-kjpaw_psl.0.1.in << EOF
+#cat > Cl.$fct-n-kjpaw_psl.0.1.in << EOF
+# &input
+#   title='Cl',
+#   zed=17,
+#   rel=$nrel,
+#   config='[Ne] 3s2 3p5 3d-2',
+#   iswitch=3,
+#   dft='$gfun'
+# /
+# &inputp
+#   lpaw=.true.,
+#   pseudotype=3,
+#   file_pseudopw='Cl.$fct-n-kjpaw_psl.0.1.UPF',
+#   author='ADC',
+#   lloc=2,
+#   which_augfun ='PSQ',
+#   rmatch_augfun= 1.7,
+#   nlcc=.true.,
+#   new_core_ps = .true.,
+#   rcore=1.0,
+#   tm=.true.
+# /
+#5
+#3S  1  0  2.00  0.00  1.60  1.80  0.0
+#3S  1  0  0.00  6.20  1.00  1.80  0.0
+#3P  2  1  5.00  0.00  1.90  2.10  0.0
+#3P  2  1  0.00  6.20  1.00  2.10  0.0
+#3D  3  2 -2.00  0.15  1.80  1.80  0.0
+#EOF
+
+cat > Cl.$fct-n-kjpaw_psl.0.3.0.in << EOF
  &input
    title='Cl',
    zed=17,
@@ -430,11 +522,11 @@ cat > Cl.$fct-n-kjpaw_psl.0.1.in << EOF
  &inputp
    lpaw=.true.,
    pseudotype=3,
-   file_pseudopw='Cl.$fct-n-kjpaw_psl.0.1.UPF',
+   file_pseudopw='Cl.$fct-n-kjpaw_psl.0.3.0.UPF',
    author='ADC',
    lloc=2,
    which_augfun ='PSQ',
-   rmatch_augfun= 1.7,
+   rmatch_augfun= 1.75,
    nlcc=.true.,
    new_core_ps = .true.,
    rcore=1.0,
@@ -1110,7 +1202,37 @@ fi
 if [ $nrel = 2 ]
 then
 
-cat > Pd.$fct-n-kjpaw_psl.0.2.2.in << EOF
+#cat > Pd.$fct-n-kjpaw_psl.0.2.2.in << EOF
+# &input
+#   title='Pd',
+#   zed=46.,
+#   rel=$nrel,
+#   config='[Kr] 4d10. 5s0. 5p0.0',
+#   iswitch=3,
+#   dft='$gfun'
+# /
+# &inputp
+#   lpaw=.true.,
+#   pseudotype=3,
+#   file_pseudopw='Pd.$fct-n-kjpaw_psl.0.2.2.UPF',
+#   author='ADC',
+#   lloc=-1,
+#   rcloc=2.1,
+#   which_augfun='PSQ',
+#   rmatch_augfun=0.90,
+#   nlcc=.true.,
+#   tm=.true.
+# /
+#6
+#5S  1  0  0.00  0.00  2.10  2.30  0.0
+#5S  1  0  0.00  5.50  2.10  2.30  0.0
+#5P  2  1  0.00  0.00  2.20  2.60  0.0
+#5P  2  1  0.00  6.30  2.20  2.60  0.0
+#4D  3  2 10.00  0.00  1.70  1.90  0.0
+#4D  3  2  0.00  4.30  1.70  1.90  0.0
+#EOF
+
+cat > Pd.$fct-n-kjpaw_psl.0.3.0.in << EOF
  &input
    title='Pd',
    zed=46.,
@@ -1122,12 +1244,12 @@ cat > Pd.$fct-n-kjpaw_psl.0.2.2.in << EOF
  &inputp
    lpaw=.true.,
    pseudotype=3,
-   file_pseudopw='Pd.$fct-n-kjpaw_psl.0.2.2.UPF',
+   file_pseudopw='Pd.$fct-n-kjpaw_psl.0.3.0.UPF',
    author='ADC',
    lloc=-1,
    rcloc=2.1,
    which_augfun='PSQ',
-   rmatch_augfun=0.9,
+   rmatch_augfun=0.85,
    nlcc=.true.,
    tm=.true.
  /
@@ -1142,7 +1264,7 @@ EOF
 
 else
 
-cat > Pd.$fct-n-kjpaw_psl.0.2.2.in << EOF
+cat > Pd.$fct-n-kjpaw_psl.0.3.0.in << EOF
  &input
    title='Pd',
    zed=46.,
@@ -1154,7 +1276,7 @@ cat > Pd.$fct-n-kjpaw_psl.0.2.2.in << EOF
  &inputp
    lpaw=.true.,
    pseudotype=3,
-   file_pseudopw='Pd.$fct-n-kjpaw_psl.0.2.2.UPF',
+   file_pseudopw='Pd.$fct-n-kjpaw_psl.0.3.0.UPF',
    author='ADC',
    lloc=-1,
    rcloc=2.2,

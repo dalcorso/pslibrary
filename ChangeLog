@@ -131,7 +131,14 @@ d: same convergence problem. Errors moderately large. Not acceptable PP,
 e: insufficient PP. Problems.
 q: PPs for which there is no info so far.
 
-
 Nb, Mo, Tc, Ru, Rh, have been substituted with hopefully improved data-sets. 
 Apparently in all this series the core radius of the local PP was too
 large and decreased the transferability.
+
+Pd, Au, Cl : the pseudization radii of the Q have been
+slightly changed to make revpbe working. This should give no change on the
+other functional, but the version has been updated to 0.3.0.
+Sc is still not working for revpbe. Change rmatch_augfun to 0.87.
+Ir and At are not working in the FR case with revpbe.
+
+Mg, Ne, Ar, Xe : These data-sets had negative dr2 problem. Slightly changed.
