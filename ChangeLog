@@ -106,7 +106,8 @@ pslibrary.0.3.0 (ADC, Oct. 2012)
 
 Hf data set is not very accurate, moved to the _tot files.
 
-Ce data set had problems. Removed.
+Ce data set had problems. Removed. 
+New Ce data set contributed by L. Paulatto.
 
 Alternative (FR+SR) Ir PP with semicore states added to the alternative PPs.
 

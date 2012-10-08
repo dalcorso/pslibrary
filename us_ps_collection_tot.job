@@ -133,6 +133,41 @@ EOF
 #4F  4  3  0.00 -0.24  1.50  2.00  0.0
 #EOF
 
+cat > Ce.$fct-spn-rrkjus_psl.0.3.0.in << EOF
+ &input
+   title='Ce q',
+   zed=58.0,
+   rel=$nrel,
+   config='[Xe] 4f1 5d1 6s2 6p0 ',
+   iswitch=3,
+   dft='$gfun'
+ /
+ &inputp
+   pseudotype=3,
+   file_pseudopw='Ce.$fct-spn-rrkjus_psl.0.3.0.UPF',
+   author='Lorenzo Paulatto',
+   lloc=-2,
+   rcloc=2.7,
+   which_augfun='PSQ', 
+   rmatch_augfun_nc=.true.,
+   nlcc=.true.,
+   new_core_ps = .true.,
+   rcore=1.5,
+   tm=.true.
+ /
+9 
+5S  1  0  2.00  0.00  1.65  1.70  0.0
+6S  2  0  2.00  0.00  1.65  1.85  0.0
+6S  2  0  0.00  2.60  1.75  2.10  0.0
+5P  2  1  6.00  0.00  1.80  2.00  0.0
+6P  3  1  0.00  0.00  1.80  2.00  0.0
+5D  3  2  1.00  0.00  2.10  2.50  0.0
+5D  3  2  0.00  0.20  2.10  2.50  0.0
+4F  4  3  1.00  0.00  2.35  2.75  0.0
+4F  4  3  0.00  0.40  2.35  2.75  0.0
+EOF
+
+
 cat > Co.$fct-n-rrkjus_psl.0.2.3.in << EOF
  &input
    title='Co b',
