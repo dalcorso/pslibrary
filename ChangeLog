@@ -109,7 +109,8 @@ Hf data set is not very accurate, moved to the _tot files.
 Ce data set had problems. Removed. 
 New Ce data set contributed by L. Paulatto.
 
-Alternative (FR+SR) Ir PP with semicore states added to the alternative PPs.
+Alternative (FR+SR) Ag, Pd, and Ir, PP with semicore states added to the 
+alternative PPs.
 
 The name of the job now contains the pslibrary version. 
 Added to each PP name the number of the last version in which it changed.
