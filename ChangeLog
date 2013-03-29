@@ -144,3 +144,8 @@ Sc is still not working for revpbe. Change rmatch_augfun to 0.87.
 Ir and At are not working in the FR case with revpbe.
 
 Mg, Ne, Ar, Xe : These data-sets had negative dr2 problem. Slightly changed.
+
+--------------------------------------------------------
+pslibrary.0.3.1 (ADC, In progress)
+
+Introduced the command make_test to test the data_sets.

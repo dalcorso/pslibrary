@@ -1,0 +1,19 @@
+#!/bin/bash
+#
+#   This file produce only the pz, pbe, rel-pz and rel-pbe functionals.
+#   If you are interested in some other functional enter in the directory
+#   with the functional name and type ../make_ps
+#
+
+cd ./pz
+. ../make_test
+cd ..
+cd ./pbe
+. ../make_test
+cd ..
+cd ./rel-pz
+. ../make_test
+cd ..
+cd ./rel-pbe
+. ../make_tes
+cd ..

@@ -1,0 +1,65 @@
+#!/bin/bash
+
+PWDIR='/scratch/dalcorso_sissa/espresso_my_best_version_apr_2013'
+element='all'
+
+# do not change after this line. Uncomment the appropriate line if
+# you want to test the additional PPs or to use a version of 
+# QE < 5.0 (at your own risk).
+
+work=./TEST
+#  For QE < 5.0 
+#. $PWDIR/example/environment_variables
+#
+. $PWDIR/environment_variables
+BIN_DIR=$PWDIR/bin
+
+mkdir $work >& /dev/null
+
+. ../paw_ps_test.job
+. ../us_ps_test.job
+
+#  Uncomment the following line to test the NC-PPs. 
+#
+#. ../nc_ps_test.job
+
+#  Uncomment the following line to test additional PAW data sets. 
+#
+#. ../paw_ps_test_tot.job
+
+#  Uncomment the following line to test alternative PAW data sets. 
+#
+#. ../paw_ps_test_alt.job
+
+#  Uncomment the following line to test additional US-PPs. 
+#
+#. ../us_ps_test_tot.job
+
+#  Uncomment the following line to test alternative US-PPs. 
+#
+#. ../us_ps_test_alt.job
+
+ld1_command="$PARA_PREFIX $BIN_DIR/ld1.x $PARA_POSTFIX"
+
+echo "ld1_command =" $ld1_command
+
+if [ $element = "all" ] ;
+then
+
+   for atom in *.in ; do
+       echo -e "Making   $atom  ...\c"
+       $ld1_command < $atom > $work/$atom.out
+       echo '  Done' 
+   done
+
+else
+
+   for atom in "$element"*.in ; do
+       echo -e "Making   $atom  ...\c"
+       $ld1_command < $atom > $work/$atom.out
+       echo '  Done' 
+   done
+
+fi
+
+\mv *.in $work
