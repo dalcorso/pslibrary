@@ -1,0 +1,651 @@
+#!/bin/bash
+#!
+#! Copyright (C) 2010-2012 Andrea Dal Corso 
+#! This file is distributed under the terms of the
+#! GNU General Public License. See the file `License'
+#! in the root directory of the present distribution,
+#! or http://www.gnu.org/copyleft/gpl.txt .
+#!
+
+
+
+. ./enviroment.job
+psdir=./PSEUDOPOTENTIALS
+
+cat > At.$fct-dn-rrkjus_psl.0.2.3.test.in << EOF
+ &input
+   title='At q',
+   zed=85.,
+   rel=$nrel,
+   config='[Xe] 4f14.0 5d10.0 6s2.0 6p5.0 6d-2.0',
+   iswitch=2,
+   dft='$gfun'
+ /
+ &test
+   file_pseudo='$psdir/At.$fct-dn-rrkjus_psl.0.2.3.UPF',
+   nconf=5
+   configts(1)='5d10 6s2 6p5'
+   configts(2)='5d10 6s2 6p3 6d0.5'
+   configts(3)='5d10 6s1 6p5 6d0.5'
+   configts(4)='5d10 6s1 6p5 6d0'
+   configts(5)='5d10 6s2 6p4 6d0'
+ /
+EOF
+
+cat > Ba.$fct-spn-rrkjus_psl.0.2.3.test.in << EOF
+ &input
+   title='Ba d',
+   zed=56.0,
+   rel=$nrel,
+   config='[Xe] 5d0.0 6s2 6p0',
+   iswitch=2,
+   dft='$gfun'
+ /
+ &test
+   file_pseudo='$psdir/Ba.$fct-spn-rrkjus_psl.0.2.3.UPF',
+   nconf=5
+   configts(1)='5s2.0 5p6.0 6s2.0  '
+   configts(2)='5s2.0 5p6.0 6s1.0 6p1 '
+   configts(3)='5s2.0 5p6.0 6s1.0  '
+   configts(4)='5s2.0 5p6.0 6s1.5  '
+   configts(5)='5s2.0 5p5.5 6s1.75 6p0 5d0.25'
+ /
+EOF
+
+cat > Ca.$fct-spn-rrkjus_psl.0.2.3.test.in << EOF
+ &input
+   title='Ca b',
+   zed=20.0,
+   rel=$nrel,
+   config='[Ar] 3d0.0 4s2.0 4p0',
+   iswitch=2,
+   dft='$gfun'
+ /
+ &test
+   file_pseudo='$psdir/Ca.$fct-spn-rrkjus_psl.0.2.3.UPF',
+   nconf=5
+   configts(1)='3s2.0 3p6.0 4s2.0  '
+   configts(2)='3s2.0 3p6.0 4s1.0 4p1 '
+   configts(3)='3s2.0 3p6.0 4s1.0  '
+   configts(4)='3s2.0 3p6.0 4s1.5  '
+   configts(5)='3s2.0 3p5.5 4s1.75 4p0 3d0.25'
+ /
+EOF
+
+cat > Ce.$fct-spn-rrkjus_psl.0.3.0.test.in << EOF
+ &input
+   title='Ce q',
+   zed=58.0,
+   rel=$nrel,
+   config='[Xe] 4f1 5d1 6s2 6p0 ',
+   iswitch=2,
+   dft='$gfun'
+ /
+ &test
+   file_pseudo='$psdir/Ce.$fct-spn-rrkjus_psl.0.3.0.UPF',
+   nconf=4
+   configts(1)='4f1 5s2.0 5p6.0 6s2.0  5d1'
+   configts(2)='4f1 5s2.0 5p6.0 6s1.0 5d1 6p1'
+   configts(3)='4f2 5s2.0 5p6.0 6s0.0 5d1'
+   configts(4)='4f1 5s2.0 5p5.5 6s1.75 6p0 5d1.25'
+ /
+EOF
+
+
+cat > Co.$fct-n-rrkjus_psl.0.2.3.test.in << EOF
+ &input
+   title='Co b',
+   zed=27.,
+   rel=$nrel,
+   config='[Ar] 4s2 3d7 4p0',
+   iswitch=2,
+   dft='$gfun'
+ /
+ &test
+   file_pseudo='$psdir/Co.$fct-n-rrkjus_psl.0.2.3.UPF',
+   nconf=5
+   configts(1)='3d7 4s2 4p0'
+   configts(2)='3d8 4s1 4p0'
+   configts(3)='3d7 4s2 4p0'
+   configts(4)='3d7 4s1 4p1'
+   configts(5)='3d6 4s2 4p0'
+ /
+EOF
+
+cat > Cr.$fct-spn-rrkjus_psl.0.2.3.test.in << EOF
+ &input
+   title='Cr c',
+   zed=24.0,
+   rel=$nrel,
+   config='[Ar] 3d5.0 4s1 4p0',
+   iswitch=2,
+   dft='$gfun'
+ /
+ &test
+   file_pseudo='$psdir/Cr.$fct-spn-rrkjus_psl.0.2.3.UPF',
+   nconf=5
+   configts(1)='3s2.0 3p6.0 4s1.0 3d5 '
+   configts(2)='3s2.0 3p6.0 4s1.0 4p1 3d4'
+   configts(3)='3s2.0 3p6.0 4s1.0 3d4 '
+   configts(4)='3s2.0 3p6.0 4s1.5 3d4 '
+   configts(5)='3s2.0 3p6.0 4s0. 4p1 3d4.0'
+ /
+EOF
+
+cat > Cs.$fct-spn-rrkjus_psl.0.2.3.test.in << EOF
+ &input
+   title='Cs e',
+   zed=55.0,
+   rel=$nrel,
+   config='[Xe] 5d0.0 6s1 6p0',
+   iswitch=2,
+   dft='$gfun'
+ /
+ &test
+   file_pseudo='$psdir/Cs.$fct-spn-rrkjus_psl.0.2.3.UPF',
+   nconf=5
+   configts(1)='5s2.0 5p6.0 6s1.0  '
+   configts(2)='5s2.0 5p6.0 6s0.0 6p1 '
+   configts(3)='5s2.0 5p6.0 6s0.0  '
+   configts(4)='5s2.0 5p6.0 6s0.5  '
+   configts(5)='5s2.0 5p5.5 6s0.75 6p0 5d0.25'
+ /
+EOF
+
+cat > Hf.$fct-spn-rrkjus_psl.0.2.test.in << EOF
+ &input
+   title='Hf d',
+   zed=72.0,
+   rel=$nrel,
+   config='[Xe] 4f14 5d2.0 6s2 6p0',
+   iswitch=2,
+   dft='$gfun'
+ /
+ &test
+   file_pseudo='$psdir/Hf.$fct-spn-rrkjus_psl.0.2.UPF',
+   nconf=5
+   configts(1)='5s2.0 5p6.0 6s2.0  5d2 '
+   configts(2)='5s2.0 5p6.0 6s1.0 5d2 6p1 '
+   configts(3)='5s2.0 5p6.0 6s1.0 5d2  '
+   configts(4)='5s2.0 5p6.0 6s1.5 5d2  '
+   configts(5)='5s2.0 5p5.5 6s1.75 6p0 5d2.25'
+ /
+EOF
+
+cat > He.$fct-rrkjus_psl.0.2.3.test.in << EOF
+ &input
+   title='He q',
+   zed=2.0,
+   rel=$nrel,
+   config='1s2 2s-2 2p-2',
+   iswitch=2,
+   dft='$gfun'
+ /
+ &test
+   file_pseudo='$psdir/He.$fct-rrkjus_psl.0.2.3.UPF',
+   nconf=3
+   configts(1)='1s2'
+   configts(2)='1s1.5 2p0'
+   configts(3)='1s1.0 2s0.5'
+ /
+EOF
+
+cat > K.$fct-spn-rrkjus_psl.0.2.3.test.in << EOF
+ &input
+   title='K b',
+   zed=19.0,
+   rel=$nrel,
+   config='[Ar] 3d-2 4s1 4p0',
+   iswitch=2,
+   dft='$gfun'
+ /
+ &test
+   file_pseudo='$psdir/K.$fct-spn-rrkjus_psl.0.2.3.UPF',
+   nconf=5
+   configts(1)='3s2.0 3p6.0 4s0.5  '
+   configts(2)='3s2.0 3p6.0 4s0.0 4p1 '
+   configts(3)='3s2.0 3p6.0 4s0.0  '
+   configts(4)='3s2.0 3p6.0 4s0.5  '
+   configts(5)='3s2.0 3p5.5 4s0.75 4p0 3d0.25'
+ /
+EOF
+
+cat > Kr.$fct-n-rrkjus_psl.0.2.3.test.in << EOF
+ &input
+   title='Kr q',
+   zed=36.0,
+   rel=$nrel,
+   config='[Ar] 3d10 4s2 4p6.00 4d-2.0',
+   iswitch=2,
+   dft='$gfun'
+ /
+ &test
+   file_pseudo='$psdir/Kr.$fct-n-rrkjus_psl.0.2.3.UPF',
+   nconf=5
+   configts(1)='4s2 4p6'
+   configts(2)='4s2 4p5 4d1'
+   configts(3)='4s1 4p6 4d1'
+   configts(4)='4s1 4p6 4d0'
+   configts(5)='4s2 4p5 4d0'
+ /
+EOF
+
+cat > La.$fct-spn-rrkjus_psl.0.2.3.test.in << EOF
+ &input
+   title='La q',
+   zed=57.0,
+   rel=$nrel,
+   config='[Xe] 5d1.0 6s2 6p0',
+   iswitch=2,
+   dft='$gfun'
+ /
+ &test
+   file_pseudo='$psdir/La.$fct-spn-rrkjus_psl.0.2.3.UPF',
+   nconf=5
+   configts(1)='5s2.0 5p6.0 6s2.0  5d1 '
+   configts(2)='5s2.0 5p6.0 6s1.0 5d1 6p1 '
+   configts(3)='5s2.0 5p6.0 6s1.0 5d1  '
+   configts(4)='5s2.0 5p6.0 6s1.5 5d1  '
+   configts(5)='5s2.0 5p5.5 6s1.75 6p0 5d1.25'
+ /
+EOF
+
+cat > Mg.$fct-n-rrkjus_psl.0.3.0.test.in << EOF
+ &input
+   title='Mg c',
+   zed=12.0,
+   rel=$nrel,
+   config='[Ne] 3s2.0 3p0 3d-2',
+   iswitch=2,
+   dft='$gfun'
+ /
+ &test
+   file_pseudo='$psdir/Mg.$fct-n-rrkjus_psl.0.3.0.UPF',
+   nconf=5
+   configts(1)='3s2.0 3p0 '
+   configts(2)='3s1.0 3p0 '
+   configts(3)='3s1.0 3p1.0 '
+   configts(4)='3s1.5 3p0.5 '
+   configts(5)='3s1.5 3p0 3d0.25'
+ /
+EOF
+
+cat > Mn.$fct-spn-rrkjus_psl.0.2.3.test.in << EOF
+ &input
+   title='Mn c',
+   zed=25.0,
+   rel=$nrel,
+   config='[Ar] 3d5.0 4s2 4p0',
+   iswitch=2,
+   dft='$gfun'
+ /
+ &test
+   file_pseudo='$psdir/Mn.$fct-spn-rrkjus_psl.0.2.3.UPF',
+   nconf=5
+   configts(1)='3s2.0 3p6.0 4s2.0 3d5 '
+   configts(2)='3s2.0 3p6.0 4s2.0 4p1 3d4'
+   configts(3)='3s2.0 3p6.0 4s2.0 3d4 '
+   configts(4)='3s2.0 3p6.0 4s1.5 3d4 '
+   configts(5)='3s2.0 3p6.0 4s1. 4p1 3d4.0'
+ /
+EOF
+
+cat > Nb.$fct-spn-rrkjus_psl.0.3.0.test.in << EOF
+ &input
+   title='Nb b',
+   zed=41.0,
+   rel=$nrel,
+   config='[Kr] 4d4.0 5s1 5p0',
+   iswitch=2,
+   dft='$gfun'
+ /
+ &test
+   file_pseudo='$psdir/Nb.$fct-spn-rrkjus_psl.0.3.0.UPF',
+   nconf=5
+   configts(1)='4s2.0 4p6.0 5s1.0  4d4 '
+   configts(2)='4s2.0 4p6.0 5s0.0 4d4 5p1 '
+   configts(3)='4s2.0 4p6.0 5s0.0 4d4  '
+   configts(4)='4s2.0 4p6.0 5s0.5 4d4  '
+   configts(5)='4s2.0 4p5.5 5s0.75 5p0 4d4.25'
+ /
+EOF
+
+cat > Ne.$fct-n-rrkjus_psl.0.3.0.test.in << EOF
+ &input
+   title='Ne q',
+   zed=10.0,
+   rel=$nrel,
+   config='1s2 2s2 2p6 3d-2',
+   iswitch=2,
+   dft='$gfun'
+ /
+ &test
+   file_pseudo='$psdir/Ne.$fct-n-rrkjus_psl.0.3.0.UPF',
+   nconf=5
+   configts(1)='2s2 2p6 3d-2'
+   configts(2)='2s2 2p5'
+   configts(3)='2s1 2p5.5 3d1'
+   configts(4)='2s1 2p6'
+   configts(5)='2s1 2p5'
+ /
+EOF
+
+cat > Os.$fct-n-rrkjus_psl.0.2.3.test.in << EOF
+ &input
+   title='Os q',
+   zed=76.,
+   rel=$nrel,
+   iswitch=2,
+   config='[Xe] 4f14.0 5d6.0 6s2.0 6p0.0',
+   dft='$gfun'
+ /
+ &test
+   file_pseudo='$psdir/Os.$fct-n-rrkjus_psl.0.2.3.UPF',
+   nconf=5
+   configts(1)='5d6.0 6s2.0 6p0.0',
+   configts(2)='5d6.0 6s0.0 6p1.0',
+   configts(3)='5d6.0 6s0.0 6p0.0',
+   configts(4)='5d6.0 6s1.0 6p0.0',
+   configts(5)='5d7.0 6s1.0 6p0.0',
+ /
+EOF
+
+cat > Po.$fct-dn-rrkjus_psl.0.2.3.test.in << EOF
+ &input
+   title='Po q',
+   zed=84.,
+   rel=$nrel,
+   config='[Xe] 4f14.0 5d10.0 6s2.0 6p4.0 6d-2',
+   iswitch=2,
+   dft='$gfun'
+ /
+ &test
+   file_pseudo='$psdir/Po.$fct-dn-rrkjus_psl.0.2.3.UPF',
+   nconf=5,
+   configts(1)='5d10 6s2 6p4',
+   configts(3)='5d10 6s2 6p2 6d1',
+   configts(2)='5d10 6s1 6p2 6d0.5',
+   configts(4)='5d10 6s1 6p4 6d0',
+   configts(5)='5d10 6s2 6p3 6d0',
+ /
+EOF
+
+cat > Rb.$fct-spn-rrkjus_psl.0.2.3.test.in << EOF
+ &input
+   title='Rb d',
+   zed=37.0,
+   rel=$nrel,
+   config='[Kr] 4d-2.0 5s1 5p0',
+   iswitch=2,
+   dft='$gfun'
+ /
+ &test
+   file_pseudo='$psdir/Rb.$fct-spn-rrkjus_psl.0.2.3.UPF',
+   nconf=5
+   configts(1)='4s2.0 4p6.0 5s0.5  '
+   configts(2)='4s2.0 4p6.0 5s0.0 5p1 '
+   configts(3)='4s2.0 4p6.0 5s0.0  '
+   configts(4)='4s2.0 4p6.0 5s0.5  '
+   configts(5)='4s2.0 4p5.5 5s0.75 5p0 4d0.25'
+ /
+EOF
+
+cat > Re.$fct-spn-rrkjus_psl.0.2.3.test.in << EOF
+ &input
+   title='Re q',
+   zed=75.0,
+   rel=$nrel,
+   config='[Xe] 4f14 5d5.0 6s2 6p0',
+   iswitch=2,
+   dft='$gfun'
+ /
+ &test
+   file_pseudo='$psdir/Re.$fct-spn-rrkjus_psl.0.2.3.UPF',
+   nconf=5
+   configts(1)='5s2.0 5p6.0 6s2.0  5d5 '
+   configts(2)='5s2.0 5p6.0 6s1.0 5d5 6p1 '
+   configts(3)='5s2.0 5p6.0 6s1.0 5d5  '
+   configts(4)='5s2.0 5p6.0 6s1.5 5d5  '
+   configts(5)='5s2.0 5p5.5 6s1.75 6p0 5d5.25'
+ /
+EOF
+
+cat > Ru.$fct-spn-rrkjus_psl.0.3.0.test.in << EOF
+ &input
+   title='Ru b',
+   zed=44.,
+   rel=$nrel,
+   config='[Kr] 4d6.0 5s2.0 5p0.0',
+   iswitch=2,
+   dft='$gfun'
+ /
+ &test
+   file_pseudo='$psdir/Ru.$fct-spn-rrkjus_psl.0.3.0.UPF',
+   nconf=5,
+   configts(1)='4s2.0 4p6.0 4d6.0 5s2.0 5p0.0'
+   configts(2)='4s2.0 4p6.0 4d6.0 5s1.0'
+   configts(3)='4s2.0 4p6.0 4d7.0 5s1.0'
+   configts(4)='4s2.0 4p6.0 4d6.0 5s0.0 5p1.0'
+   configts(5)='4s2.0 4p6.0 4d5.0 5s0.0 5p1.0'
+ /
+EOF
+
+cat > Sb.$fct-n-rrkjus_psl.0.2.3.test.in << EOF
+ &input
+   title='Sb c',
+   zed=51.,
+   rel=$nrel,
+   config='[Kr] 4d10.0 5s2.0 5p3.0 5d-2.0',
+   iswitch=2,
+   dft='$gfun'
+ /
+ &test
+   file_pseudo='$psdir/Sb.$fct-n-rrkjus_psl.0.2.3.UPF',
+   nconf=5
+   configts(1)='5s2 5p3'
+   configts(2)='5s2 5p1 5d1'
+   configts(3)='5s1 5p2 5d1'
+   configts(4)='5s1 5p3 5d0'
+   configts(5)='5s2 5p2 5d0'
+ /
+EOF
+
+cat > Sc.$fct-spn-rrkjus_psl.0.2.3.test.in << EOF
+ &input
+   title='Sc a',
+   zed=21.0,
+   rel=$nrel,
+   config='[Ar] 3d1.0 4s2 4p0',
+   iswitch=2,
+   dft='$gfun'
+ /
+ &test
+   file_pseudo='$psdir/Sc.$fct-spn-rrkjus_psl.0.2.3.UPF',
+   nconf=5
+   configts(1)='3s2.0 3p6.0 4s2.0 3d1 '
+   configts(2)='3s2.0 3p6.0 4s1.0 4p1 3d1'
+   configts(3)='3s2.0 3p6.0 4s1.0 3d1 '
+   configts(4)='3s2.0 3p6.0 4s1.5 3d1 '
+   configts(5)='3s2.0 3p5.5 4s1.75 4p0 3d1.25'
+ /
+EOF
+
+cat > Sr.$fct-spn-rrkjus_psl.0.2.3.test.in << EOF
+ &input
+   title='Sr b',
+   zed=38.0,
+   rel=$nrel,
+   config='[Kr] 4d0.0 5s2 5p0',
+   iswitch=2,
+   dft='$gfun'
+ /
+ &test
+   file_pseudo='$psdir/Sr.$fct-spn-rrkjus_psl.0.2.3.UPF',
+   nconf=5
+   configts(1)='4s2.0 4p6.0 5s2.0'
+   configts(2)='4s2.0 4p6.0 5s1.0 5p1'
+   configts(3)='4s2.0 4p6.0 5s1.0'
+   configts(4)='4s2.0 4p6.0 5s1.5'
+   configts(5)='4s2.0 4p5.5 5s1.75 5p0 4d0.25'
+ /
+EOF
+
+cat > Tc.$fct-spn-rrkjus_psl.0.3.0.test.in << EOF
+ &input
+   title='Tc b',
+   zed=43.0,
+   rel=$nrel,
+   config='[Kr] 4d5.0 5s2 5p0',
+   iswitch=2,
+   dft='$gfun'
+ /
+ &test
+   file_pseudo='$psdir/Tc.$fct-spn-rrkjus_psl.0.3.0.UPF',
+   nconf=5
+   configts(1)='4s2.0 4p6.0 5s2.0  4d5 '
+   configts(2)='4s2.0 4p6.0 5s1.0 4d5 5p1 '
+   configts(3)='4s2.0 4p6.0 5s1.0 4d5  '
+   configts(4)='4s2.0 4p6.0 5s1.5 4d5  '
+   configts(5)='4s2.0 4p5.5 5s1.75 5p0 4d5.25'
+ /
+EOF
+
+cat > Ti.$fct-spn-rrkjus_psl.0.2.3.test.in << EOF
+ &input
+   title='Ti d',
+   zed=22.0,
+   rel=$nrel,
+   config='[Ar] 3d2.0 4s2 4p0',
+   iswitch=2,
+   dft='$gfun'
+ /
+ &test
+   file_pseudo='$psdir/Ti.$fct-spn-rrkjus_psl.0.2.3.UPF',
+   nconf=5
+   configts(1)='3s2.0 3p6.0 4s2.0 3d2 '
+   configts(2)='3s2.0 3p6.0 4s1.0 4p1 3d2'
+   configts(3)='3s2.0 3p6.0 4s1.0 3d2 '
+   configts(4)='3s2.0 3p6.0 4s1.5 3d2 '
+   configts(5)='3s2.0 3p5.0 4s1.75 4p0 3d2.0'
+ /
+EOF
+
+cat > Tl.$fct-dn-rrkjus_psl.0.2.3.test.in << EOF
+ &input
+   title='Tl q',
+   zed=81.,
+   rel=$nrel,
+   config='[Xe] 4f14.0 5d10.0 6s2.0 6p1.0',
+   iswitch=2,
+   dft='$gfun'
+ /
+ &test
+   file_pseudo='$psdir/Tl.$fct-dn-rrkjus_psl.0.2.3.UPF',
+   nconf=5,
+   configts(1)='5d10.0 6s2  6p1.0'
+   configts(2)='5d9.5  6s2  6p1.'
+   configts(3)='5d10   6s2  6p0.0'
+   configts(4)='5d10   6s1  6p1.5'
+   configts(5)='5d9.5  6s2  6p0.5'
+ /
+EOF
+
+cat > V.$fct-spn-rrkjus_psl.0.2.3.test.in << EOF
+ &input
+   title='V b',
+   zed=23.0,
+   rel=$nrel,
+   config='[Ar] 3d3.0 4s2 4p0',
+   iswitch=2,
+   dft='$gfun'
+ /
+ &test
+   file_pseudo='$psdir/V.$fct-spn-rrkjus_psl.0.2.3.UPF',
+   nconf=5
+   configts(1)='3s2.0 3p6.0 4s2.0 3d3'
+   configts(2)='3s2.0 3p6.0 4s1.0 4p1 3d3'
+   configts(3)='3s2.0 3p6.0 4s1.0 3d3'
+   configts(4)='3s2.0 3p6.0 4s1.5 3d3'
+   configts(5)='3s2.0 3p6.0 4s0. 4p1 3d3.0'
+ /
+EOF
+
+cat > Xe.$fct-n-rrkjus_psl.0.3.0.test.in << EOF
+ &input
+   title='Xe q',
+   zed=54.,
+   rel=$nrel,
+   config='[Kr] 4d10.0 5s2.0 5p6.0 5d-2.0',
+   iswitch=2,
+   dft='$gfun'
+ /
+ &test
+   file_pseudo='$psdir/Xe.$fct-n-rrkjus_psl.0.3.0.UPF',
+   nconf=5
+   configts(1)='5s2 5p6'
+   configts(2)='5s2 5p5 5d1'
+   configts(3)='5s1 5p6 5d1'
+   configts(4)='5s1 5p6 5d0'
+   configts(5)='5s2 5p5 5d0'
+ /
+EOF
+
+cat > Y.$fct-spn-rrkjus_psl.0.2.3.test.in << EOF
+ &input
+   title='Y b',
+   zed=39.0,
+   rel=$nrel,
+   config='[Kr] 4d1.0 5s2 5p0',
+   iswitch=2,
+   dft='$gfun'
+ /
+ &test
+   file_pseudo='$psdir/Y.$fct-spn-rrkjus_psl.0.2.3.UPF',
+   nconf=5
+   configts(1)='4s2.0 4p6.0 5s2.0  4d1'
+   configts(2)='4s2.0 4p6.0 5s1.0 4d1 5p1'
+   configts(3)='4s2.0 4p6.0 5s1.0 4d1'
+   configts(4)='4s2.0 4p6.0 5s1.5 4d1'
+   configts(5)='4s2.0 4p5.5 5s1.75 5p0 4d1.25'
+ /
+EOF
+
+cat > W.$fct-spn-rrkjus_psl.0.2.3.test.in << EOF
+ &input
+   title='W c',
+   zed=74.0,
+   rel=$nrel,
+   config='[Xe] 4f14 5d4.0 6s2 6p0',
+   iswitch=2,
+   dft='$gfun'
+ /
+ &test
+   file_pseudo='$psdir/W.$fct-spn-rrkjus_psl.0.2.3.UPF',
+   nconf=5
+   configts(1)='5s2.0 5p6.0 6s2.0  5d4 '
+   configts(2)='5s2.0 5p6.0 6s1.0 5d4 6p1 '
+   configts(3)='5s2.0 5p6.0 6s1.0 5d4  '
+   configts(4)='5s2.0 5p6.0 6s1.5 5d4  '
+   configts(5)='5s2.0 5p5.5 6s1.75 6p0 5d4.25'
+ /
+EOF
+
+cat > Zr.$fct-spn-rrkjus_psl.0.2.3.test.in << EOF
+ &input
+   title='Zr b',
+   zed=40.0,
+   rel=$nrel,
+   config='[Kr] 4d2.0 5s2 5p0',
+   iswitch=2,
+   dft='$gfun'
+ /
+ &test
+   file_pseudo='$psdir/Zr.$fct-spn-rrkjus_psl.0.2.3.UPF',
+   nconf=5
+   configts(1)='4s2.0 4p6.0 5s2.0 4d2'
+   configts(2)='4s2.0 4p6.0 5s1.0 4d2 5p1'
+   configts(3)='4s2.0 4p6.0 5s1.0 4d2'
+   configts(4)='4s2.0 4p6.0 5s1.5 4d2'
+   configts(5)='4s2.0 4p5.5 5s1.75 5p0 4d2.25'
+ /
+EOF
