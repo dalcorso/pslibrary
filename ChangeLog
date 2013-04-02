@@ -150,3 +150,5 @@ pslibrary.0.3.1 (ADC, In progress)
 
 Introduced the command make_test to test the data_sets.
 The tests are in paw_ps_test*.job and us_ps_test*.job.
+
+Modified PPs: SR and FR Ti. Small change for negative dr2 problems. 

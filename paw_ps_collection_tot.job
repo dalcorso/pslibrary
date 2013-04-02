@@ -984,7 +984,40 @@ cat > Tc.$fct-spn-kjpaw_psl.0.3.0.in << EOF
 4D  3  2 -2.00  0.30  1.30  2.00  0.0
 EOF
 
-cat > Ti.$fct-spn-kjpaw_psl.0.2.3.in << EOF
+#cat > Ti.$fct-spn-kjpaw_psl.0.2.3.in << EOF
+# &input
+#   title='Ti d',
+#   zed=22.0,
+#   rel=$nrel,
+#   config='[Ar] 3d2.0 4s2 4p0',
+#   iswitch=3,
+#   dft='$gfun'
+# /
+# &inputp
+#   lpaw=.true.,
+#   pseudotype=3,
+#   file_pseudopw='Ti.$fct-spn-kjpaw_psl.0.2.3.UPF',
+#   author='ADC',
+#   lloc=-1,
+#   rcloc=2.1,
+#   which_augfun='BESSEL',
+#   rmatch_augfun=1.5,
+#   nlcc=.true.,
+#   new_core_ps=.true.,
+#   rcore=0.7,
+#   tm=.true.
+# /
+#6
+#3S  1  0  2.00  0.00  1.40  1.70  0.0
+#4S  2  0  2.00  0.00  2.10  2.30  0.0
+#3P  2  1  6.00  0.00  1.50  1.90  0.0
+#4P  3  1  0.00  0.00  0.80  1.90  0.0
+#3D  3  2  2.00  0.00  1.50  1.70  0.0
+#3D  3  2 -2.00  0.80  1.50  1.70  0.0
+#EOF
+
+
+cat > Ti.$fct-spn-kjpaw_psl.0.3.1.in << EOF
  &input
    title='Ti d',
    zed=22.0,
@@ -996,24 +1029,24 @@ cat > Ti.$fct-spn-kjpaw_psl.0.2.3.in << EOF
  &inputp
    lpaw=.true.,
    pseudotype=3,
-   file_pseudopw='Ti.$fct-spn-kjpaw_psl.0.2.3.UPF',
+   file_pseudopw='Ti.$fct-spn-kjpaw_psl.0.3.1.UPF',
    author='ADC',
    lloc=-1,
    rcloc=2.1,
-   which_augfun='BESSEL',
-   rmatch_augfun=1.5,
+   which_augfun='PSQ',
+   rmatch_augfun_nc=.true.,
    nlcc=.true.,
    new_core_ps=.true.,
    rcore=0.7,
    tm=.true.
  /
 6
-3S  1  0  2.00  0.00  1.40  1.70  0.0
-4S  2  0  2.00  0.00  2.10  2.30  0.0
-3P  2  1  6.00  0.00  1.50  1.90  0.0
-4P  3  1  0.00  0.00  0.80  1.90  0.0
-3D  3  2  2.00  0.00  1.50  1.70  0.0
-3D  3  2 -2.00  0.80  1.50  1.70  0.0
+3S  1  0  2.00  0.00  0.75  1.70  0.0
+4S  2  0  2.00  0.00  0.75  2.30  0.0
+3P  2  1  6.00  0.00  0.75  1.90  0.0
+4P  3  1  0.00  0.00  0.75  1.90  0.0
+3D  3  2  2.00  0.00  0.75  1.70  0.0
+3D  3  2 -2.00  0.80  0.75  1.70  0.0
 EOF
 
 cat > Tl.$fct-dn-kjpaw_psl.0.2.3.in << EOF

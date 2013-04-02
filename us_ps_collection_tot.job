@@ -947,7 +947,37 @@ cat > Tc.$fct-spn-rrkjus_psl.0.3.0.in << EOF
 4D  3  2 -2.00  0.30  1.30  2.00  0.0
 EOF
 
-cat > Ti.$fct-spn-rrkjus_psl.0.2.3.in << EOF
+#cat > Ti.$fct-spn-rrkjus_psl.0.2.3.in << EOF
+# &input
+#   title='Ti d',
+#   zed=22.0,
+#   rel=$nrel,
+#   config='[Ar] 3d2.0 4s2 4p0',
+#   iswitch=3,
+#   dft='$gfun'
+# /
+# &inputp
+#   pseudotype=3,
+#   file_pseudopw='Ti.$fct-spn-rrkjus_psl.0.2.3.UPF',
+#   author='ADC',
+#   lloc=-1,
+#   rcloc=2.0,
+#   which_augfun='PSQ',
+#   rmatch_augfun=0.8,
+#   nlcc=.true.,
+#   rcore=1.5,
+#   tm=.true.
+# /
+#6
+#3S  1  0  2.00  0.00  1.10  1.50  0.0
+#4S  2  0  2.00  0.00  1.10  1.50  0.0
+#3P  2  1  6.00  0.00  1.40  1.50  0.0
+#4P  3  1  0.00  3.30  0.90  1.80  0.0
+#3D  3  2  2.00  0.00  1.40  1.70  0.0
+#3D  3  2 -2.00  0.30  1.40  1.70  0.0
+#EOF
+
+cat > Ti.$fct-spn-rrkjus_psl.0.3.1.in << EOF
  &input
    title='Ti d',
    zed=22.0,
@@ -957,24 +987,26 @@ cat > Ti.$fct-spn-rrkjus_psl.0.2.3.in << EOF
    dft='$gfun'
  /
  &inputp
+   lpaw=.true.,
    pseudotype=3,
-   file_pseudopw='Ti.$fct-spn-rrkjus_psl.0.2.3.UPF',
+   file_pseudopw='Ti.$fct-spn-rrkjus_psl.0.3.1.UPF',
    author='ADC',
    lloc=-1,
-   rcloc=2.0,
+   rcloc=2.1,
    which_augfun='PSQ',
-   rmatch_augfun=0.8,
+   rmatch_augfun_nc=.true.,
    nlcc=.true.,
-   rcore=1.5,
+   new_core_ps=.true.,
+   rcore=0.7,
    tm=.true.
  /
 6
-3S  1  0  2.00  0.00  1.10  1.50  0.0
-4S  2  0  2.00  0.00  1.10  1.50  0.0
-3P  2  1  6.00  0.00  1.40  1.50  0.0
-4P  3  1  0.00  3.30  0.90  1.80  0.0
-3D  3  2  2.00  0.00  1.40  1.70  0.0
-3D  3  2 -2.00  0.30  1.40  1.70  0.0
+3S  1  0  2.00  0.00  0.75  1.70  0.0
+4S  2  0  2.00  0.00  0.75  2.30  0.0
+3P  2  1  6.00  0.00  0.75  1.90  0.0
+4P  3  1  0.00  0.00  0.75  1.90  0.0
+3D  3  2  2.00  0.00  0.75  1.70  0.0
+3D  3  2 -2.00  0.80  0.75  1.70  0.0
 EOF
 
 cat > Tl.$fct-dn-rrkjus_psl.0.2.3.in << EOF

@@ -15,5 +15,5 @@ cd ./rel-pz
 . ../make_test
 cd ..
 cd ./rel-pbe
-. ../make_tes
+. ../make_test
 cd ..
