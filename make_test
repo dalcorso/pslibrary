@@ -1,6 +1,6 @@
 #!/bin/bash
 
-PWDIR='/scratch/dalcorso_sissa/espresso_my_best_version_apr_2013'
+PWDIR='/path_to_quantum_espresso/'
 element='all'
 
 # do not change after this line. Uncomment the appropriate line if
