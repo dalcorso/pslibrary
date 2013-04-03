@@ -36,7 +36,6 @@ cat > Ag.$fct-spn-kjpaw_psl.0.3.0.test.in << EOF
  /
 EOF
 
-
 cat > Au.$fct-spn-kjpaw_psl.0.2.4.test.in << EOF
  &input
    title='Au',
@@ -48,11 +47,12 @@ cat > Au.$fct-spn-kjpaw_psl.0.2.4.test.in << EOF
  /
  &test
    file_pseudo='$psdir/Au.$fct-spn-kjpaw_psl.0.2.4.UPF',
-   nconf=4
+   nconf=5
    configts(1)='5s2 5p6 5d10. 6s1 6p0',
-   configts(2)='5s2 5p6 5d9. 6s0 6p0.5',
-   configts(3)='5s2 5p6 5d9. 6s0.5 6p0',
-   configts(4)='5s2 5p6 5d10. 6s0 6p0',
+   configts(2)='5s2 5p6 5d10. 6s0 6p0.5',
+   configts(3)='5s2 5p6 5d10. 6s0 6p0',
+   configts(4)='5s2 5p6 5d9.  6s1 6p0',
+   configts(5)='5s2 5p6 5d8.  6s2 6p0',
  /
 EOF
 
@@ -68,11 +68,11 @@ cat > Fe.$fct-n-kjpaw_psl.0.2.4.test.in << EOF
  &test
    file_pseudo='$psdir/Fe.$fct-n-kjpaw_psl.0.2.4.UPF',
    nconf=5
-   configts(1)='3d7. 4s1. 4p0'
-   configts(2)='3d6.8 4s1.2 4p0'
-   configts(3)='3d7. 4s0 4p1.'
-   configts(4)='3d6. 4s1. 4p1.'
-   configts(5)='3d6. 4s2. 4p0'
+   configts(1)='3d6 4s2'
+   configts(2)='3d6 4s1 4p0'
+   configts(3)='3d6 4s1 4p1'
+   configts(4)='3d7 4s1'
+   configts(5)='3d7 4s0 4p1'
  /
 EOF
 
@@ -88,11 +88,11 @@ cat > Ir.$fct-spn-kjpaw_psl.0.2.6.test.in << EOF
  &test
    file_pseudo='$psdir/Ir.$fct-spn-kjpaw_psl.0.2.6.UPF',
    nconf=5
-   configts(1)='5s2 5p6 5d7.0 6s2.0 6p0.0',
-   configts(2)='5s2 5p6 5d7.0 6s0.0 6p1.0',
-   configts(3)='5s2 5p6 5d6.0 6s2.0 6p1.0',
-   configts(4)='5s2 5p6 5d7.0 6s1.0 6p0.0',
-   configts(5)='5s2 5p6 5d6.0 6s1.0 6p1.0',
+   configts(1)='5s2 5p6 5d7 6s2',
+   configts(2)='5s2 5p6 5d7 6s1 6p0',
+   configts(3)='5s2 5p6 5d7 6s0 6p1',
+   configts(4)='5s2 5p6 5d6 6s2 6p0',
+   configts(5)='5s2 5p6 5d6 6s2 6p1',
  /
 EOF
 
@@ -107,10 +107,11 @@ cat > Mg.$fct-sp-kjpaw_psl.0.2.5.test.in << EOF
  /
  &test
    file_pseudo='$psdir/Mg.$fct-sp-kjpaw_psl.0.2.5.UPF',
-   nconf=3
-   configts(1)='2s2 2p6 3s2 3p0'
+   nconf=4
+   configts(1)='2s2 2p6 3s2'
    configts(2)='2s2 2p6 3s1 3p1'
-   configts(3)='2s2 2p6 3s1.5 3p0'
+   configts(3)='2s2 2p6 3s0 3p2'
+   configts(4)='2s2 2p6 3s0 3p1'
  /
 EOF
 
@@ -126,11 +127,11 @@ cat > Pd.$fct-spn-kjpaw_psl.0.3.0.test.in << EOF
  &test
    file_pseudo='$psdir/Pd.$fct-spn-kjpaw_psl.0.3.0.UPF',
    nconf=5,
-   configts(1)='4s2 4p6 4d10 5s0 5p0 '
-   configts(2)='4s2 4p6 4d9 5s1 5p0 '
-   configts(3)='4s2 4p6 4d10 5s0 5p0.0 '
-   configts(4)='4s2 4p6 4d8 5s2 5p0 '
-   configts(5)='4s2 4p6 4d8 5s1 5p1 '
+   configts(1)='4s2 4p6 4d10 5s0.0'
+   configts(2)='4s2 4p6 4d9.5 5s0.5'
+   configts(3)='4s2 4p6 4d9.5 5s0 5p0.5'
+   configts(4)='4s2 4p6 4d9 5s1 5p0'
+   configts(5)='4s2 4p6 4d9 5s0 5p1'
  /
 EOF
 
@@ -145,10 +146,12 @@ cat > Pt.$fct-spn-kjpaw_psl.0.2.4.test.in << EOF
  /
  &test
    file_pseudo='$psdir/Pt.$fct-spn-kjpaw_psl.0.2.4.UPF',
-   nconf=3,
-   configts(1)='5s2 5p6 6s1 6p0 5d9'
-   configts(2)='5s2 5p6 6s0 6p1 5d9'
-   configts(3)='5s2 5p6 6s0.5 6p0.0 5d9'
+   nconf=5,
+   configts(1)='5s2 5p6 5d9 6s1 6p0'
+   configts(2)='5s2 5p6 5d9 6s0 6p0'
+   configts(3)='5s2 5p6 5d10 6s0'
+   configts(4)='5s2 5p6 5d8 6s1 6p0'
+   configts(5)='5s2 5p6 5d8 6s1 6p1'
  /
 EOF
 
