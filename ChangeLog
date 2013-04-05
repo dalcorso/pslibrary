@@ -152,3 +152,10 @@ Introduced the command make_test to test the data_sets.
 The tests are in paw_ps_test*.job and us_ps_test*.job.
 
 Modified PPs: SR and FR Ti. Small change for negative dr2 problems. 
+
+Pseudopotentials of Nb, Sc, Sr, Y, Zr, Tc, Tl moved from the _tot list to the
+main list. PP of I moved from the main list to the _tot list.
+
+old PPs distributed with some version of pslibrary and substituted
+by a newer version have been removed from the main scripts and
+collected in the file obsolete.job.

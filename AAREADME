@@ -25,7 +25,8 @@ If you need a PP for one element, change the variable
 
 element='all'
 
-with the element name (examples Si, C, Fe, etc.).
+with the element name (examples Si, C., Fe, etc.) at the beginning of the
+make_ps file.
 
 Andrea Dal Corso
 Dic. 2011
@@ -81,6 +82,25 @@ Please report to the pw_forum or to me any problem that you find.
 
 Andrea Dal Corso
 Dic. 2011
+----------------------------------------------------------------------------
+
+Starting from version 0.3.1, pslibrary contains a set of scripts to test 
+the pseudopotentials. In order to perform the test you need to change the 
+file make_test inserting the path to QE package, then give the command
+
+. ./make_all_test
+
+This command checks the PPs in the directories pz, pbe, rel-pz, and rel-pbe.
+To test other functionals enter in the appropriate directory and
+give the command:
+
+. ../make_test
+
+In order to test the PPs of the _alt or _tot files you need to uncomment
+the appropriate line inside the make_test script.
+
+Andrea Dal Corso
+April 2013
 ----------------------------------------------------------------------------
 
 All the material included in this distribution is free software;

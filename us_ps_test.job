@@ -1,6 +1,6 @@
 #!/bin/bash
 #!
-#! Copyright (C) 2010-2012 Andrea Dal Corso 
+#! Copyright (C) 2013 Andrea Dal Corso 
 #! This file is distributed under the terms of the
 #! GNU General Public License. See the file `License'
 #! in the root directory of the present distribution,
@@ -561,6 +561,27 @@ cat > Na.$fct-spn-rrkjus_psl.0.2.test.in << EOF
  /
 EOF
 
+cat > Nb.$fct-spn-rrkjus_psl.0.3.0.test.in << EOF
+ &input
+   title='Nb',
+   zed=41.0,
+   rel=$nrel,
+   config='[Kr] 4d4.0 5s1 5p0',
+   iswitch=2,
+   dft='$gfun'
+ /
+ &test
+   file_pseudo='$psdir/Nb.$fct-spn-rrkjus_psl.0.3.0.UPF',
+   nconf=5
+   configts(1)='4s2 4p6 4d4 5s1'
+   configts(2)='4s2 4p6 4d4 5s0 5p1'
+   configts(3)='4s2 4p6 4d4 5s0 5p0'
+   configts(4)='4s2 4p6 4d3 5s2'
+   configts(5)='4s2 4p6 4d5 5s0'
+ /
+EOF
+
+
 cat > Ni.$fct-n-rrkjus_psl.0.1.test.in << EOF
  &input
    title='Ni',
@@ -742,6 +763,27 @@ cat > S.$fct-n-rrkjus_psl.0.1.test.in << EOF
  /
 EOF
 
+cat > Sc.$fct-spn-rrkjus_psl.0.2.3.test.in << EOF
+ &input
+   title='Sc',
+   zed=21.0,
+   rel=$nrel,
+   config='[Ar] 3d1.0 4s2 4p0',
+   iswitch=2,
+   dft='$gfun'
+ /
+ &test
+   file_pseudo='$psdir/Sc.$fct-spn-rrkjus_psl.0.2.3.UPF',
+   nconf=5
+   configts(1)='3s2 3p6 3d1 4s2'
+   configts(2)='3s2 3p6 3d1 4s1 4p1' 
+   configts(3)='3s2 3p6 3d1 4s1 4p0'
+   configts(4)='3s2 3p6 3d0 4s2 4p0'
+   configts(5)='3s2 3p6 3d0 4s1 4p1'
+ /
+EOF
+
+
 cat > Se.$fct-n-rrkjus_psl.0.2.test.in << EOF
  &input
    title='Se',
@@ -803,6 +845,26 @@ cat > Sn.$fct-dn-rrkjus_psl.0.2.test.in << EOF
  /
 EOF
 
+cat > Sr.$fct-spn-rrkjus_psl.0.2.3.test.in << EOF
+ &input
+   title='Sr',
+   zed=38.0,
+   rel=$nrel,
+   config='[Kr] 4d0.0 5s2 5p0',
+   iswitch=2,
+   dft='$gfun'
+ /
+ &test
+   file_pseudo='$psdir/Sr.$fct-spn-rrkjus_psl.0.2.3.UPF',
+   nconf=5
+   configts(1)='4s2 4p6 5s2'
+   configts(2)='4s2 4p6 5s1.5'
+   configts(3)='4s2 4p6 5s1 5p1'
+   configts(4)='4s2 4p6 5s1 5p0'
+   configts(5)='4s2 4p6 5s1.75 5p0 4d0.25'
+ /
+EOF
+
 cat > Ta.$fct-spn-rrkjus_psl.0.2.test.in << EOF
  &input
    title='Ta',
@@ -820,6 +882,26 @@ cat > Ta.$fct-spn-rrkjus_psl.0.2.test.in << EOF
    configts(3)='5s2 5p6 5d3 6s1 6p0'
    configts(4)='5s2 5p6 5d2 6s2 6p0'
    configts(5)='5s2 5p6 5d2 6s1 6p1'
+ /
+EOF
+
+cat > Tc.$fct-spn-rrkjus_psl.0.3.0.test.in << EOF
+ &input
+   title='Tc',
+   zed=43.0,
+   rel=$nrel,
+   config='[Kr] 4d5.0 5s2 5p0',
+   iswitch=2,
+   dft='$gfun'
+ /
+ &test
+   file_pseudo='$psdir/Tc.$fct-spn-rrkjus_psl.0.3.0.UPF',
+   nconf=5
+   configts(1)='4s2 4p6 4d5 5s2'
+   configts(2)='4s2 4p6 4d5 5s1 5p1'
+   configts(3)='4s2 4p6 4d5 5s1 5p0'
+   configts(4)='4s2 4p6 4d4 5s2'
+   configts(5)='4s2 4p6 4d6 5s1'
  /
 EOF
 
@@ -843,6 +925,46 @@ cat > Te.$fct-dn-rrkjus_psl.0.2.2.test.in << EOF
  /
 EOF
 
+cat > Tl.$fct-dn-rrkjus_psl.0.2.3.test.in << EOF
+ &input
+   title='Tl q',
+   zed=81.,
+   rel=$nrel,
+   config='[Xe] 4f14.0 5d10.0 6s2.0 6p1.0 6d-1',
+   iswitch=2,
+   dft='$gfun'
+ /
+ &test
+   file_pseudo='$psdir/Tl.$fct-dn-rrkjus_psl.0.2.3.UPF',
+   nconf=5,
+   configts(1)='5d10 6s2 6p1'
+   configts(2)='5d10 6s2 6p0 6d0'
+   configts(3)='5d10 6s1 6p1'
+   configts(4)='5d10 6s1 6p2'
+   configts(5)='5d10 6s1 6p0'
+ /
+EOF
+
+cat > Y.$fct-spn-rrkjus_psl.0.2.3.test.in << EOF
+ &input
+   title='Y b',
+   zed=39.0,
+   rel=$nrel,
+   config='[Kr] 4d1.0 5s2 5p0',
+   iswitch=2,
+   dft='$gfun'
+ /
+ &test
+   file_pseudo='$psdir/Y.$fct-spn-rrkjus_psl.0.2.3.UPF',
+   nconf=5
+   configts(1)='4s2 4p6 4d1 5s2'
+   configts(2)='4s2 4p6 4d1 5s1 5p1'
+   configts(3)='4s2 4p6 4d1 5s1 5p0'
+   configts(4)='4s2 4p6 4d0 5s2 5p0'
+   configts(5)='4s2 4p6 4d2 5s1'
+ /
+EOF
+
 cat > Zn.$fct-dn-rrkjus_psl.0.2.2.test.in << EOF
  &input
    title='Zn d',
@@ -863,3 +985,22 @@ cat > Zn.$fct-dn-rrkjus_psl.0.2.2.test.in << EOF
  /
 EOF
 
+cat > Zr.$fct-spn-rrkjus_psl.0.2.3.test.in << EOF
+ &input
+   title='Zr b',
+   zed=40.0,
+   rel=$nrel,
+   config='[Kr] 4d2.0 5s2 5p0',
+   iswitch=2,
+   dft='$gfun'
+ /
+ &test
+   file_pseudo='$psdir/Zr.$fct-spn-rrkjus_psl.0.2.3.UPF',
+   nconf=5
+   configts(1)='4s2 4p6 4d2 5s2'
+   configts(2)='4s2 4p6 4d2 5s1 5p1'
+   configts(3)='4s2 4p6 4d2 5s1 5p0'
+   configts(4)='4s2 4p6 4d1 5s2 5p0'
+   configts(5)='4s2 4p6 4d3 5s1'
+ /
+EOF

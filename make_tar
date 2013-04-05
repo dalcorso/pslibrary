@@ -1,12 +1,23 @@
 #!/bin/bash
+#!
+#! Copyright (C) 2010-2013 Andrea Dal Corso 
+#! This file is distributed under the terms of the
+#! GNU General Public License. See the file `License'
+#! in the root directory of the present distribution,
+#! or http://www.gnu.org/copyleft/gpl.txt .
+#!
 
-tar_directory=./pslibrary.0.3.0 
+tar_directory=./pslibrary.0.3.1 
 mkdir $tar_directory
 
-cp ./AAREADME ./ChangeLog ./clean ./clean_all ./make_ps ./make_all_ps \
+cp ./AAREADME ./ChangeLog ./Licence ./clean ./clean_all ./make_ps ./make_all_ps \
+./make_test ./make_all_test \
 ./paw_ps_collection.job  ./us_ps_collection.job ./nc_ps_collection.job \
 ./paw_ps_collection_tot.job ./us_ps_collection_tot.job \
-./paw_ps_collection_alt.job ./us_ps_collection_alt.job ./make_tar $tar_directory
+./paw_ps_collection_alt.job ./us_ps_collection_alt.job \
+./paw_ps_test.job ./paw_ps_test_alt.job ./paw_ps_test_tot.job \
+./us_ps_test.job ./us_ps_test_alt.job ./us_ps_test_tot.job \
+obsolete.job ./make_tar $tar_directory
 
 mkdir $tar_directory/pz
 mkdir $tar_directory/rel-pz
