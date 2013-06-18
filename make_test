@@ -7,7 +7,7 @@
 #! or http://www.gnu.org/copyleft/gpl.txt .
 #!
 
-PWDIR='/path_to_quantum_espresso/'
+. ../QE_path
 element='all'
 
 # do not change after this line. Uncomment the appropriate line if
