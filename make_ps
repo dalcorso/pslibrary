@@ -44,6 +44,7 @@ mkdir PSEUDOPOTENTIALS >& /dev/null
 
 #  Uncomment the following line to generate PAW data sets for Lanthanides 
 #  and Actinides. Much more experimental than the previous ones.
+#  Require an atomic code with svn version older than 10324.
 #
 #. ../paw_lan_collection.job
 
@@ -59,6 +60,7 @@ mkdir PSEUDOPOTENTIALS >& /dev/null
 
 #  Uncomment the following line to generate US-PPs for Lanthanides 
 #  and Actinides. Much more experimental than the previous ones.
+#  Require an atomic code with svn version older than 10324.
 #
 #. ../us_lan_collection.job
 

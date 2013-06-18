@@ -40,6 +40,7 @@ mkdir $work >& /dev/null
 
 #  Uncomment the following line to test PAW data-sets for Lanthanides 
 #  and Actinides. 
+#  Require an atomic code with svn version older than 10324.
 #
 #. ../paw_lan_test.job
 
@@ -52,6 +53,7 @@ mkdir $work >& /dev/null
 #. ../us_ps_test_alt.job
 
 #  Uncomment the following line to test US-PPs for Lanthanides and Actinides. 
+#  Require an atomic code with svn version older than 10324.
 #
 #. ../us_lan_test.job
 
