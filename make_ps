@@ -42,6 +42,11 @@ mkdir PSEUDOPOTENTIALS >& /dev/null
 #
 #. ../paw_ps_collection_alt.job
 
+#  Uncomment the following line to generate PAW data sets for Lanthanides 
+#  and Actinides. Much more experimental than the previous ones.
+#
+#. ../paw_lan_collection.job
+
 #  Uncomment the following line to generate additional US-PPs. Be
 #  careful these PPs might have problems.
 #
@@ -51,6 +56,11 @@ mkdir PSEUDOPOTENTIALS >& /dev/null
 #  These are alternative PPs
 #
 #. ../us_ps_collection_alt.job
+
+#  Uncomment the following line to generate US-PPs for Lanthanides 
+#  and Actinides. Much more experimental than the previous ones.
+#
+#. ../us_lan_collection.job
 
 ld1_command="$PARA_PREFIX $BIN_DIR/ld1.x $PARA_POSTFIX"
 

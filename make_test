@@ -38,6 +38,11 @@ mkdir $work >& /dev/null
 #
 #. ../paw_ps_test_alt.job
 
+#  Uncomment the following line to test PAW data-sets for Lanthanides 
+#  and Actinides. 
+#
+#. ../paw_lan_test.job
+
 #  Uncomment the following line to test additional US-PPs. 
 #
 #. ../us_ps_test_tot.job
@@ -45,6 +50,10 @@ mkdir $work >& /dev/null
 #  Uncomment the following line to test alternative US-PPs. 
 #
 #. ../us_ps_test_alt.job
+
+#  Uncomment the following line to test US-PPs for Lanthanides and Actinides. 
+#
+#. ../us_lan_test.job
 
 ld1_command="$PARA_PREFIX $BIN_DIR/ld1.x $PARA_POSTFIX"
 
