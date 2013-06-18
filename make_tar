@@ -10,7 +10,7 @@
 tar_directory=./pslibrary.0.3.1 
 mkdir $tar_directory
 
-cp ./AAREADME ./ChangeLog ./Licence ./clean ./clean_all ./make_ps ./make_all_ps \
+cp ./AAREADME ./ChangeLog ./License ./clean ./clean_all ./make_ps ./make_all_ps \
 ./make_test ./make_all_test \
 ./paw_ps_collection.job  ./us_ps_collection.job ./nc_ps_collection.job \
 ./paw_ps_collection_tot.job ./us_ps_collection_tot.job \
