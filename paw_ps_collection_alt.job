@@ -15,7 +15,7 @@
 
 . ./environment.job
 
-cat > Ag.$fct-spn-kjpaw_psl.0.3.0.in << EOF
+cat > Ag.$fct-spn-kjpaw_psl.0.3.1.in << EOF
  &input
    title='Ag',
    zed=47.,
@@ -27,7 +27,7 @@ cat > Ag.$fct-spn-kjpaw_psl.0.3.0.in << EOF
  &inputp
    lpaw=.true.,
    pseudotype=3,
-   file_pseudopw='Ag.$fct-spn-kjpaw_psl.0.3.0.UPF',
+   file_pseudopw='Ag.$fct-spn-kjpaw_psl.0.3.1.UPF',
    author='ADC',
    lloc=-1,
    rcloc=1.4,
@@ -41,10 +41,9 @@ cat > Ag.$fct-spn-kjpaw_psl.0.3.0.in << EOF
 5S  2  0  1.00  0.00  1.20  1.30  0.0
 4P  2  1  6.00  0.00  0.90  1.70  0.0
 5P  3  1  0.00  0.00  0.90  1.20  0.0
-4D  3  2 10.00  0.00  0.75  1.80  0.0
-4D  3  2 -2.00  0.30  0.75  1.80  0.0
+4D  3  2 10.00  0.00  0.75  1.70  0.0
+4D  3  2 -2.00  0.30  0.75  1.70  0.0
 EOF
-
 
 cat > Au.$fct-spn-kjpaw_psl.0.2.4.in << EOF
  &input
