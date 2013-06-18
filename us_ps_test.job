@@ -8,7 +8,7 @@
 #!
 
 
-. ./enviroment.job
+. ./environment.job
 psdir=./PSEUDOPOTENTIALS
 cat > Ag.$fct-dn-rrkjus_psl.0.1.test.in << EOF
  &input

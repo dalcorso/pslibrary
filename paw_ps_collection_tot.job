@@ -7,7 +7,7 @@
 #! or http://www.gnu.org/copyleft/gpl.txt .
 #!
 
-. ./enviroment.job
+. ./environment.job
 
 
 cat > At.$fct-dn-kjpaw_psl.0.2.3.in << EOF

@@ -13,7 +13,7 @@
 #!
 #!
 
-. ./enviroment.job
+. ./environment.job
 
 cat > Ac.$fct-n-nc.in << EOF
  &input

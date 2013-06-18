@@ -13,7 +13,7 @@
 #! 
 
 
-. ./enviroment.job
+. ./environment.job
 psdir=./PSEUDOPOTENTIALS
 
 cat > Ag.$fct-spn-kjpaw_psl.0.3.0.test.in << EOF

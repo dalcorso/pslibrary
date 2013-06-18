@@ -35,19 +35,19 @@ mkdir $tar_directory/wc
 mkdir $tar_directory/rel-wc
 
 
-cp ./pz/enviroment.job $tar_directory/pz
-cp ./rel-pz/enviroment.job $tar_directory/rel-pz
-cp ./pbe/enviroment.job $tar_directory/pbe
-cp ./rel-pbe/enviroment.job $tar_directory/rel-pbe
-cp ./bp/enviroment.job $tar_directory/bp
-cp ./rel-bp/enviroment.job $tar_directory/rel-bp
-cp ./pbesol/enviroment.job $tar_directory/pbesol
-cp ./rel-pbesol/enviroment.job $tar_directory/rel-pbesol
-cp ./pw91/enviroment.job $tar_directory/pw91
-cp ./rel-pw91/enviroment.job $tar_directory/rel-pw91
-cp ./revpbe/enviroment.job $tar_directory/revpbe
-cp ./rel-revpbe/enviroment.job $tar_directory/rel-revpbe
-cp ./wc/enviroment.job $tar_directory/wc
-cp ./rel-wc/enviroment.job $tar_directory/rel-wc
+cp ./pz/environment.job $tar_directory/pz
+cp ./rel-pz/environment.job $tar_directory/rel-pz
+cp ./pbe/environment.job $tar_directory/pbe
+cp ./rel-pbe/environment.job $tar_directory/rel-pbe
+cp ./bp/environment.job $tar_directory/bp
+cp ./rel-bp/environment.job $tar_directory/rel-bp
+cp ./pbesol/environment.job $tar_directory/pbesol
+cp ./rel-pbesol/environment.job $tar_directory/rel-pbesol
+cp ./pw91/environment.job $tar_directory/pw91
+cp ./rel-pw91/environment.job $tar_directory/rel-pw91
+cp ./revpbe/environment.job $tar_directory/revpbe
+cp ./rel-revpbe/environment.job $tar_directory/rel-revpbe
+cp ./wc/environment.job $tar_directory/wc
+cp ./rel-wc/environment.job $tar_directory/rel-wc
 
 tar -czvf $tar_directory.tar.gz $tar_directory

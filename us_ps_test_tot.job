@@ -9,7 +9,7 @@
 
 
 
-. ./enviroment.job
+. ./environment.job
 psdir=./PSEUDOPOTENTIALS
 
 cat > At.$fct-dn-rrkjus_psl.0.2.3.test.in << EOF
