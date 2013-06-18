@@ -10,7 +10,7 @@
 . ./environment.job
 psdir=./PSEUDOPOTENTIALS
 
-cat > At.$fct-dn-kjpaw_psl.0.2.3.test.in << EOF
+cat > At.$fct-dn-kjpaw_psl.0.3.1.test.in << EOF
  &input
    title='At q',
    zed=85.,
@@ -20,7 +20,7 @@ cat > At.$fct-dn-kjpaw_psl.0.2.3.test.in << EOF
    dft='$gfun'
  /
  &test
-   file_pseudo='$psdir/At.$fct-dn-kjpaw_psl.0.2.3.UPF',
+   file_pseudo='$psdir/At.$fct-dn-kjpaw_psl.0.3.1.UPF',
    nconf=5
    configts(1)='5d10 6s2 6p5'
    configts(2)='5d10 6s2 6p4'
@@ -69,26 +69,6 @@ cat > Ca.$fct-spn-kjpaw_psl.0.2.3.test.in << EOF
    configts(5)='3s2 3p6 4s1 4p0 3d1'
  /
 EOF
-
-cat > Ce.$fct-spn-kjpaw_psl.0.3.0.test.in << EOF
- &input
-   title='Ce q',
-   zed=58.0,
-   rel=$nrel,
-   config='[Xe] 4f1 5d1 6s2 6p0 ',
-   iswitch=2,
-   dft='$gfun'
- /
- &test
-   file_pseudo='$psdir/Ce.$fct-spn-kjpaw_psl.0.3.0.UPF',
-   nconf=4
-   configts(1)='4f1 5s2.0 5p6.0 6s2.0  5d1'
-   configts(2)='4f1 5s2.0 5p6.0 6s1.0 5d1 6p1'
-   configts(3)='4f2 5s2.0 5p6.0 6s0.0 5d1'
-   configts(4)='4f1 5s2.0 5p5.5 6s1.75 6p0 5d1.25'
- /
-EOF
-
 
 cat > Co.$fct-n-kjpaw_psl.0.2.3.test.in << EOF
  &input
@@ -170,6 +150,7 @@ cat > Fr.$fct-spdn-kjpaw_psl.0.3.1.test.in << EOF
  /
 EOF
 
+
 cat > Hf.$fct-spn-kjpaw_psl.0.2.test.in << EOF
  &input
    title='Hf d',
@@ -249,27 +230,7 @@ cat > Kr.$fct-n-kjpaw_psl.0.2.3.test.in << EOF
    configts(5)='4s1 4p5 4d1'
  /
 EOF
-
-cat > La.$fct-spn-kjpaw_psl.0.2.3.test.in << EOF
- &input
-   title='La q',
-   zed=57.0,
-   rel=$nrel,
-   config='[Xe] 5d1.0 6s2 6p0',
-   iswitch=2,
-   dft='$gfun'
- /
- &test
-   file_pseudo='$psdir/La.$fct-spn-kjpaw_psl.0.2.3.UPF',
-   nconf=5
-   configts(1)='5s2.0 5p6.0 6s2.0  5d1 '
-   configts(2)='5s2.0 5p6.0 6s1.0 5d1 6p1 '
-   configts(3)='5s2.0 5p6.0 6s1.0 5d1  '
-   configts(4)='5s2.0 5p6.0 6s1.5 5d1  '
-   configts(5)='5s2.0 5p5.5 6s1.75 6p0 5d1.25'
- /
-EOF
-
+ 
 cat > Mg.$fct-n-kjpaw_psl.0.3.0.test.in << EOF
  &input
    title='Mg c',
@@ -289,7 +250,7 @@ cat > Mg.$fct-n-kjpaw_psl.0.3.0.test.in << EOF
  /
 EOF
 
-cat > Mn.$fct-spn-kjpaw_psl.0.2.3.test.in << EOF
+cat > Mn.$fct-spn-kjpaw_psl.0.3.1.test.in << EOF
  &input
    title='Mn c',
    zed=25.0,
@@ -299,7 +260,7 @@ cat > Mn.$fct-spn-kjpaw_psl.0.2.3.test.in << EOF
    dft='$gfun'
  /
  &test
-   file_pseudo='$psdir/Mn.$fct-spn-kjpaw_psl.0.2.3.UPF',
+   file_pseudo='$psdir/Mn.$fct-spn-kjpaw_psl.0.3.1.UPF',
    nconf=5
    configts(1)='3s2 3p6 3d5 4s2 '
    configts(2)='3s2 3p6 3d5 4s1 4p0'
@@ -349,7 +310,7 @@ cat > Os.$fct-n-kjpaw_psl.0.2.3.test.in << EOF
  /
 EOF
 
-cat > Po.$fct-dn-kjpaw_psl.0.2.3.test.in << EOF
+cat > Po.$fct-dn-kjpaw_psl.0.3.1.test.in << EOF
  &input
    title='Po q',
    zed=84.,
@@ -359,7 +320,7 @@ cat > Po.$fct-dn-kjpaw_psl.0.2.3.test.in << EOF
    dft='$gfun'
  /
  &test
-   file_pseudo='$psdir/Po.$fct-dn-kjpaw_psl.0.2.3.UPF',
+   file_pseudo='$psdir/Po.$fct-dn-kjpaw_psl.0.3.1.UPF',
    nconf=5,
    configts(1)='5d10 6s2 6p4',
    configts(3)='5d10 6s2 6p3',
@@ -409,7 +370,7 @@ cat > Rb.$fct-spn-kjpaw_psl.0.2.3.test.in << EOF
  /
 EOF
 
-cat > Re.$fct-spn-kjpaw_psl.0.2.3.test.in << EOF
+cat > Re.$fct-spn-kjpaw_psl.0.3.1.test.in << EOF
  &input
    title='Re q',
    zed=75.0,
@@ -419,7 +380,7 @@ cat > Re.$fct-spn-kjpaw_psl.0.2.3.test.in << EOF
    dft='$gfun'
  /
  &test
-   file_pseudo='$psdir/Re.$fct-spn-kjpaw_psl.0.2.3.UPF',
+   file_pseudo='$psdir/Re.$fct-spn-kjpaw_psl.0.3.1.UPF',
    nconf=5
    configts(1)='5s2 5p6 5d5 6s2'
    configts(2)='5s2 5p6 5d5 6s1.5 6p0'
@@ -448,6 +409,7 @@ cat > Rn.$fct-dn-kjpaw_psl.0.3.1.test.in << EOF
    configts(5)='5d10 6s1 6p5'
  /
 EOF
+
 
 cat > Ru.$fct-spn-kjpaw_psl.0.3.0.test.in << EOF
  &input
@@ -529,7 +491,7 @@ cat > V.$fct-spn-kjpaw_psl.0.2.3.test.in << EOF
  /
 EOF
 
-cat > Xe.$fct-n-kjpaw_psl.0.3.0.test.in << EOF
+cat > Xe.$fct-n-kjpaw_psl.0.3.1.test.in << EOF
  &input
    title='Xe q',
    zed=54.,
@@ -539,13 +501,13 @@ cat > Xe.$fct-n-kjpaw_psl.0.3.0.test.in << EOF
    dft='$gfun'
  /
  &test
-   file_pseudo='$psdir/Xe.$fct-n-kjpaw_psl.0.3.0.UPF',
+   file_pseudo='$psdir/Xe.$fct-n-kjpaw_psl.0.3.1.UPF',
    nconf=5
-   configts(1)='5s2 5p6'
-   configts(2)='5s2 5p5 5d1'
-   configts(3)='5s2 5p5 5d0'
-   configts(4)='5s1 5p6 5d0'
-   configts(5)='5s1 5p5 5d0.5'
+   configts(1)='4d10 5s2 5p6'
+   configts(2)='4d10 5s2 5p5 5d0.5'
+   configts(3)='4d10 5s2 5p5 5d0'
+   configts(4)='4d10 5s1 5p6 5d0'
+   configts(5)='4d10 5s1 5p5 5d0.5'
  /
 EOF
 
