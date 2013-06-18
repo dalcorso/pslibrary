@@ -150,6 +150,26 @@ cat > Cs.$fct-spn-kjpaw_psl.0.2.3.test.in << EOF
  /
 EOF
 
+cat > Fr.$fct-spdn-kjpaw_psl.0.3.1.test.in << EOF
+ &input
+   title='Fr q',
+   zed=87.,
+   rel=$nrel,
+   config='[Xe] 4f14.0 5d10.0 6s2.0 6p6.0 6d-2.0 7s1.0 7p0.0',
+   iswitch=2,
+   dft='$gfun'
+ /
+ &test
+   file_pseudo='$psdir/Fr.$fct-spdn-kjpaw_psl.0.3.1.UPF',
+   nconf=5
+   configts(1)='5d10 6s2 6p6 7s1.0'
+   configts(2)='5d10 6s2 6p6 7s0.0'
+   configts(3)='5d10 6s2 6p5 7s1.0 7p0.0'
+   configts(4)='5d10 6s2 6p6 7s0.5'
+   configts(5)='5d10 6s2 6p5 7s0.5'
+ /
+EOF
+
 cat > Hf.$fct-spn-kjpaw_psl.0.2.test.in << EOF
  &input
    title='Hf d',
@@ -349,6 +369,26 @@ cat > Po.$fct-dn-kjpaw_psl.0.2.3.test.in << EOF
  /
 EOF
 
+cat > Ra.$fct-spdn-kjpaw_psl.0.3.1.test.in << EOF
+ &input
+   title='Ra q',
+   zed=88.,
+   rel=$nrel,
+   config='[Xe] 4f14.0 5d10.0 6s2.0 6p6.0 6d-2.0 7s2.0 7p0.0',
+   iswitch=2,
+   dft='$gfun'
+ /
+ &test
+   file_pseudo='$psdir/Ra.$fct-spdn-kjpaw_psl.0.3.1.UPF',
+   nconf=5
+   configts(1)='5d10 6s2 6p6 7s2.0'
+   configts(2)='5d10 6s2 6p6 7s1.0'
+   configts(3)='5d10 6s2 6p5 7s2.0 7p0.0'
+   configts(4)='5d10 6s2 6p6 7s1.5'
+   configts(5)='5d10 6s2 6p5 7s1.5'
+ /
+EOF
+
 cat > Rb.$fct-spn-kjpaw_psl.0.2.3.test.in << EOF
  &input
    title='Rb d',
@@ -386,6 +426,26 @@ cat > Re.$fct-spn-kjpaw_psl.0.2.3.test.in << EOF
    configts(3)='5s2 5p6 5d5 6s1 6p1'
    configts(4)='5s2 5p6 5d4 6s2'
    configts(5)='5s2 5p6 5d6 6s1'
+ /
+EOF
+
+cat > Rn.$fct-dn-kjpaw_psl.0.3.1.test.in << EOF
+ &input
+   title='Rn q',
+   zed=86.,
+   rel=$nrel,
+   config='[Xe] 4f14.0 5d10.0 6s2.0 6p6.0 6d-2.0',
+   iswitch=2,
+   dft='$gfun'
+ /
+ &test
+   file_pseudo='$psdir/Rn.$fct-dn-kjpaw_psl.0.3.1.UPF',
+   nconf=5
+   configts(1)='5d10 6s2 6p6'
+   configts(2)='5d10 6s2 6p5'
+   configts(3)='5d10 6s2 6p4'
+   configts(4)='5d10 6s1 6p6'
+   configts(5)='5d10 6s1 6p5'
  /
 EOF
 
