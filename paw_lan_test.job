@@ -1,0 +1,773 @@
+#!/bin/bash
+#!
+#! Copyright (C) 2010-2013 Andrea Dal Corso 
+#! This file is distributed under the terms of the
+#! GNU General Public License. See the file `License'
+#! in the root directory of the present distribution,
+#! or http://www.gnu.org/copyleft/gpl.txt .
+#!
+
+. ./environment.job
+psdir=./PSEUDOPOTENTIALS
+
+cat > La.$fct-spdfn-kjpaw_psl.0.3.1.test.in << EOF
+ &input
+   title='La',
+   zed=57.0,
+   rel=$nrel,
+   config='[Xe] 4f0 5d1.0 6s1.5 6p0.5',
+   iswitch=2,
+ /
+ &test
+   file_pseudo='$psdir/La.$fct-spdfn-kjpaw_psl.0.3.1.UPF',
+   nconf=5,
+   configts(1)='5s2  5p6  6s2 6p0 5d1 4f0 '
+   configts(2)='5s2  5p6 6s1.5 6p0.0  5d1 4f0 '
+   configts(3)='5s2  5p6 6s1 6p0. 5d1 4f0 '
+   configts(4)='5s2  5p6 6s1 6p0. 5d0 4f0.6 '
+   configts(5)='5s2  5p6 6s1 6p1. 5d0 4f0 '
+ /
+EOF
+
+cat > Ce.$fct-spdfn-kjpaw_psl.0.3.1.test.in << EOF
+ &input
+   title='Ce',
+   zed=58.0,
+   rel=$nrel,
+   config='[Xe] 4f1 5d1.0 6s1.5 6p0.5',
+   iswitch=2,
+ /
+ &test
+   file_pseudo='$psdir/Ce.$fct-spdfn-kjpaw_psl.0.3.1.UPF',
+   nconf=5,
+   configts(1)='5s2 5p6 6s1.5 6p0.5  5d1 4f1 '
+   configts(2)='5s2 5p6  6s2 6p0 5d1 4f1 '
+   configts(3)='5s2 5p6 6s2 6p0. 5d1 4f0.5 '
+   configts(4)='5s2 5p6 6s2 6p0. 5d0 4f0 '
+   configts(5)='5s2 5p6 6s1 6p0. 5d1 4f1.4 '
+ /
+EOF
+
+cat > Ce.$fct-spdn-kjpaw_psl.0.3.1.test.in << EOF
+ &input
+   title='Ce',
+   zed=58.0,
+   rel=$nrel,
+   config='[Xe] 4f1 5d1.0 6s1.5 6p0.5',
+   iswitch=2,
+ /
+ &test
+   file_pseudo='$psdir/Ce.$fct-spdn-kjpaw_psl.0.3.1.UPF',
+   nconf=5,
+   configts(1)='5s2 5p6 6s1.5 6p0.5  5d1  '
+   configts(2)='5s2 5p6  6s2 6p0 5d1 '
+   configts(3)='5s2 5p6 6s2 6p1. 5d0  '
+   configts(4)='5s2 5p6 6s2 6p0. 5d0  '
+   configts(5)='5s2 5p6 6s1 6p0. 5d1  '
+ /
+EOF
+
+cat > Pr.$fct-spdfn-kjpaw_psl.0.3.1.test.in << EOF
+ &input
+   title='Pr',
+   zed=59.0,
+   rel=$nrel,
+   config='[Xe] 4f3.0 5d0.0 6s1.5 6p0.5',
+   iswitch=2,
+ /
+ &test
+   file_pseudo='$psdir/Pr.$fct-spdfn-kjpaw_psl.0.3.1.UPF',
+   nconf=5,
+   configts(1)='5s2 5p6 6s1.5 6p0.5  5d0 4f3 '
+   configts(2)='5s2 5p6 6s2 6p0 5d0 4f3 '
+   configts(3)='5s2 5p6 6s2 6p0. 5d1 4f2 '
+   configts(4)='5s2 5p6 6s2 6p0. 5d0 4f2 '
+   configts(5)='5s2 5p6 6s1 6p0. 5d0 4f3.4 '
+ /
+EOF
+
+cat > Pr.$fct-spdn-kjpaw_psl.0.3.1.test.in << EOF
+ &input
+   title='Pr',
+   zed=59.0,
+   rel=$nrel,
+   config='[Xe] 4f2.0 5d1.0 6s1.5 6p0.5',
+   iswitch=2,
+ /
+ &test
+   file_pseudo='$psdir/Pr.$fct-spdn-kjpaw_psl.0.3.1.UPF',
+   nconf=5,
+   configts(1)='5s2 5p6 6s1.5 6p0.5 5d1'
+   configts(2)='5s2 5p6 6s2 6p0 5d1'
+   configts(3)='5s2 5p6 6s1 6p0. 5d1'
+   configts(4)='5s2 5p6 6s1 6p1. 5d1'
+   configts(5)='5s2 5p6 6s2 6p0. 5d0'
+ /
+EOF
+
+cat > Nd.$fct-spdfn-kjpaw_psl.0.3.1.test.in << EOF
+ &input
+   title='Nd',
+   zed=60.0,
+   rel=$nrel,
+   config='[Xe] 4f4.0 5d0.0 6s1.5 6p0.5',
+   iswitch=2,
+ /
+ &test
+   file_pseudo='$psdir/Nd.$fct-spdfn-kjpaw_psl.0.3.1.UPF',
+   nconf=5,
+   configts(1)='5s2 5p6 6s1.5 6p0.5 5d0 4f4'
+   configts(2)='5s2 5p6 6s2 6p0 5d0 4f4'
+   configts(3)='5s2 5p6 6s2 6p0. 5d1 4f3'
+   configts(4)='5s2 5p6 6s2 6p0. 5d0 4f3'
+   configts(5)='5s2 5p6 6s1 6p0. 5d0 4f4.4'
+ /
+EOF
+
+cat > Nd.$fct-spdn-kjpaw_psl.0.3.1.test.in << EOF
+ &input
+   title='Nd',
+   zed=60.0,
+   rel=$nrel,
+   config='[Xe] 4f3.0 5d1.0 6s1.5 6p0.5',
+   iswitch=2,
+ /
+ &test
+   file_pseudo='$psdir/Nd.$fct-spdn-kjpaw_psl.0.3.1.UPF',
+   nconf=5,
+   configts(1)='5s2 5p6 6s1.5 6p0.5 5d1'
+   configts(2)='5s2 5p6 6s2 6p0 5d1 '
+   configts(3)='5s2 5p6 6s1 6p1. 5d1'
+   configts(4)='5s2 5p6 6s1 6p0. 5d1'
+   configts(5)='5s2 5p6 6s1 6p1. 5d0'
+ /
+EOF
+
+cat > Pm.$fct-spdfn-kjpaw_psl.0.3.1.test.in << EOF
+ &input
+   title='Pm',
+   zed=61.0,
+   rel=$nrel,
+   config='[Xe] 4f5.0 5d0.0 6s1.5 6p0.5',
+   iswitch=2,
+ /
+ &test
+   file_pseudo='$psdir/Pm.$fct-spdfn-kjpaw_psl.0.3.1.UPF',
+   nconf=5,
+   configts(1)='5s2 5p6 6s1.5 6p0.5 5d0 4f5 '
+   configts(2)='5s2 5p6 6s2 6p0 5d0 4f5 '
+   configts(3)='5s2 5p6 6s2 6p0. 5d1 4f4 '
+   configts(4)='5s2 5p6 6s2 6p0. 5d0 4f4 '
+   configts(5)='5s2 5p6 6s1 6p0. 5d0 4f5.5 '
+ /
+EOF
+
+cat > Pm.$fct-spdn-kjpaw_psl.0.3.1.test.in << EOF
+ &input
+   title='Pm',
+   zed=61.0,
+   rel=$nrel,
+   config='[Xe] 4f4.0 5d1.0 6s1.5 6p0.5',
+   iswitch=2,
+ /
+ &test
+   file_pseudo='$psdir/Pm.$fct-spdn-kjpaw_psl.0.3.1.UPF',
+   nconf=5,
+   configts(1)='5s2 5p6 6s1.5 6p0.5 5d1'
+   configts(2)='5s2 5p6 6s2 6p0 5d1'
+   configts(3)='5s2 5p6 6s1 6p0. 5d1'
+   configts(4)='5s2 5p6 6s1 6p1. 5d1'
+   configts(5)='5s2 5p6 6s2 6p0. 5d0'
+ /
+EOF
+
+cat > Sm.$fct-spdfn-kjpaw_psl.0.3.1.test.in << EOF
+ &input
+   title='Sm',
+   zed=62.0,
+   rel=$nrel,
+   config='[Xe] 4f6.0 5d0.0 6s1.5 6p0.5',
+   iswitch=2,
+ /
+ &test
+   file_pseudo='$psdir/Sm.$fct-spdfn-kjpaw_psl.0.3.1.UPF',
+   nconf=5,
+   configts(1)='5s2 5p6 6s1.5 6p0.5 5d0 4f6'
+   configts(2)='5s2 5p6 6s2 6p0 5d0 4f6'
+   configts(3)='5s2 5p6 6s2 6p0. 5d1 4f5'
+   configts(4)='5s2 5p6 6s2 6p0. 5d0 4f5'
+   configts(5)='5s2 5p6 6s1 6p0. 5d0 4f6.5'
+ /
+EOF
+
+cat > Sm.$fct-spdn-kjpaw_psl.0.3.1.test.in << EOF
+ &input
+   title='Sm',
+   zed=62.0,
+   rel=$nrel,
+   config='[Xe] 4f5.0 5d1.0 6s1.5 6p0.5',
+   iswitch=2,
+ /
+ &test
+   file_pseudo='$psdir/Sm.$fct-spdn-kjpaw_psl.0.3.1.UPF',
+   nconf=5,
+   configts(1)='5s2 5p6 6s1.5 6p0.5 5d1'
+   configts(2)='5s2 5p6 6s2 6p1 5d0'
+   configts(3)='5s2 5p6 6s2 6p0. 5d1'
+   configts(4)='5s2 5p6 6s1 6p0. 5d2'
+   configts(5)='5s2 5p6 6s1 6p1. 5d0'
+ /
+EOF
+
+cat > Sm.$fct-spn-kjpaw_psl.0.3.1.test.in << EOF
+ &input
+   title='Sm',
+   zed=62.0,
+   rel=$nrel,
+   config='[Xe] 4f6.0 5d0.0 6s1.5 6p0.5',
+   iswitch=2,
+ /
+ &test
+   file_pseudo='$psdir/Sm.$fct-spn-kjpaw_psl.0.3.1.UPF',
+   nconf=5,
+   configts(1)='5s2 5p6 6s1.5 6p0.5 5d0'
+   configts(2)='5s2 5p6 6s2 6p0 5d0'
+   configts(3)='5s2 5p6 6s1 6p1. 5d0'
+   configts(4)='5s2 5p6 6s1 6p0. 5d1'
+   configts(5)='5s2 5p6 6s1 6p0. 5d0'
+ /
+EOF
+
+cat > Eu.$fct-spdfn-kjpaw_psl.0.3.1.test.in << EOF
+ &input
+   title='Eu',
+   zed=63.0,
+   rel=$nrel,
+   config='[Xe] 4f7.0 5d0.0 6s1.5 6p0.5',
+   iswitch=2,
+ /
+ &test
+   file_pseudo='$psdir/Eu.$fct-spdfn-kjpaw_psl.0.3.1.UPF',
+   nconf=5,
+   configts(1)='5s2 5p6 6s1.5 6p0.5 5d0 4f7 '
+   configts(2)='5s2 5p6 6s2 6p0 5d0 4f7 '
+   configts(3)='5s2 5p6 6s2 6p0. 5d1 4f6 '
+   configts(4)='5s2 5p6 6s2 6p0. 5d0 4f6 '
+   configts(5)='5s2 5p6 6s1 6p0. 5d0 4f7.5 '
+ /
+EOF
+
+cat > Eu.$fct-spdn-kjpaw_psl.0.3.1.test.in << EOF
+ &input
+   title='Eu',
+   zed=63.0,
+   rel=$nrel,
+   config='[Xe] 4f6.0 5d1.0 6s1.5 6p0.5',
+   iswitch=2,
+ /
+ &test
+   file_pseudo='$psdir/Eu.$fct-spdn-kjpaw_psl.0.3.1.UPF',
+   nconf=5,
+   configts(1)='5s2 5p6 6s1.5 6p0.5 5d1'
+   configts(2)='5s2 5p6 6s2 6p0 5d1'
+   configts(3)='5s2 5p6 6s1 6p0. 5d2'
+   configts(4)='5s2 5p6 6s2 6p0. 5d1'
+   configts(5)='5s2 5p6 6s1 6p0. 5d1'
+ /
+EOF
+
+cat > Eu.$fct-spn-kjpaw_psl.0.3.1.test.in << EOF
+ &input
+   title='Eu',
+   zed=63.0,
+   rel=$nrel,
+   config='[Xe] 4f7.0 5d0.0 6s1.5 6p0.5',
+   iswitch=2,
+ /
+ &test
+   file_pseudo='$psdir/Eu.$fct-spn-kjpaw_psl.0.3.1.UPF',
+   nconf=5,
+   nconf=5,
+   configts(1)='5s2 5p6 6s1.5 6p0.5 5d0  '
+   configts(2)='5s2 5p6 6s2 6p0 5d0  '
+   configts(3)='5s2 5p6 6s1 6p0. 5d1  '
+   configts(4)='5s2 5p6 6s1 6p1. 5d0  '
+   configts(5)='5s2 5p6 6s1 6p0. 5d0  '
+ /
+EOF
+
+cat > Gd.$fct-spdfn-kjpaw_psl.0.3.1.test.in << EOF
+ &input
+   title='Gd',
+   zed=64.0,
+   rel=$nrel,
+   config='[Xe] 4f8.0 5d0.0 6s1.5 6p0.5',
+   iswitch=2,
+ /
+ &test
+   file_pseudo='$psdir/Gd.$fct-spdfn-kjpaw_psl.0.3.1.UPF',
+   nconf=5,
+   configts(1)='5s2 5p6 6s1.5 6p0.5 5d0 4f8'
+   configts(2)='5s2 5p6 6s2 6p0 5d0 4f8'
+   configts(3)='5s2 5p6 6s2 6p0. 5d1 4f7'
+   configts(4)='5s2 5p6 6s2 6p0. 5d0 4f7'
+   configts(5)='5s2 5p6 6s1 6p0. 5d0 4f8.5'
+ /
+EOF
+
+cat > Gd.$fct-spdn-kjpaw_psl.0.3.1.test.in << EOF
+ &input
+   title='Gd',
+   zed=64.0,
+   rel=$nrel,
+   config='[Xe] 4f7.0 5d1.0 6s1.5 6p0.5',
+   iswitch=2,
+ /
+ &test
+   file_pseudo='$psdir/Gd.$fct-spdn-kjpaw_psl.0.3.1.UPF',
+   nconf=5,
+   configts(1)='5s2 5p6 6s1.5 6p0.5 5d1 '
+   configts(2)='5s2 5p6 6s2 6p0 5d1 '
+   configts(3)='5s2 5p6 6s1 6p0. 5d2 '
+   configts(4)='5s2 5p6 6s2 6p1. 5d0 '
+   configts(5)='5s2 5p6 6s1 6p0. 5d1 '
+ /
+EOF
+
+cat > Tb.$fct-spdfn-kjpaw_psl.0.3.1.test.in << EOF
+ &input
+   title='Tb',
+   zed=65.0,
+   rel=$nrel,
+   config='[Xe] 4f9 5d0.0 6s1.5 6p0.5',
+   iswitch=2,
+ /
+ &test
+   file_pseudo='$psdir/Tb.$fct-spdfn-kjpaw_psl.0.3.1.UPF',
+   nconf=5,
+   configts(1)='5s2 5p6 6s1.5 6p0.5 5d0 4f9 '
+   configts(2)='5s2 5p6 6s2 6p0 5d0 4f9 '
+   configts(3)='5s2 5p6 6s2 6p0. 5d1 4f8 '
+   configts(4)='5s2 5p6 6s2 6p0. 5d0 4f8 '
+   configts(5)='5s2 5p6 6s1 6p0. 5d0 4f9.5 '
+ /
+EOF
+
+cat > Tb.$fct-spdn-kjpaw_psl.0.3.1.test.in << EOF
+ &input
+   title='Tb',
+   zed=65.0,
+   rel=$nrel,
+   config='[Xe] 4f8.0 5d1.0 6s1.5 6p0.5',
+   iswitch=2,
+ /
+ &test
+   file_pseudo='$psdir/Tb.$fct-spdn-kjpaw_psl.0.3.1.UPF',
+   nconf=5,
+   configts(1)='5s2 5p6 6s1.5 6p0.5 5d1'
+   configts(2)='5s2 5p6 6s2 6p0 5d1'
+   configts(3)='5s2 5p6 6s1 6p0. 5d2'
+   configts(4)='5s2 5p6 6s1 6p1. 5d1'
+   configts(5)='5s2 5p6 6s1 6p0. 5d1'
+ /
+EOF
+
+cat > Dy.$fct-spdfn-kjpaw_psl.0.3.1.test.in << EOF
+ &input
+   title='Dy',
+   zed=66.0,
+   rel=$nrel,
+   config='[Xe] 4f10.0 5d0.0 6s1.5 6p0.5',
+   iswitch=2,
+ /
+ &test
+   file_pseudo='$psdir/Dy.$fct-spdfn-kjpaw_psl.0.3.1.UPF',
+   nconf=5,
+   configts(1)='5s2 5p6 6s1.5 6p0.5 5d0 4f10 '
+   configts(2)='5s2 5p6 6s2 6p0 5d0 4f10 '
+   configts(3)='5s2 5p6 6s2 6p0. 5d1 4f9 '
+   configts(4)='5s2 5p6 6s2 6p0. 5d0 4f9 '
+   configts(5)='5s2 5p6 6s1 6p0. 5d0 4f10.5 '
+ /
+EOF
+
+cat > Dy.$fct-spdn-kjpaw_psl.0.3.1.test.in << EOF
+ &input
+   title='Dy',
+   zed=66.0,
+   rel=$nrel,
+   config='[Xe] 4f9.0 5d1.0 6s1.5 6p0.5',
+   iswitch=2,
+ /
+ &test
+   file_pseudo='$psdir/Dy.$fct-spdn-kjpaw_psl.0.3.1.UPF',
+   nconf=5,
+   configts(1)='5s2 5p6 6s1.5 6p0.5 5d1'
+   configts(2)='5s2 5p6 6s2 6p0 5d1'
+   configts(3)='5s2 5p6 6s1 6p0. 5d2'
+   configts(4)='5s2 5p6 6s1 6p1. 5d1'
+   configts(5)='5s2 5p6 6s1 6p0. 5d1'
+ /
+EOF
+
+cat > Ho.$fct-spdfn-kjpaw_psl.0.3.1.test.in << EOF
+ &input
+   title='Ho',
+   zed=67.0,
+   rel=$nrel,
+   config='[Xe] 4f11.0 5d0.0 6s1.5 6p0.5',
+   iswitch=2,
+ /
+ &test
+   file_pseudo='$psdir/Ho.$fct-spdfn-kjpaw_psl.0.3.1.UPF',
+   nconf=5,
+   configts(1)='5s2 5p6 6s1.5 6p0.5 5d0 4f11'
+   configts(2)='5s2 5p6 6s2 6p0 5d0 4f11'
+   configts(3)='5s2 5p6 6s2 6p0. 5d1 4f10'
+   configts(4)='5s2 5p6 6s2 6p0. 5d0 4f10'
+   configts(5)='5s2 5p6 6s1 6p0. 5d0 4f11.5'
+ /
+EOF
+
+cat > Ho.$fct-spdn-kjpaw_psl.0.3.1.test.in << EOF
+ &input
+   title='Ho',
+   zed=67.0,
+   rel=$nrel,
+   config='[Xe] 4f10.0 5d1.0 6s1.5 6p0.5',
+   iswitch=2,
+ /
+ &test
+   file_pseudo='$psdir/Ho.$fct-spdn-kjpaw_psl.0.3.1.UPF',
+   nconf=5,
+   configts(1)='5s2 5p6 6s1.5 6p0.5 5d1'
+   configts(2)='5s2 5p6 6s2 6p0 5d1'
+   configts(3)='5s2 5p6 6s1 6p0. 5d2'
+   configts(4)='5s2 5p6 6s1 6p1. 5d1'
+   configts(5)='5s2 5p6 6s1 6p0. 5d1'
+ /
+EOF
+
+cat > Er.$fct-spdfn-kjpaw_psl.0.3.1.test.in << EOF
+ &input
+   title='Er',
+   zed=68.0,
+   rel=$nrel,
+   config='[Xe] 4f12.0 5d0.0 6s1.5 6p0.5',
+   iswitch=2,
+ /
+ &test
+   file_pseudo='$psdir/Er.$fct-spdfn-kjpaw_psl.0.3.1.UPF',
+   nconf=5,
+   configts(1)='5s2 5p6 6s1.5 6p0.5 5d0 4f12 '
+   configts(2)='5s2 5p6 6s2 6p0 5d0 4f12 '
+   configts(3)='5s2 5p6 6s2 6p0. 5d1 4f11 '
+   configts(4)='5s2 5p6 6s2 6p0. 5d0 4f11 '
+   configts(5)='5s2 5p6 6s1 6p0. 5d0 4f12.5 '
+ /
+EOF
+
+cat > Er.$fct-spdn-kjpaw_psl.0.3.1.test.in << EOF
+ &input
+   title='Er',
+   zed=68.0,
+   rel=$nrel,
+   config='[Xe] 4f11 5d1.0 6s1.5 6p0.5',
+   iswitch=2,
+ /
+ &test
+   file_pseudo='$psdir/Er.$fct-spdn-kjpaw_psl.0.3.1.UPF',
+   nconf=5,
+   configts(1)='5s2 5p6 6s1.5 6p0.5 5d1'
+   configts(2)='5s2 5p6 6s2 6p0 5d1'
+   configts(3)='5s2 5p6 6s1 6p0. 5d2'
+   configts(4)='5s2 5p6 6s1 6p1. 5d1'
+   configts(5)='5s2 5p6 6s1 6p0. 5d1'
+ /
+EOF
+
+cat > Er.$fct-spn-kjpaw_psl.0.3.1.test.in << EOF
+ &input
+   title='Er',
+   zed=68.0,
+   rel=$nrel,
+   config='[Xe] 4f12 5d0.0 6s1.5 6p0.5',
+   iswitch=2,
+ /
+ &test
+   file_pseudo='$psdir/Er.$fct-spn-kjpaw_psl.0.3.1.UPF',
+   nconf=5,
+   configts(1)='5s2 5p6 6s1.5 6p0.5 5d0'
+   configts(2)='5s2 5p6 6s2 6p0 5d0'
+   configts(3)='5s2 5p6 6s1 6p0. 5d1'
+   configts(4)='5s2 5p6 6s1 6p1. 5d0'
+   configts(5)='5s2 5p6 6s1 6p0. 5d0'
+ /
+EOF
+
+cat > Tm.$fct-spdfn-kjpaw_psl.0.3.1.test.in << EOF
+ &input
+   title='Tm',
+   zed=69.0,
+   rel=$nrel,
+   config='[Xe] 4f13.0 5d0.0 6s1.5 6p0.5',
+   iswitch=2,
+ /
+ &test
+   file_pseudo='$psdir/Tm.$fct-spdfn-kjpaw_psl.0.3.1.UPF',
+   nconf=5,
+   configts(1)='5s2 5p6 6s1.5 6p0.5 5d0 4f13'
+   configts(2)='5s2 5p6 6s2 6p0 5d0 4f13'
+   configts(3)='5s2 5p6 6s2 6p0. 5d1 4f12'
+   configts(4)='5s2 5p6 6s2 6p0. 5d0 4f12'
+   configts(5)='5s2 5p6 6s1 6p0. 5d0 4f13.5'
+ /
+EOF
+
+cat > Tm.$fct-spdn-kjpaw_psl.0.3.1.test.in << EOF
+ &input
+   title='Tm',
+   zed=69.0,
+   rel=$nrel,
+   config='[Xe] 4f12 5d1.0 6s1.5 6p0.5',
+   iswitch=2,
+ /
+ &test
+   file_pseudo='$psdir/Tm.$fct-spdn-kjpaw_psl.0.3.1.UPF',
+   nconf=5,
+   configts(1)='5s2 5p6 6s1.5 6p0.5 5d1'
+   configts(2)='5s2 5p6 6s2 6p0 5d1'
+   configts(3)='5s2 5p6 6s1 6p0. 5d2'
+   configts(4)='5s2 5p6 6s1 6p1. 5d1'
+   configts(5)='5s2 5p6 6s1 6p0. 5d1'
+ /
+EOF
+
+cat > Yb.$fct-spdfn-kjpaw_psl.0.3.1.test.in << EOF
+ &input
+   title='Yb',
+   zed=70.0,
+   rel=$nrel,
+   config='[Xe] 4f14.0 5d0.0 6s1.5 6p0.5',
+   iswitch=2,
+ /
+ &test
+   file_pseudo='$psdir/Yb.$fct-spdfn-kjpaw_psl.0.3.1.UPF',
+   nconf=5,
+   configts(1)='5s2 5p6 6s1.5 6p0.5 5d0 4f14'
+   configts(2)='5s2 5p6 6s2 6p0 5d0 4f14'
+   configts(3)='5s2 5p6 6s2 6p0. 5d1 4f13'
+   configts(4)='5s2 5p6 6s2 6p0. 5d0 4f13'
+   configts(5)='5s2 5p6 6s1 6p0. 5d0 4f14'
+ /
+EOF
+
+cat > Yb.$fct-spdn-kjpaw_psl.0.3.1.test.in << EOF
+ &input
+   title='Yb',
+   zed=70.0,
+   rel=$nrel,
+   config='[Xe] 4f13.0 5d1.0 6s1.5 6p0.5',
+   iswitch=2,
+ /
+ &test
+   file_pseudo='$psdir/Yb.$fct-spdn-kjpaw_psl.0.3.1.UPF',
+   nconf=5,
+   configts(1)='5s2 5p6 6s1.5 6p0.5 5d1'
+   configts(2)='5s2 5p6 6s2 6p0 5d1'
+   configts(3)='5s2 5p6 6s1 6p0. 5d1'
+   configts(4)='5s2 5p6 6s1 6p1. 5d1'
+   configts(5)='5s2 5p6 6s1 6p0. 5d1.5'
+ /
+EOF
+
+cat > Yb.$fct-spn-kjpaw_psl.0.3.1.test.in << EOF
+ &input
+   title='Yb',
+   zed=70.0,
+   rel=$nrel,
+   config='[Xe] 4f14.0 5d0.0 6s1.5 6p0.5',
+   iswitch=2,
+ /
+ &test
+   file_pseudo='$psdir/Yb.$fct-spn-kjpaw_psl.0.3.1.UPF',
+   nconf=5,
+   configts(1)='5s2 5p6 6s1.5 6p0.5 5d0'
+   configts(2)='5s2 5p6 6s2 6p0 5d0'
+   configts(3)='5s2 5p6 6s1 6p0. 5d1'
+   configts(4)='5s2 5p6 6s1 6p1. 5d0'
+   configts(5)='5s2 5p6 6s1 6p0. 5d0'
+ /
+EOF
+
+cat > Lu.$fct-spdfn-kjpaw_psl.0.3.1.test.in << EOF
+ &input
+   title='Lu',
+   zed=71.0,
+   rel=$nrel,
+   config='[Xe] 4f14.0 5d1.0 6s1.5 6p0.5',
+   iswitch=2,
+ /
+ &test
+   file_pseudo='$psdir/Lu.$fct-spdfn-kjpaw_psl.0.3.1.UPF',
+   nconf=5,
+   configts(1)='5s2 5p6 6s1.5 6p0.5 5d1 4f14'
+   configts(2)='5s2 5p6 6s2 6p0 5d1 4f14'
+   configts(3)='5s2 5p6 6s2 6p0. 5d2 4f13'
+   configts(4)='5s2 5p6 6s2 6p0. 5d1 4f13'
+   configts(5)='5s2 5p6 6s1 6p0. 5d1 4f14'
+ /
+EOF
+
+cat > Lu.$fct-spdn-kjpaw_psl.0.3.1.test.in << EOF
+ &input
+   title='Lu',
+   zed=71.0,
+   rel=$nrel,
+   config='[Xe] 4f14.0 5d1.0 6s1.5 6p0.5',
+   iswitch=2,
+ /
+ &test
+   file_pseudo='$psdir/Lu.$fct-spdn-kjpaw_psl.0.3.1.UPF',
+   nconf=5,
+   configts(1)='5s2 5p6 6s1.5 6p0.5 5d1 '
+   configts(2)='5s2 5p6 6s2 6p0 5d1 '
+   configts(3)='5s2 5p6 6s1 6p0. 5d2 '
+   configts(4)='5s2 5p6 6s1 6p1. 5d1 '
+   configts(5)='5s2 5p6 6s1 6p0. 5d1 '
+ /
+EOF
+
+cat > Ac.$fct-spdfn-kjpaw_psl.0.3.1.test.in << EOF
+ &input
+   title='Ac',
+   zed=89.0,
+   rel=$nrel,
+   config='[Rn] 6d1.0 7s2.0 7p0. 5f-1',
+   iswitch=2,
+ /
+ &test
+   file_pseudo='$psdir/Ac.$fct-spdfn-kjpaw_psl.0.3.1.UPF',
+   nconf=5,
+   configts(1)='6s2  6p6 7s2 7p0 6d1 '
+   configts(2)='6s2  6p6 7s1.5 7p0.0  6d1 '
+   configts(3)='6s2  6p6 7s1 7p0. 6d1 5f0 '
+   configts(4)='6s2  6p6 7s1 7p0. 6d0 5f0.6 '
+   configts(5)='6s2  6p6 7s1 7p1. 6d0 5f0. '
+ /
+EOF
+
+cat > Th.$fct-spdfn-kjpaw_psl.0.3.1.test.in << EOF
+ &input
+   title='Th',
+   zed=90.0,
+   rel=$nrel,
+   config='[Rn] 6d2.0 7s2.0 7p0. 5f0',
+   iswitch=2,
+ /
+ &test
+   file_pseudo='$psdir/Th.$fct-spdfn-kjpaw_psl.0.3.1.UPF',
+   nconf=5,
+   configts(1)='6s2  6p6 7s2 7p0 6d2 5f0 '
+   configts(2)='6s2  6p6 7s1.5 7p0.0  6d2 '
+   configts(3)='6s2  6p6 7s1 7p0. 6d2 5f0 '
+   configts(4)='6s2  6p6 7s1 7p0. 6d1 5f0.6 '
+   configts(5)='6s2  6p6 7s1 7p1. 6d1 5f0 '
+ /
+EOF
+
+cat > Pa.$fct-spdfn-kjpaw_psl.0.3.1.test.in << EOF
+ &input
+   title='Pa',
+   zed=91.0,
+   rel=$nrel,
+   config='[Rn] 6d1.0 7s2.0 7p0. 5f2.0',
+   iswitch=2,
+ /
+ &test
+   file_pseudo='$psdir/Pa.$fct-spdfn-kjpaw_psl.0.3.1.UPF',
+   nconf=5,
+   configts(1)='6s2 6p6 7s2 7p0 6d1 5f2'
+   configts(2)='6s2 6p6 7s1.5 7p0.0  6d1 5f1'
+   configts(3)='6s2 6p6 7s1 7p0. 6d1 5f1'
+   configts(4)='6s2 6p6 7s1 7p0. 6d0 5f2.6'
+   configts(5)='6s2 6p6 7s1 7p1. 6d0 5f1.'
+ /
+EOF
+
+cat > U.$fct-spdfn-kjpaw_psl.0.3.1.test.in << EOF
+ &input
+   title='U',
+   zed=92.0,
+   rel=$nrel,
+   config='[Rn] 6d1.0 7s2.0 7p0. 5f3.0',
+   iswitch=2,
+ /
+ &test
+   file_pseudo='$psdir/U.$fct-spdfn-kjpaw_psl.0.3.1.UPF',
+   nconf=5,
+   configts(1)='6s2 6p6 7s2 7p0 6d1 5f3'
+   configts(2)='6s2 6p6 7s1.5 7p0.0 6d1 5f3'
+   configts(3)='6s2 6p6 7s1 7p0. 6d1 5f2'
+   configts(4)='6s2 6p6 7s1 7p0. 6d0 5f3.6'
+   configts(5)='6s2 6p6 7s1 7p1. 6d1 5f2'
+ /
+EOF
+
+cat > Np.$fct-spdfn-kjpaw_psl.0.3.1.test.in << EOF
+ &input
+   title='Np',
+   zed=93.0,
+   rel=$nrel,
+   config='[Rn] 6d1.0 7s2.0 7p0. 5f4.0',
+   iswitch=2,
+ /
+ &test
+   file_pseudo='$psdir/Np.$fct-spdfn-kjpaw_psl.0.3.1.UPF',
+   nconf=5,
+   configts(1)='6s2 6p6 7s2 7p0 6d1 5f4 '
+   configts(2)='6s2 6p6 7s1.5 7p0.0  6d1 5f4 '
+   configts(3)='6s2 6p6 7s1 7p0. 6d1 5f3 '
+   configts(4)='6s2 6p6 7s1 7p0. 6d0 5f4.6 '
+   configts(5)='6s2 6p6 7s1 7p1. 6d0 5f4 '
+ /
+EOF
+
+cat > Pu.$fct-spdfn-kjpaw_psl.0.3.1.test.in << EOF
+ &input
+   title='Pu',
+   zed=94.0,
+   rel=$nrel,
+   config='[Rn] 6d0.0 7s2.0 7p0. 5f6.0',
+   iswitch=2,
+ /
+ &test
+   file_pseudo='$psdir/Pu.$fct-spdfn-kjpaw_psl.0.3.1.UPF',
+   nconf=5,
+   configts(1)='6s2 6p6 7s2 7p0 6d0 5f6'
+   configts(2)='6s2 6p6 7s1.5 7p0.5  6d0 5f6'
+   configts(3)='6s2 6p6 7s1 7p0. 6d0 5f6'
+   configts(4)='6s2 6p6 7s1 7p0. 6d0 5f6.6'
+   configts(5)='6s2 6p6 7s1 7p1. 6d0 5f6.'
+ /
+EOF
+
+
+cat > Am.$fct-spdfn-kjpaw_psl.0.3.1.test.in << EOF
+ &input
+   title='Am',
+   zed=95.0,
+   rel=$nrel,
+   config='[Rn] 6d0.0 7s2.0 7p0. 5f7.0',
+   iswitch=2,
+ /
+ &test
+   file_pseudo='$psdir/Am.$fct-spdfn-kjpaw_psl.0.3.1.UPF',
+   nconf=5,
+   configts(1)='6s2 6p6 7s2 7p0 6d0 5f6 '
+   configts(2)='6s2 6p6 7s1.5 7p0.5  6d0 5f6 '
+   configts(3)='6s2 6p6 7s1 7p1. 6d0 5f6 '
+   configts(4)='6s2 6p6 7s1 7p0. 6d0 5f6.6 '
+   configts(5)='6s2 6p6 7s1 7p0. 6d1 5f6. '
+ /
+EOF
