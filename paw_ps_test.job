@@ -903,7 +903,7 @@ cat > Tc.$fct-spn-kjpaw_psl.0.3.0.test.in << EOF
  /
 EOF
 
-cat > Te.$fct-dn-kjpaw_psl.0.2.2.test.in << EOF
+cat > Te.$fct-dn-kjpaw_psl.0.3.1.test.in << EOF
  &input
    title='Te',
    zed=52.,
@@ -913,7 +913,7 @@ cat > Te.$fct-dn-kjpaw_psl.0.2.2.test.in << EOF
    dft='$gfun'
  /
  &test
-   file_pseudo='$psdir/Te.$fct-dn-kjpaw_psl.0.2.2.UPF',
+   file_pseudo='$psdir/Te.$fct-dn-kjpaw_psl.0.3.1.UPF',
    nconf=5,
    configts(1)='4d10 5s2 5p4'
    configts(2)='4d10 5s2 5p3 5d0'

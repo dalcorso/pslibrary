@@ -1398,7 +1398,7 @@ cat > Tc.$fct-spn-rrkjus_psl.0.3.0.in << EOF
 4D  3  2 -2.00  0.30  1.30  2.00  0.0
 EOF
 
-cat > Te.$fct-dn-rrkjus_psl.0.2.2.in << EOF
+cat > Te.$fct-dn-rrkjus_psl.0.3.1.in << EOF
  &input
    title='Te',
    zed=52.,
@@ -1409,12 +1409,12 @@ cat > Te.$fct-dn-rrkjus_psl.0.2.2.in << EOF
  /
  &inputp
    pseudotype=3,
-   file_pseudopw='Te.$fct-dn-rrkjus_psl.0.2.2.UPF',
+   file_pseudopw='Te.$fct-dn-rrkjus_psl.0.3.1.UPF',
    author='ADC',
    lloc=-1,
-   rcloc=2.2,
+   rcloc=2.1,
    which_augfun='PSQ',
-   rmatch_augfun=1.7,
+   rmatch_augfun=1.4,
    nlcc=.true.,
    rcore=0.9,
    tm=.true.
@@ -1424,8 +1424,8 @@ cat > Te.$fct-dn-rrkjus_psl.0.2.2.in << EOF
 5S  1  0  0.00  6.30  1.70  2.00  0.0
 5P  2  1  4.00  0.00  1.90  2.40  0.0
 5P  2  1  0.00  6.30  1.90  2.40  0.0
-4D  3  2 10.00  0.00  1.60  1.90  0.0
-4D  3  2  0.00  1.30  1.60  1.90  0.0
+4D  3  2 10.00  0.00  1.60  1.70  0.0
+4D  3  2  0.00  1.30  1.60  1.70  0.0
 EOF
 
 cat > Tl.$fct-dn-rrkjus_psl.0.2.3.in << EOF

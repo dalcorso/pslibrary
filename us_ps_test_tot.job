@@ -432,7 +432,7 @@ cat > Ru.$fct-spn-rrkjus_psl.0.3.0.test.in << EOF
  /
 EOF
 
-cat > Sb.$fct-n-rrkjus_psl.0.2.3.test.in << EOF
+cat > Sb.$fct-n-rrkjus_psl.0.3.1.test.in << EOF
  &input
    title='Sb c',
    zed=51.,
@@ -442,7 +442,7 @@ cat > Sb.$fct-n-rrkjus_psl.0.2.3.test.in << EOF
    dft='$gfun'
  /
  &test
-   file_pseudo='$psdir/Sb.$fct-n-rrkjus_psl.0.2.3.UPF',
+   file_pseudo='$psdir/Sb.$fct-n-rrkjus_psl.0.3.1.UPF',
    nconf=5
    configts(1)='5s2 5p3'
    configts(2)='5s2 5p2 5d0'
