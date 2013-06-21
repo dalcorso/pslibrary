@@ -152,12 +152,17 @@ Introduced the command make_test to test the data_sets.
 The tests are in paw_ps_test*.job and us_ps_test*.job.
 
 Modified PPs: SR and FR Ti. Small change for negative dr2 problems. 
-SR and FR Cd: improved transferability. d core radius reduced.
+SR and FR Cd and Te: improved transferability. d core radius reduced.
 SR and FR La: improved transferability (new version inspired to the 
 BGRV library).
+SR and FR Sb: improved transferability by adding 5d projectors.
 SR and FR Re: new version.
 SR and FR Xe: still problems. Replaced with a PP with 4d in valence.
 SR and FR Mn and Ge: slightly changed to improve transferability in the FR case.
+Added a PP of Cu with 3s and 3p semicore states among the alternative PPs.
+Added a PP of Sb with 4d semicore states among the alternative PPs.
+Added a PP of Te without 4d semicore states among the alternative PPs.
+
 
 New PPs SR and FR: Po, At, Rn, Fr, Ra.
 
