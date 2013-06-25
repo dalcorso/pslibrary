@@ -56,6 +56,26 @@ cat > Au.$fct-spn-kjpaw_psl.0.2.4.test.in << EOF
  /
 EOF
 
+cat > Co.$fct-spn-kjpaw_psl.0.3.1.test.in << EOF
+ &input
+   title='Co',
+   zed=27.,
+   rel=$nrel,
+   config='[Ar] 3d7.0 4s2.0 4p0.0',
+   iswitch=2,
+   dft='$gfun'
+ /
+ &test
+   file_pseudo='$psdir/Co.$fct-spn-kjpaw_psl.0.3.1.UPF',
+   nconf=5
+   configts(1)='3s2 3p6 3d7 4s2 ',
+   configts(2)='3s2 3p6 3d7 4s1 4p0.5',
+   configts(3)='3s2 3p6 3d6 4s1 4p0.5',
+   configts(4)='3s2 3p6 3d8 4s1 4p0',
+   configts(5)='3s2 3p6 3d8 4s0 4p0',
+ /
+EOF
+
 cat > Cu.$fct-spn-kjpaw_psl.0.3.1.test.in << EOF
  &input
    title='Cu',
@@ -132,6 +152,26 @@ cat > Mg.$fct-sp-kjpaw_psl.0.2.5.test.in << EOF
    configts(2)='2s2 2p6 3s1 3p1'
    configts(3)='2s2 2p6 3s0 3p2'
    configts(4)='2s2 2p6 3s0 3p1'
+ /
+EOF
+
+cat > Ni.$fct-spn-kjpaw_psl.0.3.1.test.in << EOF
+ &input
+   title='Ni',
+   zed=28.,
+   rel=$nrel,
+   config='[Ar] 3d8.0 4s2.0 4p0.0',
+   iswitch=2,
+   dft='$gfun'
+ /
+ &test
+   file_pseudo='$psdir/Ni.$fct-spn-kjpaw_psl.0.3.1.UPF',
+   nconf=5
+   configts(1)='3s2 3p6 3d8 4s2 ',
+   configts(2)='3s2 3p6 3d8 4s1 4p0.5',
+   configts(3)='3s2 3p6 3d7 4s1 4p0.5',
+   configts(4)='3s2 3p6 3d9 4s1 4p0',
+   configts(5)='3s2 3p6 3d9 4s0 4p0',
  /
 EOF
 
