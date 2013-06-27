@@ -7,8 +7,6 @@
 #! or http://www.gnu.org/copyleft/gpl.txt .
 #!
 
-
-
 . ./environment.job
 psdir=./PSEUDOPOTENTIALS
 
@@ -19,7 +17,6 @@ cat > At.$fct-dn-rrkjus_psl.0.3.1.test.in << EOF
    rel=$nrel,
    config='[Xe] 4f14.0 5d10.0 6s2.0 6p5.0 6d-2.0',
    iswitch=2,
-   dft='$gfun'
  /
  &test
    file_pseudo='$psdir/At.$fct-dn-rrkjus_psl.0.3.1.UPF',
@@ -39,7 +36,6 @@ cat > Ba.$fct-spn-rrkjus_psl.0.2.3.test.in << EOF
    rel=$nrel,
    config='[Xe] 5d0.0 6s2 6p0',
    iswitch=2,
-   dft='$gfun'
  /
  &test
    file_pseudo='$psdir/Ba.$fct-spn-rrkjus_psl.0.2.3.UPF',
@@ -59,7 +55,6 @@ cat > Ca.$fct-spn-rrkjus_psl.0.2.3.test.in << EOF
    rel=$nrel,
    config='[Ar] 3d0.0 4s2.0 4p0',
    iswitch=2,
-   dft='$gfun'
  /
  &test
    file_pseudo='$psdir/Ca.$fct-spn-rrkjus_psl.0.2.3.UPF',
@@ -79,7 +74,6 @@ cat > Co.$fct-n-rrkjus_psl.0.2.3.test.in << EOF
    rel=$nrel,
    config='[Ar] 4s2 3d7 4p0',
    iswitch=2,
-   dft='$gfun'
  /
  &test
    file_pseudo='$psdir/Co.$fct-n-rrkjus_psl.0.2.3.UPF',
@@ -99,7 +93,6 @@ cat > Cr.$fct-spn-rrkjus_psl.0.2.3.test.in << EOF
    rel=$nrel,
    config='[Ar] 3d5.0 4s1 4p0',
    iswitch=2,
-   dft='$gfun'
  /
  &test
    file_pseudo='$psdir/Cr.$fct-spn-rrkjus_psl.0.2.3.UPF',
@@ -119,7 +112,6 @@ cat > Cs.$fct-spn-rrkjus_psl.0.2.3.test.in << EOF
    rel=$nrel,
    config='[Xe] 5d0.0 6s1 6p0',
    iswitch=2,
-   dft='$gfun'
  /
  &test
    file_pseudo='$psdir/Cs.$fct-spn-rrkjus_psl.0.2.3.UPF',
@@ -139,7 +131,6 @@ cat > Fr.$fct-spdn-rrkjus_psl.0.3.1.test.in << EOF
    rel=$nrel,
    config='[Xe] 4f14.0 5d10.0 6s2.0 6p6.0 6d-2.0 7s1.0 7p0.0',
    iswitch=2,
-   dft='$gfun'
  /
  &test
    file_pseudo='$psdir/Fr.$fct-spdn-rrkjus_psl.0.3.1.UPF',
@@ -159,7 +150,6 @@ cat > Hf.$fct-spn-rrkjus_psl.0.2.test.in << EOF
    rel=$nrel,
    config='[Xe] 4f14 5d2.0 6s2 6p0',
    iswitch=2,
-   dft='$gfun'
  /
  &test
    file_pseudo='$psdir/Hf.$fct-spn-rrkjus_psl.0.2.UPF',
@@ -179,7 +169,6 @@ cat > He.$fct-rrkjus_psl.0.2.3.test.in << EOF
    rel=$nrel,
    config='1s2 2s-2 2p-2',
    iswitch=2,
-   dft='$gfun'
  /
  &test
    file_pseudo='$psdir/He.$fct-rrkjus_psl.0.2.3.UPF',
@@ -199,7 +188,6 @@ cat > K.$fct-spn-rrkjus_psl.0.2.3.test.in << EOF
    rel=$nrel,
    config='[Ar] 3d-2 4s1 4p0',
    iswitch=2,
-   dft='$gfun'
  /
  &test
    file_pseudo='$psdir/K.$fct-spn-rrkjus_psl.0.2.3.UPF',
@@ -219,7 +207,6 @@ cat > Kr.$fct-n-rrkjus_psl.0.2.3.test.in << EOF
    rel=$nrel,
    config='[Ar] 3d10 4s2 4p6.00 4d-2.0',
    iswitch=2,
-   dft='$gfun'
  /
  &test
    file_pseudo='$psdir/Kr.$fct-n-rrkjus_psl.0.2.3.UPF',
@@ -239,7 +226,6 @@ cat > Mg.$fct-n-rrkjus_psl.0.3.0.test.in << EOF
    rel=$nrel,
    config='[Ne] 3s2.0 3p0 3d-2',
    iswitch=2,
-   dft='$gfun'
  /
  &test
    file_pseudo='$psdir/Mg.$fct-n-rrkjus_psl.0.3.0.UPF',
@@ -258,7 +244,6 @@ cat > Mn.$fct-spn-rrkjus_psl.0.3.1.test.in << EOF
    rel=$nrel,
    config='[Ar] 3d5.0 4s2 4p0',
    iswitch=2,
-   dft='$gfun'
  /
  &test
    file_pseudo='$psdir/Mn.$fct-spn-rrkjus_psl.0.3.1.UPF',
@@ -278,7 +263,6 @@ cat > Ne.$fct-n-rrkjus_psl.0.3.0.test.in << EOF
    rel=$nrel,
    config='1s2 2s2 2p6 3d-2',
    iswitch=2,
-   dft='$gfun'
  /
  &test
    file_pseudo='$psdir/Ne.$fct-n-rrkjus_psl.0.3.0.UPF',
@@ -298,7 +282,6 @@ cat > Os.$fct-n-rrkjus_psl.0.2.3.test.in << EOF
    rel=$nrel,
    iswitch=2,
    config='[Xe] 4f14.0 5d6.0 6s2.0 6p0.0',
-   dft='$gfun'
  /
  &test
    file_pseudo='$psdir/Os.$fct-n-rrkjus_psl.0.2.3.UPF',
@@ -318,7 +301,6 @@ cat > Po.$fct-dn-rrkjus_psl.0.3.1.test.in << EOF
    rel=$nrel,
    config='[Xe] 4f14.0 5d10.0 6s2.0 6p4.0 6d-2',
    iswitch=2,
-   dft='$gfun'
  /
  &test
    file_pseudo='$psdir/Po.$fct-dn-rrkjus_psl.0.3.1.UPF',
@@ -338,7 +320,6 @@ cat > Ra.$fct-spdn-rrkjus_psl.0.3.1.test.in << EOF
    rel=$nrel,
    config='[Xe] 4f14.0 5d10.0 6s2.0 6p6.0 6d-2.0 7s2.0 7p0.0',
    iswitch=2,
-   dft='$gfun'
  /
  &test
    file_pseudo='$psdir/Ra.$fct-spdn-rrkjus_psl.0.3.1.UPF',
@@ -351,7 +332,6 @@ cat > Ra.$fct-spdn-rrkjus_psl.0.3.1.test.in << EOF
  /
 EOF
 
-
 cat > Rb.$fct-spn-rrkjus_psl.0.2.3.test.in << EOF
  &input
    title='Rb d',
@@ -359,7 +339,6 @@ cat > Rb.$fct-spn-rrkjus_psl.0.2.3.test.in << EOF
    rel=$nrel,
    config='[Kr] 4d-2.0 5s1 5p0',
    iswitch=2,
-   dft='$gfun'
  /
  &test
    file_pseudo='$psdir/Rb.$fct-spn-rrkjus_psl.0.2.3.UPF',
@@ -379,7 +358,6 @@ cat > Re.$fct-spn-rrkjus_psl.0.3.1.test.in << EOF
    rel=$nrel,
    config='[Xe] 4f14 5d5.0 6s2 6p0',
    iswitch=2,
-   dft='$gfun'
  /
  &test
    file_pseudo='$psdir/Re.$fct-spn-rrkjus_psl.0.3.1.UPF',
@@ -399,7 +377,6 @@ cat > Rn.$fct-dn-rrkjus_psl.0.3.1.test.in << EOF
    rel=$nrel,
    config='[Xe] 4f14.0 5d10.0 6s2.0 6p6.0 6d-2.0',
    iswitch=2,
-   dft='$gfun'
  /
  &test
    file_pseudo='$psdir/Rn.$fct-dn-rrkjus_psl.0.3.1.UPF',
@@ -419,7 +396,6 @@ cat > Ru.$fct-spn-rrkjus_psl.0.3.0.test.in << EOF
    rel=$nrel,
    config='[Kr] 4d6.0 5s2.0 5p0.0',
    iswitch=2,
-   dft='$gfun'
  /
  &test
    file_pseudo='$psdir/Ru.$fct-spn-rrkjus_psl.0.3.0.UPF',
@@ -439,7 +415,6 @@ cat > Sb.$fct-n-rrkjus_psl.0.3.1.test.in << EOF
    rel=$nrel,
    config='[Kr] 4d10.0 5s2.0 5p3.0 5d-2.0',
    iswitch=2,
-   dft='$gfun'
  /
  &test
    file_pseudo='$psdir/Sb.$fct-n-rrkjus_psl.0.3.1.UPF',
@@ -459,7 +434,6 @@ cat > Ti.$fct-spn-rrkjus_psl.0.3.1.test.in << EOF
    rel=$nrel,
    config='[Ar] 3d2.0 4s2 4p0',
    iswitch=2,
-   dft='$gfun'
  /
  &test
    file_pseudo='$psdir/Ti.$fct-spn-rrkjus_psl.0.3.1.UPF',
@@ -479,7 +453,6 @@ cat > V.$fct-spn-rrkjus_psl.0.2.3.test.in << EOF
    rel=$nrel,
    config='[Ar] 3d3.0 4s2 4p0',
    iswitch=2,
-   dft='$gfun'
  /
  &test
    file_pseudo='$psdir/V.$fct-spn-rrkjus_psl.0.2.3.UPF',
@@ -499,7 +472,6 @@ cat > Xe.$fct-n-rrkjus_psl.0.3.1.test.in << EOF
    rel=$nrel,
    config='[Kr] 4d10.0 5s2.0 5p6.0 5d-2.0',
    iswitch=2,
-   dft='$gfun'
  /
  &test
    file_pseudo='$psdir/Xe.$fct-n-rrkjus_psl.0.3.1.UPF',
@@ -519,7 +491,6 @@ cat > Y.$fct-spn-rrkjus_psl.0.2.3.test.in << EOF
    rel=$nrel,
    config='[Kr] 4d1.0 5s2 5p0',
    iswitch=2,
-   dft='$gfun'
  /
  &test
    file_pseudo='$psdir/Y.$fct-spn-rrkjus_psl.0.2.3.UPF',
@@ -539,7 +510,6 @@ cat > W.$fct-spn-rrkjus_psl.0.2.3.test.in << EOF
    rel=$nrel,
    config='[Xe] 4f14 5d4.0 6s2 6p0',
    iswitch=2,
-   dft='$gfun'
  /
  &test
    file_pseudo='$psdir/W.$fct-spn-rrkjus_psl.0.2.3.UPF',
@@ -551,4 +521,3 @@ cat > W.$fct-spn-rrkjus_psl.0.2.3.test.in << EOF
    configts(5)='5s2 5p6.0 5d3 6s1'
  /
 EOF
-
