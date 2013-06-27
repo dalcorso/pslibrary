@@ -20,7 +20,6 @@ cat > La.$fct-spdfn-rrkjus_psl.0.3.1.in << EOF
    dft='$gfun'
  /
  &inputp
-   lpaw=.true.,
    pseudotype=3,
    file_pseudopw='La.$fct-spdfn-rrkjus_psl.0.3.1.UPF',
    author='ADC',
@@ -54,7 +53,6 @@ cat > Ce.$fct-spdfn-rrkjus_psl.0.3.1.in << EOF
    dft='$gfun'
  /
  &inputp
-   lpaw=.true.,
    pseudotype=3,
    file_pseudopw='Ce.$fct-spdfn-rrkjus_psl.0.3.1.UPF',
    author='ADC',
@@ -88,7 +86,6 @@ cat > Ce.$fct-spdn-rrkjus_psl.0.3.1.in << EOF
    dft='$gfun'
  /
  &inputp
-   lpaw=.true.,
    pseudotype=3,
    file_pseudopw='Ce.$fct-spdn-rrkjus_psl.0.3.1.UPF',
    author='ADC',
@@ -120,7 +117,6 @@ cat > Pr.$fct-spdfn-rrkjus_psl.0.3.1.in << EOF
    dft='$gfun'
  /
  &inputp
-   lpaw=.true.,
    pseudotype=3,
    file_pseudopw='Pr.$fct-spdfn-rrkjus_psl.0.3.1.UPF',
    author='ADC',
@@ -154,7 +150,6 @@ cat > Pr.$fct-spdn-rrkjus_psl.0.3.1.in << EOF
    dft='$gfun'
  /
  &inputp
-   lpaw=.true.,
    pseudotype=3,
    file_pseudopw='Pr.$fct-spdn-rrkjus_psl.0.3.1.UPF',
    author='ADC',
@@ -186,7 +181,6 @@ cat > Nd.$fct-spdfn-rrkjus_psl.0.3.1.in << EOF
    dft='$gfun'
  /
  &inputp
-   lpaw=.true.,
    pseudotype=3,
    file_pseudopw='Nd.$fct-spdfn-rrkjus_psl.0.3.1.UPF',
    author='ADC',
@@ -220,7 +214,6 @@ cat > Nd.$fct-spdn-rrkjus_psl.0.3.1.in << EOF
    dft='$gfun'
  /
  &inputp
-   lpaw=.true.,
    pseudotype=3,
    file_pseudopw='Nd.$fct-spdn-rrkjus_psl.0.3.1.UPF',
    author='ADC',
@@ -252,7 +245,6 @@ cat > Pm.$fct-spdfn-rrkjus_psl.0.3.1.in << EOF
    dft='$gfun'
  /
  &inputp
-   lpaw=.true.,
    pseudotype=3,
    file_pseudopw='Pm.$fct-spdfn-rrkjus_psl.0.3.1.UPF',
    author='ADC',
@@ -286,7 +278,6 @@ cat > Pm.$fct-spdn-rrkjus_psl.0.3.1.in << EOF
    dft='$gfun'
  /
  &inputp
-   lpaw=.true.,
    pseudotype=3,
    file_pseudopw='Pm.$fct-spdn-rrkjus_psl.0.3.1.UPF',
    author='ADC',
@@ -318,7 +309,6 @@ cat > Sm.$fct-spdfn-rrkjus_psl.0.3.1.in << EOF
    dft='$gfun'
  /
  &inputp
-   lpaw=.true.,
    pseudotype=3,
    file_pseudopw='Sm.$fct-spdfn-rrkjus_psl.0.3.1.UPF',
    author='ADC',
@@ -352,7 +342,6 @@ cat > Sm.$fct-spdn-rrkjus_psl.0.3.1.in << EOF
    dft='$gfun'
  /
  &inputp
-   lpaw=.true.,
    pseudotype=3,
    file_pseudopw='Sm.$fct-spdn-rrkjus_psl.0.3.1.UPF',
    author='ADC',
@@ -384,7 +373,6 @@ cat > Sm.$fct-spn-rrkjus_psl.0.3.1.in << EOF
    dft='$gfun'
  /
  &inputp
-   lpaw=.true.,
    pseudotype=3,
    file_pseudopw='Sm.$fct-spn-rrkjus_psl.0.3.1.UPF',
    author='ADC',
@@ -416,7 +404,6 @@ cat > Eu.$fct-spdfn-rrkjus_psl.0.3.1.in << EOF
    dft='$gfun'
  /
  &inputp
-   lpaw=.true.,
    pseudotype=3,
    file_pseudopw='Eu.$fct-spdfn-rrkjus_psl.0.3.1.UPF',
    author='ADC',
@@ -450,7 +437,6 @@ cat > Eu.$fct-spdn-rrkjus_psl.0.3.1.in << EOF
    dft='$gfun'
  /
  &inputp
-   lpaw=.true.,
    pseudotype=3,
    file_pseudopw='Eu.$fct-spdn-rrkjus_psl.0.3.1.UPF',
    author='ADC',
@@ -482,7 +468,6 @@ cat > Eu.$fct-spn-rrkjus_psl.0.3.1.in << EOF
    dft='$gfun'
  /
  &inputp
-   lpaw=.true.,
    pseudotype=3,
    file_pseudopw='Eu.$fct-spn-rrkjus_psl.0.3.1.UPF',
    author='ADC',
@@ -514,7 +499,6 @@ cat > Gd.$fct-spdfn-rrkjus_psl.0.3.1.in << EOF
    dft='$gfun'
  /
  &inputp
-   lpaw=.true.,
    pseudotype=3,
    file_pseudopw='Gd.$fct-spdfn-rrkjus_psl.0.3.1.UPF',
    author='ADC',
@@ -548,7 +532,6 @@ cat > Gd.$fct-spdn-rrkjus_psl.0.3.1.in << EOF
    dft='$gfun'
  /
  &inputp
-   lpaw=.true.,
    pseudotype=3,
    file_pseudopw='Gd.$fct-spdn-rrkjus_psl.0.3.1.UPF',
    author='ADC',
@@ -580,7 +563,6 @@ cat > Tb.$fct-spdfn-rrkjus_psl.0.3.1.in << EOF
    dft='$gfun'
  /
  &inputp
-   lpaw=.true.,
    pseudotype=3,
    file_pseudopw='Tb.$fct-spdfn-rrkjus_psl.0.3.1.UPF',
    author='ADC',
@@ -614,7 +596,6 @@ cat > Tb.$fct-spdn-rrkjus_psl.0.3.1.in << EOF
    dft='$gfun'
  /
  &inputp
-   lpaw=.true.,
    pseudotype=3,
    file_pseudopw='Tb.$fct-spdn-rrkjus_psl.0.3.1.UPF',
    author='ADC',
@@ -646,7 +627,6 @@ cat > Dy.$fct-spdfn-rrkjus_psl.0.3.1.in << EOF
    dft='$gfun'
  /
  &inputp
-   lpaw=.true.,
    pseudotype=3,
    file_pseudopw='Dy.$fct-spdfn-rrkjus_psl.0.3.1.UPF',
    author='ADC',
@@ -680,7 +660,6 @@ cat > Dy.$fct-spdn-rrkjus_psl.0.3.1.in << EOF
    dft='$gfun'
  /
  &inputp
-   lpaw=.true.,
    pseudotype=3,
    file_pseudopw='Dy.$fct-spdn-rrkjus_psl.0.3.1.UPF',
    author='ADC',
@@ -712,7 +691,6 @@ cat > Ho.$fct-spdfn-rrkjus_psl.0.3.1.in << EOF
    dft='$gfun'
  /
  &inputp
-   lpaw=.true.,
    pseudotype=3,
    file_pseudopw='Ho.$fct-spdfn-rrkjus_psl.0.3.1.UPF',
    author='ADC',
@@ -746,7 +724,6 @@ cat > Ho.$fct-spdn-rrkjus_psl.0.3.1.in << EOF
    dft='$gfun'
  /
  &inputp
-   lpaw=.true.,
    pseudotype=3,
    file_pseudopw='Ho.$fct-spdn-rrkjus_psl.0.3.1.UPF',
    author='ADC',
@@ -778,7 +755,6 @@ cat > Er.$fct-spdfn-rrkjus_psl.0.3.1.in << EOF
    dft='$gfun'
  /
  &inputp
-   lpaw=.true.,
    pseudotype=3,
    file_pseudopw='Er.$fct-spdfn-rrkjus_psl.0.3.1.UPF',
    author='ADC',
@@ -812,7 +788,6 @@ cat > Er.$fct-spdn-rrkjus_psl.0.3.1.in << EOF
    dft='$gfun'
  /
  &inputp
-   lpaw=.true.,
    pseudotype=3,
    file_pseudopw='Er.$fct-spdn-rrkjus_psl.0.3.1.UPF',
    author='ADC',
@@ -844,7 +819,6 @@ cat > Er.$fct-spn-rrkjus_psl.0.3.1.in << EOF
    dft='$gfun'
  /
  &inputp
-   lpaw=.true.,
    pseudotype=3,
    file_pseudopw='Er.$fct-spn-rrkjus_psl.0.3.1.UPF',
    author='ADC',
@@ -876,7 +850,6 @@ cat > Tm.$fct-spdfn-rrkjus_psl.0.3.1.in << EOF
    dft='$gfun'
  /
  &inputp
-   lpaw=.true.,
    pseudotype=3,
    file_pseudopw='Tm.$fct-spdfn-rrkjus_psl.0.3.1.UPF',
    author='ADC',
@@ -910,7 +883,6 @@ cat > Tm.$fct-spdn-rrkjus_psl.0.3.1.in << EOF
    dft='$gfun'
  /
  &inputp
-   lpaw=.true.,
    pseudotype=3,
    file_pseudopw='Tm.$fct-spdn-rrkjus_psl.0.3.1.UPF',
    author='ADC',
@@ -942,7 +914,6 @@ cat > Yb.$fct-spdfn-rrkjus_psl.0.3.1.in << EOF
    dft='$gfun'
  /
  &inputp
-   lpaw=.true.,
    pseudotype=3,
    file_pseudopw='Yb.$fct-spdfn-rrkjus_psl.0.3.1.UPF',
    author='ADC',
@@ -976,7 +947,6 @@ cat > Yb.$fct-spdn-rrkjus_psl.0.3.1.in << EOF
    dft='$gfun'
  /
  &inputp
-   lpaw=.true.,
    pseudotype=3,
    file_pseudopw='Yb.$fct-spdn-rrkjus_psl.0.3.1.UPF',
    author='ADC',
@@ -1008,7 +978,6 @@ cat > Yb.$fct-spn-rrkjus_psl.0.3.1.in << EOF
    dft='$gfun'
  /
  &inputp
-   lpaw=.true.,
    pseudotype=3,
    file_pseudopw='Yb.$fct-spn-rrkjus_psl.0.3.1.UPF',
    author='ADC',
@@ -1040,7 +1009,6 @@ cat > Lu.$fct-spdfn-rrkjus_psl.0.3.1.in << EOF
    dft='$gfun'
  /
  &inputp
-   lpaw=.true.,
    pseudotype=3,
    file_pseudopw='Lu.$fct-spdfn-rrkjus_psl.0.3.1.UPF',
    author='ADC',
@@ -1074,7 +1042,6 @@ cat > Lu.$fct-spdn-rrkjus_psl.0.3.1.in << EOF
    dft='$gfun'
  /
  &inputp
-   lpaw=.true.,
    pseudotype=3,
    file_pseudopw='Lu.$fct-spdn-rrkjus_psl.0.3.1.UPF',
    author='ADC',
@@ -1106,7 +1073,6 @@ cat > Ac.$fct-spdfn-rrkjus_psl.0.3.1.in << EOF
    dft='$gfun'
  /
  &inputp
-   lpaw=.true.,
    pseudotype=3,
    file_pseudopw='Ac.$fct-spdfn-rrkjus_psl.0.3.1.UPF',
    author='ADC',
@@ -1140,7 +1106,6 @@ cat > Th.$fct-spdfn-rrkjus_psl.0.3.1.in << EOF
    dft='$gfun'
  /
  &inputp
-   lpaw=.true.,
    pseudotype=3,
    file_pseudopw='Th.$fct-spdfn-rrkjus_psl.0.3.1.UPF',
    author='ADC',
@@ -1174,7 +1139,6 @@ cat > Pa.$fct-spdfn-rrkjus_psl.0.3.1.in << EOF
    dft='$gfun'
  /
  &inputp
-   lpaw=.true.,
    pseudotype=3,
    file_pseudopw='Pa.$fct-spdfn-rrkjus_psl.0.3.1.UPF',
    author='ADC',
@@ -1208,7 +1172,6 @@ cat > U.$fct-spdfn-rrkjus_psl.0.3.1.in << EOF
    dft='$gfun'
  /
  &inputp
-   lpaw=.true.,
    pseudotype=3,
    file_pseudopw='U.$fct-spdfn-rrkjus_psl.0.3.1.UPF',
    author='ADC',
@@ -1242,7 +1205,6 @@ cat > Np.$fct-spdfn-rrkjus_psl.0.3.1.in << EOF
    dft='$gfun'
  /
  &inputp
-   lpaw=.true.,
    pseudotype=3,
    file_pseudopw='Np.$fct-spdfn-rrkjus_psl.0.3.1.UPF',
    author='ADC',
@@ -1277,7 +1239,6 @@ cat > Pu.$fct-spdfn-rrkjus_psl.0.3.1.in << EOF
    dft='$gfun'
  /
  &inputp
-   lpaw=.true.,
    pseudotype=3,
    file_pseudopw='Pu.$fct-spdfn-rrkjus_psl.0.3.1.UPF',
    author='ADC',
@@ -1313,7 +1274,6 @@ cat > Am.$fct-spdfn-rrkjus_psl.0.3.1.in << EOF
    dft='$gfun'
  /
  &inputp
-   lpaw=.true.,
    pseudotype=3,
    file_pseudopw='Am.$fct-spdfn-rrkjus_psl.0.3.1.UPF',
    author='ADC',

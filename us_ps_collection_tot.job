@@ -204,7 +204,6 @@ cat > Fr.$fct-spdn-rrkjus_psl.0.3.1.in << EOF
    dft='$gfun'
  /
  &inputp
-   lpaw=.true.,
    pseudotype=3,
    file_pseudopw='Fr.$fct-spdn-rrkjus_psl.0.3.1.UPF',
    author='ADC',
@@ -411,7 +410,6 @@ cat > Ne.$fct-n-rrkjus_psl.0.3.0.in << EOF
    dft='$gfun'
  /
  &inputp
-   lpaw=.true.,
    pseudotype=3,
    file_pseudopw='Ne.$fct-n-rrkjus_psl.0.3.0.UPF',
    author='ADC',
@@ -496,7 +494,6 @@ cat > Ra.$fct-spdn-rrkjus_psl.0.3.1.in << EOF
    dft='$gfun'
  /
  &inputp
-   lpaw=.true.,
    pseudotype=3,
    file_pseudopw='Ra.$fct-spdn-rrkjus_psl.0.3.1.UPF',
    author='ADC',
@@ -652,7 +649,6 @@ cat > Sb.$fct-n-rrkjus_psl.0.3.1.in << EOF
    dft='$gfun'
  /
  &inputp
-   lpaw=.true.,
    pseudotype=3,
    file_pseudopw='Sb.$fct-n-rrkjus_psl.0.3.1.UPF',
    author='ADC',
@@ -682,7 +678,6 @@ cat > Ti.$fct-spn-rrkjus_psl.0.3.1.in << EOF
    dft='$gfun'
  /
  &inputp
-   lpaw=.true.,
    pseudotype=3,
    file_pseudopw='Ti.$fct-spn-rrkjus_psl.0.3.1.UPF',
    author='ADC',
@@ -745,7 +740,6 @@ cat > Xe.$fct-n-rrkjus_psl.0.3.1.in << EOF
    dft='$gfun'
  /
  &inputp
-   lpaw=.true.,
    pseudotype=3,
    file_pseudopw='Xe.$fct-n-rrkjus_psl.0.3.1.UPF',
    author='ADC',

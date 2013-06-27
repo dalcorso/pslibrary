@@ -85,7 +85,6 @@ cat > Co.$fct-spn-rrkjus_psl.0.3.1.in << EOF
    dft='$gfun'
  /
  &inputp
-   lpaw=.true.,
    pseudotype=3,
    file_pseudopw='Co.$fct-spn-rrkjus_psl.0.3.1.UPF',
    author='ADC',
@@ -235,7 +234,6 @@ cat > Ni.$fct-spn-rrkjus_psl.0.3.1.in << EOF
    dft='$gfun'
  /
  &inputp
-   lpaw=.true.,
    pseudotype=3,
    file_pseudopw='Ni.$fct-spn-rrkjus_psl.0.3.1.UPF',
    author='ADC',
@@ -358,7 +356,6 @@ cat > Te.$fct-n-rrkjus_psl.0.3.1.in << EOF
    dft='$gfun'
  /
  &inputp
-   lpaw=.true.,
    pseudotype=3,
    file_pseudopw='Te.$fct-n-rrkjus_psl.0.3.1.UPF',
    author='ADC (similar to GBRV)',
