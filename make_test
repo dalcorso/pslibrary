@@ -61,23 +61,22 @@ ld1_command="$PARA_PREFIX $BIN_DIR/ld1.x $PARA_POSTFIX"
 
 echo "ld1_command =" $ld1_command
 
-if [ $element = "all" ] ;
-then
+for elem in $element ; do
+    if [ $elem = "all" ] ;
+    then
+       for atom in *.in ; do
+          echo -e "Making   $atom  ...\c"
+          $ld1_command < ./$atom > $work/$atom.out
+          echo '  Done' 
+       done
+   else
+       for atom in "$elem"*.in ; do
+          echo -e "Making   $atom  ...\c"
+          $ld1_command < ./$atom > $work/$atom.out
+          echo '  Done' 
+       done
 
-   for atom in *.in ; do
-       echo -e "Making   $atom  ...\c"
-       $ld1_command < $atom > $work/$atom.out
-       echo '  Done' 
-   done
-
-else
-
-   for atom in "$element"*.in ; do
-       echo -e "Making   $atom  ...\c"
-       $ld1_command < $atom > $work/$atom.out
-       echo '  Done' 
-   done
-
-fi
+   fi
+done
 
 \mv *.in $work
