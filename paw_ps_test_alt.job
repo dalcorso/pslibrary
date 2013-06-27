@@ -36,6 +36,27 @@ cat > Ag.$fct-spn-kjpaw_psl.0.3.1.test.in << EOF
  /
 EOF
 
+cat > As.$fct-dn-kjpaw_psl.0.3.1.test.in << EOF
+ &input
+   title='As',
+   zed=33.,
+   rel=$nrel,
+   config='[Ar] 3d10.0 4s2.0 4p3.0 4d-1',
+   iswitch=2,
+   dft='$gfun'
+ /
+ &test
+   file_pseudo='$psdir/As.$fct-dn-kjpaw_psl.0.3.1.UPF',
+   nconf=5
+   configts(1)='3d10 4s2 4p3 ',
+   configts(2)='3d10 4s2 4p2 4d0',
+   configts(3)='3d10 4s2 4p1 4d0.5',
+   configts(4)='3d10 4s1 4p3 4d0',
+   configts(5)='3d10 4s1 4p2 4d0',
+ /
+EOF
+
+
 cat > Au.$fct-spn-kjpaw_psl.0.2.4.test.in << EOF
  &input
    title='Au',
@@ -53,6 +74,26 @@ cat > Au.$fct-spn-kjpaw_psl.0.2.4.test.in << EOF
    configts(3)='5s2 5p6 5d10. 6s0 6p0',
    configts(4)='5s2 5p6 5d9.  6s1 6p0',
    configts(5)='5s2 5p6 5d8.  6s2 6p0',
+ /
+EOF
+
+cat > Br.$fct-dn-kjpaw_psl.0.3.1.test.in << EOF
+ &input
+   title='Br',
+   zed=35.,
+   rel=$nrel,
+   config='[Ar] 3d10.0 4s2.0 4p5.0 4d-1',
+   iswitch=2,
+   dft='$gfun'
+ /
+ &test
+   file_pseudo='$psdir/Br.$fct-dn-kjpaw_psl.0.3.1.UPF',
+   nconf=5
+   configts(1)='3d10 4s2 4p5 ',
+   configts(2)='3d10 4s2 4p4 4d0',
+   configts(3)='3d10 4s2 4p3 4d0.5',
+   configts(4)='3d10 4s1 4p5 4d0',
+   configts(5)='3d10 4s1 4p4 4d0',
  /
 EOF
 
@@ -235,6 +276,26 @@ cat > Sb.$fct-dn-kjpaw_psl.0.3.1.test.in << EOF
  /
 EOF
 
+cat > Se.$fct-dn-kjpaw_psl.0.3.1.test.in << EOF
+ &input
+   title='Se',
+   zed=34.,
+   rel=$nrel,
+   config='[Ar] 3d10.0 4s2.0 4p4.0 4d-1',
+   iswitch=2,
+   dft='$gfun'
+ /
+ &test
+   file_pseudo='$psdir/Se.$fct-dn-kjpaw_psl.0.3.1.UPF',
+   nconf=5
+   configts(1)='3d10 4s2 4p4 ',
+   configts(2)='3d10 4s2 4p3 4d0',
+   configts(3)='3d10 4s2 4p2 4d0.5',
+   configts(4)='3d10 4s1 4p4 4d0',
+   configts(5)='3d10 4s1 4p3 4d0',
+ /
+EOF
+
 cat > Te.$fct-n-kjpaw_psl.0.3.1.test.in << EOF
  &input
    title='Te',
@@ -255,4 +316,23 @@ cat > Te.$fct-n-kjpaw_psl.0.3.1.test.in << EOF
  /
 EOF
 
+cat > Zn.$fct-spn-kjpaw_psl.0.3.1.test.in << EOF
+ &input
+   title='Zn',
+   zed=30.,
+   rel=$nrel,
+   config='[Ar] 3d10.0 4s2.0 4p0.0',
+   iswitch=2,
+   dft='$gfun'
+ /
+ &test
+   file_pseudo='$psdir/Zn.$fct-spn-kjpaw_psl.0.3.1.UPF',
+   nconf=5
+   configts(1)='3s2 3p6 3d10 4s2 ',
+   configts(2)='3s2 3p6 3d10 4s1 4p0.5',
+   configts(3)='3s2 3p6 3d9  4s1 4p0.5',
+   configts(4)='3s2 3p6 3d9  4s1 4p0',
+   configts(5)='3s2 3p6 3d10 4s0 4p0',
+ /
+EOF
 

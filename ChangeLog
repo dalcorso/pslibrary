@@ -159,8 +159,9 @@ SR and FR Sb: improved transferability by adding 5d projectors.
 SR and FR Re: new version.
 SR and FR Xe: still problems. Replaced with a PP with 4d in valence.
 SR and FR Mn and Ge: slightly changed to improve transferability in the FR case.
-Added a PP of Co, Ni, Cu with 3s and 3p semicore states among the 
+Added PPs of Co, Ni, Cu, Zn with 3s and 3p semicore states among the 
 alternative PPs.
+Added PPs of As, Se, Br, with 3d semicore states among the alternative PPs.
 Added a PP of Sb with 4d semicore states among the alternative PPs.
 Added a PP of Te without 4d semicore states among the alternative PPs.
 
