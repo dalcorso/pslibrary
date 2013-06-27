@@ -747,11 +747,10 @@ cat > Pu.$fct-spdfn-kjpaw_psl.0.3.1.test.in << EOF
    configts(1)='6s2 6p6 7s2 7p0 6d0 5f6'
    configts(2)='6s2 6p6 7s1.5 7p0.5  6d0 5f6'
    configts(3)='6s2 6p6 7s1 7p0. 6d0 5f6'
-   configts(4)='6s2 6p6 7s1 7p0. 6d0 5f6.6'
+   configts(4)='6s2 6p6 7s1 7p0. 6d0 5f6.4'
    configts(5)='6s2 6p6 7s1 7p1. 6d0 5f6.'
  /
 EOF
-
 
 cat > Am.$fct-spdfn-kjpaw_psl.0.3.1.test.in << EOF
  &input
