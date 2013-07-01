@@ -511,7 +511,7 @@ cat > Ra.$fct-spdn-kjpaw_psl.0.3.1.in << EOF
    title='Ra q',
    zed=88.,
    rel=$nrel,
-   config='[Xe] 4f14.0 5d10.0 6s2.0 6p6.0 6d-2.0 7s2. 7p-1.',
+   config='[Xe] 4f14.0 5d10.0 6s2.0 6p6.0 6d0. 7s2. 7p0.',
    iswitch=3,
    dft='$gfun'
  /
