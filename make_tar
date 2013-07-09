@@ -18,7 +18,7 @@ cp ./AAREADME ./ChangeLog ./License ./clean ./clean_all ./make_ps ./make_all_ps 
 ./paw_lan_collection.job ./us_lan_collection.job \
 ./paw_ps_test.job ./paw_ps_test_alt.job ./paw_ps_test_tot.job \
 ./paw_lan_test.job ./us_lan_test.job \
-./us_ps_test.job ./us_ps_test_alt.job ./us_ps_test_tot.job \
+./us_ps_test.job ./us_ps_test_alt.job ./us_ps_test_tot.job QE_path \
 obsolete.job ./make_tar $tar_directory
 
 mkdir $tar_directory/pz
