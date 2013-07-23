@@ -534,7 +534,7 @@ EOF
 
 cat > Nb.$fct-spn-kjpaw_psl.0.3.0.test.in << EOF
  &input
-   title='Nb b',
+   title='Nb',
    zed=41.0,
    rel=$nrel,
    config='[Kr] 4d4.0 5s1 5p0',
@@ -724,7 +724,7 @@ EOF
 
 cat > Sc.$fct-spn-kjpaw_psl.0.2.3.test.in << EOF
  &input
-   title='Sc a',
+   title='Sc',
    zed=21.0,
    rel=$nrel,
    config='[Ar] 3d1.0 4s2 4p0',
@@ -800,7 +800,7 @@ EOF
 
 cat > Sr.$fct-spn-kjpaw_psl.0.2.3.test.in << EOF
  &input
-   title='Sr b',
+   title='Sr',
    zed=38.0,
    rel=$nrel,
    config='[Kr] 4d0.0 5s2 5p0',
@@ -838,7 +838,7 @@ EOF
 
 cat > Tc.$fct-spn-kjpaw_psl.0.3.0.test.in << EOF
  &input
-   title='Tc b',
+   title='Tc',
    zed=43.0,
    rel=$nrel,
    config='[Kr] 4d5.0 5s2 5p0',
@@ -876,7 +876,7 @@ EOF
 
 cat > Tl.$fct-dn-kjpaw_psl.0.2.3.test.in << EOF
  &input
-   title='Tl q',
+   title='Tl',
    zed=81.,
    rel=$nrel,
    config='[Xe] 4f14.0 5d10.0 6s2.0 6p1.0 6d-2',
@@ -895,7 +895,7 @@ EOF
 
 cat > Y.$fct-spn-kjpaw_psl.0.2.3.test.in << EOF
  &input
-   title='Y b',
+   title='Y',
    zed=39.0,
    rel=$nrel,
    config='[Kr] 4d1.0 5s2 5p0',
@@ -914,7 +914,7 @@ EOF
 
 cat > Zn.$fct-dn-kjpaw_psl.0.2.2.test.in << EOF
  &input
-   title='Zn d',
+   title='Zn',
    zed=30.,
    rel=$nrel,
    config='[Ar] 3d10. 4s2. 4p0.0',
@@ -933,7 +933,7 @@ EOF
 
 cat > Zr.$fct-spn-kjpaw_psl.0.2.3.test.in << EOF
  &input
-   title='Zr b',
+   title='Zr',
    zed=40.0,
    rel=$nrel,
    config='[Kr] 4d2.0 5s2 5p0',

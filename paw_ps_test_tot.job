@@ -12,7 +12,7 @@ psdir=./PSEUDOPOTENTIALS
 
 cat > At.$fct-dn-kjpaw_psl.0.3.1.test.in << EOF
  &input
-   title='At q',
+   title='At',
    zed=85.,
    rel=$nrel,
    config='[Xe] 4f14.0 5d10.0 6s2.0 6p5.0 6d-2.0',
@@ -31,7 +31,7 @@ EOF
 
 cat > Ba.$fct-spn-kjpaw_psl.0.2.3.test.in << EOF
  &input
-   title='Ba d',
+   title='Ba',
    zed=56.0,
    rel=$nrel,
    config='[Xe] 5d0.0 6s2 6p0',
@@ -50,7 +50,7 @@ EOF
 
 cat > Ca.$fct-spn-kjpaw_psl.0.2.3.test.in << EOF
  &input
-   title='Ca b',
+   title='Ca',
    zed=20.0,
    rel=$nrel,
    config='[Ar] 3d0.0 4s2.0 4p0',
@@ -69,7 +69,7 @@ EOF
 
 cat > Co.$fct-n-kjpaw_psl.0.2.3.test.in << EOF
  &input
-   title='Co b',
+   title='Co',
    zed=27.,
    rel=$nrel,
    config='[Ar] 4s2 3d7 4p0',
@@ -88,7 +88,7 @@ EOF
 
 cat > Cr.$fct-spn-kjpaw_psl.0.2.3.test.in << EOF
  &input
-   title='Cr c',
+   title='Cr',
    zed=24.0,
    rel=$nrel,
    config='[Ar] 3d5.0 4s1 4p0',
@@ -107,7 +107,7 @@ EOF
 
 cat > Cs.$fct-spn-kjpaw_psl.0.2.3.test.in << EOF
  &input
-   title='Cs e',
+   title='Cs',
    zed=55.0,
    rel=$nrel,
    config='[Xe] 5d0.0 6s1 6p0',
@@ -124,28 +124,9 @@ cat > Cs.$fct-spn-kjpaw_psl.0.2.3.test.in << EOF
  /
 EOF
 
-cat > Fr.$fct-spdn-kjpaw_psl.0.3.1.test.in << EOF
- &input
-   title='Fr q',
-   zed=87.,
-   rel=$nrel,
-   config='[Xe] 4f14.0 5d10.0 6s2.0 6p6.0 6d-2.0 7s1.0 7p0.0',
-   iswitch=2,
- /
- &test
-   file_pseudo='$psdir/Fr.$fct-spdn-kjpaw_psl.0.3.1.UPF',
-   nconf=5
-   configts(1)='5d10 6s2 6p6 7s1.0'
-   configts(2)='5d10 6s2 6p6 7s0.0'
-   configts(3)='5d10 6s2 6p5 7s1.0 7p0.0'
-   configts(4)='5d10 6s2 6p6 7s0.5'
-   configts(5)='5d10 6s2 6p5 7s0.5'
- /
-EOF
-
 cat > Hf.$fct-spn-kjpaw_psl.0.2.test.in << EOF
  &input
-   title='Hf d',
+   title='Hf',
    zed=72.0,
    rel=$nrel,
    config='[Xe] 4f14 5d2.0 6s2 6p0',
@@ -164,7 +145,7 @@ EOF
 
 cat > He.$fct-kjpaw_psl.0.2.3.test.in << EOF
  &input
-   title='He q',
+   title='He',
    zed=2.0,
    rel=$nrel,
    config='1s2 2s-2 2p-2',
@@ -183,7 +164,7 @@ EOF
 
 cat > K.$fct-spn-kjpaw_psl.0.2.3.test.in << EOF
  &input
-   title='K b',
+   title='K',
    zed=19.0,
    rel=$nrel,
    config='[Ar] 3d-2 4s1 4p0',
@@ -202,7 +183,7 @@ EOF
 
 cat > Kr.$fct-n-kjpaw_psl.0.2.3.test.in << EOF
  &input
-   title='Kr q',
+   title='Kr',
    zed=36.0,
    rel=$nrel,
    config='[Ar] 3d10 4s2 4p6.00 4d-2.0',
@@ -221,7 +202,7 @@ EOF
  
 cat > Mg.$fct-n-kjpaw_psl.0.3.0.test.in << EOF
  &input
-   title='Mg c',
+   title='Mg',
    zed=12.0,
    rel=$nrel,
    config='[Ne] 3s2.0 3p0 3d-2',
@@ -239,7 +220,7 @@ EOF
 
 cat > Mn.$fct-spn-kjpaw_psl.0.3.1.test.in << EOF
  &input
-   title='Mn c',
+   title='Mn',
    zed=25.0,
    rel=$nrel,
    config='[Ar] 3d5.0 4s2 4p0',
@@ -258,7 +239,7 @@ EOF
 
 cat > Ne.$fct-n-kjpaw_psl.0.3.0.test.in << EOF
  &input
-   title='Ne q',
+   title='Ne',
    zed=10.0,
    rel=$nrel,
    config='1s2 2s2 2p6 3d-2',
@@ -277,7 +258,7 @@ EOF
 
 cat > Os.$fct-n-kjpaw_psl.0.2.3.test.in << EOF
  &input
-   title='Os q',
+   title='Os',
    zed=76.,
    rel=$nrel,
    iswitch=2,
@@ -296,7 +277,7 @@ EOF
 
 cat > Po.$fct-dn-kjpaw_psl.0.3.1.test.in << EOF
  &input
-   title='Po q',
+   title='Po',
    zed=84.,
    rel=$nrel,
    config='[Xe] 4f14.0 5d10.0 6s2.0 6p4.0 6d-2',
@@ -313,28 +294,9 @@ cat > Po.$fct-dn-kjpaw_psl.0.3.1.test.in << EOF
  /
 EOF
 
-cat > Ra.$fct-spdn-kjpaw_psl.0.3.1.test.in << EOF
- &input
-   title='Ra q',
-   zed=88.,
-   rel=$nrel,
-   config='[Xe] 4f14.0 5d10.0 6s2.0 6p6.0 6d-2.0 7s2.0 7p0.0',
-   iswitch=2,
- /
- &test
-   file_pseudo='$psdir/Ra.$fct-spdn-kjpaw_psl.0.3.1.UPF',
-   nconf=5
-   configts(1)='5d10 6s2 6p6 7s2.0'
-   configts(2)='5d10 6s2 6p6 7s1.0'
-   configts(3)='5d10 6s2 6p5 7s2.0 7p0.0'
-   configts(4)='5d10 6s2 6p6 7s1.5'
-   configts(5)='5d10 6s2 6p5 7s1.5'
- /
-EOF
-
 cat > Rb.$fct-spn-kjpaw_psl.0.2.3.test.in << EOF
  &input
-   title='Rb d',
+   title='Rb',
    zed=37.0,
    rel=$nrel,
    config='[Kr] 4d-2.0 5s1 5p0',
@@ -353,7 +315,7 @@ EOF
 
 cat > Re.$fct-spn-kjpaw_psl.0.3.1.test.in << EOF
  &input
-   title='Re q',
+   title='Re',
    zed=75.0,
    rel=$nrel,
    config='[Xe] 4f14 5d5.0 6s2 6p0',
@@ -372,7 +334,7 @@ EOF
 
 cat > Rn.$fct-dn-kjpaw_psl.0.3.1.test.in << EOF
  &input
-   title='Rn q',
+   title='Rn',
    zed=86.,
    rel=$nrel,
    config='[Xe] 4f14.0 5d10.0 6s2.0 6p6.0 6d-2.0',
@@ -391,7 +353,7 @@ EOF
 
 cat > Ru.$fct-spn-kjpaw_psl.0.3.0.test.in << EOF
  &input
-   title='Ru b',
+   title='Ru',
    zed=44.,
    rel=$nrel,
    config='[Kr] 4d6.0 5s2.0 5p0.0',
@@ -410,7 +372,7 @@ EOF
 
 cat > Sb.$fct-n-kjpaw_psl.0.3.1.test.in << EOF
  &input
-   title='Sb c',
+   title='Sb',
    zed=51.,
    rel=$nrel,
    config='[Kr] 4d10.0 5s2.0 5p3.0 5d-2.0',
@@ -429,7 +391,7 @@ EOF
 
 cat > Ti.$fct-spn-kjpaw_psl.0.3.1.test.in << EOF
  &input
-   title='Ti d',
+   title='Ti',
    zed=22.0,
    rel=$nrel,
    config='[Ar] 3d2.0 4s2 4p0',
@@ -448,7 +410,7 @@ EOF
 
 cat > V.$fct-spn-kjpaw_psl.0.2.3.test.in << EOF
  &input
-   title='V b',
+   title='V',
    zed=23.0,
    rel=$nrel,
    config='[Ar] 3d3.0 4s2 4p0',
@@ -467,7 +429,7 @@ EOF
 
 cat > Xe.$fct-n-kjpaw_psl.0.3.1.test.in << EOF
  &input
-   title='Xe q',
+   title='Xe',
    zed=54.,
    rel=$nrel,
    config='[Kr] 4d10.0 5s2.0 5p6.0 5d-2.0',
@@ -486,7 +448,7 @@ EOF
 
 cat > W.$fct-spn-kjpaw_psl.0.2.3.test.in << EOF
  &input
-   title='W c',
+   title='W',
    zed=74.0,
    rel=$nrel,
    config='[Xe] 4f14 5d4.0 6s2 6p0',

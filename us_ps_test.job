@@ -879,7 +879,7 @@ EOF
 
 cat > Tl.$fct-dn-rrkjus_psl.0.2.3.test.in << EOF
  &input
-   title='Tl q',
+   title='Tl',
    zed=81.,
    rel=$nrel,
    config='[Xe] 4f14.0 5d10.0 6s2.0 6p1.0 6d-1',
@@ -898,7 +898,7 @@ EOF
 
 cat > Y.$fct-spn-rrkjus_psl.0.2.3.test.in << EOF
  &input
-   title='Y b',
+   title='Y',
    zed=39.0,
    rel=$nrel,
    config='[Kr] 4d1.0 5s2 5p0',
@@ -917,7 +917,7 @@ EOF
 
 cat > Zn.$fct-dn-rrkjus_psl.0.2.2.test.in << EOF
  &input
-   title='Zn d',
+   title='Zn',
    zed=30.,
    rel=$nrel,
    config='[Ar] 3d10. 4s2. 4p0.0',
@@ -936,7 +936,7 @@ EOF
 
 cat > Zr.$fct-spn-rrkjus_psl.0.2.3.test.in << EOF
  &input
-   title='Zr b',
+   title='Zr',
    zed=40.0,
    rel=$nrel,
    config='[Kr] 4d2.0 5s2 5p0',

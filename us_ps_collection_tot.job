@@ -486,7 +486,7 @@ EOF
 
 cat > Ra.$fct-spdn-rrkjus_psl.0.3.1.in << EOF
  &input
-   title='Rn q',
+   title='Rn',
    zed=88.,
    rel=$nrel,
    config='[Xe] 4f14.0 5d10.0 6s2.0 6p6.0 6d0. 7s2. 7p0.',
