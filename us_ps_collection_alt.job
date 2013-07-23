@@ -117,7 +117,6 @@ cat > Be.$fct-s-rrkjus_psl.0.3.1.in << EOF
    dft='$gfun'
  /
  &inputp
-   lpaw=.true.,
    pseudotype=3,
    file_pseudopw='Be.$fct-s-rrkjus_psl.0.3.1.UPF',
    author='ADC',

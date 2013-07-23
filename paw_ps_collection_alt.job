@@ -115,7 +115,7 @@ cat > Be.$fct-s-kjpaw_psl.0.3.1.in << EOF
    title='Be',
    zed=4.0,
    rel=$nrel,
-   config='1s2.0 2s2.0 2p0',
+   config='1s2 2s2 2p0',
    iswitch=3,
    dft='$gfun'
  /
