@@ -20,7 +20,7 @@ cat > Ag.$fct-spn-kjpaw_psl.0.3.1.in << EOF
    title='Ag',
    zed=47.,
    rel=$nrel,
-   config='[Kr] 4d10.0 5s1.0 5p0.0',
+   config='[Kr] 4d9.0 5s2.0 5p0.0',
    iswitch=3,
    dft='$gfun'
  /
@@ -34,15 +34,17 @@ cat > Ag.$fct-spn-kjpaw_psl.0.3.1.in << EOF
    which_augfun='PSQ',
    rmatch_augfun_nc=.true.,
    nlcc=.true.,
+   new_core_ps=.true.,
+   rcore=0.8,
    tm=.true.
  /
 6
-4S  1  0  2.00  0.00  1.20  1.70  0.0
-5S  2  0  1.00  0.00  1.20  1.30  0.0
-4P  2  1  6.00  0.00  0.90  1.70  0.0
-5P  3  1  0.00  0.00  0.90  1.20  0.0
-4D  3  2 10.00  0.00  0.75  1.70  0.0
-4D  3  2 -2.00  0.30  0.75  1.70  0.0
+4S  1  0  2.00  0.00  0.80  1.25  0.0
+5S  2  0  2.00  0.00  0.80  1.25  0.0
+4P  2  1  6.00  0.00  0.85  1.25  0.0
+5P  2  1  0.00 -2.50  0.85  1.25  0.0
+4D  3  2  9.00  0.00  1.30  1.70  0.0
+4D  3  2  0.00  0.50  1.30  1.70  0.0
 EOF
 
 cat > As.$fct-dn-kjpaw_psl.0.3.1.in << EOF
