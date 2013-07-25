@@ -86,24 +86,6 @@ Andrea Dal Corso
 Dic. 2011
 ----------------------------------------------------------------------------
 
-Version 0.3.1 contains two new input files:
-
-paw_lan_collection.job
-us_lan_collection.job
-
-These files contain a collection of PP inputs for all Lanthanides and
-Actinides up to Am. The Actinides PPs contains only PPs with 5f,6s,6p,6d,7s,7p
-projectors, while for the Lanthanides two or three PPs are given.
-The PPs with spdfn extension have 4f,5s,5p,5d,6s,6p valence states, while
-those with spdn or spn extension have 4f electrons in the core. These PPs 
-can be generated starting from the configuration 4f^n5d^0 (divalent state) 
-or 4f^{n-1}5d^1 (trivalent state). spdn PPs are trivalent. spn PPs are 
-divalent and are available only for a few Lanthanides. 
-Uncomment the appropriate file in make_ps if you want to test these PPs.
-The PPs are very experimental. They have been tested only on the metals
-and seem to be ghost-free, but be very careful with them or wait for the
-next release before using them.
-
 Starting from version 0.3.1, pslibrary contains a set of scripts to test 
 the pseudopotentials. To run these tests give the command
 
@@ -115,16 +97,32 @@ give the command:
 
 . ../make_test
 
-In order to test the PPs of the _alt, _tot or Lanthanides and Actinides files 
+In order to test the PPs of the _alt, _tot or _lan files 
 you need to uncomment the appropriate line inside the make_test script.
 
 Note that starting from version 0.3.1 the path to QE must be specified in
-the file QE_path and no more inside make_ps or mate_test.
+the file QE_path and no more inside make_ps or make_test.
 
 It is also possible to specify a list of elements in make_ps and make_test.
 
+Version 0.3.1 contains two new input files:
+
+paw_lan_collection.job
+us_lan_collection.job
+
+These files contain a collection of PP inputs for Lanthanides with
+fixed f occupations. f electrons are frozen in the core.
+The PPs with with spdn or spn extensions have 4f electrons in the core
+and can be generated starting from the configuration 4f^n5d^0 (divalent state) 
+or 4f^{n-1}5d^1 (trivalent state). spdn PPs are trivalent. spn PPs are 
+divalent and are available only for a few Lanthanides. 
+Uncomment the appropriate line in make_ps if you want to test these PPs.
+The PPs are very experimental. They have been tested only on the metals
+and seem to be ghost-free, but be very careful with them or wait for the
+next release before using them.
+
 Andrea Dal Corso
-June 2013
+July 2013
 ----------------------------------------------------------------------------
 
 All the material included in this distribution is free software;
