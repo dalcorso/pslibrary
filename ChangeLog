@@ -149,9 +149,10 @@ Mg, Ne, Ar, Xe : These data-sets had negative dr2 problem. Slightly changed.
 pslibrary.0.3.1 (ADC, July 2013)
 
 Introduced the command make_test to test the data_sets.
-The tests are in paw_ps_test*.job and us_ps_test*.job.
+The tests are in paw_ps_test*.job and us_ps_test*.job. 
 
-Modified PPs: SR and FR Ti. Small change for negative dr2 problems. 
+Modified PPs: 
+SR and FR Ti. Small change for negative dr2 problems. 
 SR and FR Cd and Te: improved transferability. d core radius reduced.
 SR and FR Sb: improved transferability by adding 5d projectors.
 SR and FR Re: new version.
@@ -159,6 +160,8 @@ SR and FR Xe: still problems. Replaced with a PP with 4d in valence.
 SR and FR Mn and Ge: slightly changed to improve transferability in the FR case.
 SR and FR: Ag with semicore 4s and 4p states was not working substituted
 with a new one.
+
+Added PPs:
 Added PP of Be with 1s semicore states among the alternative PPs.
 Added PPs of Co, Ni, Cu, Zn with 3s and 3p semicore states among the 
 alternative PPs.
@@ -166,7 +169,9 @@ Added PPs of As, Se, Br, with 3d semicore states among the alternative PPs.
 Added a PP of Sb with 4d semicore states among the alternative PPs.
 Added a PP of Te without 4d semicore states among the alternative PPs.
 New PPs SR and FR: Po, At, Rn.
-SR and FR La: Removed
+
+Removed PPs:
+SR and FR La.
 
 Experimental PPs with fixed f occupations for Lanthanides have been added:
 paw_lan_collection.job and us_lan_collection.job.
