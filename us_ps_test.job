@@ -246,7 +246,7 @@ cat > Cd.$fct-dn-rrkjus_psl.0.3.1.test.in << EOF
  /
 EOF
 
-cat > Cl.$fct-n-rrkjus_psl.0.1.test.in << EOF
+cat > Cl.$fct-n-rrkjus_psl.0.3.0.test.in << EOF
  &input
    title='Cl',
    zed=17,
@@ -255,7 +255,7 @@ cat > Cl.$fct-n-rrkjus_psl.0.1.test.in << EOF
    iswitch=2,
  /
  &test
-   file_pseudo='$psdir/Cl.$fct-n-rrkjus_psl.0.1.UPF',
+   file_pseudo='$psdir/Cl.$fct-n-rrkjus_psl.0.3.0.UPF',
    nconf=5
    configts(1)='3s2 3p5'
    configts(2)='3s2 3p4 3d0'
