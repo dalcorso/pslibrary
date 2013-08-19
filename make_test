@@ -66,13 +66,27 @@ for elem in $element ; do
        for atom in *.in ; do
           echo -e "Making   $atom  ...\c"
           $ld1_command < ./$atom > $work/$atom.out
-          echo '  Done' 
+          warn=`grep ! $work/$atom.out | head -1 |cut -c 36-40`
+          if [ "$warn" = "" ] ;
+          then
+             echo '  Done' 
+          else
+             echo '  Done !' 
+             grep ! $work/$atom.out
+          fi
        done
    else
        for atom in "$elem"*.in ; do
           echo -e "Making   $atom  ...\c"
           $ld1_command < ./$atom > $work/$atom.out
-          echo '  Done' 
+          warn=`grep ! $work/$atom.out | head -1 |cut -c 36-40`
+          if [ "$warn" = "" ] ;
+          then
+             echo '  Done' 
+          else
+             echo '  Done !' 
+             grep ! $work/$atom.out
+          fi
        done
 
    fi
