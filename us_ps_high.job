@@ -1,0 +1,3618 @@
+#!/bin/bash
+#!
+#! Copyright (C) 2013 Andrea Dal Corso 
+#! This file is distributed under the terms of the
+#! GNU General Public License. See the file `License'
+#! in the root directory of the present distribution,
+#! or http://www.gnu.org/copyleft/gpl.txt .
+#!
+
+. ./environment.job
+
+cat > H.$fct-rrkjus_psl.1.0.0.in << EOF
+ &input
+   title='H',
+   zed=1.,
+   rel=$nrel,
+   config='1s1 2p-2',
+   iswitch=3,
+   dft='$gfun'
+ /
+ &inputp
+   lpaw=.false.,
+   pseudotype=3,
+   file_pseudopw='H.$fct-rrkjus_psl.1.0.0.UPF',
+   author='Lorenzo Paulatto',
+   lloc=1,
+   which_augfun='PSQ',
+   rmatch_augfun_nc=.true.,
+   tm=.true.
+ /
+3
+1S  1  0  1.00  0.00  0.80  1.00  0.0
+1S  1  0  0.00  0.05  0.80  1.00  0.0
+2P  2  1 -1.00  0.05  0.75  0.75  0.0
+EOF
+
+cat > He.$fct-rrkjus_psl.1.0.0.in << EOF
+ &input
+   title='He',
+   zed=2.,
+   rel=$nrel,
+   config='1s2 2p-2',
+   iswitch=3,
+   dft='$gfun'
+ /
+ &inputp
+   lpaw=.false.,
+   pseudotype=3,
+   file_pseudopw='He.$fct-rrkjus_psl.1.0.0.UPF',
+   author='ADC',
+   lloc=-1,
+   rcloc=0.6
+   which_augfun='PSQ',
+   rmatch_augfun_nc=.true.,
+   tm=.true.
+ /
+2
+1S  1  0  2.00  0.00  0.90  1.10  0.0
+1S  1  0  0.00  0.05  0.90  1.10  0.0
+EOF
+
+cat > Li.$fct-s-rrkjus_psl.1.0.0.in << EOF
+ &input
+   title='Li',
+   zed=3.,
+   rel=$nrel,
+   config='[He] 2s1 2p0',
+   iswitch=3,
+   dft='$gfun'
+ /
+ &inputp
+   lpaw=.false.,
+   pseudotype=3,
+   file_pseudopw='Li.$fct-s-rrkjus_psl.1.0.0.UPF',
+   author='ADC',
+   lloc=-1,
+   rcloc=0.6
+   which_augfun='PSQ',
+   rmatch_augfun_nc=.true.,
+   tm=.true.
+ /
+4
+1S  1  0  2.00  0.00  0.80  1.00  0.0
+2S  2  0  1.00  0.00  0.80  1.00  0.0
+2P  2  1  0.00  0.00  0.85  1.20  0.0
+2P  2  1  0.00  1.00  0.85  1.20  0.0
+EOF
+
+cat > Be.$fct-s-rrkjus_psl.1.0.0.in << EOF
+ &input
+   title='Be',
+   zed=4.,
+   rel=$nrel,
+   config='[He] 2s2 2p0',
+   iswitch=3,
+   dft='$gfun'
+ /
+ &inputp
+   lpaw=.false.,
+   pseudotype=3,
+   file_pseudopw='Be.$fct-s-rrkjus_psl.1.0.0.UPF',
+   author='ADC',
+   lloc=-1,
+   rcloc=0.7
+   which_augfun='PSQ',
+   rmatch_augfun_nc=.true.,
+   tm=.true.
+ /
+4
+1S  1  0  2.00  0.00  0.45  1.20  0.0
+2S  2  0  2.00  0.00  0.45  1.20  0.0
+2P  2  1  0.00  0.00  0.90  1.00  0.0
+2P  2  1  0.00  1.50  0.90  1.00  0.0
+EOF
+
+cat > B.$fct-n-rrkjus_psl.1.0.0.in << EOF
+ &input
+   title='B',
+   zed=5.,
+   rel=$nrel,
+   config='[He] 2s2 2p1',
+   iswitch=3,
+   dft='$gfun'
+ /
+ &inputp
+   lpaw=.false.,
+   pseudotype=3,
+   file_pseudopw='B.$fct-n-rrkjus_psl.1.0.0.UPF',
+   author='ADC',
+   lloc=-1,
+   rcloc=1.2
+   which_augfun='PSQ',
+   rmatch_augfun_nc=.true.,
+   nlcc=.true.,
+   new_core_ps=.true.,
+   rcore=0.9,
+   tm=.true.
+ /
+4
+2S  1  0  2.00  0.00  1.00  1.20  0.0
+2S  1  0  0.00  3.00  1.00  1.20  0.0
+2P  2  1  1.00  0.00  1.00  1.40  0.0
+2P  2  1  0.00  1.50  1.00  1.40  0.0
+EOF
+
+cat > C.$fct-n-rrkjus_psl.1.0.0.in << EOF
+ &input
+   title='C',
+   zed=6.,
+   rel=$nrel,
+   config='[He] 2s2 2p2',
+   iswitch=3,
+   dft='$gfun'
+ /
+ &inputp
+   lpaw=.false.,
+   pseudotype=3,
+   file_pseudopw='C.$fct-n-rrkjus_psl.1.0.0.UPF',
+   author='ADC',
+   lloc=-1,
+   rcloc=1.0
+   which_augfun='PSQ',
+   rmatch_augfun_nc=.true.,
+   nlcc=.true.,
+   new_core_ps=.true.,
+   rcore=0.7,
+   tm=.true.
+ /
+4
+2S  1  0  2.00  0.00  1.00  1.20  0.0
+2S  1  0  0.00  3.00  1.00  1.20  0.0
+2P  2  1  2.00  0.00  0.90  1.40  0.0
+2P  2  1  0.00  0.05  0.90  1.40  0.0
+EOF
+
+cat > N.$fct-n-rrkjus_psl.1.0.0.in << EOF
+ &input
+   title='N',
+   zed=7.,
+   rel=$nrel,
+   config='[He] 2s2 2p3',
+   iswitch=3,
+   dft='$gfun'
+ /
+ &inputp
+   lpaw=.false.,
+   pseudotype=3,
+   file_pseudopw='N.$fct-n-rrkjus_psl.1.0.0.UPF',
+   author='ADC',
+   lloc=-1,
+   rcloc=1.2
+   which_augfun='PSQ',
+   rmatch_augfun_nc=.true.,
+   nlcc=.true.,
+   new_core_ps=.true.,
+   rcore=0.7,
+   tm=.true.
+ /
+4
+2S  1  0  2.00  0.00  1.00  1.30  0.0
+2S  1  0  0.00  2.00  1.00  1.30  0.0
+2P  2  1  3.00  0.00  0.90  1.35  0.0
+2P  2  1  0.00  0.05  0.90  1.35  0.0
+EOF
+
+cat > O.$fct-n-rrkjus_psl.1.0.0.in << EOF
+ &input
+   title='O',
+   zed=8.,
+   rel=$nrel,
+   config='[He] 2s2 2p4',
+   iswitch=3,
+   dft='$gfun'
+ /
+ &inputp
+   lpaw=.false.,
+   pseudotype=3,
+   file_pseudopw='O.$fct-n-rrkjus_psl.1.0.0.UPF',
+   author='ADC',
+   lloc=-1,
+   rcloc=1.1
+   which_augfun='PSQ',
+   rmatch_augfun_nc=.true.,
+   nlcc=.true.,
+   new_core_ps=.true.,
+   rcore=0.7,
+   tm=.true.
+ /
+4
+2S  1  0  2.00  0.00  1.00  1.30  0.0
+2S  1  0  0.00  1.00  1.00  1.30  0.0
+2P  2  1  4.00  0.00  0.90  1.35  0.0
+2P  2  1  0.00  0.05  0.90  1.35  0.0
+EOF
+
+cat > F.$fct-n-rrkjus_psl.1.0.0.in << EOF
+ &input
+   title='F',
+   zed=9.,
+   rel=$nrel,
+   config='[He] 2s2 2p5',
+   iswitch=3,
+   dft='$gfun'
+ /
+ &inputp
+   lpaw=.false.,
+   pseudotype=3,
+   file_pseudopw='F.$fct-n-rrkjus_psl.1.0.0.UPF',
+   author='ADC',
+   lloc=-1,
+   rcloc=0.9
+   which_augfun='PSQ',
+   rmatch_augfun_nc=.true.,
+   nlcc=.true.,
+   new_core_ps=.true.,
+   rcore=0.7,
+   tm=.true.
+ /
+4
+2S  1  0  2.00  0.00  1.00  1.30  0.0
+2S  1  0  0.00  0.40  1.00  1.30  0.0
+2P  2  1  5.00  0.00  0.90  1.40  0.0
+2P  2  1  0.00  0.15  0.90  1.40  0.0
+EOF
+
+cat > Ne.$fct-n-rrkjus_psl.1.0.0.in << EOF
+ &input
+   title='Ne',
+   zed=10.,
+   rel=$nrel,
+   config='[He] 2s2 2p6',
+   iswitch=3,
+   dft='$gfun'
+ /
+ &inputp
+   lpaw=.false.,
+   pseudotype=3,
+   file_pseudopw='Ne.$fct-n-rrkjus_psl.1.0.0.UPF',
+   author='ADC',
+   lloc=-1,
+   rcloc=1.0
+   which_augfun='PSQ',
+   rmatch_augfun_nc=.true.,
+   nlcc=.true.,
+   new_core_ps=.true.,
+   rcore=0.7,
+   tm=.true.
+ /
+4
+2S  1  0  2.00  0.00  1.00  1.35  0.0
+2S  1  0  0.00  0.05  1.00  1.35  0.0
+2P  2  1  6.00  0.00  0.90  1.35  0.0
+2P  2  1  0.00  0.05  0.90  1.35  0.0
+EOF
+cat > Na.$fct-spn-rrkjus_psl.1.0.0.in << EOF
+ &input
+   title='Na',
+   zed=11.,
+   rel=$nrel,
+   config='[Ne] 3s1 3p0',
+   iswitch=3,
+   dft='$gfun'
+ /
+ &inputp
+   lpaw=.false.,
+   pseudotype=3,
+   file_pseudopw='Na.$fct-spn-rrkjus_psl.1.0.0.UPF',
+   author='ADC',
+   lloc=-1,
+   rcloc=1.0
+   which_augfun='PSQ',
+   rmatch_augfun_nc=.true.,
+   nlcc=.true.,
+   new_core_ps=.true.,
+   rcore=0.7,
+   tm=.true.
+ /
+4
+2S  1  0  2.00  0.00  1.00  1.25  0.0
+3S  2  0  1.00  0.00  1.00  1.25  0.0
+2P  2  1  6.00  0.00  0.90  1.30  0.0
+3P  2  1  0.00  5.00  0.90  1.30  0.0
+EOF
+
+cat > Mg.$fct-spn-rrkjus_psl.1.0.0.in << EOF
+ &input
+   title='Mg',
+   zed=12.,
+   rel=$nrel,
+   config='[Ne] 3s2.0 3p0',
+   iswitch=3,
+   dft='$gfun'
+ /
+ &inputp
+   lpaw=.false.,
+   pseudotype=3,
+   file_pseudopw='Mg.$fct-spn-rrkjus_psl.1.0.0.UPF',
+   author='ADC',
+   lloc=-1,
+   rcloc=1.0
+   which_augfun='PSQ',
+   rmatch_augfun_nc=.true.,
+   nlcc=.true.,
+   new_core_ps=.true.,
+   rcore=0.7,
+   tm=.true.
+ /
+4
+2S  1  0  2.00  0.00  0.70  0.90  0.0
+3S  2  0  2.00  0.00  0.70  0.90  0.0
+2P  2  1  6.00  0.00  0.90  1.40  0.0
+3P  3  1  0.00  0.00  0.90  1.40  0.0
+EOF
+
+cat > Al.$fct-n-rrkjus_psl.1.0.0.in << EOF
+ &input
+   title='Al',
+   zed=13.,
+   rel=$nrel,
+   config='[Ne] 3s2 3p1 3d-1',
+   iswitch=3,
+   dft='$gfun'
+ /
+ &inputp
+   lpaw=.false.,
+   pseudotype=3,
+   file_pseudopw='Al.$fct-n-rrkjus_psl.1.0.0.UPF',
+   author='ADC',
+   lloc=-1,
+   rcloc=1.9,
+   which_augfun='PSQ',
+   rmatch_augfun_nc=.true.,
+   nlcc=.true.,
+   new_core_ps=.true.,
+   rcore=1.8,
+   tm=.true.
+ /
+6
+3S  1  0  2.00  0.00  1.70  1.90  0.0
+3S  1  0  0.00  6.00  1.70  1.90  0.0
+3P  2  1  1.00  0.00  1.70  2.00  0.0
+3P  2  1  0.00  3.50  1.70  2.00  0.0
+3D  3  2  0.00  0.10  1.70  1.90  0.0
+3D  3  2  0.00  0.30  1.70  1.90  0.0
+EOF
+
+cat > Si.$fct-n-rrkjus_psl.1.0.0.in << EOF
+ &input
+   title='Si',
+   zed=14.,
+   rel=$nrel,
+   config='[Ne] 3s2 3p2 3d-1',
+   iswitch=3,
+   dft='$gfun'
+ /
+ &inputp
+   lpaw=.false.,
+   pseudotype=3,
+   file_pseudopw='Si.$fct-n-rrkjus_psl.1.0.0.UPF',
+   author='ADC',
+   lloc=-1,
+   rcloc=1.9,
+   which_augfun='PSQ',
+   rmatch_augfun_nc=.true.,
+   nlcc=.true.,
+   new_core_ps=.true.,
+   rcore=1.3,
+   tm=.true.
+ /
+6
+3S  1  0  2.00  0.00  1.60  1.80  0.0
+3S  1  0  0.00  6.00  1.60  1.80  0.0
+3P  2  1  2.00  0.00  1.60  1.80  0.0
+3P  2  1  0.00  6.00  1.60  1.80  0.0
+3D  3  2  0.00  0.10  1.60  1.80  0.0
+3D  3  2  0.00  0.30  1.60  1.80  0.0
+EOF
+
+cat > P.$fct-n-rrkjus_psl.1.0.0.in << EOF
+ &input
+   title='P',
+   zed=15.,
+   rel=$nrel,
+   config='[Ne] 3s2 3p3 3d-1',
+   iswitch=3,
+   dft='$gfun'
+ /
+ &inputp
+   lpaw=.false.,
+   pseudotype=3,
+   file_pseudopw='P.$fct-n-rrkjus_psl.1.0.0.UPF',
+   author='ADC',
+   lloc=-1,
+   rcloc=1.8,
+   which_augfun='PSQ',
+   rmatch_augfun_nc=.true.,
+   nlcc=.true.,
+   new_core_ps=.true.,
+   rcore=1.5,
+   tm=.true.
+ /
+6
+3S  1  0  2.00  0.00  1.50  1.80  0.0
+3S  1  0  0.00  6.00  1.50  1.80  0.0
+3P  2  1  3.00  0.00  1.50  1.80  0.0
+3P  2  1  0.00  3.00  1.50  1.80  0.0
+3D  3  2  0.00  0.10  1.50  1.80  0.0
+3D  3  2  0.00  0.30  1.50  1.80  0.0
+EOF
+
+cat > S.$fct-n-rrkjus_psl.1.0.0.in << EOF
+ &input
+   title='S',
+   zed=16.,
+   rel=$nrel,
+   config='[Ne] 3s2 3p4 3d-1',
+   iswitch=3,
+   dft='$gfun'
+ /
+ &inputp
+   lpaw=.false.,
+   pseudotype=3,
+   file_pseudopw='S.$fct-n-rrkjus_psl.1.0.0.UPF',
+   author='ADC',
+   lloc=-1,
+   rcloc=1.8,
+   which_augfun='PSQ',
+   rmatch_augfun_nc=.true.,
+   nlcc=.true.,
+   new_core_ps=.true.,
+   rcore=1.5,
+   tm=.true.
+ /
+6
+3S  1  0  2.00  0.00  1.50  1.70  0.0
+3S  1  0  0.00  6.00  1.50  1.70  0.0
+3P  2  1  4.00  0.00  1.50  1.70  0.0
+3P  2  1  0.00  3.00  1.50  1.70  0.0
+3D  3  2  0.00  0.10  1.50  1.70  0.0
+3D  3  2  0.00  0.30  1.50  1.70  0.0
+EOF
+
+cat > Cl.$fct-n-rrkjus_psl.1.0.0.in << EOF
+ &input
+   title='Cl',
+   zed=17.,
+   rel=$nrel,
+   config='[Ne] 3s2 3p5 3d-1',
+   iswitch=3,
+   dft='$gfun'
+ /
+ &inputp
+   lpaw=.false.,
+   pseudotype=3,
+   file_pseudopw='Cl.$fct-n-rrkjus_psl.1.0.0.UPF',
+   author='ADC',
+   lloc=-1,
+   rcloc=1.8,
+   which_augfun='PSQ',
+   rmatch_augfun_nc=.true.,
+   nlcc=.true.,
+   new_core_ps=.true.,
+   rcore=1.0,
+   tm=.true.
+ /
+6
+3S  1  0  2.00  0.00  1.20  1.60  0.0
+3S  1  0  0.00  6.20  1.20  1.60  0.0
+3P  2  1  5.00  0.00  1.30  1.60  0.0
+3P  2  1  0.00  3.20  1.30  1.60  0.0
+3D  3  2  0.00  0.10  1.30  1.60  0.0
+3D  3  2  0.00  0.30  1.30  1.60  0.0
+EOF
+
+cat > Ar.$fct-n-rrkjus_psl.1.0.0.in << EOF
+ &input
+   title='Ar',
+   zed=18.,
+   rel=$nrel,
+   config='[Ne] 3s2 3p6 3d-1',
+   iswitch=3,
+   dft='$gfun'
+ /
+ &inputp
+   lpaw=.false.,
+   pseudotype=3,
+   file_pseudopw='Ar.$fct-n-rrkjus_psl.1.0.0.UPF',
+   author='ADC',
+   lloc=-1,
+   rcloc=1.8,
+   which_augfun='PSQ',
+   rmatch_augfun_nc=.true.,
+   nlcc=.true.,
+   new_core_ps=.true.,
+   rcore=1.0,
+   tm=.true.
+ /
+6
+3S  1  0  2.00  0.00  1.20  1.50  0.0
+3S  1  0  0.00  5.00  1.20  1.50  0.0
+3P  2  1  6.00  0.00  1.20  1.50  0.0
+3P  2  1  0.00  2.50  1.20  1.50  0.0
+3D  3  2  0.00  0.10  1.40  1.50  0.0
+3D  3  2  0.00  0.30  1.40  1.50  0.0
+EOF
+
+cat > K.$fct-spn-rrkjus_psl.1.0.0.in << EOF
+ &input
+   title='K',
+   zed=19.,
+   rel=$nrel,
+   config='[Ar] 4s1 4p0 3d-1',
+   iswitch=3,
+   dft='$gfun'
+ /
+ &inputp
+   lpaw=.false.,
+   pseudotype=3,
+   file_pseudopw='K.$fct-spn-rrkjus_psl.1.0.0.UPF',
+   author='ADC',
+   lloc=-1,
+   rcloc=1.5,
+   which_augfun='PSQ',
+   rmatch_augfun_nc=.true.,
+   nlcc=.true.,
+   new_core_ps=.true.,
+   rcore=1.0,
+   tm=.true.
+ /
+6
+3S  1  0  2.00  0.00  1.20  1.30  0.0
+4S  2  0  1.00  0.00  1.20  1.30  0.0
+3P  2  1  6.00  0.00  1.40  1.60  0.0
+4P  3  1  0.00  0.00  1.40  1.60  0.0
+3D  3  2  0.00  0.05  1.20  1.70  0.0
+3D  3  2  0.00  1.00  1.20  1.70  0.0
+EOF
+
+cat > Ca.$fct-spn-rrkjus_psl.1.0.0.in << EOF
+ &input
+   title='Ca',
+   zed=20.,
+   rel=$nrel,
+   config='[Ar] 4s2 4p0 3d-1',
+   iswitch=3,
+   dft='$gfun'
+ /
+ &inputp
+   lpaw=.false.,
+   pseudotype=3,
+   file_pseudopw='Ca.$fct-spn-rrkjus_psl.1.0.0.UPF',
+   author='ADC',
+   lloc=-1,
+   rcloc=1.5,
+   which_augfun='PSQ',
+   rmatch_augfun_nc=.true.,
+   nlcc=.true.,
+   new_core_ps=.true.,
+   rcore=1.0,
+   tm=.true.
+ /
+6
+3S  1  0  2.00  0.00  1.20  1.30  0.0
+4S  2  0  2.00  0.00  1.20  1.30  0.0
+3P  2  1  6.00  0.00  1.40  1.60  0.0
+4P  3  1  0.00  0.00  1.40  1.60  0.0
+3D  3  2  0.00  0.05  1.20  1.70  0.0
+3D  3  2  0.00  1.00  1.20  1.70  0.0
+EOF
+
+cat > Sc.$fct-spn-rrkjus_psl.1.0.0.in << EOF
+ &input
+   title='Sc',
+   zed=21.,
+   rel=$nrel,
+   config='[Ar] 4s2 4p0 3d1',
+   iswitch=3,
+   dft='$gfun'
+ /
+ &inputp
+   lpaw=.false.,
+   pseudotype=3,
+   file_pseudopw='Sc.$fct-spn-rrkjus_psl.1.0.0.UPF',
+   author='ADC',
+   lloc=-1,
+   rcloc=1.2,
+   which_augfun='PSQ',
+   rmatch_augfun_nc=.true.,
+   nlcc=.true.,
+   new_core_ps=.true.,
+   rcore=0.8,
+   tm=.true.
+ /
+6
+3S  1  0  2.00  0.00  0.90  1.30  0.0
+4S  2  0  2.00  0.00  0.90  1.30  0.0
+3P  2  1  6.00  0.00  0.90  1.45  0.0
+4P  3  1  0.00  7.00  0.90  1.45  0.0
+3D  3  2  1.00  0.00  1.00  1.50  0.0
+3D  3  2  0.00  6.00  1.00  1.50  0.0
+EOF
+
+cat > Ti.$fct-spn-rrkjus_psl.1.0.0.in << EOF
+ &input
+   title='Ti',
+   zed=22.,
+   rel=$nrel,
+   config='[Ar] 4s2 4p0 3d2',
+   iswitch=3,
+   dft='$gfun'
+ /
+ &inputp
+   lpaw=.false.,
+   pseudotype=3,
+   file_pseudopw='Ti.$fct-spn-rrkjus_psl.1.0.0.UPF',
+   author='ADC',
+   lloc=-1,
+   rcloc=1.6,
+   which_augfun='PSQ',
+   rmatch_augfun_nc=.true.,
+   nlcc=.true.,
+   new_core_ps=.true.,
+   rcore=0.8,
+   tm=.true.
+ /
+6
+3S  1  0  2.00  0.00  0.85  1.30  0.0
+4S  2  0  2.00  0.00  0.85  1.30  0.0
+3P  2  1  6.00  0.00  0.80  1.60  0.0
+4P  3  1  0.00  4.00  0.80  1.60  0.0
+3D  3  2  2.00  0.00  0.80  1.50  0.0
+3D  3  2  0.00  0.05  0.80  1.50  0.0
+EOF
+
+cat > V.$fct-spn-rrkjus_psl.1.0.0.in << EOF
+ &input
+   title='V',
+   zed=23.,
+   rel=$nrel,
+   config='[Ar] 4s2 4p0 3d3',
+   iswitch=3,
+   dft='$gfun'
+ /
+ &inputp
+   lpaw=.false.,
+   pseudotype=3,
+   file_pseudopw='V.$fct-spn-rrkjus_psl.1.0.0.UPF',
+   author='ADC',
+   lloc=-1,
+   rcloc=1.5,
+   which_augfun='PSQ',
+   rmatch_augfun_nc=.true.,
+   nlcc=.true.,
+   new_core_ps=.true.,
+   rcore=0.8,
+   tm=.true.
+ /
+6
+3S  1  0  2.00  0.00  0.75  1.55  0.0
+4S  2  0  2.00  0.00  0.75  1.55  0.0
+3P  2  1  6.00  0.00  0.85  1.40  0.0
+4P  3  1  0.00  7.00  0.85  1.40  0.0
+3D  3  2  3.00  0.00  1.00  1.50  0.0
+3D  3  2  0.00  5.00  1.00  1.50  0.0
+EOF
+
+cat > Cr.$fct-spn-rrkjus_psl.1.0.0.in << EOF
+ &input
+   title='Cr',
+   zed=24.,
+   rel=$nrel,
+   config='[Ar] 4s2 4p0 3d4',
+   iswitch=3,
+   dft='$gfun'
+ /
+ &inputp
+   lpaw=.false.,
+   pseudotype=3,
+   file_pseudopw='Cr.$fct-spn-rrkjus_psl.1.0.0.UPF',
+   author='ADC',
+   lloc=-1,
+   rcloc=1.4,
+   which_augfun='PSQ',
+   rmatch_augfun_nc=.true.,
+   nlcc=.true.,
+   new_core_ps=.true.,
+   rcore=0.8,
+   tm=.true.
+ /
+6
+3S  1  0  2.00  0.00  0.75  1.53  0.0
+4S  2  0  2.00  0.00  0.75  1.53  0.0
+3P  2  1  6.00  0.00  1.00  1.35  0.0
+4P  3  1  0.00  7.00  1.00  1.35  0.0
+3D  3  2  4.00  0.00  1.10  1.65  0.0
+3D  3  2  0.00  0.05  1.10  1.65  0.0
+EOF
+
+cat > Mn.$fct-spn-rrkjus_psl.1.0.0.in << EOF
+ &input
+   title='Mn',
+   zed=25.,
+   rel=$nrel,
+   config='[Ar] 4s2 4p0 3d5',
+   iswitch=3,
+   dft='$gfun'
+ /
+ &inputp
+   lpaw=.false.,
+   pseudotype=3,
+   file_pseudopw='Mn.$fct-spn-rrkjus_psl.1.0.0.UPF',
+   author='ADC',
+   lloc=-1,
+   rcloc=1.4,
+   which_augfun='PSQ',
+   rmatch_augfun_nc=.true.,
+   nlcc=.true.,
+   new_core_ps=.true.,
+   rcore=0.8,
+   tm=.true.
+ /
+6
+3S  1  0  2.00  0.00  0.65  1.40  0.0
+4S  2  0  2.00  0.00  0.65  1.40  0.0
+3P  2  1  6.00  0.00  0.85  1.30  0.0
+4P  3  1  0.00  7.00  0.85  1.30  0.0
+3D  3  2  5.00  0.00  1.00  1.55  0.0
+3D  3  2  0.00  0.05  1.00  1.55  0.0
+EOF
+
+cat > Fe.$fct-spn-rrkjus_psl.1.0.0.in << EOF
+ &input
+   title='Fe',
+   zed=26.,
+   rel=$nrel,
+   config='[Ar] 4s2 4p0 3d6',
+   iswitch=3,
+   dft='$gfun'
+ /
+ &inputp
+   lpaw=.false.,
+   pseudotype=3,
+   file_pseudopw='Fe.$fct-spn-rrkjus_psl.1.0.0.UPF',
+   author='ADC',
+   lloc=-1,
+   rcloc=1.5,
+   which_augfun='PSQ',
+   rmatch_augfun_nc=.true.,
+   nlcc=.true.,
+   new_core_ps=.true.,
+   rcore=0.8,
+   tm=.true.
+ /
+6
+3S  1  0  2.00  0.00  0.70  1.20  0.0
+4S  2  0  2.00  0.00  0.70  1.20  0.0
+3P  2  1  6.00  0.00  1.00  1.30  0.0
+4P  3  1  0.00  6.00  1.00  1.30  0.0
+3D  3  2  6.00  0.00  1.00  1.40  0.0
+3D  3  2  0.00  4.50  1.00  1.40  0.0
+EOF
+
+cat > Co.$fct-spn-rrkjus_psl.1.0.0.in << EOF
+ &input
+   title='Co',
+   zed=27.,
+   rel=$nrel,
+   config='[Ar] 4s2 4p0 3d7',
+   iswitch=3,
+   dft='$gfun'
+ /
+ &inputp
+   lpaw=.false.,
+   pseudotype=3,
+   file_pseudopw='Co.$fct-spn-rrkjus_psl.1.0.0.UPF',
+   author='ADC',
+   lloc=-1,
+   rcloc=1.5,
+   which_augfun='PSQ',
+   rmatch_augfun_nc=.true.,
+   nlcc=.true.,
+   new_core_ps=.true.,
+   rcore=0.8,
+   tm=.true.
+ /
+6
+3S  1  0  2.00  0.00  1.00  1.20  0.0
+4S  2  0  2.00  0.00  1.00  1.20  0.0
+3P  2  1  6.00  0.00  1.00  1.20  0.0
+4P  3  1  0.00  7.00  1.00  1.20  0.0
+3D  3  2  7.00  0.00  1.00  1.40  0.0
+3D  3  2  0.00  4.50  1.00  1.40  0.0
+EOF
+
+cat > Ni.$fct-spn-rrkjus_psl.1.0.0.in << EOF
+ &input
+   title='Ni',
+   zed=28.,
+   rel=$nrel,
+   config='[Ar] 4s2 4p0 3d8',
+   iswitch=3,
+   dft='$gfun'
+ /
+ &inputp
+   lpaw=.false.,
+   pseudotype=3,
+   file_pseudopw='Ni.$fct-spn-rrkjus_psl.1.0.0.UPF',
+   author='ADC',
+   lloc=-1,
+   rcloc=1.5,
+   which_augfun='PSQ',
+   rmatch_augfun_nc=.true.,
+   nlcc=.true.,
+   new_core_ps=.true.,
+   rcore=0.8,
+   tm=.true.
+ /
+6
+3S  1  0  2.00  0.00  0.80  1.20  0.0
+4S  2  0  2.00  0.00  0.80  1.20  0.0
+3P  2  1  6.00  0.00  1.00  1.20  0.0
+4P  3  1  0.00  7.00  1.00  1.20  0.0
+3D  3  2  8.00  0.00  1.00  1.40  0.0
+3D  3  2  0.00  4.00  1.00  1.40  0.0
+EOF
+
+cat > Cu.$fct-spn-rrkjus_psl.1.0.0.in << EOF
+ &input
+   title='Cu',
+   zed=29.,
+   rel=$nrel,
+   config='[Ar] 4s1 4p0 3d10',
+   iswitch=3,
+   dft='$gfun'
+ /
+ &inputp
+   lpaw=.false.,
+   pseudotype=3,
+   file_pseudopw='Cu.$fct-spn-rrkjus_psl.1.0.0.UPF',
+   author='ADC',
+   lloc=-1,
+   rcloc=1.4,
+   which_augfun='PSQ',
+   rmatch_augfun_nc=.true.,
+   nlcc=.true.,
+   new_core_ps=.true.,
+   rcore=0.8,
+   tm=.true.
+ /
+6
+3S  1  0  2.00  0.00  1.00  1.25  0.0
+4S  2  0  1.00  0.00  1.00  1.25  0.0
+3P  2  1  6.00  0.00  1.10  1.20  0.0
+4P  3  1  0.00  7.00  1.10  1.20  0.0
+3D  3  2 10.00  0.00  1.10  1.45  0.0
+3D  3  2  0.00  0.05  1.10  1.45  0.0
+EOF
+
+cat > Zn.$fct-spn-rrkjus_psl.1.0.0.in << EOF
+ &input
+   title='Zn',
+   zed=30.,
+   rel=$nrel,
+   config='[Ar] 4s2 4p0 3d10',
+   iswitch=3,
+   dft='$gfun'
+ /
+ &inputp
+   lpaw=.false.,
+   pseudotype=3,
+   file_pseudopw='Zn.$fct-spn-rrkjus_psl.1.0.0.UPF',
+   author='ADC',
+   lloc=-1,
+   rcloc=1.5,
+   which_augfun='PSQ',
+   rmatch_augfun_nc=.true.,
+   nlcc=.true.,
+   new_core_ps=.true.,
+   rcore=0.8,
+   tm=.true.
+ /
+6
+3S  1  0  2.00  0.00  0.80  1.25  0.0
+4S  2  0  2.00  0.00  0.80  1.25  0.0
+3P  2  1  6.00  0.00  1.00  1.20  0.0
+4P  3  1  0.00  7.00  1.00  1.20  0.0
+3D  3  2 10.00  0.00  1.00  1.40  0.0
+3D  3  2  0.00  0.05  1.00  1.40  0.0
+EOF
+
+cat > Ga.$fct-dn-rrkjus_psl.1.0.0.in << EOF
+ &input
+   title='Ga',
+   zed=31.,
+   rel=$nrel,
+   config='[Ar] 4s2 4p1 3d10',
+   iswitch=3,
+   dft='$gfun'
+ /
+ &inputp
+   lpaw=.false.,
+   pseudotype=3,
+   file_pseudopw='Ga.$fct-dn-rrkjus_psl.1.0.0.UPF',
+   author='ADC',
+   lloc=-1,
+   rcloc=1.9,
+   which_augfun='PSQ',
+   rmatch_augfun_nc=.true.,
+   nlcc=.true.,
+   new_core_ps=.true.,
+   rcore=1.2,
+   tm=.true.
+ /
+6
+4S  1  0  2.00  0.00  1.30  1.90  0.0
+4S  1  0  0.00  6.00  1.30  1.90  0.0
+4P  2  1  1.00  0.00  2.00  2.20  0.0
+4P  2  1  0.00  6.00  2.00  2.20  0.0
+3D  3  2 10.00  0.00  1.30  1.90  0.0
+3D  3  2  0.00  0.05  1.30  1.90  0.0
+EOF
+
+cat > Ge.$fct-dn-rrkjus_psl.1.0.0.in << EOF
+ &input
+   title='Ge',
+   zed=32.,
+   rel=$nrel,
+   config='[Ar] 4s2 4p2 3d10',
+   iswitch=3,
+   dft='$gfun'
+ /
+ &inputp
+   lpaw=.false.,
+   pseudotype=3,
+   file_pseudopw='Ge.$fct-dn-rrkjus_psl.1.0.0.UPF',
+   author='ADC',
+   lloc=-1,
+   rcloc=1.9,
+   which_augfun='PSQ',
+   rmatch_augfun_nc=.true.,
+   nlcc=.true.,
+   new_core_ps=.true.,
+   rcore=1.8,
+   tm=.true.
+ /
+6
+4S  1  0  2.00  0.00  1.30  1.70  0.0
+4S  1  0  0.00  6.00  1.30  1.70  0.0
+4P  2  1  2.00  0.00  1.80  1.90  0.0
+4P  2  1  0.00  6.00  1.80  1.90  0.0
+3D  3  2 10.00  0.00  1.30  1.70  0.0
+3D  3  2  0.00  0.05  1.30  1.70  0.0
+EOF
+
+cat > As.$fct-dn-rrkjus_psl.1.0.0.in << EOF
+ &input
+   title='As',
+   zed=33.,
+   rel=$nrel,
+   config='[Ar] 4s2 4p3 3d10',
+   iswitch=3,
+   dft='$gfun'
+ /
+ &inputp
+   lpaw=.false.,
+   pseudotype=3,
+   file_pseudopw='As.$fct-dn-rrkjus_psl.1.0.0.UPF',
+   author='ADC',
+   lloc=-1,
+   rcloc=2.0,
+   which_augfun='PSQ',
+   rmatch_augfun_nc=.true.,
+   nlcc=.true.,
+   new_core_ps=.true.,
+   rcore=1.0,
+   tm=.true.
+ /
+6
+4S  1  0  2.00  0.00  1.50  1.80  0.0
+4S  1  0  0.00  2.00  1.50  1.80  0.0
+4P  2  1  3.00  0.00  1.60  1.80  0.0
+4P  2  1  0.00  2.00  1.60  1.80  0.0
+3D  3  2 10.00  0.00  1.20  1.70  0.0
+3D  3  2  0.00  0.05  1.20  1.70  0.0
+EOF
+
+cat > Se.$fct-dn-rrkjus_psl.1.0.0.in << EOF
+ &input
+   title='Se',
+   zed=34.,
+   rel=$nrel,
+   config='[Ar] 4s2 4p4 3d10',
+   iswitch=3,
+   dft='$gfun'
+ /
+ &inputp
+   lpaw=.false.,
+   pseudotype=3,
+   file_pseudopw='Se.$fct-dn-rrkjus_psl.1.0.0.UPF',
+   author='ADC',
+   lloc=-1,
+   rcloc=1.9,
+   which_augfun='PSQ',
+   rmatch_augfun_nc=.true.,
+   nlcc=.true.,
+   new_core_ps=.true.,
+   rcore=1.8,
+   tm=.true.
+ /
+6
+4S  1  0  2.00  0.00  1.30  1.70  0.0
+4S  1  0  0.00  6.00  1.30  1.70  0.0
+4P  2  1  4.00  0.00  1.40  1.70  0.0
+4P  2  1  0.00  6.00  1.40  1.70  0.0
+3D  3  2 10.00  0.00  1.30  1.50  0.0
+3D  3  2  0.00  0.05  1.30  1.50  0.0
+EOF
+
+cat > Br.$fct-dn-rrkjus_psl.1.0.0.in << EOF
+ &input
+   title='Br',
+   zed=35.,
+   rel=$nrel,
+   config='[Ar] 4s2 4p5 3d10',
+   iswitch=3,
+   dft='$gfun'
+ /
+ &inputp
+   lpaw=.false.,
+   pseudotype=3,
+   file_pseudopw='Br.$fct-dn-rrkjus_psl.1.0.0.UPF',
+   author='ADC',
+   lloc=-1,
+   rcloc=1.9,
+   which_augfun='PSQ',
+   rmatch_augfun_nc=.true.,
+   nlcc=.true.,
+   new_core_ps=.true.,
+   rcore=1.8,
+   tm=.true.
+ /
+6
+4S  1  0  2.00  0.00  1.30  1.70  0.0
+4S  1  0  0.00  6.00  1.30  1.70  0.0
+4P  2  1  5.00  0.00  1.40  1.70  0.0
+4P  2  1  0.00  6.00  1.40  1.70  0.0
+3D  3  2 10.00  0.00  1.30  1.50  0.0
+3D  3  2  0.00  0.05  1.30  1.50  0.0
+EOF
+
+cat > Kr.$fct-dn-rrkjus_psl.1.0.0.in << EOF
+ &input
+   title='Kr',
+   zed=36.,
+   rel=$nrel,
+   config='[Ar] 4s2 4p6 3d10',
+   iswitch=3,
+   dft='$gfun'
+ /
+ &inputp
+   lpaw=.false.,
+   pseudotype=3,
+   file_pseudopw='Kr.$fct-dn-rrkjus_psl.1.0.0.UPF',
+   author='ADC',
+   lloc=-1,
+   rcloc=2.0,
+   which_augfun='PSQ',
+   rmatch_augfun_nc=.true.,
+   nlcc=.true.,
+   new_core_ps=.true.,
+   rcore=1.8,
+   tm=.true.
+ /
+6
+4S  1  0  2.00  0.00  1.30  1.50  0.0
+4S  1  0  0.00  6.00  1.30  1.50  0.0
+4P  2  1  6.00  0.00  1.30  1.60  0.0
+4P  2  1  0.00  6.00  1.30  1.60  0.0
+3D  3  2 10.00  0.00  1.30  1.50  0.0
+3D  3  2  0.00  0.05  1.30  1.50  0.0
+EOF
+
+cat > Rb.$fct-spn-rrkjus_psl.1.0.0.in << EOF
+ &input
+   title='Rb',
+   zed=37.,
+   rel=$nrel,
+   config='[Kr] 5s1 5p0 4d-1',
+   iswitch=3,
+   dft='$gfun'
+ /
+ &inputp
+   lpaw=.false.,
+   pseudotype=3,
+   file_pseudopw='Rb.$fct-spn-rrkjus_psl.1.0.0.UPF',
+   author='ADC',
+   lloc=-1,
+   rcloc=1.5,
+   which_augfun='PSQ',
+   rmatch_augfun_nc=.true.,
+   nlcc=.true.,
+   new_core_ps=.true.,
+   rcore=1.2,
+   tm=.true.
+ /
+6
+4S  1  0  2.00  0.00  1.30  1.50  0.0
+5S  2  0  1.00  0.00  1.30  1.50  0.0
+4P  2  1  6.00  0.00  1.40  1.60  0.0
+5P  3  1  0.00  0.00  1.40  1.60  0.0
+4D  3  2  0.00  0.05  1.20  1.80  0.0
+4D  3  2  0.00  1.00  1.20  1.80  0.0
+EOF
+
+cat > Sr.$fct-spn-rrkjus_psl.1.0.0.in << EOF
+ &input
+   title='Sr',
+   zed=38.,
+   rel=$nrel,
+   config='[Kr] 5s2 5p0 4d-1',
+   iswitch=3,
+   dft='$gfun'
+ /
+ &inputp
+   lpaw=.false.,
+   pseudotype=3,
+   file_pseudopw='Sr.$fct-spn-rrkjus_psl.1.0.0.UPF',
+   author='ADC',
+   lloc=-1,
+   rcloc=1.9,
+   which_augfun='PSQ',
+   rmatch_augfun_nc=.true.,
+   nlcc=.true.,
+   new_core_ps=.true.,
+   rcore=1.2,
+   tm=.true.
+ /
+6
+4S  1  0  2.00  0.00  1.30  1.50  0.0
+5S  2  0  2.00  0.00  1.30  1.50  0.0
+4P  2  1  6.00  0.00  1.40  1.60  0.0
+5P  3  1  0.00  0.00  1.40  1.60  0.0
+4D  3  2  0.00  0.05  1.20  1.70  0.0
+4D  3  2  0.00  1.00  1.20  1.70  0.0
+EOF
+
+cat > Y.$fct-spn-rrkjus_psl.1.0.0.in << EOF
+ &input
+   title='Y',
+   zed=39.,
+   rel=$nrel,
+   config='[Kr] 5s2 5p0 4d1',
+   iswitch=3,
+   dft='$gfun'
+ /
+ &inputp
+   lpaw=.false.,
+   pseudotype=3,
+   file_pseudopw='Y.$fct-spn-rrkjus_psl.1.0.0.UPF',
+   author='ADC',
+   lloc=-1,
+   rcloc=1.6,
+   which_augfun='PSQ',
+   rmatch_augfun_nc=.true.,
+   nlcc=.true.,
+   new_core_ps=.true.,
+   rcore=1.2,
+   tm=.true.
+ /
+6
+4S  1  0  2.00  0.00  1.20  1.40  0.0
+5S  2  0  2.00  0.00  1.20  1.40  0.0
+4P  2  1  6.00  0.00  1.30  1.60  0.0
+5P  3  1  0.00  0.00  1.30  1.60  0.0
+4D  3  2  1.00  0.00  1.20  1.80  0.0
+4D  3  2  0.00  0.50  1.20  1.80  0.0
+EOF
+
+cat > Zr.$fct-spn-rrkjus_psl.1.0.0.in << EOF
+ &input
+   title='Zr',
+   zed=40.,
+   rel=$nrel,
+   config='[Kr] 5s2 5p0 4d2',
+   iswitch=3,
+   dft='$gfun'
+ /
+ &inputp
+   lpaw=.false.,
+   pseudotype=3,
+   file_pseudopw='Zr.$fct-spn-rrkjus_psl.1.0.0.UPF',
+   author='ADC',
+   lloc=-1,
+   rcloc=1.5,
+   which_augfun='PSQ',
+   rmatch_augfun_nc=.true.,
+   nlcc=.true.,
+   new_core_ps=.true.,
+   rcore=1.2,
+   tm=.true.
+ /
+6
+4S  1  0  2.00  0.00  1.20  1.30  0.0
+5S  2  0  2.00  0.00  1.20  1.30  0.0
+4P  2  1  6.00  0.00  1.20  1.50  0.0
+5P  3  1  0.00  0.00  1.20  1.50  0.0
+4D  3  2  2.00  0.00  1.20  1.60  0.0
+4D  3  2  0.00  0.50  1.20  1.60  0.0
+EOF
+
+cat > Nb.$fct-spn-rrkjus_psl.1.0.0.in << EOF
+ &input
+   title='Nb',
+   zed=41.,
+   rel=$nrel,
+   config='[Kr] 5s2 5p0 4d3',
+   iswitch=3,
+   dft='$gfun'
+ /
+ &inputp
+   lpaw=.false.,
+   pseudotype=3,
+   file_pseudopw='Nb.$fct-spn-rrkjus_psl.1.0.0.UPF',
+   author='ADC',
+   lloc=-1,
+   rcloc=1.5,
+   which_augfun='PSQ',
+   rmatch_augfun_nc=.true.,
+   nlcc=.true.,
+   new_core_ps=.true.,
+   rcore=1.2,
+   tm=.true.
+ /
+6
+4S  1  0  2.00  0.00  1.10  1.15  0.0
+5S  2  0  2.00  0.00  1.10  1.15  0.0
+4P  2  1  6.00  0.00  1.10  1.50  0.0
+5P  3  1  0.00  0.00  1.10  1.50  0.0
+4D  3  2  3.00  0.00  1.30  1.70  0.0
+4D  3  2  0.00  1.00  1.30  1.70  0.0
+EOF
+
+cat > Mo.$fct-spn-rrkjus_psl.1.0.0.in << EOF
+ &input
+   title='Mo',
+   zed=42.,
+   rel=$nrel,
+   config='[Kr] 5s2 5p0 4d4',
+   iswitch=3,
+   dft='$gfun'
+ /
+ &inputp
+   lpaw=.false.,
+   pseudotype=3,
+   file_pseudopw='Mo.$fct-spn-rrkjus_psl.1.0.0.UPF',
+   author='ADC',
+   lloc=-1,
+   rcloc=1.4,
+   which_augfun='PSQ',
+   rmatch_augfun_nc=.true.,
+   nlcc=.true.,
+   new_core_ps=.true.,
+   rcore=1.2,
+   tm=.true.
+ /
+6
+4S  1  0  2.00  0.00  1.10  1.15  0.0
+5S  2  0  2.00  0.00  1.10  1.15  0.0
+4P  2  1  6.00  0.00  1.00  1.60  0.0
+5P  3  1  0.00 -2.50  1.00  1.60  0.0
+4D  3  2  4.00  0.00  1.30  1.60  0.0
+4D  3  2  0.00  1.00  1.30  1.60  0.0
+EOF
+
+cat > Tc.$fct-spn-rrkjus_psl.1.0.0.in << EOF
+ &input
+   title='Tc',
+   zed=43.,
+   rel=$nrel,
+   config='[Kr] 5s2 5p0 4d5',
+   iswitch=3,
+   dft='$gfun'
+ /
+ &inputp
+   lpaw=.false.,
+   pseudotype=3,
+   file_pseudopw='Tc.$fct-spn-rrkjus_psl.1.0.0.UPF',
+   author='ADC',
+   lloc=-1,
+   rcloc=1.3,
+   which_augfun='PSQ',
+   rmatch_augfun_nc=.true.,
+   nlcc=.true.,
+   new_core_ps=.true.,
+   rcore=1.2,
+   tm=.true.
+ /
+6
+4S  1  0  2.00  0.00  1.10  1.30  0.0
+5S  2  0  2.00  0.00  1.10  1.30  0.0
+4P  2  1  6.00  0.00  1.00  1.40  0.0
+5P  3  1  0.00  0.00  1.00  1.40  0.0
+4D  3  2  5.00  0.00  1.50  1.70  0.0
+4D  3  2  0.00  1.00  1.50  1.70  0.0
+EOF
+
+cat > Ru.$fct-spn-rrkjus_psl.1.0.0.in << EOF
+ &input
+   title='Ru',
+   zed=44.,
+   rel=$nrel,
+   config='[Kr] 5s2 5p0 4d6',
+   iswitch=3,
+   dft='$gfun'
+ /
+ &inputp
+   lpaw=.false.,
+   pseudotype=3,
+   file_pseudopw='Ru.$fct-spn-rrkjus_psl.1.0.0.UPF',
+   author='ADC',
+   lloc=-1,
+   rcloc=1.3,
+   which_augfun='PSQ',
+   rmatch_augfun_nc=.true.,
+   nlcc=.true.,
+   new_core_ps=.true.,
+   rcore=1.0,
+   tm=.true.
+ /
+6
+4S  1  0  2.00  0.00  1.00  1.30  0.0
+5S  2  0  2.00  0.00  1.00  1.30  0.0
+4P  2  1  6.00  0.00  0.90  1.40  0.0
+5P  2  1  0.00 -2.50  0.90  1.40  0.0
+4D  3  2  6.00  0.00  1.10  1.70  0.0
+4D  3  2  0.00  0.50  1.10  1.70  0.0
+EOF
+
+cat > Rh.$fct-spn-rrkjus_psl.1.0.0.in << EOF
+ &input
+   title='Rh',
+   zed=45.,
+   rel=$nrel,
+   config='[Kr] 5s2 5p0 4d7',
+   iswitch=3,
+   dft='$gfun'
+ /
+ &inputp
+   lpaw=.false.,
+   pseudotype=3,
+   file_pseudopw='Rh.$fct-spn-rrkjus_psl.1.0.0.UPF',
+   author='ADC',
+   lloc=-1,
+   rcloc=1.2,
+   which_augfun='PSQ',
+   rmatch_augfun_nc=.true.,
+   nlcc=.true.,
+   new_core_ps=.true.,
+   rcore=1.0,
+   tm=.true.
+ /
+6
+4S  1  0  2.00  0.00  0.90  1.40  0.0
+5S  2  0  2.00  0.00  0.90  1.40  0.0
+4P  2  1  6.00  0.00  0.90  1.30  0.0
+5P  2  1  0.00 -2.50  0.90  1.30  0.0
+4D  3  2  7.00  0.00  1.10  1.70  0.0
+4D  3  2  0.00  0.50  1.10  1.70  0.0
+EOF
+
+cat > Pd.$fct-spn-rrkjus_psl.1.0.0.in << EOF
+ &input
+   title='Pd',
+   zed=46.,
+   rel=$nrel,
+   config='[Kr] 5s2 5p0 4d8',
+   iswitch=3,
+   dft='$gfun'
+ /
+ &inputp
+   lpaw=.false.,
+   pseudotype=3,
+   file_pseudopw='Pd.$fct-spn-rrkjus_psl.1.0.0.UPF',
+   author='ADC',
+   lloc=-1,
+   rcloc=1.2,
+   which_augfun='PSQ',
+   rmatch_augfun_nc=.true.,
+   nlcc=.true.,
+   new_core_ps=.true.,
+   rcore=1.0,
+   tm=.true.
+ /
+6
+4S  1  0  2.00  0.00  0.80  1.40  0.0
+5S  2  0  2.00  0.00  0.80  1.40  0.0
+4P  2  1  6.00  0.00  0.90  1.30  0.0
+5P  2  1  0.00 -2.50  0.90  1.30  0.0
+4D  3  2  8.00  0.00  1.10  1.60  0.0
+4D  3  2  0.00  0.50  1.10  1.60  0.0
+EOF
+
+cat > Ag.$fct-spn-rrkjus_psl.1.0.0.in << EOF
+ &input
+   title='Ag',
+   zed=47.,
+   rel=$nrel,
+   config='[Kr] 5s2 5p0 4d9',
+   iswitch=3,
+   dft='$gfun'
+ /
+ &inputp
+   lpaw=.false.,
+   pseudotype=3,
+   file_pseudopw='Ag.$fct-spn-rrkjus_psl.1.0.0.UPF',
+   author='ADC',
+   lloc=-1,
+   rcloc=1.4,
+   which_augfun='PSQ',
+   rmatch_augfun_nc=.true.,
+   nlcc=.true.,
+   new_core_ps=.true.,
+   rcore=0.8,
+   tm=.true.
+ /
+6
+4S  1  0  2.00  0.00  0.80  1.25  0.0
+5S  2  0  2.00  0.00  0.80  1.25  0.0
+4P  2  1  6.00  0.00  0.85  1.25  0.0
+5P  2  1  0.00 -2.50  0.85  1.25  0.0
+4D  3  2  9.00  0.00  1.30  1.70  0.0
+4D  3  2  0.00  0.50  1.30  1.70  0.0
+EOF
+
+cat > Cd.$fct-spn-rrkjus_psl.1.0.0.in << EOF
+ &input
+   title='Cd',
+   zed=48.,
+   rel=$nrel,
+   config='[Kr] 5s2 5p0 4d10',
+   iswitch=3,
+   dft='$gfun'
+ /
+ &inputp
+   lpaw=.false.,
+   pseudotype=3,
+   file_pseudopw='Cd.$fct-spn-rrkjus_psl.1.0.0.UPF',
+   author='ADC',
+   lloc=-1,
+   rcloc=1.3,
+   which_augfun='PSQ',
+   rmatch_augfun_nc=.true.,
+   nlcc=.true.,
+   new_core_ps=.true.,
+   rcore=1.0,
+   tm=.true.
+ /
+6
+4S  1  0  2.00  0.00  0.80  1.45  0.0
+5S  2  0  2.00  0.00  0.80  1.45  0.0
+4P  2  1  6.00  0.00  0.80  1.20  0.0
+5P  2  1  0.00 -3.00  0.80  1.20  0.0
+4D  3  2 10.00  0.00  1.00  1.70  0.0
+4D  3  2  0.00  0.10  1.00  1.70  0.0
+EOF
+
+cat > In.$fct-dn-rrkjus_psl.1.0.0.in << EOF
+ &input
+   title='In',
+   zed=49.,
+   rel=$nrel,
+   config='[Kr] 5s2 5p1 4d10',
+   iswitch=3,
+   dft='$gfun'
+ /
+ &inputp
+   lpaw=.false.,
+   pseudotype=3,
+   file_pseudopw='In.$fct-dn-rrkjus_psl.1.0.0.UPF',
+   author='ADC',
+   lloc=-1,
+   rcloc=1.9,
+   which_augfun='PSQ',
+   rmatch_augfun_nc=.true.,
+   nlcc=.true.,
+   new_core_ps=.true.,
+   rcore=1.2,
+   tm=.true.
+ /
+6
+5S  1  0  2.00  0.00  1.80  2.00  0.0
+5S  1  0  0.00  3.00  1.80  2.00  0.0
+5P  2  1  1.00  0.00  1.90  2.50  0.0
+5P  2  1  0.00  6.00  1.90  2.50  0.0
+4D  3  2 10.00  0.00  1.40  1.70  0.0
+4D  3  2  0.00  5.00  1.40  1.70  0.0
+EOF
+
+cat > Sn.$fct-dn-rrkjus_psl.1.0.0.in << EOF
+ &input
+   title='Sn',
+   zed=50.,
+   rel=$nrel,
+   config='[Kr] 5s2 5p2 4d10',
+   iswitch=3,
+   dft='$gfun'
+ /
+ &inputp
+   lpaw=.false.,
+   pseudotype=3,
+   file_pseudopw='Sn.$fct-dn-rrkjus_psl.1.0.0.UPF',
+   author='ADC',
+   lloc=-1,
+   rcloc=1.9,
+   which_augfun='PSQ',
+   rmatch_augfun_nc=.true.,
+   nlcc=.true.,
+   new_core_ps=.true.,
+   rcore=1.2,
+   tm=.true.
+ /
+6
+5S  1  0  2.00  0.00  1.80  2.00  0.0
+5S  1  0  0.00  3.00  1.80  2.00  0.0
+5P  2  1  2.00  0.00  2.00  2.30  0.0
+5P  2  1  0.00  6.00  2.00  2.30  0.0
+4D  3  2 10.00  0.00  1.30  1.60  0.0
+4D  3  2  0.00  4.50  1.30  1.60  0.0
+EOF
+
+cat > Sb.$fct-dn-rrkjus_psl.1.0.0.in << EOF
+ &input
+   title='Sb',
+   zed=51.,
+   rel=$nrel,
+   config='[Kr] 5s2 5p3 4d10',
+   iswitch=3,
+   dft='$gfun'
+ /
+ &inputp
+   lpaw=.false.,
+   pseudotype=3,
+   file_pseudopw='Sb.$fct-dn-rrkjus_psl.1.0.0.UPF',
+   author='ADC',
+   lloc=-1,
+   rcloc=1.9,
+   which_augfun='PSQ',
+   rmatch_augfun_nc=.true.,
+   nlcc=.true.,
+   new_core_ps=.true.,
+   rcore=1.2,
+   tm=.true.
+ /
+6
+5S  1  0  2.00  0.00  1.70  1.80  0.0
+5S  1  0  0.00  6.00  1.70  1.80  0.0
+5P  2  1  3.00  0.00  2.00  2.10  0.0
+5P  2  1  0.00  6.00  2.00  2.10  0.0
+4D  3  2 10.00  0.00  1.30  1.60  0.0
+4D  3  2  0.00  4.05  1.30  1.60  0.0
+EOF
+
+cat > Te.$fct-dn-rrkjus_psl.1.0.0.in << EOF
+ &input
+   title='Te',
+   zed=52.,
+   rel=$nrel,
+   config='[Kr] 5s2 5p4 4d10',
+   iswitch=3,
+   dft='$gfun'
+ /
+ &inputp
+   lpaw=.false.,
+   pseudotype=3,
+   file_pseudopw='Te.$fct-dn-rrkjus_psl.1.0.0.UPF',
+   author='ADC',
+   lloc=-1,
+   rcloc=2.1,
+   which_augfun='PSQ',
+   rmatch_augfun_nc=.true.,
+   nlcc=.true.,
+   new_core_ps=.true.,
+   rcore=1.2,
+   tm=.true.
+ /
+6
+5S  1  0  2.00  0.00  1.60  1.80  0.0
+5S  1  0  0.00  6.00  1.60  1.80  0.0
+5P  2  1  4.00  0.00  1.70  1.90  0.0
+5P  2  1  0.00  6.00  1.70  1.90  0.0
+4D  3  2 10.00  0.00  1.20  1.60  0.0
+4D  3  2  0.00  0.05  1.20  1.60  0.0
+EOF
+
+cat > I.$fct-dn-rrkjus_psl.1.0.0.in << EOF
+ &input
+   title='I',
+   zed=53.,
+   rel=$nrel,
+   config='[Kr] 5s2 5p5 4d10',
+   iswitch=3,
+   dft='$gfun'
+ /
+ &inputp
+   lpaw=.false.,
+   pseudotype=3,
+   file_pseudopw='I.$fct-dn-rrkjus_psl.1.0.0.UPF',
+   author='ADC',
+   lloc=-1,
+   rcloc=1.9,
+   which_augfun='PSQ',
+   rmatch_augfun_nc=.true.,
+   nlcc=.true.,
+   new_core_ps=.true.,
+   rcore=1.2,
+   tm=.true.
+ /
+6
+5S  1  0  2.00  0.00  1.30  1.70  0.0
+5S  1  0  0.00  6.00  1.30  1.70  0.0
+5P  2  1  5.00  0.00  1.40  1.80  0.0
+5P  2  1  0.00  6.00  1.40  1.80  0.0
+4D  3  2 10.00  0.00  1.30  1.70  0.0
+4D  3  2  0.00 -2.50  1.30  1.70  0.0
+EOF
+
+cat > Xe.$fct-dn-rrkjus_psl.1.0.0.in << EOF
+ &input
+   title='Xe',
+   zed=54.,
+   rel=$nrel,
+   config='[Kr] 5s2 5p6 4d10',
+   iswitch=3,
+   dft='$gfun'
+ /
+ &inputp
+   lpaw=.false.,
+   pseudotype=3,
+   file_pseudopw='Xe.$fct-dn-rrkjus_psl.1.0.0.UPF',
+   author='ADC',
+   lloc=-1,
+   rcloc=2.1,
+   which_augfun='PSQ',
+   rmatch_augfun_nc=.true.,
+   nlcc=.true.,
+   new_core_ps=.true.,
+   rcore=1.2,
+   tm=.true.
+ /
+6
+5S  1  0  2.00  0.00  1.70  1.80  0.0
+5S  1  0  0.00  3.00  1.70  1.80  0.0
+5P  2  1  6.00  0.00  1.60  2.20  0.0
+5P  2  1  0.00  3.00  1.60  2.20  0.0
+4D  3  2 10.00  0.00  1.40  1.65  0.0
+4D  3  2  0.00  1.05  1.40  1.65  0.0
+EOF
+
+cat > Cs.$fct-spn-rrkjus_psl.1.0.0.in << EOF
+ &input
+   title='Cs',
+   zed=55.,
+   rel=$nrel,
+   config='[Xe] 6s1 6p0 5d-1 4f-1',
+   iswitch=3,
+   dft='$gfun'
+ /
+ &inputp
+   lpaw=.false.,
+   pseudotype=3,
+   file_pseudopw='Cs.$fct-spn-rrkjus_psl.1.0.0.UPF',
+   author='ADC',
+   lloc=-1,
+   rcloc=2.0,
+   which_augfun='PSQ',
+   rmatch_augfun_nc=.true.,
+   nlcc=.true.,
+   new_core_ps=.true.,
+   rcore=1.6,
+   tm=.true.
+ /
+9
+5S  1  0  2.00  0.00  1.60  2.10  0.0
+6S  2  0  1.00  0.00  1.60  2.10  0.0
+6S  2  0  0.00  1.00  1.60  2.10  0.0
+5P  2  1  6.00  0.00  1.60  2.30  0.0
+6P  3  1  0.00  6.00  1.60  2.30  0.0
+5D  3  2  0.00  0.30  1.50  2.10  0.0
+5D  3  2  0.00  4.05  1.50  2.10  0.0
+4F  4  3  0.00  0.05  1.50  2.10  0.0
+4F  4  3  0.00  4.05  1.50  2.10  0.0
+EOF
+
+cat > Ba.$fct-spn-rrkjus_psl.1.0.0.in << EOF
+ &input
+   title='Ba',
+   zed=56.,
+   rel=$nrel,
+   config='[Xe] 6s2 6p0 5d-1',
+   iswitch=3,
+   dft='$gfun'
+ /
+ &inputp
+   lpaw=.false.,
+   pseudotype=3,
+   file_pseudopw='Ba.$fct-spn-rrkjus_psl.1.0.0.UPF',
+   author='ADC',
+   lloc=-1,
+   rcloc=2.0,
+   which_augfun='PSQ',
+   rmatch_augfun_nc=.true.,
+   nlcc=.true.,
+   new_core_ps=.true.,
+   rcore=1.6,
+   tm=.true.
+ /
+7
+5S  1  0  2.00  0.00  1.40  1.90  0.0
+6S  2  0  2.00  0.00  1.40  1.90  0.0
+6S  2  0  0.00  6.00  1.40  1.90  0.0
+5P  2  1  6.00  0.00  1.60  2.10  0.0
+6P  3  1  0.00  6.00  1.60  2.10  0.0
+5D  3  2  0.00  0.30  1.50  2.10  0.0
+5D  3  2  0.00  4.05  1.50  2.10  0.0
+EOF
+
+cat > La.$fct-spdfn-rrkjus_psl.1.0.0.in << EOF
+ &input
+   title='La',
+   zed=57.0,
+   rel=$nrel,
+   config='[Xe] 4f0.0 5d1.0 6s2.0 6p0.0',
+   iswitch=3,
+   dft='$gfun'
+ /
+ &inputp
+   lpaw=.false.,
+   pseudotype=3,
+   file_pseudopw='La.$fct-spdfn-rrkjus_psl.1.0.0.UPF',
+   author='ADC',
+   lloc=-1,
+   rcloc=2.0,
+   which_augfun='PSQ',
+   rmatch_augfun_nc=.true.,
+   nlcc=.true.,
+   new_core_ps=.true.,
+   rcore=1.3,
+   tm=.true.
+ /
+8
+5S  1  0  2.00  0.00  0.90  1.60  0.0
+6S  2  0  2.00  0.00  0.90  1.60  0.0
+5P  2  1  6.00  0.00  1.00  2.10  0.0
+6P  3  1  0.00  0.30  1.00  2.10  0.0
+4D  3  2 10.00  0.00  0.65  1.00  0.0
+5D  4  2  1.00  0.00  0.75  1.50  0.0
+4F  4  3  0.00  0.00  1.00  1.50  0.0
+4F  4  3  0.00  1.00  1.00  1.50  0.0
+EOF
+
+cat > La.$fct-spfn-rrkjus_psl.1.0.0.in << EOF
+ &input
+   title='La',
+   zed=57.0,
+   rel=$nrel,
+   config='[Xe] 4f0 5d1.0 6s1.5 6p0.5',
+   iswitch=3,
+   dft='$gfun'
+ /
+ &inputp
+   lpaw=.false.,
+   pseudotype=3,
+   file_pseudopw='La.$fct-spfn-rrkjus_psl.1.0.0.UPF',
+   author='ADC',
+   lloc=-1,
+   rcloc=2.0,
+   which_augfun='PSQ',
+   rmatch_augfun_nc=.true.,
+   nlcc=.true.,
+   new_core_ps=.true.,
+   rcore=1.1,
+   tm=.true.
+ /
+8
+5S  1  0  2.00  0.00  1.60  1.70  0.0
+6S  2  0  1.50  0.00  1.60  1.70  0.0
+5P  2  1  6.00  0.00  1.60  2.00  0.0
+6P  3  1  0.50  0.00  1.60  2.00  0.0
+5D  3  2  1.00  0.00  1.60  2.00  0.0
+5D  3  2 -2.00  2.00  1.60  2.00  0.0
+4F  4  3  0.00  0.00  1.00  1.50  0.0
+4F  4  3 -2.00  0.20  1.00  1.50  0.0
+EOF
+
+cat > Ce.$fct-spdfn-rrkjus_psl.1.0.0.in << EOF
+ &input
+   title='Ce',
+   zed=58.0,
+   rel=$nrel,
+   config='[Xe] 4f0.5 5d1.5 6s2.0 6p0.0',
+   iswitch=3,
+   dft='$gfun'
+ /
+ &inputp
+   lpaw=.false.,
+   pseudotype=3,
+   file_pseudopw='Ce.$fct-spdfn-rrkjus_psl.1.0.0.UPF',
+   author='ADC',
+   lloc=-1,
+   rcloc=2.0,
+   which_augfun='PSQ',
+   rmatch_augfun_nc=.true.,
+   nlcc=.true.,
+   new_core_ps=.true.,
+   rcore=1.2,
+   tm=.true.
+ /
+8
+5S  1  0  2.00  0.00  0.90  1.60  0.0
+6S  2  0  2.00  0.00  0.90  1.60  0.0
+5P  2  1  6.00  0.00  1.00  1.90  0.0
+6P  3  1  0.00  0.30  1.00  1.90  0.0
+4D  3  2 10.00  0.00  0.90  1.00  0.0
+5D  4  2  1.50  0.00  0.95  1.10  0.0
+4F  4  3  0.50  0.00  1.00  1.30  0.0
+4F  4  3  0.00  1.00  1.00  1.30  0.0
+EOF
+
+#cat > Ce.$fct-spfn-rrkjus_psl.1.0.0.in << EOF
+# &input
+#   title='Ce',
+#   zed=58.0,
+#   rel=$nrel,
+#   config='[Xe] 4f1 5d1.0 6s1.5 6p0.5',
+#   iswitch=3,
+#   dft='$gfun'
+# /
+# &inputp
+#  lpaw=.false.,
+#   pseudotype=3,
+#   file_pseudopw='Ce.$fct-spfn-rrkjus_psl.1.0.0.UPF',
+#   author='ADC',
+#   lloc=-1,
+#   rcloc=2.0,
+#   which_augfun='PSQ',
+#   rmatch_augfun_nc=.true.,
+#   nlcc=.true.,
+#   new_core_ps=.true.,
+#   rcore=1.1,
+#   tm=.true.
+# /
+#8
+#5S  1  0  2.00  0.00  1.60  1.70  0.0
+#6S  2  0  1.50  0.00  1.60  1.70  0.0
+#5P  2  1  6.00  0.00  1.60  1.90  0.0
+#6P  3  1  0.50  0.00  1.60  1.90  0.0
+#5D  3  2  1.00  0.00  1.60  2.00  0.0
+#5D  3  2  0.00  2.00  1.60  2.00  0.0
+#4F  4  3  1.00  0.00  1.40  1.50  0.0
+#4F  4  3  0.00 -2.00  1.40  1.50  0.0
+#EOF
+#
+cat > Pr.$fct-spdfn-rrkjus_psl.1.0.0.in << EOF
+ &input
+   title='Pr',
+   zed=59.0,
+   rel=$nrel,
+   config='[Xe] 4f3.0 5d0.0 6s2. 6p0.',
+   iswitch=3,
+   dft='$gfun'
+ /
+ &inputp
+   lpaw=.false.,
+   pseudotype=3,
+   file_pseudopw='Pr.$fct-spdfn-rrkjus_psl.1.0.0.UPF',
+   author='ADC',
+   lloc=-1,
+   rcloc=2.1,
+   which_augfun='PSQ',
+   rmatch_augfun_nc=.true.,
+   nlcc=.true.,
+   new_core_ps=.true.,
+   rcore=1.1,
+   tm=.true.
+ /
+8
+5S  1  0  2.00  0.00  1.20  1.80  0.0
+6S  2  0  2.00  0.00  1.20  1.80  0.0
+5P  2  1  6.00  0.00  1.40  1.90  0.0
+6P  3  1  0.00  0.30  1.40  1.90  0.0
+4D  3  2 10.00  0.00  0.90  1.00  0.0
+5D  4  2  0.00  0.05  0.90  1.30  0.0
+4F  4  3  3.00  0.00  1.00  1.30  0.0
+4F  4  3  0.00  1.00  1.00  1.30  0.0
+EOF
+
+#cat > Pr.$fct-spfn-rrkjus_psl.1.0.0.in << EOF
+# &input
+#   title='Pr',
+#   zed=59.0,
+#   rel=$nrel,
+#   config='[Xe] 4f3.0 5d0.0 6s1.5 6p0.5',
+#   iswitch=3,
+#   dft='$gfun'
+# /
+# &inputp
+#   lpaw=.false.,
+#   pseudotype=3,
+#   file_pseudopw='Pr.$fct-spfn-rrkjus_psl.1.0.0.UPF',
+#   author='ADC',
+#   lloc=-1,
+#   rcloc=2.0,
+#   which_augfun='PSQ',
+#   rmatch_augfun_nc=.true.,
+#   nlcc=.true.,
+#   new_core_ps=.true.,
+#   rcore=1.1,
+#   tm=.true.
+# /
+#8
+#5S  1  0  2.00  0.00  1.60  1.70  0.0
+#6S  2  0  1.50  0.00  1.60  1.70  0.0
+#5P  2  1  6.00  0.00  1.60  1.90  0.0
+#6P  3  1  0.50  0.00  1.60  1.90  0.0
+#5D  3  2  0.00  0.00  1.60  2.00  0.0
+#5D  3  2  0.00  2.00  1.60  2.00  0.0
+#4F  4  3  3.00  0.00  1.40  1.60  0.0
+#4F  4  3  0.00 -2.00  1.40  1.60  0.0
+#EOF
+
+cat > Nd.$fct-spdfn-rrkjus_psl.1.0.0.in << EOF
+ &input
+   title='Nd',
+   zed=60.0,
+   rel=$nrel,
+   config='[Xe] 4f3.5 5d0.5 6s2. 6p0.',
+   iswitch=3,
+   dft='$gfun'
+ /
+ &inputp
+   lpaw=.false.,
+   pseudotype=3,
+   file_pseudopw='Nd.$fct-spdfn-rrkjus_psl.1.0.0.UPF',
+   author='ADC',
+   lloc=-1,
+   rcloc=1.7,
+   which_augfun='PSQ',
+   rmatch_augfun_nc=.true.,
+   nlcc=.true.,
+   new_core_ps=.true.,
+   rcore=1.1,
+   tm=.true.
+ /
+8
+5S  1  0  2.00  0.00  1.30  1.70  0.0
+6S  2  0  2.00  0.00  1.30  1.70  0.0
+5P  2  1  6.00  0.00  1.40  1.90  0.0
+6P  3  1  0.00  0.30  1.40  1.90  0.0
+4D  3  2 10.00  0.00  1.05  1.30  0.0
+5D  4  2  0.50  0.00  1.05  1.30  0.0
+4F  4  3  3.50  0.00  1.00  1.30  0.0
+4F  4  3  0.00  1.00  1.00  1.30  0.0
+EOF
+
+#cat > Nd.$fct-spfn-rrkjus_psl.1.0.0.in << EOF
+# &input
+#   title='Nd',
+#   zed=60.0,
+#   rel=$nrel,
+#   config='[Xe] 4f4.0 5d0.0 6s1.5 6p0.5',
+#   iswitch=3,
+#   dft='$gfun'
+# /
+# &inputp
+#   lpaw=.false.,
+#   pseudotype=3,
+#   file_pseudopw='Nd.$fct-spfn-rrkjus_psl.1.0.0.UPF',
+#   author='ADC',
+#   lloc=-1,
+#   rcloc=2.0,
+#   which_augfun='PSQ',
+#   rmatch_augfun_nc=.true.,
+#   nlcc=.true.,
+#   new_core_ps=.true.,
+#   rcore=1.1,
+#   tm=.true.
+# /
+#8
+#5S  1  0  2.00  0.00  1.60  1.70  0.0
+#6S  2  0  1.50  0.00  1.60  1.70  0.0
+#5P  2  1  6.00  0.00  1.60  1.90  0.0
+#6P  3  1  0.50  0.00  1.60  1.90  0.0
+#5D  3  2  0.00  0.00  1.60  2.00  0.0
+#5D  3  2  0.00  2.00  1.60  2.00  0.0
+#4F  4  3  4.00  0.00  1.40  1.50  0.0
+#4F  4  3  0.00 -1.50  1.40  1.50  0.0
+#EOF
+
+cat > Pm.$fct-spdfn-rrkjus_psl.1.0.0.in << EOF
+ &input
+   title='Pm',
+   zed=61.0,
+   rel=$nrel,
+   config='[Xe] 4f4.5 5d0.5 6s2. 6p0.',
+   iswitch=3,
+   dft='$gfun'
+ /
+ &inputp
+   lpaw=.false.,
+   pseudotype=3,
+   file_pseudopw='Pm.$fct-spdfn-rrkjus_psl.1.0.0.UPF',
+   author='ADC',
+   lloc=-1,
+   rcloc=1.7,
+   which_augfun='PSQ',
+   rmatch_augfun_nc=.true.,
+   nlcc=.true.,
+   new_core_ps=.true.,
+   rcore=1.2,
+   tm=.true.
+ /
+8
+5S  1  0  2.00  0.00  1.30  1.60  0.0
+6S  2  0  2.00  0.00  1.30  1.60  0.0
+5P  2  1  6.00  0.00  1.40  1.90  0.0
+6P  3  1  0.00  0.30  1.40  1.90  0.0
+4D  3  2 10.00  0.00  1.05  1.30  0.0
+5D  4  2  0.50  0.00  1.05  1.30  0.0
+4F  4  3  4.50  0.00  1.10  1.30  0.0
+4F  4  3  0.00  1.00  1.10  1.30  0.0
+EOF
+
+#cat > Pm.$fct-spfn-rrkjus_psl.1.0.0.in << EOF
+# &input
+#   title='Pm',
+#   zed=61.0,
+#   rel=$nrel,
+#   config='[Xe] 4f5.0 5d0.0 6s1.5 6p0.5',
+#   iswitch=3,
+#   dft='$gfun'
+# /
+# &inputp
+#   lpaw=.false.,
+#   pseudotype=3,
+#   file_pseudopw='Pm.$fct-spfn-rrkjus_psl.1.0.0.UPF',
+#   author='ADC',
+#   lloc=-1,
+#   rcloc=2.0,
+#   which_augfun='PSQ',
+#   rmatch_augfun_nc=.true.,
+#   nlcc=.true.,
+#   new_core_ps=.true.,
+#   rcore=1.1,
+#   tm=.true.
+# /
+#8
+#5S  1  0  2.00  0.00  1.60  1.70  0.0
+#6S  2  0  1.50  0.00  1.60  1.70  0.0
+#5P  2  1  6.00  0.00  1.60  1.90  0.0
+#6P  3  1  0.50  0.00  1.60  1.90  0.0
+#5D  3  2  0.00  0.00  1.60  2.00  0.0
+#5D  3  2  0.00  2.00  1.60  2.00  0.0
+#4F  4  3  5.00  0.00  1.40  1.60  0.0
+#4F  4  3  0.00 -2.00  1.40  1.60  0.0
+#EOF
+#
+cat > Sm.$fct-spdfn-rrkjus_psl.1.0.0.in << EOF
+ &input
+   title='Sm',
+   zed=62.0,
+   rel=$nrel,
+   config='[Xe] 4f5.5 5d0.5 6s2. 6p0.',
+   iswitch=3,
+   dft='$gfun'
+ /
+ &inputp
+   lpaw=.false.,
+   pseudotype=3,
+   file_pseudopw='Sm.$fct-spdfn-rrkjus_psl.1.0.0.UPF',
+   author='ADC',
+   lloc=-1,
+   rcloc=1.7,
+   which_augfun='PSQ',
+   rmatch_augfun_nc=.true.,
+   nlcc=.true.,
+   new_core_ps=.true.,
+   rcore=1.2,
+   tm=.true.
+ /
+8
+5S  1  0  2.00  0.00  1.30  1.60  0.0
+6S  2  0  2.00  0.00  1.30  1.60  0.0
+5P  2  1  6.00  0.00  1.40  1.90  0.0
+6P  3  1  0.00  0.30  1.40  1.90  0.0
+4D  3  2 10.00  0.00  1.05  1.30  0.0
+5D  4  2  0.50  0.00  1.05  1.30  0.0
+4F  4  3  5.50  0.00  1.10  1.30  0.0
+4F  4  3  0.00  1.00  1.10  1.30  0.0
+EOF
+
+#cat > Sm.$fct-spfn-rrkjus_psl.1.0.0.in << EOF
+# &input
+#   title='Sm',
+#   zed=62.0,
+#   rel=$nrel,
+#   config='[Xe] 4f6.0 5d0.0 6s1.5 6p0.5',
+#   iswitch=3,
+#   dft='$gfun'
+# /
+# &inputp
+#   lpaw=.false.,
+#   pseudotype=3,
+#   file_pseudopw='Sm.$fct-spfn-rrkjus_psl.1.0.0.UPF',
+#   author='ADC',
+#   lloc=-1,
+#   rcloc=1.9,
+#   which_augfun='PSQ',
+#   rmatch_augfun_nc=.true.,
+#   nlcc=.true.,
+#   new_core_ps=.true.,
+#   rcore=1.1,
+#   tm=.true.
+# /
+#8
+#5S  1  0  2.00  0.00  1.40  1.70  0.0
+#6S  2  0  1.50  0.00  1.40  1.70  0.0
+#5P  2  1  6.00  0.00  1.40  1.90  0.0
+#6P  3  1  0.50  0.00  1.40  1.90  0.0
+#5D  3  2  0.00  0.00  1.40  2.00  0.0
+#5D  3  2  0.00  2.00  1.40  2.00  0.0
+#4F  4  3  6.00  0.00  1.40  1.50  0.0
+#4F  4  3  0.00 -2.00  1.40  1.50  0.0
+#EOF
+#
+cat > Eu.$fct-spdfn-rrkjus_psl.1.0.0.in << EOF
+ &input
+   title='Eu',
+   zed=63.0,
+   rel=$nrel,
+   config='[Xe] 4f6.5 5d0.5 6s2. 6p0.',
+   iswitch=3,
+   dft='$gfun'
+ /
+ &inputp
+   lpaw=.false.,
+   pseudotype=3,
+   file_pseudopw='Eu.$fct-spdfn-rrkjus_psl.1.0.0.UPF',
+   author='ADC',
+   lloc=-1,
+   rcloc=1.7,
+   which_augfun='PSQ',
+   rmatch_augfun_nc=.true.,
+   nlcc=.true.,
+   new_core_ps=.true.,
+   rcore=1.2,
+   tm=.true.
+ /
+8
+5S  1  0  2.00  0.00  1.30  1.60  0.0
+6S  2  0  2.00  0.00  1.30  1.60  0.0
+5P  2  1  6.00  0.00  1.40  1.90  0.0
+6P  3  1  0.00  0.30  1.40  1.90  0.0
+4D  3  2 10.00  0.00  1.05  1.30  0.0
+5D  4  2  0.50  0.00  1.05  1.30  0.0
+4F  4  3  6.50  0.00  1.10  1.30  0.0
+4F  4  3  0.00  1.00  1.10  1.30  0.0
+EOF
+
+#cat > Eu.$fct-spfn-rrkjus_psl.1.0.0.in << EOF
+# &input
+#   title='Eu',
+#   zed=63.0,
+#   rel=$nrel,
+#   config='[Xe] 4f7.0 5d0.0 6s1.5 6p0.5',
+#   iswitch=3,
+#   dft='$gfun'
+# /
+# &inputp
+#   lpaw=.false.,
+#   pseudotype=3,
+#   file_pseudopw='Eu.$fct-spfn-rrkjus_psl.1.0.0.UPF',
+#   author='ADC',
+#   lloc=-1,
+#   rcloc=2.0,
+#   which_augfun='PSQ',
+#   rmatch_augfun_nc=.true.,
+#   nlcc=.true.,
+#   new_core_ps=.true.,
+#   rcore=1.1,
+#   tm=.true.
+# /
+#8
+#5S  1  0  2.00  0.00  1.40  1.70  0.0
+#6S  2  0  1.50  0.00  1.40  1.70  0.0
+#5P  2  1  6.00  0.00  1.40  1.90  0.0
+#6P  3  1  0.50  0.00  1.40  1.90  0.0
+#5D  3  2  0.00  0.00  1.40  2.00  0.0
+#5D  3  2  0.00  2.00  1.40  2.00  0.0
+#4F  4  3  7.00  0.00  1.30  1.60  0.0
+#4F  4  3  0.00  2.50  1.30  1.60  0.0
+#EOF
+
+cat > Gd.$fct-spdfn-rrkjus_psl.1.0.0.in << EOF
+ &input
+   title='Gd',
+   zed=64.0,
+   rel=$nrel,
+   config='[Xe] 4f8. 5d0. 6s2. 6p0.',
+   iswitch=3,
+   dft='$gfun'
+ /
+ &inputp
+   lpaw=.false.,
+   pseudotype=3,
+   file_pseudopw='Gd.$fct-spdfn-rrkjus_psl.1.0.0.UPF',
+   author='ADC',
+   lloc=-1,
+   rcloc=1.7,
+   which_augfun='PSQ',
+   rmatch_augfun_nc=.true.,
+   nlcc=.true.,
+   new_core_ps=.true.,
+   rcore=1.2,
+   tm=.true.
+ /
+8
+5S  1  0  2.00  0.00  1.30  1.60  0.0
+6S  2  0  2.00  0.00  1.30  1.60  0.0
+5P  2  1  6.00  0.00  1.40  1.80  0.0
+6P  3  1  0.00  0.30  1.40  1.80  0.0
+4D  3  2 10.00  0.00  1.00  1.20  0.0
+5D  4  2  0.00  0.00  1.00  1.20  0.0
+4F  4  3  8.00  0.00  1.10  1.30  0.0
+4F  4  3  0.00  1.00  1.10  1.30  0.0
+EOF
+
+#cat > Gd.$fct-spfn-rrkjus_psl.1.0.0.in << EOF
+# &input
+#   title='Gd',
+#   zed=64.0,
+#   rel=$nrel,
+#   config='[Xe] 4f8.0 5d0.0 6s1.5 6p0.5',
+#   iswitch=3,
+#   dft='$gfun'
+# /
+# &inputp
+#   lpaw=.false.,
+#   pseudotype=3,
+#   file_pseudopw='Gd.$fct-spfn-rrkjus_psl.1.0.0.UPF',
+#   author='ADC',
+#   lloc=-1,
+#   rcloc=2.0,
+#   which_augfun='PSQ',
+#   rmatch_augfun_nc=.true.,
+#   nlcc=.true.,
+#   new_core_ps=.true.,
+#   rcore=1.1,
+#   tm=.true.
+# /
+#8
+#5S  1  0  2.00  0.00  1.60  1.70  0.0
+#6S  2  0  1.50  0.00  1.60  1.70  0.0
+#5P  2  1  6.00  0.00  1.60  1.90  0.0
+#6P  3  1  0.50  0.00  1.60  1.90  0.0
+#5D  3  2  0.00  0.00  1.60  2.00  0.0
+#5D  3  2  0.00  2.00  1.60  2.00  0.0
+#4F  4  3  8.00  0.00  1.30  1.50  0.0
+#4F  4  3  0.00 -2.00  1.30  1.50  0.0
+#EOF
+
+cat > Tb.$fct-spdfn-rrkjus_psl.1.0.0.in << EOF
+ &input
+   title='Tb',
+   zed=65.0,
+   rel=$nrel,
+   config='[Xe] 4f9 5d0.0 6s2. 6p0.',
+   iswitch=3,
+   dft='$gfun'
+ /
+ &inputp
+   lpaw=.false.,
+   pseudotype=3,
+   file_pseudopw='Tb.$fct-spdfn-rrkjus_psl.1.0.0.UPF',
+   author='ADC',
+   lloc=-1,
+   rcloc=1.7,
+   which_augfun='PSQ',
+   rmatch_augfun_nc=.true.,
+   nlcc=.true.,
+   new_core_ps=.true.,
+   rcore=1.2,
+   tm=.true.
+ /
+8
+5S  1  0  2.00  0.00  1.30  1.60  0.0
+6S  2  0  2.00  0.00  1.30  1.60  0.0
+5P  2  1  6.00  0.00  1.40  1.80  0.0
+6P  3  1  0.00  0.30  1.40  1.80  0.0
+4D  3  2 10.00  0.00  1.00  1.20  0.0
+5D  4  2  0.00  0.00  1.00  1.20  0.0
+4F  4  3  9.00  0.00  1.10  1.30  0.0
+4F  4  3  0.00  1.00  1.10  1.30  0.0
+EOF
+
+#cat > Tb.$fct-spfn-rrkjus_psl.1.0.0.in << EOF
+# &input
+#   title='Tb',
+#   zed=65.0,
+#   rel=$nrel,
+#   config='[Xe] 4f9 5d0.0 6s1.5 6p0.5',
+#   iswitch=3,
+#   dft='$gfun'
+# /
+# &inputp
+#   lpaw=.false.,
+#   pseudotype=3,
+#   file_pseudopw='Tb.$fct-spfn-rrkjus_psl.1.0.0.UPF',
+#   author='ADC',
+#   lloc=-1,
+#   rcloc=2.0,
+#   which_augfun='PSQ',
+#   rmatch_augfun_nc=.true.,
+#   nlcc=.true.,
+#   new_core_ps=.true.,
+#   rcore=1.1,
+#   tm=.true.
+# /
+#8
+#5S  1  0  2.00  0.00  1.40  1.70  0.0
+#6S  2  0  1.50  0.00  1.40  1.70  0.0
+#5P  2  1  6.00  0.00  1.40  1.80  0.0
+#6P  3  1  0.50  0.00  1.40  1.80  0.0
+#5D  3  2  0.00  0.00  1.40  2.00  0.0
+#5D  3  2  0.00  2.00  1.40  2.00  0.0
+#4F  4  3  9.00  0.00  1.30  1.60  0.0
+#4F  4  3  0.00 -1.50  1.30  1.60  0.0
+#EOF
+
+cat > Dy.$fct-spdfn-rrkjus_psl.1.0.0.in << EOF
+ &input
+   title='Dy',
+   zed=66.0,
+   rel=$nrel,
+   config='[Xe] 4f10.0 5d0.0 6s2. 6p0.',
+   iswitch=3,
+   dft='$gfun'
+ /
+ &inputp
+   lpaw=.false.,
+   pseudotype=3,
+   file_pseudopw='Dy.$fct-spdfn-rrkjus_psl.1.0.0.UPF',
+   author='ADC',
+   lloc=-1,
+   rcloc=1.7,
+   which_augfun='PSQ',
+   rmatch_augfun_nc=.true.,
+   nlcc=.true.,
+   new_core_ps=.true.,
+   rcore=1.2,
+   tm=.true.
+ /
+8
+5S  1  0  2.00  0.00  1.30  1.60  0.0
+6S  2  0  2.00  0.00  1.30  1.60  0.0
+5P  2  1  6.00  0.00  1.40  1.70  0.0
+6P  3  1  0.00  0.30  1.40  1.70  0.0
+4D  3  2 10.00  0.00  1.00  1.10  0.0
+5D  4  2  0.00  0.00  1.00  1.10  0.0
+4F  4  3 10.00  0.00  1.10  1.30  0.0
+4F  4  3  0.00  1.00  1.10  1.30  0.0
+EOF
+
+#cat > Dy.$fct-spfn-rrkjus_psl.1.0.0.in << EOF
+# &input
+#   title='Dy',
+#   zed=66.0,
+#   rel=$nrel,
+#   config='[Xe] 4f10.0 5d0.0 6s1.5 6p0.5',
+#   iswitch=3,
+#   dft='$gfun'
+# /
+# &inputp
+#   lpaw=.false.,
+#   pseudotype=3,
+#   file_pseudopw='Dy.$fct-spfn-rrkjus_psl.1.0.0.UPF',
+#   author='ADC',
+#   lloc=-1,
+#   rcloc=1.9,
+#   which_augfun='PSQ',
+#   rmatch_augfun_nc=.true.,
+#   nlcc=.true.,
+#   new_core_ps=.true.,
+#   rcore=1.1,
+#   tm=.true.
+# /
+#8
+#5S  1  0  2.00  0.00  1.50  1.70  0.0
+#6S  2  0  1.50  0.00  1.50  1.70  0.0
+#5P  2  1  6.00  0.00  1.50  1.80  0.0
+#6P  3  1  0.50  0.00  1.50  1.80  0.0
+#5D  3  2  0.00  0.00  1.50  2.00  0.0
+#5D  3  2  0.00  2.00  1.50  2.00  0.0
+#4F  4  3 10.00  0.00  1.30  1.50  0.0
+#4F  4  3  0.00 -1.00  1.30  1.50  0.0
+#EOF
+
+cat > Ho.$fct-spdfn-rrkjus_psl.1.0.0.in << EOF
+ &input
+   title='Ho',
+   zed=67.0,
+   rel=$nrel,
+   config='[Xe] 4f11.0 5d0.0 6s2. 6p0.',
+   iswitch=3,
+   dft='$gfun'
+ /
+ &inputp
+   lpaw=.false.,
+   pseudotype=3,
+   file_pseudopw='Ho.$fct-spdfn-rrkjus_psl.1.0.0.UPF',
+   author='ADC',
+   lloc=-1,
+   rcloc=1.7,
+   which_augfun='PSQ',
+   rmatch_augfun_nc=.true.,
+   nlcc=.true.,
+   new_core_ps=.true.,
+   rcore=1.2,
+   tm=.true.
+ /
+8
+5S  1  0  2.00  0.00  1.30  1.50  0.0
+6S  2  0  2.00  0.00  1.30  1.50  0.0
+5P  2  1  6.00  0.00  1.30  1.80  0.0
+6P  3  1  0.00  0.30  1.30  1.80  0.0
+4D  3  2 10.00  0.00  1.00  1.10  0.0
+5D  4  2  0.00  0.00  1.00  1.10  0.0
+4F  4  3 11.00  0.00  1.10  1.30  0.0
+4F  4  3  0.00  1.00  1.10  1.30  0.0
+EOF
+
+#cat > Ho.$fct-spfn-rrkjus_psl.1.0.0.in << EOF
+# &input
+#   title='Ho',
+#   zed=67.0,
+#   rel=$nrel,
+#   config='[Xe] 4f11.0 5d0.0 6s1.5 6p0.5',
+#   iswitch=3,
+#   dft='$gfun'
+# /
+# &inputp
+#   lpaw=.false.,
+#   pseudotype=3,
+#   file_pseudopw='Ho.$fct-spfn-rrkjus_psl.1.0.0.UPF',
+#   author='ADC',
+#   lloc=-1,
+#   rcloc=1.9,
+#   which_augfun='PSQ',
+#   rmatch_augfun_nc=.true.,
+#   nlcc=.true.,
+#   new_core_ps=.true.,
+#   rcore=1.1,
+#   tm=.true.
+# /
+#8
+#5S  1  0  2.00  0.00  1.40  1.60  0.0
+#6S  2  0  1.50  0.00  1.40  1.60  0.0
+#5P  2  1  6.00  0.00  1.40  1.80  0.0
+#6P  3  1  0.50  0.00  1.40  1.80  0.0
+#5D  3  2  0.00  0.00  1.40  2.00  0.0
+#5D  3  2  0.00  2.00  1.40  2.00  0.0
+#4F  4  3 11.00  0.00  1.30  1.50  0.0
+#4F  4  3  0.00 -0.50  1.30  1.50  0.0
+#EOF
+#
+cat > Er.$fct-spdfn-rrkjus_psl.1.0.0.in << EOF
+ &input
+   title='Er',
+   zed=68.0,
+   rel=$nrel,
+   config='[Xe] 4f12.0 5d0.0 6s2. 6p0.',
+   iswitch=3,
+   dft='$gfun'
+ /
+ &inputp
+   lpaw=.false.,
+   pseudotype=3,
+   file_pseudopw='Er.$fct-spdfn-rrkjus_psl.1.0.0.UPF',
+   author='ADC',
+   lloc=-1,
+   rcloc=1.7,
+   which_augfun='PSQ',
+   rmatch_augfun_nc=.true.,
+   nlcc=.true.,
+   new_core_ps=.true.,
+   rcore=1.2,
+   tm=.true.
+ /
+8
+5S  1  0  2.00  0.00  1.20  1.50  0.0
+6S  2  0  2.00  0.00  1.20  1.50  0.0
+5P  2  1  6.00  0.00  1.30  1.80  0.0
+6P  3  1  0.00  0.30  1.30  1.80  0.0
+4D  3  2 10.00  0.00  1.00  1.10  0.0
+5D  4  2  0.00  0.00  1.00  1.10  0.0
+4F  4  3 12.00  0.00  1.00  1.20  0.0
+4F  4  3  0.00  1.00  1.00  1.20  0.0
+EOF
+
+#cat > Er.$fct-spfn-rrkjus_psl.1.0.0.in << EOF
+# &input
+#   title='Er',
+#   zed=68.0,
+#   rel=$nrel,
+#   config='[Xe] 4f12.0 5d0.0 6s1.5 6p0.5',
+#   iswitch=3,
+#   dft='$gfun'
+# /
+# &inputp
+#   lpaw=.false.,
+#   pseudotype=3,
+#   file_pseudopw='Er.$fct-spfn-rrkjus_psl.1.0.0.UPF',
+#   author='ADC',
+#   lloc=-1,
+#   rcloc=2.0,
+#   which_augfun='PSQ',
+#   rmatch_augfun_nc=.true.,
+#   nlcc=.true.,
+#   new_core_ps=.true.,
+#   rcore=1.1,
+#   tm=.true.
+# /
+#8
+#5S  1  0  2.00  0.00  1.50  1.60  0.0
+#6S  2  0  1.50  0.00  1.50  1.60  0.0
+#5P  2  1  6.00  0.00  1.50  1.80  0.0
+#6P  3  1  0.50  0.00  1.50  1.80  0.0
+#5D  3  2  0.00  0.00  1.40  2.00  0.0
+#5D  3  2  0.00  2.00  1.40  2.00  0.0
+#4F  4  3 12.00  0.00  1.30  1.50  0.0
+#4F  4  3  0.00 -1.50  1.30  1.50  0.0
+#EOF
+
+cat > Tm.$fct-spdfn-rrkjus_psl.1.0.0.in << EOF
+ &input
+   title='Tm',
+   zed=69.0,
+   rel=$nrel,
+   config='[Xe] 4f13.0 5d0.0 6s2. 6p0.',
+   iswitch=3,
+   dft='$gfun'
+ /
+ &inputp
+   lpaw=.false.,
+   pseudotype=3,
+   file_pseudopw='Tm.$fct-spdfn-rrkjus_psl.1.0.0.UPF',
+   author='ADC',
+   lloc=-1,
+   rcloc=1.7,
+   which_augfun='PSQ',
+   rmatch_augfun_nc=.true.,
+   nlcc=.true.,
+   new_core_ps=.true.,
+   rcore=1.2,
+   tm=.true.
+ /
+8
+5S  1  0  2.00  0.00  1.20  1.50  0.0
+6S  2  0  2.00  0.00  1.20  1.50  0.0
+5P  2  1  6.00  0.00  1.20  1.70  0.0
+6P  3  1  0.00  0.30  1.20  1.70  0.0
+4D  3  2 10.00  0.00  1.00  1.10  0.0
+5D  4  2  0.00  0.00  1.00  1.10  0.0
+4F  4  3 13.00  0.00  1.00  1.20  0.0
+4F  4  3  0.00  1.00  1.00  1.20  0.0
+EOF
+
+#cat > Tm.$fct-spfn-rrkjus_psl.1.0.0.in << EOF
+# &input
+#   title='Tm',
+#   zed=69.0,
+#   rel=$nrel,
+#   config='[Xe] 4f13.0 5d0.0 6s1.5 6p0.5',
+#   iswitch=3,
+#   dft='$gfun'
+# /
+# &inputp
+#   lpaw=.false.,
+#   pseudotype=3,
+#   file_pseudopw='Tm.$fct-spfn-rrkjus_psl.1.0.0.UPF',
+#   author='ADC',
+#   lloc=-1,
+#   rcloc=1.9,
+#   which_augfun='PSQ',
+#   rmatch_augfun_nc=.true.,
+#   nlcc=.true.,
+#   new_core_ps=.true.,
+#   rcore=1.1,
+#   tm=.true.
+# /
+#8
+#5S  1  0  2.00  0.00  1.50  1.60  0.0
+#6S  2  0  1.50  0.00  1.50  1.60  0.0
+#5P  2  1  6.00  0.00  1.50  1.70  0.0
+#6P  3  1  0.50  0.00  1.50  1.70  0.0
+#5D  3  2  0.00  0.00  1.40  2.00  0.0
+#5D  3  2  0.00  2.00  1.40  2.00  0.0
+#4F  4  3 13.00  0.00  1.10  1.50  0.0
+#4F  4  3  0.00 -1.50  1.10  1.50  0.0
+#EOF
+
+cat > Yb.$fct-spdfn-rrkjus_psl.1.0.0.in << EOF
+ &input
+   title='Yb',
+   zed=70.0,
+   rel=$nrel,
+   config='[Xe] 4f14.0 5d0.0 6s2. 6p0.',
+   iswitch=3,
+   dft='$gfun'
+ /
+ &inputp
+   lpaw=.false.,
+   pseudotype=3,
+   file_pseudopw='Yb.$fct-spdfn-rrkjus_psl.1.0.0.UPF',
+   author='ADC',
+   lloc=-1,
+   rcloc=1.8,
+   which_augfun='PSQ',
+   rmatch_augfun_nc=.true.,
+   nlcc=.true.,
+   new_core_ps=.true.,
+   rcore=1.2,
+   tm=.true.
+ /
+8
+5S  1  0  2.00  0.00  1.10  1.60  0.0
+6S  2  0  2.00  0.00  1.10  1.60  0.0
+5P  2  1  6.00  0.00  1.10  1.60  0.0
+6P  3  1  0.00  0.30  1.10  1.60  0.0
+4D  3  2 10.00  0.00  1.00  1.10  0.0
+5D  4  2  0.00  0.00  1.00  1.10  0.0
+4F  4  3 14.00  0.00  0.95  1.20  0.0
+4F  4  3  0.00  1.00  0.95  1.20  0.0
+EOF
+
+#cat > Yb.$fct-spfn-rrkjus_psl.1.0.0.in << EOF
+# &input
+#   title='Yb',
+#   zed=70.0,
+#   rel=$nrel,
+#   config='[Xe] 4f14.0 5d0.0 6s1.5 6p0.5',
+#   iswitch=3,
+#   dft='$gfun'
+# /
+# &inputp
+#   lpaw=.false.,
+#   pseudotype=3,
+#   file_pseudopw='Yb.$fct-spfn-rrkjus_psl.1.0.0.UPF',
+#   author='ADC',
+#   lloc=-1,
+#   rcloc=1.9,
+#   which_augfun='PSQ',
+#   rmatch_augfun_nc=.true.,
+#   nlcc=.true.,
+#   new_core_ps=.true.,
+#   rcore=1.1,
+#   tm=.true.
+# /
+#8
+#5S  1  0  2.00  0.00  1.50  1.60  0.0
+#6S  2  0  1.50  0.00  1.50  1.60  0.0
+#5P  2  1  6.00  0.00  1.50  1.70  0.0
+#6P  3  1  0.50  0.00  1.50  1.70  0.0
+#5D  3  2  0.00  0.00  1.50  2.00  0.0
+#5D  3  2  0.00  2.00  1.50  2.00  0.0
+#4F  4  3 14.00  0.00  1.30  1.50  0.0
+#4F  4  3  0.00 -1.50  1.30  1.50  0.0
+#EOF
+#
+cat > Lu.$fct-spdfn-rrkjus_psl.1.0.0.in << EOF
+ &input
+   title='Lu',
+   zed=71.0,
+   rel=$nrel,
+   config='[Xe] 4f14.0 5d1.0 6s2. 6p0.',
+   iswitch=3,
+   dft='$gfun'
+ /
+ &inputp
+   lpaw=.false.,
+   pseudotype=3,
+   file_pseudopw='Lu.$fct-spdfn-rrkjus_psl.1.0.0.UPF',
+   author='ADC',
+   lloc=-1,
+   rcloc=1.7,
+   which_augfun='PSQ',
+   rmatch_augfun_nc=.true.,
+   nlcc=.true.,
+   new_core_ps=.true.,
+   rcore=1.2,
+   tm=.true.
+ /
+8
+5S  1  0  2.00  0.00  0.90  1.30  0.0
+6S  2  0  2.00  0.00  0.90  1.30  0.0
+5P  2  1  6.00  0.00  1.00  1.30  0.0
+6P  3  1  0.00  0.30  1.00  1.30  0.0
+4D  3  2 10.00  0.00  0.90  1.00  0.0
+5D  4  2  1.00  0.00  0.90  1.00  0.0
+4F  4  3 14.00  0.00  0.90  1.10  0.0
+4F  4  3  0.00  1.00  0.90  1.10  0.0
+EOF
+
+#cat > Lu.$fct-spfn-rrkjus_psl.1.0.0.in << EOF
+# &input
+#   title='Lu',
+#   zed=71.0,
+#   rel=$nrel,
+#   config='[Xe] 4f14.0 5d1.0 6s1.5 6p0.5',
+#   iswitch=3,
+#   dft='$gfun'
+# /
+# &inputp
+#   lpaw=.false.,
+#   pseudotype=3,
+#   file_pseudopw='Lu.$fct-spfn-rrkjus_psl.1.0.0.UPF',
+#   author='ADC',
+#   lloc=-1,
+#   rcloc=1.9,
+#   which_augfun='PSQ',
+#   rmatch_augfun_nc=.true.,
+#   nlcc=.true.,
+#   new_core_ps=.true.,
+#   rcore=1.1,
+#   tm=.true.
+# /
+#8
+#5S  1  0  2.00  0.00  1.40  1.60  0.0
+#6S  2  0  1.50  0.00  1.40  1.60  0.0
+#5P  2  1  6.00  0.00  1.40  1.60  0.0
+#6P  3  1  0.50  0.00  1.40  1.60  0.0
+#5D  3  2  1.00  0.00  1.40  1.80  0.0
+#5D  3  2  0.00  2.00  1.40  1.80  0.0
+#4F  4  3 14.00  0.00  1.30  1.50  0.0
+#4F  4  3  0.00 -1.50  1.30  1.50  0.0
+#EOF
+#
+cat > Hf.$fct-spdfn-rrkjus_psl.1.0.0.in << EOF
+ &input
+   title='Hf',
+   zed=72.,
+   rel=$nrel,
+   config='[Xe] 4f14 6s2 6p0 5d2',
+   iswitch=3,
+   dft='$gfun'
+ /
+ &inputp
+   lpaw=.false.,
+   pseudotype=3,
+   file_pseudopw='Hf.$fct-spdfn-rrkjus_psl.1.0.0.UPF',
+   author='ADC',
+   lloc=-1,
+   rcloc=2.1,
+   which_augfun='PSQ',
+   rmatch_augfun_nc=.true.,
+   nlcc=.true.,
+   new_core_ps=.true.,
+   rcore=1.0,
+   tm=.true.
+ /
+8
+5S  1  0  2.00  0.00  1.20  1.50  0.0
+6S  2  0  2.00  0.00  1.20  1.50  0.0
+5P  2  1  6.00  0.00  1.20  1.50  0.0
+6P  3  1  0.00  0.30  1.20  1.50  0.0
+4D  3  2 10.00  0.00  0.85  1.00  0.0
+5D  4  2  2.00  0.00  0.85  1.00  0.0
+4F  4  3 14.00  0.00  1.15  1.40  0.0
+4F  4  3  0.00  1.00  1.15  1.40  0.0
+EOF
+
+cat > Hf.$fct-spfn-rrkjus_psl.1.0.0.in << EOF
+ &input
+   title='Hf',
+   zed=72.,
+   rel=$nrel,
+   config='[Xe] 4f14 6s2 6p0 5d2',
+   iswitch=3,
+   dft='$gfun'
+ /
+ &inputp
+   lpaw=.false.,
+   pseudotype=3,
+   file_pseudopw='Hf.$fct-spfn-rrkjus_psl.1.0.0.UPF',
+   author='ADC',
+   lloc=-1,
+   rcloc=1.5,
+   which_augfun='PSQ',
+   rmatch_augfun_nc=.true.,
+   nlcc=.true.,
+   new_core_ps=.true.,
+   rcore=0.7,
+   tm=.true.
+ /
+8
+5S  1  0  2.00  0.00  1.00  1.30  0.0
+6S  2  0  2.00  0.00  1.00  1.30  0.0
+5P  2  1  6.00  0.00  1.10  1.30  0.0
+6P  3  1  0.00 -2.20  1.10  1.30  0.0
+5D  3  2  2.00  0.00  1.50  1.80  0.0
+5D  3  2  0.00  0.05  1.50  1.80  0.0
+4F  4  3 14.00  0.00  1.30  2.00  0.0
+4F  4  3  0.00  1.00  1.30  2.00  0.0
+EOF
+
+cat > Ta.$fct-spfn-rrkjus_psl.1.0.0.in << EOF
+ &input
+   title='Ta',
+   zed=73.,
+   rel=$nrel,
+   config='[Xe] 4f14 6s2 6p0 5d3',
+   iswitch=3,
+   dft='$gfun'
+ /
+ &inputp
+   lpaw=.false.,
+   pseudotype=3,
+   file_pseudopw='Ta.$fct-spfn-rrkjus_psl.1.0.0.UPF',
+   author='ADC',
+   lloc=-1,
+   rcloc=1.5,
+   which_augfun='PSQ',
+   rmatch_augfun_nc=.true.,
+   nlcc=.true.,
+   new_core_ps=.true.,
+   rcore=1.2,
+   tm=.true.
+ /
+8
+5S  1  0  2.00  0.00  1.00  1.30  0.0
+6S  2  0  2.00  0.00  1.00  1.30  0.0
+5P  2  1  6.00  0.00  1.10  1.30  0.0
+6P  3  1  0.00 -2.40  1.10  1.30  0.0
+5D  3  2  3.00  0.00  1.40  1.80  0.0
+5D  3  2  0.00  0.05  1.40  1.80  0.0
+4F  4  3 14.00  0.00  1.10  1.80  0.0
+4F  4  3  0.00  1.00  1.10  1.80  0.0
+EOF
+
+cat > W.$fct-spfn-rrkjus_psl.1.0.0.in << EOF
+ &input
+   title='W',
+   zed=74.,
+   rel=$nrel,
+   config='[Xe] 4f14 6s2 6p0 5d4',
+   iswitch=3,
+   dft='$gfun'
+ /
+ &inputp
+   lpaw=.false.,
+   pseudotype=3,
+   file_pseudopw='W.$fct-spfn-rrkjus_psl.1.0.0.UPF',
+   author='ADC',
+   lloc=-1,
+   rcloc=1.5,
+   which_augfun='PSQ',
+   rmatch_augfun_nc=.true.,
+   nlcc=.true.,
+   new_core_ps=.true.,
+   rcore=1.2,
+   tm=.true.
+ /
+8
+5S  1  0  2.00  0.00  1.00  1.30  0.0
+6S  2  0  2.00  0.00  1.00  1.30  0.0
+5P  2  1  6.00  0.00  1.10  1.30  0.0
+6P  3  1  0.00 -2.40  1.10  1.30  0.0
+5D  3  2  4.00  0.00  1.50  1.80  0.0
+5D  3  2  0.00  0.05  1.50  1.80  0.0
+4F  4  3 14.00  0.00  1.20  1.80  0.0
+4F  4  3  0.00  1.00  1.20  1.80  0.0
+EOF
+
+cat > Re.$fct-spfn-rrkjus_psl.1.0.0.in << EOF
+ &input
+   title='Re',
+   zed=75.,
+   rel=$nrel,
+   config='[Xe] 4f14 6s2 6p0 5d5',
+   iswitch=3,
+   dft='$gfun'
+ /
+ &inputp
+   lpaw=.false.,
+   pseudotype=3,
+   file_pseudopw='Re.$fct-spfn-rrkjus_psl.1.0.0.UPF',
+   author='ADC',
+   lloc=-1,
+   rcloc=1.5,
+   which_augfun='PSQ',
+   rmatch_augfun_nc=.true.,
+   nlcc=.true.,
+   new_core_ps=.true.,
+   rcore=1.0,
+   tm=.true.
+ /
+8
+5S  1  0  2.00  0.00  1.00  1.30  0.0
+6S  2  0  2.00  0.00  1.00  1.30  0.0
+5P  2  1  6.00  0.00  1.10  1.30  0.0
+6P  3  1  0.00 -2.40  1.10  1.30  0.0
+5D  3  2  5.00  0.00  1.50  1.80  0.0
+5D  3  2  0.00  0.05  1.50  1.80  0.0
+4F  4  3 14.00  0.00  1.10  1.80  0.0
+4F  4  3  0.00  1.00  1.10  1.80  0.0
+EOF
+
+cat > Os.$fct-spfn-rrkjus_psl.1.0.0.in << EOF
+ &input
+   title='Os',
+   zed=76.,
+   rel=$nrel,
+   config='[Xe] 4f14 6s2 6p0 5d6',
+   iswitch=3,
+   dft='$gfun'
+ /
+ &inputp
+   lpaw=.false.,
+   pseudotype=3,
+   file_pseudopw='Os.$fct-spfn-rrkjus_psl.1.0.0.UPF',
+   author='ADC',
+   lloc=-1,
+   rcloc=1.5,
+   which_augfun='PSQ',
+   rmatch_augfun_nc=.true.,
+   nlcc=.true.,
+   new_core_ps=.true.,
+   rcore=1.2,
+   tm=.true.
+ /
+8
+5S  1  0  2.00  0.00  1.00  1.30  0.0
+6S  2  0  2.00  0.00  1.00  1.30  0.0
+5P  2  1  6.00  0.00  1.10  1.30  0.0
+6P  3  1  0.00  0.00  1.10  1.30  0.0
+5D  3  2  6.00  0.00  1.50  1.70  0.0
+5D  3  2  0.00  0.05  1.50  1.70  0.0
+4F  4  3 14.00  0.00  1.10  1.60  0.0
+4F  4  3  0.00  0.20  1.10  1.60  0.0
+EOF
+
+cat > Ir.$fct-spfn-rrkjus_psl.1.0.0.in << EOF
+ &input
+   title='Ir',
+   zed=77.,
+   rel=$nrel,
+   config='[Xe] 4f14 6s2 6p0 5d7',
+   iswitch=3,
+   dft='$gfun'
+ /
+ &inputp
+   lpaw=.false.,
+   pseudotype=3,
+   file_pseudopw='Ir.$fct-spfn-rrkjus_psl.1.0.0.UPF',
+   author='ADC',
+   lloc=-1,
+   rcloc=1.5,
+   which_augfun='PSQ',
+   rmatch_augfun_nc=.true.,
+   nlcc=.true.,
+   new_core_ps=.true.,
+   rcore=1.2,
+   tm=.true.
+ /
+8
+5S  1  0  2.00  0.00  1.00  1.30  0.0
+6S  2  0  2.00  0.00  1.00  1.30  0.0
+5P  2  1  6.00  0.00  1.00  1.30  0.0
+6P  3  1  0.00 -2.50  1.00  1.30  0.0
+5D  3  2  7.00  0.00  1.40  1.60  0.0
+5D  3  2  0.00  0.05  1.40  1.60  0.0
+4F  4  3 14.00  0.00  1.10  1.60  0.0
+4F  4  3  0.00  3.00  1.10  1.60  0.0
+EOF
+
+cat > Pt.$fct-spfn-rrkjus_psl.1.0.0.in << EOF
+ &input
+   title='Pt',
+   zed=78.,
+   rel=$nrel,
+   config='[Xe] 4f14 6s2 6p0 5d8',
+   iswitch=3,
+   dft='$gfun'
+ /
+ &inputp
+   lpaw=.false.,
+   pseudotype=3,
+   file_pseudopw='Pt.$fct-spfn-rrkjus_psl.1.0.0.UPF',
+   author='ADC',
+   lloc=-1,
+   rcloc=1.5,
+   which_augfun='PSQ',
+   rmatch_augfun_nc=.true.,
+   nlcc=.true.,
+   new_core_ps=.true.,
+   rcore=1.2,
+   tm=.true.
+ /
+8
+5S  1  0  2.00  0.00  1.00  1.30  0.0
+6S  2  0  2.00  0.00  1.00  1.30  0.0
+5P  2  1  6.00  0.00  1.10  1.30  0.0
+6P  3  1  0.00 -2.50  1.10  1.30  0.0
+5D  3  2  8.00  0.00  1.30  1.50  0.0
+5D  3  2  0.00  0.05  1.30  1.50  0.0
+4F  4  3 14.00  0.00  1.20  1.50  0.0
+4F  4  3  0.00  2.20  1.20  1.50  0.0
+EOF
+
+cat > Au.$fct-spfn-rrkjus_psl.1.0.0.in << EOF
+ &input
+   title='Au',
+   zed=79.,
+   rel=$nrel,
+   config='[Xe] 4f14 6s1 6p0 5d10',
+   iswitch=3,
+   dft='$gfun'
+ /
+ &inputp
+   lpaw=.false.,
+   pseudotype=3,
+   file_pseudopw='Au.$fct-spfn-rrkjus_psl.1.0.0.UPF',
+   author='ADC',
+   lloc=-1,
+   rcloc=1.8,
+   which_augfun='PSQ',
+   rmatch_augfun_nc=.true.,
+   nlcc=.true.,
+   new_core_ps=.true.,
+   rcore=1.2,
+   tm=.true.
+ /
+8
+5S  1  0  2.00  0.00  1.00  1.20  0.0
+6S  2  0  1.00  0.00  1.00  1.20  0.0
+5P  2  1  6.00  0.00  1.10  1.30  0.0
+6P  3  1  0.00  0.00  1.10  1.30  0.0
+5D  3  2 10.00  0.00  1.50  1.70  0.0
+5D  3  2  0.00  0.05  1.50  1.70  0.0
+4F  4  3 14.00  0.00  1.20  1.70  0.0
+4F  4  3  0.00  0.20  1.20  1.70  0.0
+EOF
+
+cat > Hg.$fct-spn-rrkjus_psl.1.0.0.in << EOF
+ &input
+   title='Hg',
+   zed=80.,
+   rel=$nrel,
+   config='[Xe] 4f14 6s2 6p0 5d10',
+   iswitch=3,
+   dft='$gfun'
+ /
+ &inputp
+   lpaw=.false.,
+   pseudotype=3,
+   file_pseudopw='Hg.$fct-spn-rrkjus_psl.1.0.0.UPF',
+   author='ADC',
+   lloc=-1,
+   rcloc=1.6,
+   which_augfun='PSQ',
+   rmatch_augfun_nc=.true.,
+   nlcc=.true.,
+   new_core_ps=.true.,
+   rcore=1.2,
+   tm=.true.
+ /
+6
+5S  1  0  2.00  0.00  0.90  1.00  0.0
+6S  2  0  2.00  0.00  0.90  1.00  0.0
+5P  2  1  6.00  0.00  0.90  1.20  0.0
+6P  3  1  0.00  0.00  0.90  1.20  0.0
+5D  3  2 10.00  0.00  1.40  1.60  0.0
+5D  3  2  0.00  0.05  1.40  1.60  0.0
+EOF
+
+cat > Tl.$fct-dn-rrkjus_psl.1.0.0.in << EOF
+ &input
+   title='Tl',
+   zed=81.,
+   rel=$nrel,
+   config='[Xe] 4f14 6s2 6p1 5d10',
+   iswitch=3,
+   dft='$gfun'
+ /
+ &inputp
+   lpaw=.false.,
+   pseudotype=3,
+   file_pseudopw='Tl.$fct-dn-rrkjus_psl.1.0.0.UPF',
+   author='ADC',
+   lloc=-1,
+   rcloc=2.1,
+   which_augfun='PSQ',
+   rmatch_augfun_nc=.true.,
+   nlcc=.true.,
+   new_core_ps=.true.,
+   rcore=1.6,
+   tm=.true.
+ /
+6
+6S  1  0  2.00  0.00  1.70  2.00  0.0
+6S  1  0  0.00  4.00  1.70  2.00  0.0
+6P  2  1  1.00  0.00  2.20  2.40  0.0
+6P  2  1  0.00  6.00  2.20  2.40  0.0
+5D  3  2 10.00  0.00  1.40  1.60  0.0
+5D  3  2  0.00  7.60  1.40  1.60  0.0
+EOF
+
+cat > Pb.$fct-dn-rrkjus_psl.1.0.0.in << EOF
+ &input
+   title='Pb',
+   zed=82.,
+   rel=$nrel,
+   config='[Xe] 4f14 6s2 6p2 5d10',
+   iswitch=3,
+   dft='$gfun'
+ /
+ &inputp
+   lpaw=.false.,
+   pseudotype=3,
+   file_pseudopw='Pb.$fct-dn-rrkjus_psl.1.0.0.UPF',
+   author='ADC',
+   lloc=-1,
+   rcloc=2.1,
+   which_augfun='PSQ',
+   rmatch_augfun_nc=.true.,
+   nlcc=.true.,
+   new_core_ps=.true.,
+   rcore=1.6,
+   tm=.true.
+ /
+6
+6S  1  0  2.00  0.00  1.70  2.00  0.0
+6S  1  0  0.00  4.00  1.70  2.00  0.0
+6P  2  1  2.00  0.00  2.20  2.40  0.0
+6P  2  1  0.00  6.00  2.20  2.40  0.0
+5D  3  2 10.00  0.00  1.40  1.60  0.0
+5D  3  2  0.00  6.70  1.40  1.60  0.0
+EOF
+
+cat > Bi.$fct-dn-rrkjus_psl.1.0.0.in << EOF
+ &input
+   title='Bi',
+   zed=83.,
+   rel=$nrel,
+   config='[Xe] 4f14 6s2 6p3 5d10',
+   iswitch=3,
+   dft='$gfun'
+ /
+ &inputp
+   lpaw=.false.,
+   pseudotype=3,
+   file_pseudopw='Bi.$fct-dn-rrkjus_psl.1.0.0.UPF',
+   author='ADC',
+   lloc=-1,
+   rcloc=2.1,
+   which_augfun='PSQ',
+   rmatch_augfun_nc=.true.,
+   nlcc=.true.,
+   new_core_ps=.true.,
+   rcore=1.6,
+   tm=.true.
+ /
+6
+6S  1  0  2.00  0.00  1.70  2.00  0.0
+6S  1  0  0.00  4.00  1.70  2.00  0.0
+6P  2  1  3.00  0.00  2.20  2.40  0.0
+6P  2  1  0.00  6.00  2.20  2.40  0.0
+5D  3  2 10.00  0.00  0.90  1.60  0.0
+5D  3  2  0.00  6.00  0.90  1.60  0.0
+EOF
+
+cat > Po.$fct-dn-rrkjus_psl.1.0.0.in << EOF
+ &input
+   title='Po',
+   zed=84.,
+   rel=$nrel,
+   config='[Xe] 4f14 6s2 6p4 5d10',
+   iswitch=3,
+   dft='$gfun'
+ /
+ &inputp
+   lpaw=.false.,
+   pseudotype=3,
+   file_pseudopw='Po.$fct-dn-rrkjus_psl.1.0.0.UPF',
+   author='ADC',
+   lloc=-1,
+   rcloc=1.9,
+   which_augfun='PSQ',
+   rmatch_augfun_nc=.true.,
+   nlcc=.true.,
+   new_core_ps=.true.,
+   rcore=1.3,
+   tm=.true.
+ /
+6
+6S  1  0  2.00  0.00  1.70  1.90  0.0
+6S  1  0  0.00  4.00  1.70  1.90  0.0
+6P  2  1  4.00  0.00  2.00  2.10  0.0
+6P  2  1  0.00  6.00  2.00  2.10  0.0
+5D  3  2 10.00  0.00  0.90  1.60  0.0
+5D  3  2  0.00  4.75  0.90  1.60  0.0
+EOF
+
+cat > At.$fct-dn-rrkjus_psl.1.0.0.in << EOF
+ &input
+   title='At',
+   zed=85.,
+   rel=$nrel,
+   config='[Xe] 4f14 6s2 6p5 5d10',
+   iswitch=3,
+   dft='$gfun'
+ /
+ &inputp
+   lpaw=.false.,
+   pseudotype=3,
+   file_pseudopw='At.$fct-dn-rrkjus_psl.1.0.0.UPF',
+   author='ADC',
+   lloc=-1,
+   rcloc=1.9,
+   which_augfun='PSQ',
+   rmatch_augfun_nc=.true.,
+   nlcc=.true.,
+   new_core_ps=.true.,
+   rcore=1.3,
+   tm=.true.
+ /
+6
+6S  1  0  2.00  0.00  1.60  1.70  0.0
+6S  1  0  0.00  4.00  1.60  1.70  0.0
+6P  2  1  5.00  0.00  1.80  2.00  0.0
+6P  2  1  0.00  7.00  1.80  2.00  0.0
+5D  3  2 10.00  0.00  0.90  1.55  0.0
+5D  3  2  0.00  5.50  0.90  1.55  0.0
+EOF
+
+cat > Rn.$fct-dn-rrkjus_psl.1.0.0.in << EOF
+ &input
+   title='Rn',
+   zed=86.,
+   rel=$nrel,
+   config='[Xe] 4f14 6s2 6p6 5d10',
+   iswitch=3,
+   dft='$gfun'
+ /
+ &inputp
+   lpaw=.false.,
+   pseudotype=3,
+   file_pseudopw='Rn.$fct-dn-rrkjus_psl.1.0.0.UPF',
+   author='ADC',
+   lloc=-1,
+   rcloc=1.9,
+   which_augfun='PSQ',
+   rmatch_augfun_nc=.true.,
+   nlcc=.true.,
+   new_core_ps=.true.,
+   rcore=1.3,
+   tm=.true.
+ /
+6
+6S  1  0  2.00  0.00  1.50  1.80  0.0
+6S  1  0  0.00  4.00  1.50  1.80  0.0
+6P  2  1  6.00  0.00  1.70  1.90  0.0
+6P  2  1  0.00  6.50  1.70  1.90  0.0
+5D  3  2 10.00  0.00  0.85  1.80  0.0
+5D  3  2  0.00  2.00  0.85  1.80  0.0
+EOF
+
+cat > Fr.$fct-spdn-rrkjus_psl.1.0.0.in << EOF
+ &input
+   title='Fr',
+   zed=87.,
+   rel=$nrel,
+   config='[Xe] 4f14.0 5d10.0 6s2.0 6p6.0 6d-2.0 7s1. 7p-1.',
+   iswitch=3,
+   dft='$gfun'
+ /
+ &inputp
+   lpaw=.false.,
+   pseudotype=3,
+   file_pseudopw='Fr.$fct-spdn-rrkjus_psl.1.0.0.UPF',
+   author='ADC',
+   lloc=-1,
+   rcloc=1.8,
+   which_augfun='PSQ',
+   rmatch_augfun_nc=.true.,
+   nlcc=.true.,
+   new_core_ps=.true.,
+   rcore=1.2,
+   tm=.true.
+ /
+6
+6S  1  0  2.00  0.00  1.30  2.10  0.0
+7S  2  0  1.00  0.00  1.30  2.10  0.0
+6P  2  1  6.00  0.00  1.30  2.35  0.0
+7P  3  1  0.00  6.50  1.30  2.35  0.0
+5D  3  2 10.00  0.00  0.85  1.50  0.0
+5D  3  2 -2.00 -3.00  0.85  1.50  0.0
+EOF
+
+cat > Ra.$fct-spdn-rrkjus_psl.1.0.0.in << EOF
+ &input
+   title='Ra',
+   zed=88.,
+   rel=$nrel,
+   config='[Xe] 4f14.0 5d10.0 6s2.0 6p6.0 6d0. 7s2. 7p0.',
+   iswitch=3,
+   dft='$gfun'
+ /
+ &inputp
+   lpaw=.false.,
+   pseudotype=3,
+   file_pseudopw='Ra.$fct-spdn-rrkjus_psl.1.0.0.UPF',
+   author='ADC',
+   lloc=-1,
+   rcloc=2.1,
+   which_augfun='PSQ',
+   rmatch_augfun_nc=.true.,
+   nlcc=.true.,
+   new_core_ps=.true.,
+   rcore=1.2,
+   tm=.true.
+ /
+7
+6S  1  0  2.00  0.00  1.20  2.00  0.0
+7S  2  0  2.00  0.00  1.20  2.00  0.0
+7S  2  0  0.00  6.00  1.20  2.00  0.0
+6P  2  1  6.00  0.00  1.20  2.20  0.0
+7P  3  1  0.00  6.50  1.20  2.20  0.0
+5D  3  2 10.00  0.00  0.85  1.50  0.0
+5D  3  2 -2.00 -3.20  0.85  1.50  0.0
+EOF
+
+cat > Ac.$fct-spfn-rrkjus_psl.1.0.0.in << EOF
+ &input
+   title='Ac',
+   zed=89.0,
+   rel=$nrel,
+   config='[Rn] 6d1.0 7s2.0 7p0. 5f0',
+   iswitch=3,
+   dft='$gfun'
+ /
+ &inputp
+   lpaw=.false.,
+   pseudotype=3,
+   file_pseudopw='Ac.$fct-spfn-rrkjus_psl.1.0.0.UPF',
+   author='ADC',
+   lloc=-1,
+   rcloc=2.2,
+   which_augfun='PSQ',
+   rmatch_augfun_nc=.true.,
+   nlcc=.true.,
+   new_core_ps=.true.,
+   rcore=1.5,
+   tm=.true.
+ /
+8
+6S  1  0  2.00  0.00  1.40  1.70  0.0
+7S  2  0  2.00  0.00  1.40  1.70  0.0
+6P  2  1  6.00  0.00  1.60  2.20  0.0
+7P  3  1  0.00  0.00  1.60  2.20  0.0
+6D  3  2  1.00  0.00  1.60  2.20  0.0
+6D  3  2 -2.00  4.80  1.60  2.20  0.0
+5F  4  3  0.00  0.10  1.30  1.80  0.0
+5F  4  3 -2.00 -0.70  1.30  1.80  0.0
+EOF
+
+cat > Th.$fct-spfn-rrkjus_psl.1.0.0.in << EOF
+ &input
+   title='Th',
+   zed=90.0,
+   rel=$nrel,
+   config='[Rn] 6d1.0 7s2.0 7p0. 5f1',
+   iswitch=3,
+   dft='$gfun'
+ /
+ &inputp
+   lpaw=.false.,
+   pseudotype=3,
+   file_pseudopw='Th.$fct-spfn-rrkjus_psl.1.0.0.UPF',
+   author='ADC',
+   lloc=-1,
+   rcloc=2.1,
+   which_augfun='PSQ',
+   rmatch_augfun_nc=.true.,
+   nlcc=.true.,
+   new_core_ps=.true.,
+   rcore=1.1,
+   tm=.true.
+ /
+8
+6S  1  0  2.00  0.00  1.40  1.60  0.0
+7S  2  0  2.00  0.00  1.40  1.60  0.0
+6P  2  1  6.00  0.00  1.60  2.10  0.0
+7P  3  1  0.00  4.00  1.60  2.10  0.0
+6D  3  2  1.00  0.00  1.60  2.20  0.0
+6D  3  2  0.00  4.80  1.60  2.20  0.0
+5F  4  3  1.00  0.00  1.20  1.30  0.0
+5F  4  3  0.00  3.10  1.20  1.30  0.0
+EOF
+
+cat > Pa.$fct-spfn-rrkjus_psl.1.0.0.in << EOF
+ &input
+   title='Pa',
+   zed=91.0,
+   rel=$nrel,
+   config='[Rn] 6d1.5 7s2.0 7p0. 5f1.5',
+   iswitch=3,
+   dft='$gfun'
+ /
+ &inputp
+   lpaw=.false.,
+   pseudotype=3,
+   file_pseudopw='Pa.$fct-spfn-rrkjus_psl.1.0.0.UPF',
+   author='ADC',
+   lloc=-1,
+   rcloc=1.9,
+   which_augfun='PSQ',
+   rmatch_augfun_nc=.true.,
+   nlcc=.true.,
+   new_core_ps=.true.,
+   rcore=1.5,
+   tm=.true.
+ /
+8
+6S  1  0  2.00  0.00  1.30  1.40  0.0
+7S  2  0  2.00  0.00  1.30  1.40  0.0
+6P  2  1  6.00  0.00  1.40  2.20  0.0
+7P  3  1  0.00  5.00  1.40  2.20  0.0
+6D  3  2  1.50  0.00  1.90  2.20  0.0
+6D  3  2  0.00  4.80  1.90  2.20  0.0
+5F  4  3  1.50  0.00  1.10  1.30  0.0
+5F  4  3  0.00 -0.50  1.10  1.30  0.0
+EOF
+
+cat > U.$fct-spfn-rrkjus_psl.1.0.0.in << EOF
+ &input
+   title='U',
+   zed=92.0,
+   rel=$nrel,
+   config='[Rn] 6d1.5 7s2.0 7p0. 5f2.5',
+   iswitch=3,
+   dft='$gfun'
+ /
+ &inputp
+   lpaw=.false.,
+   pseudotype=3,
+   file_pseudopw='U.$fct-spfn-rrkjus_psl.1.0.0.UPF',
+   author='ADC',
+   lloc=-1,
+   rcloc=2.1,
+   which_augfun='PSQ',
+   rmatch_augfun_nc=.true.,
+   nlcc=.true.,
+   new_core_ps=.true.,
+   rcore=1.5,
+   tm=.true.
+ /
+8
+6S  1  0  2.00  0.00  1.20  1.40  0.0
+7S  2  0  2.00  0.00  1.20  1.40  0.0
+6P  2  1  6.00  0.00  1.30  2.20  0.0
+7P  3  1  0.00  5.00  1.30  2.20  0.0
+6D  3  2  1.50  0.00  2.00  2.20  0.0
+6D  3  2  0.00  4.80  2.00  2.20  0.0
+5F  4  3  2.50  0.00  1.00  1.30  0.0
+5F  4  3  0.00 -0.50  1.00  1.30  0.0
+EOF
+
+cat > Np.$fct-spfn-rrkjus_psl.1.0.0.in << EOF
+ &input
+   title='Np',
+   zed=93.0,
+   rel=$nrel,
+   config='[Rn] 6d1.5 7s2.0 7p0. 5f3.5',
+   iswitch=3,
+   dft='$gfun'
+ /
+ &inputp
+   lpaw=.false.,
+   pseudotype=3,
+   file_pseudopw='Np.$fct-spfn-rrkjus_psl.1.0.0.UPF',
+   author='ADC',
+   lloc=-1,
+   rcloc=2.1,
+   which_augfun='PSQ',
+   rmatch_augfun_nc=.true.,
+   nlcc=.true.,
+   new_core_ps=.true.,
+   rcore=1.1,
+   tm=.true.
+ /
+8
+6S  1  0  2.00  0.00  1.40  1.60  0.0
+7S  2  0  2.00  0.00  1.40  1.60  0.0
+6P  2  1  6.00  0.00  1.30  2.10  0.0
+7P  3  1  0.00  5.00  1.30  2.10  0.0
+6D  3  2  1.50  0.00  1.50  2.20  0.0
+6D  3  2  0.00  4.80  1.50  2.20  0.0
+5F  4  3  3.50  0.00  1.10  1.30  0.0
+5F  4  3  0.00  3.10  1.10  1.30  0.0
+EOF
+
+cat > Pu.$fct-spfn-rrkjus_psl.1.0.0.in << EOF
+ &input
+   title='Pu',
+   zed=94.0,
+   rel=$nrel,
+   config='[Rn] 6d1.5 7s2.0 7p0. 5f4.5',
+   iswitch=3,
+   dft='$gfun'
+ /
+ &inputp
+   lpaw=.false.,
+   pseudotype=3,
+   file_pseudopw='Pu.$fct-spfn-rrkjus_psl.1.0.0.UPF',
+   author='ADC',
+   lloc=-1,
+   rcloc=2.1,
+   which_augfun='PSQ',
+   rmatch_augfun_nc=.true.,
+   nlcc=.true.,
+   new_core_ps=.true.,
+   rcore=1.5,
+   tm=.true.
+ /
+8
+6S  1  0  2.00  0.00  1.40  1.60  0.0
+7S  2  0  2.00  0.00  1.40  1.60  0.0
+6P  2  1  6.00  0.00  1.40  2.10  0.0
+7P  3  1  0.00  5.00  1.40  2.10  0.0
+6D  3  2  1.50  0.00  1.50  2.20  0.0
+6D  3  2  0.00  4.80  1.50  2.20  0.0
+5F  4  3  4.50  0.00  1.30  1.90  0.0
+5F  4  3  0.00  3.10  1.30  1.90  0.0
+EOF
+
+cat > Am.$fct-spfn-rrkjus_psl.1.0.0.in << EOF
+ &input
+   title='Am',
+   zed=95.0,
+   rel=$nrel,
+   config='[Rn] 6d1.0 7s2.0 7p0. 5f6.0',
+   iswitch=3,
+   dft='$gfun'
+ /
+ &inputp
+   lpaw=.false.,
+   pseudotype=3,
+   file_pseudopw='Am.$fct-spfn-rrkjus_psl.1.0.0.UPF',
+   author='ADC',
+   lloc=-1,
+   rcloc=2.1,
+   which_augfun='PSQ',
+   rmatch_augfun_nc=.true.,
+   nlcc=.true.,
+   new_core_ps=.true.,
+   rcore=1.1,
+   tm=.true.
+ /
+8
+6S  1  0  2.00  0.00  1.40  1.60  0.0
+7S  2  0  2.00  0.00  1.40  1.60  0.0
+6P  2  1  6.00  0.00  1.40  1.90  0.0
+7P  3  1  0.00  5.00  1.40  1.90  0.0
+6D  3  2  1.00  0.00  1.50  2.30  0.0
+6D  3  2  0.00  4.80  1.50  2.30  0.0
+5F  4  3  6.00  0.00  1.40  1.80  0.0
+5F  4  3  0.00  3.10  1.40  1.80  0.0
+EOF

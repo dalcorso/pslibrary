@@ -23,8 +23,15 @@ BIN_DIR=$PWDIR/bin
 
 mkdir $work >& /dev/null
 
-. ../paw_ps_test.job
-. ../us_ps_test.job
+. ../paw_ps_test_high.job
+. ../us_ps_test_high.job
+. ../paw_ps_test_low.job
+. ../us_ps_test_low.job
+
+#  Uncomment the following lines to test the old pslibrary.0.3.1 PPs
+#
+#. ../paw_ps_test.job
+#. ../us_ps_test.job
 
 #  Uncomment the following line to test the NC-PPs. 
 #

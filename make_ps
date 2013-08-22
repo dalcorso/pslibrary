@@ -24,8 +24,25 @@ BIN_DIR=$PWDIR/bin
 mkdir $work >& /dev/null
 mkdir PSEUDOPOTENTIALS >& /dev/null
 
-. ../paw_ps_collection.job
-. ../us_ps_collection.job
+#
+#   These two files generate PAW and US PPs for all elements. These are
+#   high accuracy - high kinetic energy cut-off PPs.
+#
+. ../paw_ps_high.job
+. ../us_ps_high.job
+#
+#   These two files generate additional PAW and US PPs for some elements. 
+#   These are less accurate PP than the previous one but require
+#   lower kinetic energy cut-off or have less projectors or less semicore
+#   states.
+#
+. ../paw_ps_low.job
+. ../us_ps_low.job
+
+#  Uncomment the following line to generate the old pslibrary 0.3.1 PPs. 
+#
+#. ../paw_ps_collection.job
+#. ../us_ps_collection.job
 
 #  Uncomment the following line to generate the NC-PPs. Be very careful
 #  these PPs are completely untested.
