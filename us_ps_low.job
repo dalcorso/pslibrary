@@ -138,7 +138,7 @@ cat > Na.$fct-spnl-rrkjus_psl.1.0.0.in << EOF
    file_pseudopw='Na.$fct-spnl-rrkjus_psl.1.0.0.UPF',
    author='ADC',
    lloc=-1,
-   rcloc=0.8
+   rcloc=1.0
    which_augfun='PSQ',
    rmatch_augfun_nc=.true.,
    nlcc=.true.,
@@ -147,8 +147,8 @@ cat > Na.$fct-spnl-rrkjus_psl.1.0.0.in << EOF
    tm=.true.
  /
 4
-2S  1  0  2.00  0.00  1.00  1.30  0.0
-3S  2  0  1.00  0.00  1.00  1.30  0.0
+2S  1  0  2.00  0.00  1.00  1.25  0.0
+3S  2  0  1.00  0.00  1.00  1.25  0.0
 2P  2  1  6.00  0.00  0.90  1.30  0.0
 3P  2  1  0.00 -1.80  0.90  1.30  0.0
 EOF

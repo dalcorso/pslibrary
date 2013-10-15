@@ -154,8 +154,11 @@ indicated with spdf, n means NLCC. One or two letters l, mean that this is
 a low (or very low) kinetic energy cut-off PP and that a PP exist with
 the same semicore states but smaller cut-off radii or more nonlocal projectors.
 
+Note that you need QE with svn version higher than 10479 to generate 
+the PPs in pslibrary.1.0.0.
+
 Andrea Dal Corso
-August 2013
+October 2013
 
 ----------------------------------------------------------------------------
 
