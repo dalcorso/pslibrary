@@ -23,7 +23,7 @@ cat > Ag.$fct-dn-rrkjus_psl.0.1.test.in << EOF
    nconf=5
    configts(1)='4d9.5 5s1.5 5p0',
    configts(2)='4d10 5s1 ',
-   configts(3)='4d8.5 5s1.5 5p1.0',
+   configts(3)='4d9.5 5s0.5 5p1.0',
    configts(4)='4d9 5s2 5p0',
    configts(5)='4d10. 5s0 5p0',
  /
@@ -107,7 +107,7 @@ cat > As.$fct-n-rrkjus_psl.0.2.test.in << EOF
    nconf=5,
    configts(1)='4s2 4p3'
    configts(2)='4s2 4p2 4d0'
-   configts(3)='4s2 4p1 4d0.5'
+   configts(3)='4s2 4p2 4d0.5'
    configts(4)='4s1 4p3 4d0'
    configts(5)='4s1 4p4'
  /
@@ -151,25 +151,25 @@ cat > B.$fct-n-rrkjus_psl.0.1.test.in << EOF
  /
 EOF
 
-cat > Be.$fct-n-rrkjus_psl.0.2.test.in << EOF
- &input
-   title='Be',
-   zed=4.0,
-   rel=$nrel,
-   config='1s2 2s2.0 2p0.0 3d-2',
-   iswitch=2,
- /
- &test
-   file_pseudo='$psdir/Be.$fct-n-rrkjus_psl.0.2.UPF',
-   nconf=5,
-   configts(1)='2s2'
-   configts(2)='2s1 2p1'
-   configts(3)='2s1 2p0'
-   configts(4)='2s0.5 2p1'
-   configts(5)='2s0.5 2p0'
- /
-EOF
-
+#cat > Be.$fct-n-rrkjus_psl.0.2.test.in << EOF
+# &input
+#   title='Be',
+#   zed=4.0,
+#   rel=$nrel,
+#   config='1s2 2s2.0 2p0.0 3d-2',
+#   iswitch=2,
+# /
+# &test
+#   file_pseudo='$psdir/Be.$fct-n-rrkjus_psl.0.2.UPF',
+#   nconf=5,
+#   configts(1)='2s2'
+#   configts(2)='2s1 2p1'
+#   configts(3)='2s1 2p0'
+#   configts(4)='2s0.5 2p1'
+#   configts(5)='2s0.5 2p0'
+# /
+#EOF
+ 
 cat > Bi.$fct-dn-rrkjus_psl.0.2.2.test.in << EOF
  &input
    title='Bi',
@@ -227,24 +227,24 @@ cat > C.$fct-n-rrkjus_psl.0.1.test.in << EOF
  /
 EOF
 
-cat > Cd.$fct-dn-rrkjus_psl.0.3.1.test.in << EOF
- &input
-   title='Cd',
-   zed=48.,
-   rel=$nrel,
-   config='[Kr] 4d9.5 5s2.0 5p0.5',
-   iswitch=2,
- /
- &test
-   file_pseudo='$psdir/Cd.$fct-dn-rrkjus_psl.0.3.1.UPF',
-   nconf=5
-   configts(1)='4d9.5 5s2 5p0.5 ',
-   configts(2)='4d9.5 5s2 5p0',
-   configts(3)='4d10  5s2 5p0',
-   configts(4)='4d10  5s1 5p0',
-   configts(5)='4d9   5s2 5p0',
- /
-EOF
+#cat > Cd.$fct-dn-rrkjus_psl.0.3.1.test.in << EOF
+# &input
+#   title='Cd',
+#   zed=48.,
+#   rel=$nrel,
+#   config='[Kr] 4d9.5 5s2.0 5p0.5',
+#   iswitch=2,
+# /
+# &test
+#   file_pseudo='$psdir/Cd.$fct-dn-rrkjus_psl.0.3.1.UPF',
+#   nconf=5
+#   configts(1)='4d9.5 5s2 5p0.5 ',
+#   configts(2)='4d9.5 5s2 5p0',
+#   configts(3)='4d10  5s2 5p0',
+#   configts(4)='4d10  5s1 5p0',
+#   configts(5)='4d9   5s2 5p0',
+# /
+#EOF
 
 cat > Cl.$fct-n-rrkjus_psl.0.3.0.test.in << EOF
  &input
@@ -279,8 +279,8 @@ cat > Cu.$fct-dn-rrkjus_psl.0.2.test.in << EOF
    configts(1)='3d9.5 4s1.5'
    configts(2)='3d9.5 4s1 4p0'
    configts(3)='3d10 4s1 4p0'
-   configts(4)='3d10 4s0 4p0'
-   configts(5)='3d9  4s1 4p0'
+   configts(4)='3d9.5 4s0 4p0'
+   configts(5)='3d9  4s2 4p0'
  /
 EOF
 
@@ -379,24 +379,24 @@ cat > In.$fct-dn-rrkjus_psl.0.2.2.test.in << EOF
  /
 EOF
 
-cat > Ir.$fct-n-rrkjus_psl.0.2.3.test.in << EOF
- &input
-   title='Ir',
-   zed=77.,
-   rel=$nrel,
-   config='[Xe] 4f14.0 5d7.0 6s2.0 6p0.0',
-   iswitch=2,
- /
- &test
-   file_pseudo='$psdir/Ir.$fct-n-rrkjus_psl.0.2.3.UPF',
-   nconf=5
-   configts(1)='5d7.0 6s2.0 6p0.0',
-   configts(2)='5d7.0 6s0.0 6p1.0',
-   configts(3)='5d6.0 6s2.0 6p1.0',
-   configts(4)='5d7.0 6s1.0 6p0.0',
-   configts(5)='5d6.0 6s1.0 6p1.0',
- /
-EOF
+#cat > Ir.$fct-n-rrkjus_psl.0.2.3.test.in << EOF
+# &input
+#   title='Ir',
+#   zed=77.,
+#   rel=$nrel,
+#   config='[Xe] 4f14.0 5d7.0 6s2.0 6p0.0',
+#   iswitch=2,
+# /
+# &test
+#   file_pseudo='$psdir/Ir.$fct-n-rrkjus_psl.0.2.3.UPF',
+#   nconf=5
+#   configts(1)='5d7.0 6s2.0 6p0.0',
+#   configts(2)='5d7.0 6s0.0 6p1.0',
+#   configts(3)='5d6.0 6s2.0 6p1.0',
+#   configts(4)='5d7.0 6s1.0 6p0.0',
+#   configts(5)='5d6.0 6s1.0 6p1.0',
+# /
+#EOF
 
 cat > H.$fct-rrkjus_psl.0.1.test.in << EOF
  &input
@@ -434,50 +434,50 @@ cat > Hg.$fct-dn-rrkjus_psl.0.2.2.test.in << EOF
  /
 EOF
 
-if [ $nrel = 2 ]
-then
-
-cat > I.$fct-n-rrkjus_psl.0.2.2.test.in << EOF
- &input
-   title='I',
-   zed=53.,
-   rel=$nrel,
-   config='[Kr] 4d10.0 5s2.0 5p5.0 5d-2.0',
-   iswitch=2,
- /
- &test
-   file_pseudo='$psdir/I.$fct-n-rrkjus_psl.0.2.2.UPF',
-   nconf=5
-   configts(1)='5s2 5p5'
-   configts(2)='5s2 5p4 5d0'
-   configts(3)='5s2 5p3 5d0'
-   configts(4)='5s2 5p2 5d0'
-   configts(5)='5s2 5p1'
- /
-EOF
-
-else
-
-cat > I.$fct-n-rrkjus_psl.0.2.test.in << EOF
- &input
-   title='I',
-   zed=53.,
-   rel=$nrel,
-   config='[Kr] 4d10.0 5s2.0 5p5.0 5d-2.0',
-   iswitch=2,
- /
- &test
-   file_pseudo='$psdir/I.$fct-n-rrkjus_psl.0.2.UPF',
-   nconf=5
-   configts(1)='5s2 5p5'
-   configts(2)='5s2 5p4 5d0'
-   configts(3)='5s2 5p3 5d0'
-   configts(4)='5s2 5p2 5d0'
-   configts(5)='5s2 5p1'
- /
-EOF
-
-fi
+#if [ $nrel = 2 ]
+#then
+#
+#cat > I.$fct-n-rrkjus_psl.0.2.2.test.in << EOF
+# &input
+#   title='I',
+#   zed=53.,
+#   rel=$nrel,
+#   config='[Kr] 4d10.0 5s2.0 5p5.0 5d-2.0',
+#   iswitch=2,
+# /
+# &test
+#   file_pseudo='$psdir/I.$fct-n-rrkjus_psl.0.2.2.UPF',
+#   nconf=5
+#   configts(1)='5s2 5p5'
+#   configts(2)='5s2 5p4 5d0'
+#   configts(3)='5s2 5p3 5d0'
+#   configts(4)='5s2 5p2 5d0'
+#   configts(5)='5s2 5p1'
+# /
+#EOF
+#
+#else
+#
+#cat > I.$fct-n-rrkjus_psl.0.2.test.in << EOF
+# &input
+#   title='I',
+#   zed=53.,
+#   rel=$nrel,
+#   config='[Kr] 4d10.0 5s2.0 5p5.0 5d-2.0',
+#   iswitch=2,
+# /
+# &test
+#   file_pseudo='$psdir/I.$fct-n-rrkjus_psl.0.2.UPF',
+#   nconf=5
+#   configts(1)='5s2 5p5'
+#   configts(2)='5s2 5p4 5d0'
+#   configts(3)='5s2 5p3 5d0'
+#   configts(4)='5s2 5p2 5d0'
+#   configts(5)='5s2 5p1'
+# /
+#EOF
+#
+#fi
 
 cat > Li.$fct-s-rrkjus_psl.0.2.1.test.in << EOF
  &input
@@ -565,9 +565,9 @@ cat > Ni.$fct-n-rrkjus_psl.0.1.test.in << EOF
    file_pseudo='$psdir/Ni.$fct-n-rrkjus_psl.0.1.UPF',
    nconf=5
    configts(1)='3d8 4s2'
-   configts(2)='3d8 4s1 4p0'
-   configts(3)='3d8 4s1 4p0.5'
-   configts(4)='3d9 4s1'
+   configts(2)='3d9 4s1'
+   configts(3)='3d8 4s1 4p0'
+   configts(4)='3d8 4s1 4p0.5'
    configts(5)='3d7.5 4s2 4p0'
  /
 EOF
@@ -719,7 +719,7 @@ cat > S.$fct-n-rrkjus_psl.0.1.test.in << EOF
    nconf=5,
    configts(1)='3s2 3p4'
    configts(2)='3s2 3p3 3d0'
-   configts(3)='3s2 3p2 3d0'
+   configts(3)='3s2 3p2'
    configts(4)='3s1 3p4 3d0'
    configts(5)='3s1 3p5'
  /
