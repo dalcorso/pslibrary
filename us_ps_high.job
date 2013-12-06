@@ -283,15 +283,16 @@ cat > Ne.$fct-n-rrkjus_psl.1.0.0.in << EOF
    rmatch_augfun_nc=.true.,
    nlcc=.true.,
    new_core_ps=.true.,
-   rcore=0.7,
+   rcore=0.8,
    tm=.true.
  /
 4
-2S  1  0  2.00  0.00  1.00  1.35  0.0
-2S  1  0  0.00  0.05  1.00  1.35  0.0
-2P  2  1  6.00  0.00  0.90  1.35  0.0
-2P  2  1  0.00  0.05  0.90  1.35  0.0
+2S  1  0  2.00  0.00  1.00  1.40  0.0
+2S  1  0  0.00  0.40  1.00  1.40  0.0
+2P  2  1  6.00  0.00  1.00  1.40  0.0
+2P  2  1  0.00  0.05  1.00  1.40  0.0
 EOF
+
 cat > Na.$fct-spn-rrkjus_psl.1.0.0.in << EOF
  &input
    title='Na',
@@ -3086,8 +3087,8 @@ cat > Au.$fct-spfn-rrkjus_psl.1.0.0.in << EOF
 6P  3  1  0.00  0.00  1.10  1.30  0.0
 5D  3  2 10.00  0.00  1.50  1.70  0.0
 5D  3  2  0.00  0.05  1.50  1.70  0.0
-4F  4  3 14.00  0.00  1.20  1.70  0.0
-4F  4  3  0.00  0.20  1.20  1.70  0.0
+4F  4  3 14.00  0.00  1.20  1.80  0.0
+4F  4  3  0.00  0.20  1.20  1.80  0.0
 EOF
 
 cat > Hg.$fct-spn-rrkjus_psl.1.0.0.in << EOF
@@ -3329,7 +3330,7 @@ cat > Fr.$fct-spdn-rrkjus_psl.1.0.0.in << EOF
    file_pseudopw='Fr.$fct-spdn-rrkjus_psl.1.0.0.UPF',
    author='ADC',
    lloc=-1,
-   rcloc=1.8,
+   rcloc=2.2,
    which_augfun='PSQ',
    rmatch_augfun_nc=.true.,
    nlcc=.true.,
@@ -3338,12 +3339,12 @@ cat > Fr.$fct-spdn-rrkjus_psl.1.0.0.in << EOF
    tm=.true.
  /
 6
-6S  1  0  2.00  0.00  1.30  2.10  0.0
-7S  2  0  1.00  0.00  1.30  2.10  0.0
-6P  2  1  6.00  0.00  1.30  2.35  0.0
-7P  3  1  0.00  6.50  1.30  2.35  0.0
+6S  1  0  2.00  0.00  1.00  2.10  0.0
+7S  2  0  1.00  0.00  1.00  2.10  0.0
+6P  2  1  6.00  0.00  1.20  2.10  0.0
+7P  3  1  0.00  6.50  1.20  2.10  0.0
 5D  3  2 10.00  0.00  0.85  1.50  0.0
-5D  3  2 -2.00 -3.00  0.85  1.50  0.0
+5D  3  2 -2.00 -3.20  0.85  1.50  0.0
 EOF
 
 cat > Ra.$fct-spdn-rrkjus_psl.1.0.0.in << EOF
@@ -3462,7 +3463,7 @@ cat > Pa.$fct-spfn-rrkjus_psl.1.0.0.in << EOF
    file_pseudopw='Pa.$fct-spfn-rrkjus_psl.1.0.0.UPF',
    author='ADC',
    lloc=-1,
-   rcloc=1.9,
+   rcloc=2.1,
    which_augfun='PSQ',
    rmatch_augfun_nc=.true.,
    nlcc=.true.,
@@ -3471,8 +3472,8 @@ cat > Pa.$fct-spfn-rrkjus_psl.1.0.0.in << EOF
    tm=.true.
  /
 8
-6S  1  0  2.00  0.00  1.30  1.40  0.0
-7S  2  0  2.00  0.00  1.30  1.40  0.0
+6S  1  0  2.00  0.00  1.30  1.50  0.0
+7S  2  0  2.00  0.00  1.30  1.50  0.0
 6P  2  1  6.00  0.00  1.40  2.20  0.0
 7P  3  1  0.00  5.00  1.40  2.20  0.0
 6D  3  2  1.50  0.00  1.90  2.20  0.0
