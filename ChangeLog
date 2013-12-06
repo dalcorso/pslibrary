@@ -190,8 +190,8 @@ collected in the file obsolete.job.
 pslibrary.1.0.0 (ADC, In progress)
 
 A major reorganization of pslibrary. Introduced four new files:
-paw_ps_high.job     paw_ps_low.job
-us_ps_high.job      us_ps_low.job
+paw_ps_high.job         paw_ps_low.job
+us_ps_high.job          us_ps_low.job
 and the corresponding four test files:
 paw_ps_test_high.job    paw_ps_test_low.job
 us_ps_test_high.job     us_ps_test_low.job
@@ -206,7 +206,7 @@ Third row   2s, 2p, 3s, 3p (Na, Mg). 3s, 3p (Mg, Al-Ar).
 Fourth row  3s, 3p, 3d, 4s, 4p (K-Zn). 3d, 4s, 4p (Fe-Kr). 4s, 4p (As-Kr).
 Fifth row   4s, 4p, 4d, 5s, 5p (Rb-Cd). 4d, 5s, 5p (Pd-Xe). 5s, 5p (Sb-Xe).
 Sixth row   4d, 4f, 5s, 5p, 5d, 6s, 6p (La-Hf). 4f, 5s, 5p, 5d, 6s, 6p (La-Au).
-            5s, 5p, 5d, 6s, 6p (Cs-Hg).  5d, 6s, 6p (Ir-Rn).
+            5s, 5p, 5d, 6s, 6p (Cs-Hg). 5d, 6s, 6p (Ir-Rn).
 Seventh row 5f, 6s, 6p, 6d, 7s, 7p (Fr-Am).
 
 From now on the files of pslibrary.0.3.1 will be updated only by commenting
@@ -220,3 +220,5 @@ uncomment them, but this is strongly discouraged. If the PP is not commented
 this means that it is more or less equivalent to that of pslibrary.1.0.0 or
 possibly better, you can continue to use it.
 
+The experimental lanthanides PPs in pslibrary.0.3.1 have been moved to the
+pslibrary.1.0.0. Some of them have been modified. 
