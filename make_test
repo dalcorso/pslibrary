@@ -45,8 +45,10 @@ mkdir $work >& /dev/null
 #
 #. ../paw_ps_test_alt.job
 
-#  Uncomment the following line to test PAW data-sets for Lanthanides.
+#
+#  Old tests of the PAW data-sets for Lanthanides. 
 #  Require an atomic code with svn version older than 10324.
+#  This file is obsolete. The test have been moved in paw_ps_test_low.job
 #
 #. ../paw_lan_test.job
 
@@ -58,8 +60,9 @@ mkdir $work >& /dev/null
 #
 #. ../us_ps_test_alt.job
 
-#  Uncomment the following line to test US-PPs for Lanthanides. 
+#  Old tests of the PAW data-sets for Lanthanides. 
 #  Require an atomic code with svn version older than 10324.
+#  This file is obsolete. The test have been moved in us_ps_test_low.job
 #
 #. ../us_lan_test.job
 

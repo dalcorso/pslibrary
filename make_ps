@@ -59,9 +59,9 @@ mkdir PSEUDOPOTENTIALS >& /dev/null
 #
 #. ../paw_ps_collection_alt.job
 
-#  Uncomment the following line to generate PAW data sets for Lanthanides. 
-#  Much more experimental than the previous ones.
+#  Old PP files for Lanthanides. 
 #  Require an atomic code with svn version older than 10324.
+#  This file is obsolete. The PPs have been moved to paw_ps_low and corrected.
 #
 #. ../paw_lan_collection.job
 
@@ -75,9 +75,9 @@ mkdir PSEUDOPOTENTIALS >& /dev/null
 #
 #. ../us_ps_collection_alt.job
 
-#  Uncomment the following line to generate US-PPs for Lanthanides. 
-#  Much more experimental than the previous ones.
+#  Old PP files for Lanthanides.  
 #  Require an atomic code with svn version older than 10324.
+#  This file is obsolete. The PPs have been moved to us_ps_low and corrected.
 #
 #. ../us_lan_collection.job
 
