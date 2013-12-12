@@ -533,7 +533,7 @@ cat > Ar.$fct-n-kjpaw_psl.1.0.0.in << EOF
    rmatch_augfun_nc=.true.,
    nlcc=.true.,
    new_core_ps=.true.,
-   rcore=1.0,
+   rcore=1.2,
    tm=.true.
  /
 6
