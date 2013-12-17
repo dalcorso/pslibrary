@@ -34,6 +34,64 @@ Andrea Dal Corso
 Dic. 2011
 
 --------------------------------------------------------------------------
+Version 1.0.0:
+
+This is a new version of the pslibrary. The entire library has been rewritten
+building on previous experience so many PPs are equivalent to those in 
+pslibrary.0.3.1. PPs are available for all elements up to Pu (Z=94). There 
+are still PAW and US PPs. Two sets of files are provided:
+
+paw_ps_high.job, 
+us_ps_high.job 
+
+contain the most accurate PP. These PPs have the highest number of semicore 
+states and smaller cut-off radii. They usually require a high kinetic-energy 
+cut-off and should be reserved for special applications. Check inside the 
+UPF PP file for an indication of the required kinetic energy cut-off. 
+
+paw_ps_low.job, 
+us_ps_low.job 
+
+contain PPs that are optimized for low kinetic energy cut-offs at the price 
+of a lower accuracy. These are PPs with less semicore states and larger cut-off 
+radii. The target of the _low library is convergence at 40 Ry kinetic energy 
+cut-off, with some exceptions that converge between 40 Ry and 50 Ry. If the 
+_low library does not contain any PP for a given element, 
+it means that the PP in the _high library converges with a kinetic energy 
+cut-off lower than 40 Ry or between 40 Ry and 50 Ry.
+
+The names of these PPs follow the same logic of previous versions of pslibrary
+with version number updated to 1.0.0 and the presence of semicore states
+indicated with spdf, n means NLCC. One (or two) letters l, mean that this is
+a low (or very low) kinetic energy cut-off PP and that a PP with
+the same semicore states but smaller cut-off radii or more nonlocal 
+projectors exists.
+
+Note that you need QE with svn version higher than 10479 to generate the PPs 
+in pslibrary.1.0.0.
+
+The PPs can be tested with the tests available in the files
+
+paw_ps_test_high.job  us_ps_test_high.job
+paw_ps_test_low.job   us_ps_test_low.job
+
+That are used by the commands
+
+. ./make_all_test
+
+or entering in the directories and giving the command
+
+.. ./make_test
+
+The PPs of pslibrary.0.3.1 or older are still available but in order
+to generate them you need to uncomment the lines inside make_ps.
+The lanthanides PPs of pslibrary.0.3.1 are no more available, and
+are substituted by those of pslibrary.1.0.0.
+
+Andrea Dal Corso
+Dicember 2013
+
+----------------------------------------------------------------------------
 
 Note that these pseudopotentials are experimental. 
 By default, only PAW data-sets and US-PPs that are in 
@@ -125,39 +183,6 @@ Andrea Dal Corso
 July 2013
 ----------------------------------------------------------------------------
 
-Version 1.0.0:
-
-This is a new version of the pslibrary. The entire library has been made more
-uniform, building on previous experience so many PPs are equivalent to
-those in pslibrary.0.3.1. PPs are available for all elements up to Am (Z=95).
-There are still PAW and US PPs. Two set of files are provided:
-paw_ps_high.job, us_ps_high.job contain the most accurate PP. These PPs
-have the highest number of semicore states and smaller cut-off radii. They
-usually require a high kinetic-energy cut-off and should be reserved for
-special applications. Check inside the UPF PP file for an indication of 
-the required kinetic energy cut-off. paw_ps_low.job, us_ps_low.job contain 
-PPs that are optimized for low kinetic energy cut-offs at the price of a 
-lower accuracy. These are PPs with less semicore states and larger cut-off 
-radii. The target of the _low library is convergence at 40 Ry kinetic energy 
-cut-off, with some exceptions for some elements that converge between 40 Ry 
-and 50 Ry. The _low library does not contain any PP for a given element, 
-if the PP in the _high library converges with a kinetic energy cut-off 
-lower than 40 Ry or between 40 Ry and 50 Ry.
-
-The names of these PPs follow the same logic of previous version of pslibrary
-with version number updated to 1.0.0 and the presence of semicore states
-indicated with spdf, n means NLCC. One or two letters l, mean that this is
-a low (or very low) kinetic energy cut-off PP and that a PP with
-the same semicore states but smaller cut-off radii or more nonlocal 
-projectorsi exists.
-
-Note that you need QE with svn version higher than 10479 to generate 
-the PPs in pslibrary.1.0.0.
-
-Andrea Dal Corso
-Dicember 2013
-
-----------------------------------------------------------------------------
 
 All the material included in this distribution is free software;
 you can redistribute it and/or modify it under the terms of the GNU

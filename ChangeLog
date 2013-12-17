@@ -187,7 +187,7 @@ by a newer version have been removed from the main scripts and
 collected in the file obsolete.job.
 
 --------------------------------------------------------
-pslibrary.1.0.0 (ADC, In progress)
+pslibrary.1.0.0 (ADC, December 2013)
 
 A major reorganization of pslibrary. Introduced four new files:
 paw_ps_high.job         paw_ps_low.job
