@@ -227,3 +227,8 @@ pslibrary.1.0.0. Some of them have been modified.
 
 Commented pslibrary.0.3.1 PPs: Be without semicore 1s, I, Cu with semicore,
                                Se with semicore, Hf, He.
+--------------------------------------------------------
+pslibrary.1.0.1 (ADC, Current)
+
+NC Ta PP: It was reported that the norm conserving Ta PP is not working. Commented.
+
