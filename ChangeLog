@@ -236,7 +236,7 @@ NC Ta PP: It was reported that the norm conserving Ta PP is not working. Comment
 
 Sn, version 0.2,
 Zn, version 0.2.2,
-Ba, Ca, K, Rb version 0.2.3, 
+Ba, Ca, K, Rb, Y version 0.2.3, 
 Ru version 0.3.0,
 Te version 0.3.1,
 seem to be wrong or worse than those of pslibrary 1.0.0 
