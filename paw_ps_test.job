@@ -780,25 +780,25 @@ cat > Si.$fct-n-kjpaw_psl.0.1.test.in << EOF
  /
 EOF
 
-cat > Sn.$fct-dn-kjpaw_psl.0.2.test.in << EOF
- &input
-   title='Sn',
-   zed=50.,
-   rel=$nrel,
-   config='[Kr] 4d10.0 5s2.0 5p2.0 5d-1',
-   iswitch=2,
- /
- &test
-   file_pseudo='$psdir/Sn.$fct-dn-kjpaw_psl.0.2.UPF',
-   nconf=5,
-   configts(1)='4d10 5s2 5p2'
-   configts(2)='4d10 5s2 5p1 5d0'
-   configts(3)='4d10 5s2 5p0'
-   configts(4)='4d10 5s1 5p3'
-   configts(5)='4d10 5s1 5p2 5d0'
- /
-EOF
-
+#cat > Sn.$fct-dn-kjpaw_psl.0.2.test.in << EOF
+# &input
+#   title='Sn',
+#   zed=50.,
+#   rel=$nrel,
+#   config='[Kr] 4d10.0 5s2.0 5p2.0 5d-1',
+#   iswitch=2,
+# /
+# &test
+#   file_pseudo='$psdir/Sn.$fct-dn-kjpaw_psl.0.2.UPF',
+#   nconf=5,
+#   configts(1)='4d10 5s2 5p2'
+#   configts(2)='4d10 5s2 5p1 5d0'
+#   configts(3)='4d10 5s2 5p0'
+#   configts(4)='4d10 5s1 5p3'
+#   configts(5)='4d10 5s1 5p2 5d0'
+# /
+#EOF
+#
 cat > Sr.$fct-spn-kjpaw_psl.0.2.3.test.in << EOF
  &input
    title='Sr',
@@ -856,24 +856,24 @@ cat > Tc.$fct-spn-kjpaw_psl.0.3.0.test.in << EOF
  /
 EOF
 
-cat > Te.$fct-dn-kjpaw_psl.0.3.1.test.in << EOF
- &input
-   title='Te',
-   zed=52.,
-   rel=$nrel,
-   config='[Kr] 4d10.0 5s2.0 5p4.00 5d-2.0',
-   iswitch=2,
- /
- &test
-   file_pseudo='$psdir/Te.$fct-dn-kjpaw_psl.0.3.1.UPF',
-   nconf=5,
-   configts(1)='4d10 5s2 5p4'
-   configts(2)='4d10 5s2 5p3 5d0'
-   configts(3)='4d10 5s2 5p2'
-   configts(4)='4d10 5s1 5p5'
-   configts(5)='4d10 5s1 5p4 5d0'
- /
-EOF
+#cat > Te.$fct-dn-kjpaw_psl.0.3.1.test.in << EOF
+# &input
+#   title='Te',
+#   zed=52.,
+#   rel=$nrel,
+#   config='[Kr] 4d10.0 5s2.0 5p4.00 5d-2.0',
+#   iswitch=2,
+# /
+# &test
+#   file_pseudo='$psdir/Te.$fct-dn-kjpaw_psl.0.3.1.UPF',
+#   nconf=5,
+#   configts(1)='4d10 5s2 5p4'
+#   configts(2)='4d10 5s2 5p3 5d0'
+#   configts(3)='4d10 5s2 5p2'
+#   configts(4)='4d10 5s1 5p5'
+#   configts(5)='4d10 5s1 5p4 5d0'
+# /
+#EOF
 
 cat > Tl.$fct-dn-kjpaw_psl.0.2.3.test.in << EOF
  &input
@@ -913,24 +913,24 @@ cat > Y.$fct-spn-kjpaw_psl.0.2.3.test.in << EOF
  /
 EOF
 
-cat > Zn.$fct-dn-kjpaw_psl.0.2.2.test.in << EOF
- &input
-   title='Zn',
-   zed=30.,
-   rel=$nrel,
-   config='[Ar] 3d10. 4s2. 4p0.0',
-   iswitch=2,
- /
- &test
-   file_pseudo='$psdir/Zn.$fct-dn-kjpaw_psl.0.2.2.UPF',
-   nconf=5,
-   configts(1)='3d10 4s2'
-   configts(2)='3d10 4s1 4p0'
-   configts(3)='3d10 4s0 4p1 '
-   configts(4)='3d9.5 4s2. 4p0'
-   configts(5)='3d9 4s2. 4p0'
- /
-EOF
+#cat > Zn.$fct-dn-kjpaw_psl.0.2.2.test.in << EOF
+# &input
+#   title='Zn',
+#   zed=30.,
+#   rel=$nrel,
+#   config='[Ar] 3d10. 4s2. 4p0.0',
+#   iswitch=2,
+# /
+# &test
+#   file_pseudo='$psdir/Zn.$fct-dn-kjpaw_psl.0.2.2.UPF',
+#   nconf=5,
+#   configts(1)='3d10 4s2'
+#   configts(2)='3d10 4s1 4p0'
+#   configts(3)='3d10 4s0 4p1 '
+#   configts(4)='3d9.5 4s2. 4p0'
+#   configts(5)='3d9 4s2. 4p0'
+# /
+#EOF
 
 cat > Zr.$fct-spn-kjpaw_psl.0.2.3.test.in << EOF
  &input

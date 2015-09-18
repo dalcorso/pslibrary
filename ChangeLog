@@ -232,3 +232,14 @@ pslibrary.1.0.1 (ADC, Current)
 
 NC Ta PP: It was reported that the norm conserving Ta PP is not working. Commented.
 
+18/9/2015:
+
+Sn, version 0.2,
+Zn, version 0.2.2,
+Ba, Ca, K, Rb version 0.2.3, 
+Ru version 0.3.0,
+Te version 0.3.1,
+seem to be wrong or worse than those of pslibrary 1.0.0 
+(see http://materialscloud.org/sssp/). By default they are no more 
+produced by the pslibrary scripts. 
+

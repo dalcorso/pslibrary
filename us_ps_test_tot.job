@@ -29,43 +29,43 @@ cat > At.$fct-dn-rrkjus_psl.0.3.1.test.in << EOF
  /
 EOF
 
-cat > Ba.$fct-spn-rrkjus_psl.0.2.3.test.in << EOF
- &input
-   title='Ba',
-   zed=56.0,
-   rel=$nrel,
-   config='[Xe] 5d0.0 6s2 6p0',
-   iswitch=2,
- /
- &test
-   file_pseudo='$psdir/Ba.$fct-spn-rrkjus_psl.0.2.3.UPF',
-   nconf=5
-   configts(1)='5s2 5p6 6s2'
-   configts(2)='5s2 5p6 6s1.5 6p0'
-   configts(3)='5s2 5p6 6s1 6p1'
-   configts(4)='5s2 5p6 6s0.5 6p1'
-   configts(5)='5s2 5p6 6s1. 6p0 5d0'
- /
-EOF
+#cat > Ba.$fct-spn-rrkjus_psl.0.2.3.test.in << EOF
+# &input
+#   title='Ba',
+#   zed=56.0,
+#   rel=$nrel,
+#   config='[Xe] 5d0.0 6s2 6p0',
+#   iswitch=2,
+# /
+# &test
+#   file_pseudo='$psdir/Ba.$fct-spn-rrkjus_psl.0.2.3.UPF',
+#   nconf=5
+#   configts(1)='5s2 5p6 6s2'
+#   configts(2)='5s2 5p6 6s1.5 6p0'
+#   configts(3)='5s2 5p6 6s1 6p1'
+#   configts(4)='5s2 5p6 6s0.5 6p1'
+#   configts(5)='5s2 5p6 6s1. 6p0 5d0'
+# /
+#EOF
 
-cat > Ca.$fct-spn-rrkjus_psl.0.2.3.test.in << EOF
- &input
-   title='Ca',
-   zed=20.0,
-   rel=$nrel,
-   config='[Ar] 3d0.0 4s2.0 4p0',
-   iswitch=2,
- /
- &test
-   file_pseudo='$psdir/Ca.$fct-spn-rrkjus_psl.0.2.3.UPF',
-   nconf=5
-   configts(1)='3s2 3p6 4s2'
-   configts(2)='3s2 3p6 4s1.5 4p0'
-   configts(3)='3s2 3p6 4s1 4p0'
-   configts(4)='3s2 3p6 4s1 4p1'
-   configts(5)='3s2 3p6 4s1 4p0 3d1'
- /
-EOF
+#cat > Ca.$fct-spn-rrkjus_psl.0.2.3.test.in << EOF
+# &input
+#   title='Ca',
+#   zed=20.0,
+#   rel=$nrel,
+#   config='[Ar] 3d0.0 4s2.0 4p0',
+#   iswitch=2,
+# /
+# &test
+#   file_pseudo='$psdir/Ca.$fct-spn-rrkjus_psl.0.2.3.UPF',
+#   nconf=5
+#   configts(1)='3s2 3p6 4s2'
+#   configts(2)='3s2 3p6 4s1.5 4p0'
+#   configts(3)='3s2 3p6 4s1 4p0'
+#   configts(4)='3s2 3p6 4s1 4p1'
+#   configts(5)='3s2 3p6 4s1 4p0 3d1'
+# /
+#EOF
 
 cat > Co.$fct-n-rrkjus_psl.0.2.3.test.in << EOF
  &input
@@ -162,24 +162,24 @@ EOF
 # /
 #EOF
 
-cat > K.$fct-spn-rrkjus_psl.0.2.3.test.in << EOF
- &input
-   title='K',
-   zed=19.0,
-   rel=$nrel,
-   config='[Ar] 3d-2 4s1 4p0',
-   iswitch=2,
- /
- &test
-   file_pseudo='$psdir/K.$fct-spn-rrkjus_psl.0.2.3.UPF',
-   nconf=5
-   configts(1)='3s2 3p6 4s1'
-   configts(2)='3s2 3p6 4s0.5 4p0.5'
-   configts(3)='3s2 3p6 4s0.5 3d0'
-   configts(4)='3s2 3p6 4s0.5 4p0 '
-   configts(5)='3s2 3p6 4s0.75 4p0 3d0.25'
- /
-EOF
+#cat > K.$fct-spn-rrkjus_psl.0.2.3.test.in << EOF
+# &input
+#   title='K',
+#   zed=19.0,
+#   rel=$nrel,
+#   config='[Ar] 3d-2 4s1 4p0',
+#   iswitch=2,
+# /
+# &test
+#   file_pseudo='$psdir/K.$fct-spn-rrkjus_psl.0.2.3.UPF',
+#   nconf=5
+#   configts(1)='3s2 3p6 4s1'
+#   configts(2)='3s2 3p6 4s0.5 4p0.5'
+#   configts(3)='3s2 3p6 4s0.5 3d0'
+#   configts(4)='3s2 3p6 4s0.5 4p0 '
+#   configts(5)='3s2 3p6 4s0.75 4p0 3d0.25'
+# /
+#EOF
 
 cat > Kr.$fct-n-rrkjus_psl.0.2.3.test.in << EOF
  &input
@@ -294,24 +294,24 @@ cat > Po.$fct-dn-rrkjus_psl.0.3.1.test.in << EOF
  /
 EOF
 
-cat > Rb.$fct-spn-rrkjus_psl.0.2.3.test.in << EOF
- &input
-   title='Rb',
-   zed=37.0,
-   rel=$nrel,
-   config='[Kr] 4d-2.0 5s1 5p0',
-   iswitch=2,
- /
- &test
-   file_pseudo='$psdir/Rb.$fct-spn-rrkjus_psl.0.2.3.UPF',
-   nconf=5
-   configts(1)='4s2 4p6 5s1  '
-   configts(2)='4s2 4p6 5s0 5p1 '
-   configts(3)='4s2 4p6 5s0 5p0 '
-   configts(4)='4s2 4p6 5s0.5  '
-   configts(5)='4s2 4p6 5s0.5 5p0 4d0.5'
- /
-EOF
+#cat > Rb.$fct-spn-rrkjus_psl.0.2.3.test.in << EOF
+# &input
+#   title='Rb',
+#   zed=37.0,
+#   rel=$nrel,
+#   config='[Kr] 4d-2.0 5s1 5p0',
+#   iswitch=2,
+# /
+# &test
+#   file_pseudo='$psdir/Rb.$fct-spn-rrkjus_psl.0.2.3.UPF',
+#   nconf=5
+#   configts(1)='4s2 4p6 5s1  '
+#   configts(2)='4s2 4p6 5s0 5p1 '
+#   configts(3)='4s2 4p6 5s0 5p0 '
+#   configts(4)='4s2 4p6 5s0.5  '
+#   configts(5)='4s2 4p6 5s0.5 5p0 4d0.5'
+# /
+#EOF
 
 cat > Re.$fct-spn-rrkjus_psl.0.3.1.test.in << EOF
  &input
@@ -351,24 +351,24 @@ cat > Rn.$fct-dn-rrkjus_psl.0.3.1.test.in << EOF
  /
 EOF
 
-cat > Ru.$fct-spn-rrkjus_psl.0.3.0.test.in << EOF
- &input
-   title='Ru',
-   zed=44.,
-   rel=$nrel,
-   config='[Kr] 4d6.0 5s2.0 5p0.0',
-   iswitch=2,
- /
- &test
-   file_pseudo='$psdir/Ru.$fct-spn-rrkjus_psl.0.3.0.UPF',
-   nconf=5,
-   configts(1)='4s2 4p6 4d6 5s2'
-   configts(2)='4s2 4p6 4d6 5s1 5p0'
-   configts(3)='4s2 4p6 4d6 5s0 5p1'
-   configts(4)='4s2 4p6 4d7 5s1 5p0'
-   configts(5)='4s2 4p6 4d5 5s2 5p0'
- /
-EOF
+#cat > Ru.$fct-spn-rrkjus_psl.0.3.0.test.in << EOF
+# &input
+#   title='Ru',
+#   zed=44.,
+#   rel=$nrel,
+#   config='[Kr] 4d6.0 5s2.0 5p0.0',
+#   iswitch=2,
+# /
+# &test
+#   file_pseudo='$psdir/Ru.$fct-spn-rrkjus_psl.0.3.0.UPF',
+#   nconf=5,
+#   configts(1)='4s2 4p6 4d6 5s2'
+#   configts(2)='4s2 4p6 4d6 5s1 5p0'
+#   configts(3)='4s2 4p6 4d6 5s0 5p1'
+#   configts(4)='4s2 4p6 4d7 5s1 5p0'
+#   configts(5)='4s2 4p6 4d5 5s2 5p0'
+# /
+#EOF
 
 cat > Sb.$fct-n-rrkjus_psl.0.3.1.test.in << EOF
  &input
