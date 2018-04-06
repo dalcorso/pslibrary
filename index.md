@@ -1,5 +1,5 @@
 <p align="justify"> 
-PSlibrary is a library of inputs for the ld1.x atomic code. It allows the generation of scalar relativistic and fully relativistic PAW data sets and ultrasoft pseudopotentials for many elements.
+PSlibrary is a library of inputs for the ld1.x atomic code of the <a href="https://www.quantum-espresso.org/">Quantum ESPRESSO</a> package. It allows the generation of scalar relativistic and fully relativistic PAW data sets and ultrasoft pseudopotentials for many elements.
 </p>
 
 Need help? Read [here](https://dalcorso.github.io/pslibrary/pslibrary_help.html)
