@@ -135,7 +135,7 @@ libraries</a> are available on the web.
 
 <p align="justify"> In order to generate <code>pslibrary.1.0.0</code> you 
 need an updated version of the atomic code. Please do not report problems 
-of QE 5.0.3, update to QE 5.1.2 or higher.</p>
+of <code>QE 5.0.3</code>, update to <code>QE 5.1.2</code> or higher.</p>
 
 ### Known PPs problems for previous versions of pslibrary:
 <p align="justify">
