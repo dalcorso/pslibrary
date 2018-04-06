@@ -1,0 +1,246 @@
+![pslibrary-logo](pslibrary.jpg)
+
+> This directory contains a collection of input files for the ld1.x
+> atomic code which is distributed with the Quantum ESPRESSO package
+> (See http://www.quantum-espresso.org).
+> It allows the generation of PAW data-sets or US pseudopotentials,
+> scalar relativistic or fully relativistic, for several elements. 
+
+The main distribution web page for pslibrary is 
+[here](https://dalcorso.github.io/pslibrary).
+Some help and updated information on these pseudopotentials can be found 
+[here](https://dalcorso.github.io/pslibrary/pslibrary_help.html)).  
+
+[![License: GPL v2](https://img.shields.io/badge/License-GPL%20v2-blue.svg)](https://www.gnu.org/licenses/old-licenses/gpl-2.0.en.html)
+
+## USAGE
+
+To generate the pseudopotentials, you need to change the file QE\_path
+inserting the path to the QE package.
+Then give the command:
+
+```
+. ./make_all_ps
+```
+to create the PPs for the pz, pbe, rel-pz and rel-pbe functionals,
+or enter in a "functional" directory and give the command:
+
+```
+. ../make_ps
+```
+The UPF pseudopotentials will appear in the directory
+ functional/PSEUDOPOTENTIALS. 
+See the file Modules/funct.f90 in the QE distribution for a list of the
+available functionals. 
+
+NB: Only LDA or GGA PPs can be created by the ld1.x code. Hybrid 
+functionals or meta-GGA PPs are not presently available.
+
+If you need a PP for one element, change the variable 
+
+element='all'
+
+with the element name (examples Si, C., Fe, etc.) at the beginning of the
+make\_ps file. 
+
+Andrea Dal Corso
+
+December 2011
+
+---------------------------------------------------------------------------
+
+## Version 1.0.0:
+
+This is a new version of the pslibrary. The entire library has been rewritten
+building on previous experience so many PPs are equivalent to those in 
+pslibrary.0.3.1. PPs are available for all elements up to Pu (Z=94). There 
+are still PAW and US PPs. Two sets of files are provided:
+
+```
+paw_ps_high.job, 
+us_ps_high.job 
+```
+
+contain the most accurate PP. These PPs have the highest number of semicore 
+states and smaller cut-off radii. They usually require a high kinetic-energy 
+cut-off and should be reserved for special applications. Check inside the 
+UPF PP file for an indication of the required kinetic energy cut-off. 
+
+```
+paw_ps_low.job, 
+us_ps_low.job 
+```
+
+contain PPs that are optimized for low kinetic energy cut-offs at the price 
+of a lower accuracy. These are PPs with less semicore states and larger cut-off 
+radii. The target of the _low library is convergence at 40 Ry kinetic energy 
+cut-off, with some exceptions that converge between 40 Ry and 50 Ry. If the 
+_low library does not contain any PP for a given element, 
+it means that the PP in the _high library converges with a kinetic energy 
+cut-off lower than 40 Ry or between 40 Ry and 50 Ry.
+
+The names of these PPs follow the same logic of previous versions of pslibrary
+with version number updated to 1.0.0 and the presence of semicore states
+indicated with spdf, n means NLCC. One (or two) letters l, mean that this is
+a low (or very low) kinetic energy cut-off PP and that a PP with
+the same semicore states but smaller cut-off radii or more nonlocal 
+projectors exists.
+
+Note that you need QE with svn version higher than 10479 to generate the PPs 
+in pslibrary.1.0.0.
+
+The PPs can be tested with the tests available in the files
+
+```
+paw_ps_test_high.job  us_ps_test_high.job
+paw_ps_test_low.job   us_ps_test_low.job
+```
+
+that are used by the commands
+
+```
+. ./make_all_test
+```
+
+or entering in the directories and giving the command
+
+```
+.. ./make_test
+```
+
+The PPs of pslibrary.0.3.1 or older are still available but in order
+to generate them you need to uncomment the lines inside make_ps.
+The lanthanides PPs of pslibrary.0.3.1 are no more available, and
+are substituted by those of pslibrary.1.0.0.
+
+Andrea Dal Corso
+
+December 2013
+
+----------------------------------------------------------------------------
+
+## Version 0.3.1:
+
+Note that these pseudopotentials are experimental. 
+By default, only PAW data-sets and US-PPs that are in 
+
+```
+ paw_ps_collection.job
+ us_ps_collection.job
+```
+
+are generated. These PPs have been tested in some cases and no error 
+has been reported so far. The PPs that were in pslibrary.0.1 
+(See ChangeLog file) have been tested extensively, the others are 
+under test right now. Only the pz, pbe, rel-pz and rel-pbe functionals
+have been tested. Please report any problem that you find with 
+other functionals.
+
+PAW data-sets and US-PPs that are in
+
+```
+paw_ps_collection_tot.job
+us_ps_collection_tot.job
+```
+
+have not been tested or if tested have been found to have at least
+one problem (mainly in the FR case). However a few bugs have been found 
+in the pw.x code and some of the apparent PP problems might be now corrected. 
+To generate these PPs you need to enter in the make_ps file and uncomment
+the appropriate line.
+
+PAW data-sets and US-PPs that are in
+
+```
+paw_ps_collection_alt.job
+us_ps_collection_alt.job
+```
+
+are alternative data sets that might have a different number of valence
+states with respect to the data set in the main distribution file.
+They are not compiled by default. To generate them you need to enter in the 
+make_ps file and uncomment the appropriate line.
+
+For testing purposes, starting with version 0.2.1 also the TM norm 
+conserving radii are distributed. 
+(NB: these radii have been originally imported from the file
+distributed with the Troullier and Martins (TM) atomic code.
+See http://bohr.inesc-mn.pt/~jlm/pseudo.html
+but they have not been tested. The file is maintained so improvements are 
+continuously made. However the status of this part of the library is far 
+from complete.)
+To generate these PPs you need to enter in the make_ps file and uncomment
+the appropriate line.
+
+Please report to the pw_forum or to me any problem that you find. 
+
+Andrea Dal Corso
+
+December 2011
+
+----------------------------------------------------------------------------
+
+## Pseudopotential tests
+
+Starting from version 0.3.1, pslibrary contains a set of scripts to test 
+the pseudopotentials. To run these tests give the command
+
+```
+. ./make_all_test
+```
+
+This command checks the PPs in the directories pz, pbe, rel-pz, and rel-pbe.
+To test other functionals enter in the appropriate directory and
+give the command:
+
+```
+. ../make_test
+```
+
+In order to test the PPs of the _alt, _tot or _lan files 
+you need to uncomment the appropriate line inside the make_test script.
+
+Note that starting from version 0.3.1 the path to QE must be specified in
+the file QE_path and no more inside make_ps or make_test.
+
+It is also possible to specify a list of elements in make_ps and make_test.
+
+Version 0.3.1 contains two new input files:
+
+```
+paw_lan_collection.job
+us_lan_collection.job
+```
+
+These files contain a collection of PP inputs for Lanthanides with
+fixed f occupations. f electrons are frozen in the core.
+The PPs with with spdn or spn extensions have 4f electrons in the core
+and can be generated starting from the configuration 4f^n5d^0 (divalent state) 
+or 4f^{n-1}5d^1 (trivalent state). spdn PPs are trivalent. spn PPs are 
+divalent and are available only for a few Lanthanides. 
+Uncomment the appropriate line in make_ps if you want to test these PPs.
+The PPs are very experimental. They have been tested only on the metals
+and seem to be ghost-free, but be very careful with them or wait for the
+next release before using them.
+
+Andrea Dal Corso
+
+July 2013
+
+-------------------------------------------------------------------------
+
+## LICENSE
+
+All the material included in this distribution is free software;
+you can redistribute it and/or modify it under the terms of the GNU
+General Public License as published by the Free Software Foundation;
+either version 2 of the License, or (at your option) any later version.
+
+These programs are distributed in the hope that they will be useful, but
+WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY
+or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public License
+for more details.
+
+You should have received a copy of the GNU General Public License along
+with this program; if not, write to the Free Software Foundation, Inc.,
+675 Mass Ave, Cambridge, MA 02139, USA.
