@@ -127,6 +127,8 @@ the magnetic moment of MnSi.
 * Co: <code>Co.$fct-spn-*_psl.1.0.0</code> does not work with the PBE functional.
 * Tc: <code>Tc.$fct-spn-*_psl.1.0.0</code> does not work with the PBE functional.
 * Ir: <code>Ir.$fct-n-*_psl.1.0.0</code> has a ghost at 8 eV above the Fermi level.
+* W: <code>W.pbe-spn-rrkjus_psl.1.0.0</code> does not converge when used in
+slabs with vacuum space.
 * Lanthanides: spdfn PPs are very experimental, some of them are not working.
 They are not ready for everyday use.
 * Norm conserving PPs: poorly supported and untested. Much better 
