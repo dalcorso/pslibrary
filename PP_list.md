@@ -120,6 +120,8 @@ Do not report a problem of a PP with version <code>0.3.1</code> or lower no more
 present in the files of <code>pslibrary.1.0.0</code>. The removed PPs are considered obsolete and no longer supported.</p>
 
 ### Known PPs problems for pslibrary.1.0.0:
+* N:  <code>N.$fct-n-*_psl.1.0.0</code> does not work with the <code>pbesol</code> functional (use <code>N.$fct-n-*_psl.0.1</code>).
+* Si:  <code>Si.$fct-n-*_psl.1.0.0</code> does not work with the <code>pz</code> functional.
 * F:  <code>F.$fct-n-*_psl.1.0.0</code> does not work with the <code>pz</code> functional in ionic compounds (use <code>F.$fct-n-*_psl.0.1</code>).
 * Si:  <code>Si.$fct-n-*_psl.1.0.0</code> does not work with the <code>pz</code> functional.
 * Mn: <code>Mn.$fct-spn-*_psl.1.0.0</code> has been reported to give problems with
