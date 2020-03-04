@@ -85,7 +85,7 @@ Re: Re.$fct-spn-*_psl.1.0.0
 Os: Os.$fct-spn-*_psl.1.0.0    
 Ir: Ir.$fct-n-*_psl.0.2.3    
 Pt: Pt.$fct-n-*_psl.1.0.0    
-Au: Au.$fct-n-*_psl.1.0.0    
+Au: Au.$fct-n-*_psl.1.0.1    
 Hg: Hg.$fct-n-*_psl.1.0.0 
 Tl: Tl.$fct-dn-*_psl.1.0.0    
 Pb: Pb.$fct-dn-*_psl.1.0.0    
@@ -120,6 +120,7 @@ Do not report a problem of a PP with version <code>0.3.1</code> or lower no more
 present in the files of <code>pslibrary.1.0.0</code>. The removed PPs are considered obsolete and no longer supported.</p>
 
 ### Known PPs problems for pslibrary.1.0.0:
+* Au: A small problem appeared in the EELS spectrum at high frequencies for <code>Au.$fct-spn-*_psl.1.0.0</code> (use <code>Au.$fct-spn-*_psl.1.0.1</code>).
 * N:  <code>N.$fct-n-*_psl.1.0.0</code> does not work with the <code>pbesol</code> functional (use <code>N.$fct-n-*_psl.0.1</code>).
 * F:  <code>F.$fct-n-*_psl.1.0.0</code> does not work with the <code>pz</code> functional in ionic compounds (use <code>F.$fct-n-*_psl.0.1</code>).
 * Si:  <code>Si.$fct-n-*_psl.1.0.0</code> does not work with the <code>pz</code> functional.

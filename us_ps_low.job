@@ -1735,7 +1735,7 @@ cat > Pt.$fct-n-rrkjus_psl.1.0.0.in << EOF
 5D  3  2  0.00  0.80  1.00  2.20  0.0
 EOF
 
-cat > Au.$fct-spn-rrkjus_psl.1.0.0.in << EOF
+cat > Au.$fct-spn-rrkjus_psl.1.0.1.in << EOF
  &input
    title='Au',
    zed=79.,
@@ -1750,7 +1750,7 @@ cat > Au.$fct-spn-rrkjus_psl.1.0.0.in << EOF
    file_pseudopw='Au.$fct-spn-rrkjus_psl.1.0.0.UPF',
    author='ADC',
    lloc=-1,
-   rcloc=1.4,
+   rcloc=1.6,
    which_augfun='PSQ',
    rmatch_augfun_nc=.true.,
    nlcc=.true.,
@@ -1761,10 +1761,10 @@ cat > Au.$fct-spn-rrkjus_psl.1.0.0.in << EOF
 6
 5S  1  0  2.00  0.00  0.90  1.50  0.0
 6S  2  0  1.00  0.00  0.90  1.50  0.0
-5P  2  1  6.00  0.00  0.90  1.30  0.0
-6P  3  1  0.00 -2.50  0.90  1.30  0.0
+5P  2  1  6.00  0.00  1.00  1.30  0.0
+6P  3  1  0.00  0.00  1.00  1.30  0.0
 5D  3  2 10.00  0.00  1.40  1.60  0.0
-5D  3  2  0.00  0.05  1.40  1.60  0.0
+5D  3  2  0.00  1.50  1.40  1.60  0.0
 EOF
 
 cat > Au.$fct-n-rrkjus_psl.1.0.0.in << EOF
