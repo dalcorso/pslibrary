@@ -80,7 +80,7 @@ Yb: Yb.$fct-spn-*_psl.1.0.0
 Lu: Lu.$fct-spdn-*_psl.1.0.0 
 Hf: Hf.$fct-spn-*_psl.1.0.0    
 Ta: Ta.$fct-spn-*_psl.1.0.0    
-W:  W.$fct-spn-*_psl.1.0.0    
+W:  W.$fct-spn-*_psl.1.0.1   
 Re: Re.$fct-spn-*_psl.1.0.0    
 Os: Os.$fct-spn-*_psl.1.0.0    
 Ir: Ir.$fct-n-*_psl.0.2.3    

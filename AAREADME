@@ -40,6 +40,12 @@ Au.$fct-spn-kjpaw_psl.1.0.1.in and
 Au.$fct-spn-rrkjus_psl.1.0.1.in improve the version 1.0.0 for the EELS
 spectrum at high frequencies.
 
+12/07/2022
+W.$fct-spn-kjpaw_psl.1.0.1.in and
+W.$fct-spn-rrkjus_psl.1.0.1.in improve the version 1.0.0. Lattice constants
+closer to the all-electron values reported in the literature.
+(In collaboration with X. Gong).
+
 --------------------------------------------------------------------------
 Version 1.0.0:
 
